@@ -19,7 +19,12 @@ namespace bartenderexpressReloaded
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "Lolliesoft"));
             InitializeComponent();
+            // Create an XtraTabbedMdiManager that will manage MDI child windows.
+            //XtraTabbedMdiManager1 mdiManager = new XtraTabbedMdiManager1();
+            //mdiManager.MdiParent = this;
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -40,8 +45,15 @@ namespace bartenderexpressReloaded
                     conn.Open();
                     SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM recipes WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
                     SQLiteDataReader reader = cmd.ExecuteReader();
+                   
                     while (reader.Read())
-                    { MessageBox.Show(reader["directions"].ToString());
+                    { //MessageBox.Show(reader["directions"].ToString());
+                    Form2 child = new Form2();
+                    child.Text = listBoxControl1.SelectedValue.ToString();
+                    //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                    child.MdiParent = this;
+                    child.Show();
+
                     break;
                     }
                     
