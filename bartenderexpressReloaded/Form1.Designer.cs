@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
@@ -44,11 +43,12 @@
             // 
             this.listBoxControl1.DataSource = this.recipesBindingSource;
             this.listBoxControl1.DisplayMember = "name";
-            this.listBoxControl1.Location = new System.Drawing.Point(12, 54);
+            this.listBoxControl1.Location = new System.Drawing.Point(1, 1);
             this.listBoxControl1.Name = "listBoxControl1";
             this.listBoxControl1.Size = new System.Drawing.Size(227, 429);
             this.listBoxControl1.TabIndex = 1;
             this.listBoxControl1.ValueMember = "name";
+            this.listBoxControl1.SelectedIndexChanged += new System.EventHandler(this.listBoxControl1_SelectedIndexChanged);
             this.listBoxControl1.DoubleClick += new System.EventHandler(this.nameListCount);
             // 
             // recipesBindingSource
@@ -67,6 +67,7 @@
             // 
             // xtraTabbedMdiManager1
             // 
+            this.xtraTabbedMdiManager1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // Form1
