@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+//using DevExpress.XtraBars.Docking;
 
 namespace bartenderexpressReloaded
 {
@@ -19,6 +20,7 @@ namespace bartenderexpressReloaded
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "Lolliesoft"));
             InitializeComponent();
+           
             // Create an XtraTabbedMdiManager that will manage MDI child windows.
             //XtraTabbedMdiManager1 mdiManager = new XtraTabbedMdiManager1();
             //mdiManager.MdiParent = this;
@@ -30,7 +32,8 @@ namespace bartenderexpressReloaded
         {
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
-
+           
+            
         }
 
         private void nameListCount(object sender, EventArgs e)

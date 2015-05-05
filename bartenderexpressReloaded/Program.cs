@@ -16,7 +16,18 @@ namespace bartenderexpressReloaded
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.UserSkins.TouchSkins.Register();
+
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.UseWindowsXPTheme = false;
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Glass Oceans";
+
+            DevExpress.Skins.SkinManager.EnableMdiFormSkins();
+            DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.Run(new Form1());
         }
+
+
     }
+    
 }
