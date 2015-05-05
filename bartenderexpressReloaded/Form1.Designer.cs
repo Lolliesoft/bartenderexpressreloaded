@@ -72,7 +72,6 @@
             // 
             // xtraTabbedMdiManager1
             // 
-            this.xtraTabbedMdiManager1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // ribbonControl1
