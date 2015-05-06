@@ -48,6 +48,8 @@
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
@@ -63,7 +65,7 @@
             this.listBoxControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.listBoxControl1.Location = new System.Drawing.Point(794, 144);
             this.listBoxControl1.Name = "listBoxControl1";
-            this.listBoxControl1.Size = new System.Drawing.Size(193, 341);
+            this.listBoxControl1.Size = new System.Drawing.Size(193, 382);
             this.listBoxControl1.TabIndex = 1;
             this.listBoxControl1.ValueMember = "name";
             this.listBoxControl1.DoubleClick += new System.EventHandler(this.nameListCount);
@@ -119,7 +121,9 @@
             this.navBarControl1.ActiveGroup = this.TheBarGroup;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.TheBarGroup});
+            this.TheBarGroup,
+            this.navBarGroup1,
+            this.navBarGroup2});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem1,
             this.navBarItem2,
@@ -134,13 +138,13 @@
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 175;
             this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl1.Size = new System.Drawing.Size(175, 341);
+            this.navBarControl1.Size = new System.Drawing.Size(175, 382);
             this.navBarControl1.TabIndex = 3;
             this.navBarControl1.Text = "navBarControl1";
             // 
             // TheBarGroup
             // 
-            this.TheBarGroup.Caption = "TheBarGroup";
+            this.TheBarGroup.Caption = "Bartender Recipes";
             this.TheBarGroup.Expanded = true;
             this.TheBarGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
@@ -153,6 +157,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem8),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem9)});
             this.TheBarGroup.Name = "TheBarGroup";
+            this.TheBarGroup.TopVisibleLinkIndex = 1;
             // 
             // navBarItem1
             // 
@@ -199,12 +204,23 @@
             this.navBarItem9.Caption = "Custom Recipies";
             this.navBarItem9.Name = "navBarItem9";
             // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "Favorites";
+            this.navBarGroup1.Expanded = true;
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "My Recipes";
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 485);
+            this.ClientSize = new System.Drawing.Size(987, 526);
             this.Controls.Add(this.navBarControl1);
             this.Controls.Add(this.listBoxControl1);
             this.Controls.Add(this.ribbonControl1);
@@ -245,6 +261,8 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem7;
         private DevExpress.XtraNavBar.NavBarItem navBarItem8;
         private DevExpress.XtraNavBar.NavBarItem navBarItem9;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
     }
 }
 
