@@ -20,10 +20,17 @@ namespace bartenderexpressReloaded
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "Lolliesoft"));
             InitializeComponent();
+            
            
-            // Create an XtraTabbedMdiManager that will manage MDI child windows.
-            //XtraTabbedMdiManager1 mdiManager = new XtraTabbedMdiManager1();
-            //mdiManager.MdiParent = this;
+            DrinksNameBox.Hide();
+            ShotsNameBox.Hide();
+            LiqueursNameBox.Hide();
+            PunchesNameBox.Hide();
+            CocktailsNameBox.Hide();
+            BeerAleNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+           
         }
 
 
@@ -38,9 +45,9 @@ namespace bartenderexpressReloaded
 
         private void nameListCount(object sender, EventArgs e)
         {
-            if (listBoxControl1.SelectedItem != null)
+            if (DrinksNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = listBoxControl1.SelectedValue.ToString();
+                string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
 
 
                 using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
@@ -52,7 +59,7 @@ namespace bartenderexpressReloaded
                     while (reader.Read())
                     { //MessageBox.Show(reader["directions"].ToString());
                     Form2 child = new Form2();
-                    child.Text = listBoxControl1.SelectedValue.ToString();
+                    child.Text = DrinksNameBox.SelectedValue.ToString();
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
                     child.MdiParent = this;
                     child.Show();
@@ -66,6 +73,104 @@ namespace bartenderexpressReloaded
                     //toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.listBoxControl1.Items.Count.ToString());
                 }
             }
+        }
+
+        private void DrinksBoxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            DrinksNameBox.Show();
+            ShotsNameBox.Hide();
+            LiqueursNameBox.Hide();
+            PunchesNameBox.Hide();
+            CocktailsNameBox.Hide();
+            BeerAleNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+        }
+
+        private void ShotsBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShotsNameBox.Show();
+            DrinksNameBox.Hide();
+            LiqueursNameBox.Hide();
+            PunchesNameBox.Hide();
+            CocktailsNameBox.Hide();
+            BeerAleNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+        }
+
+        private void LiqueursBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            LiqueursNameBox.Show();
+            DrinksNameBox.Hide();
+            ShotsNameBox.Hide();
+            PunchesNameBox.Hide();
+            CocktailsNameBox.Hide();
+            BeerAleNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+        }
+
+        private void PunchesBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            PunchesNameBox.Show();
+            DrinksNameBox.Hide();
+            ShotsNameBox.Hide();
+            LiqueursNameBox.Hide(); 
+            CocktailsNameBox.Hide();
+            BeerAleNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+        }
+
+        private void CocktailsBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            CocktailsNameBox.Show();
+            DrinksNameBox.Hide();
+            ShotsNameBox.Hide();
+            LiqueursNameBox.Hide();
+            PunchesNameBox.Hide();
+            BeerAleNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+        }
+
+        private void BeerAleBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            BeerAleNameBox.Show();
+            DrinksNameBox.Hide();
+            ShotsNameBox.Hide();
+            LiqueursNameBox.Hide();
+            PunchesNameBox.Hide();
+            CocktailsNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+        }
+
+        private void NonAlcoholicBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            NonAlcoholicNameBox.Show();
+            DrinksNameBox.Hide();
+            ShotsNameBox.Hide();
+            LiqueursNameBox.Hide();
+            PunchesNameBox.Hide();
+            CocktailsNameBox.Hide();
+            BeerAleNameBox.Hide();
+            CoffeeTeaNameBox.Hide();
+        }
+
+        private void CoffeeTeaBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            CoffeeTeaNameBox.Show();
+            DrinksNameBox.Hide();
+            ShotsNameBox.Hide();
+            LiqueursNameBox.Hide();
+            PunchesNameBox.Hide();
+            CocktailsNameBox.Hide();
+            BeerAleNameBox.Hide();
+            NonAlcoholicNameBox.Hide();
+           
+           
         }
     }
 }

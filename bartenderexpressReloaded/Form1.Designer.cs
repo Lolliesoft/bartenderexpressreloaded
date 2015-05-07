@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
+            this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
@@ -39,36 +39,49 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.TheBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
+            this.DrinksBarItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.ShotsBarItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.LiqueursBarItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.PunchesBarItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.CocktailsBarItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.BeerAleBarItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.NonAlcoholicBarItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.CoffeeTeaBarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
+            this.ShotsNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            this.LiqueursNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            this.PunchesNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            this.CocktailsNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            this.BeerAleNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            this.NonAlcoholicNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            this.CoffeeTeaNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            ((System.ComponentModel.ISupportInitialize)(this.DrinksNameBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShotsNameBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LiqueursNameBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PunchesNameBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CocktailsNameBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BeerAleNameBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NonAlcoholicNameBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoffeeTeaNameBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBoxControl1
+            // DrinksNameBox
             // 
-            this.listBoxControl1.DataSource = this.recipesBindingSource;
-            this.listBoxControl1.DisplayMember = "name";
-            this.listBoxControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBoxControl1.Location = new System.Drawing.Point(794, 144);
-            this.listBoxControl1.Name = "listBoxControl1";
-            this.listBoxControl1.Size = new System.Drawing.Size(193, 382);
-            this.listBoxControl1.TabIndex = 1;
-            this.listBoxControl1.ValueMember = "name";
-            this.listBoxControl1.DoubleClick += new System.EventHandler(this.nameListCount);
+            this.DrinksNameBox.DataSource = this.recipesBindingSource;
+            this.DrinksNameBox.DisplayMember = "name";
+            this.DrinksNameBox.Location = new System.Drawing.Point(794, 144);
+            this.DrinksNameBox.Name = "DrinksNameBox";
+            this.DrinksNameBox.Size = new System.Drawing.Size(193, 382);
+            this.DrinksNameBox.TabIndex = 1;
+            this.DrinksNameBox.ValueMember = "name";
+            this.DrinksNameBox.DoubleClick += new System.EventHandler(this.nameListCount);
             // 
             // recipesBindingSource
             // 
@@ -125,14 +138,14 @@
             this.navBarGroup1,
             this.navBarGroup2});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem1,
-            this.navBarItem2,
-            this.navBarItem3,
-            this.navBarItem4,
-            this.navBarItem5,
-            this.navBarItem6,
-            this.navBarItem7,
-            this.navBarItem8,
+            this.DrinksBarItem,
+            this.ShotsBarItem,
+            this.LiqueursBarItem,
+            this.PunchesBarItem,
+            this.CocktailsBarItem,
+            this.BeerAleBarItem,
+            this.NonAlcoholicBarItem,
+            this.CoffeeTeaBarItem,
             this.navBarItem9});
             this.navBarControl1.Location = new System.Drawing.Point(0, 144);
             this.navBarControl1.Name = "navBarControl1";
@@ -147,57 +160,64 @@
             this.TheBarGroup.Caption = "Bartender Recipes";
             this.TheBarGroup.Expanded = true;
             this.TheBarGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem7),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem8),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.DrinksBarItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ShotsBarItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.LiqueursBarItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.PunchesBarItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.CocktailsBarItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.BeerAleBarItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NonAlcoholicBarItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.CoffeeTeaBarItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem9)});
             this.TheBarGroup.Name = "TheBarGroup";
-            this.TheBarGroup.TopVisibleLinkIndex = 1;
             // 
-            // navBarItem1
+            // DrinksBarItem
             // 
-            this.navBarItem1.Caption = "Drinks";
-            this.navBarItem1.Name = "navBarItem1";
+            this.DrinksBarItem.Caption = "Drinks";
+            this.DrinksBarItem.Name = "DrinksBarItem";
+            this.DrinksBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.DrinksBoxItem_LinkClicked);
             // 
-            // navBarItem2
+            // ShotsBarItem
             // 
-            this.navBarItem2.Caption = "Shots";
-            this.navBarItem2.Name = "navBarItem2";
+            this.ShotsBarItem.Caption = "Shots";
+            this.ShotsBarItem.Name = "ShotsBarItem";
+            this.ShotsBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ShotsBarItem_LinkClicked);
             // 
-            // navBarItem3
+            // LiqueursBarItem
             // 
-            this.navBarItem3.Caption = "Liqueurs";
-            this.navBarItem3.Name = "navBarItem3";
+            this.LiqueursBarItem.Caption = "Liqueurs";
+            this.LiqueursBarItem.Name = "LiqueursBarItem";
+            this.LiqueursBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.LiqueursBarItem_LinkClicked);
             // 
-            // navBarItem4
+            // PunchesBarItem
             // 
-            this.navBarItem4.Caption = "Punches";
-            this.navBarItem4.Name = "navBarItem4";
+            this.PunchesBarItem.Caption = "Punches";
+            this.PunchesBarItem.Name = "PunchesBarItem";
+            this.PunchesBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.PunchesBarItem_LinkClicked);
             // 
-            // navBarItem5
+            // CocktailsBarItem
             // 
-            this.navBarItem5.Caption = "Cocktails";
-            this.navBarItem5.Name = "navBarItem5";
+            this.CocktailsBarItem.Caption = "Cocktails";
+            this.CocktailsBarItem.Name = "CocktailsBarItem";
+            this.CocktailsBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CocktailsBarItem_LinkClicked);
             // 
-            // navBarItem6
+            // BeerAleBarItem
             // 
-            this.navBarItem6.Caption = "Beer and Ales";
-            this.navBarItem6.Name = "navBarItem6";
+            this.BeerAleBarItem.Caption = "Beer and Ales";
+            this.BeerAleBarItem.Name = "BeerAleBarItem";
+            this.BeerAleBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.BeerAleBarItem_LinkClicked);
             // 
-            // navBarItem7
+            // NonAlcoholicBarItem
             // 
-            this.navBarItem7.Caption = "non-Alcoholic";
-            this.navBarItem7.Name = "navBarItem7";
+            this.NonAlcoholicBarItem.Caption = "non-Alcoholic";
+            this.NonAlcoholicBarItem.Name = "NonAlcoholicBarItem";
+            this.NonAlcoholicBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NonAlcoholicBarItem_LinkClicked);
             // 
-            // navBarItem8
+            // CoffeeTeaBarItem
             // 
-            this.navBarItem8.Caption = "Coffee and Teas";
-            this.navBarItem8.Name = "navBarItem8";
+            this.CoffeeTeaBarItem.Caption = "Coffee and Teas";
+            this.CoffeeTeaBarItem.Name = "CoffeeTeaBarItem";
+            this.CoffeeTeaBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CoffeeTeaBarItem_LinkClicked);
             // 
             // navBarItem9
             // 
@@ -207,7 +227,6 @@
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Favorites";
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // navBarGroup2
@@ -215,33 +234,96 @@
             this.navBarGroup2.Caption = "My Recipes";
             this.navBarGroup2.Name = "navBarGroup2";
             // 
+            // ShotsNameBox
+            // 
+            this.ShotsNameBox.Location = new System.Drawing.Point(794, 144);
+            this.ShotsNameBox.Name = "ShotsNameBox";
+            this.ShotsNameBox.Size = new System.Drawing.Size(193, 382);
+            this.ShotsNameBox.TabIndex = 5;
+            // 
+            // LiqueursNameBox
+            // 
+            this.LiqueursNameBox.Location = new System.Drawing.Point(794, 144);
+            this.LiqueursNameBox.Name = "LiqueursNameBox";
+            this.LiqueursNameBox.Size = new System.Drawing.Size(193, 382);
+            this.LiqueursNameBox.TabIndex = 6;
+            // 
+            // PunchesNameBox
+            // 
+            this.PunchesNameBox.Location = new System.Drawing.Point(794, 144);
+            this.PunchesNameBox.Name = "PunchesNameBox";
+            this.PunchesNameBox.Size = new System.Drawing.Size(193, 382);
+            this.PunchesNameBox.TabIndex = 7;
+            // 
+            // CocktailsNameBox
+            // 
+            this.CocktailsNameBox.Location = new System.Drawing.Point(794, 144);
+            this.CocktailsNameBox.Name = "CocktailsNameBox";
+            this.CocktailsNameBox.Size = new System.Drawing.Size(193, 382);
+            this.CocktailsNameBox.TabIndex = 8;
+            // 
+            // BeerAleNameBox
+            // 
+            this.BeerAleNameBox.Location = new System.Drawing.Point(794, 144);
+            this.BeerAleNameBox.Name = "BeerAleNameBox";
+            this.BeerAleNameBox.Size = new System.Drawing.Size(193, 382);
+            this.BeerAleNameBox.TabIndex = 9;
+            // 
+            // NonAlcoholicNameBox
+            // 
+            this.NonAlcoholicNameBox.Location = new System.Drawing.Point(794, 144);
+            this.NonAlcoholicNameBox.Name = "NonAlcoholicNameBox";
+            this.NonAlcoholicNameBox.Size = new System.Drawing.Size(193, 382);
+            this.NonAlcoholicNameBox.TabIndex = 10;
+            // 
+            // CoffeeTeaNameBox
+            // 
+            this.CoffeeTeaNameBox.Location = new System.Drawing.Point(794, 144);
+            this.CoffeeTeaNameBox.Name = "CoffeeTeaNameBox";
+            this.CoffeeTeaNameBox.Size = new System.Drawing.Size(193, 382);
+            this.CoffeeTeaNameBox.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 526);
+            this.Controls.Add(this.CoffeeTeaNameBox);
+            this.Controls.Add(this.NonAlcoholicNameBox);
+            this.Controls.Add(this.BeerAleNameBox);
+            this.Controls.Add(this.CocktailsNameBox);
+            this.Controls.Add(this.PunchesNameBox);
+            this.Controls.Add(this.LiqueursNameBox);
+            this.Controls.Add(this.ShotsNameBox);
             this.Controls.Add(this.navBarControl1);
-            this.Controls.Add(this.listBoxControl1);
+            this.Controls.Add(this.DrinksNameBox);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Bartender Express Pro";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrinksNameBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShotsNameBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LiqueursNameBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PunchesNameBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CocktailsNameBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BeerAleNameBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NonAlcoholicNameBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoffeeTeaNameBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
+        private DevExpress.XtraEditors.ListBoxControl DrinksNameBox;
         private bartenderExpressDataSet bartenderExpressDataSet;
         private System.Windows.Forms.BindingSource recipesBindingSource;
         private bartenderExpressDataSetTableAdapters.recipesTableAdapter recipesTableAdapter;
@@ -252,17 +334,24 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup TheBarGroup;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem6;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem7;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem8;
+        private DevExpress.XtraNavBar.NavBarItem DrinksBarItem;
+        private DevExpress.XtraNavBar.NavBarItem ShotsBarItem;
+        private DevExpress.XtraNavBar.NavBarItem LiqueursBarItem;
+        private DevExpress.XtraNavBar.NavBarItem PunchesBarItem;
+        private DevExpress.XtraNavBar.NavBarItem CocktailsBarItem;
+        private DevExpress.XtraNavBar.NavBarItem BeerAleBarItem;
+        private DevExpress.XtraNavBar.NavBarItem NonAlcoholicBarItem;
+        private DevExpress.XtraNavBar.NavBarItem CoffeeTeaBarItem;
         private DevExpress.XtraNavBar.NavBarItem navBarItem9;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraEditors.ListBoxControl CoffeeTeaNameBox;
+        private DevExpress.XtraEditors.ListBoxControl NonAlcoholicNameBox;
+        private DevExpress.XtraEditors.ListBoxControl BeerAleNameBox;
+        private DevExpress.XtraEditors.ListBoxControl CocktailsNameBox;
+        private DevExpress.XtraEditors.ListBoxControl PunchesNameBox;
+        private DevExpress.XtraEditors.ListBoxControl LiqueursNameBox;
+        private DevExpress.XtraEditors.ListBoxControl ShotsNameBox;
     }
 }
 
