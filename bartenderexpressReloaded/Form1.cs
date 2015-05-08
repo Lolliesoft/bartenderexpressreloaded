@@ -77,38 +77,42 @@ namespace bartenderexpressReloaded
 
         private void DrinksBoxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            WizardPages.SelectedTab = DrinksTab;
+                
             DrinksNameBox.Show();
-            ShotsNameBox.Hide();
-            LiqueursNameBox.Hide();
-            PunchesNameBox.Hide();
-            CocktailsNameBox.Hide();
-            BeerAleNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            //ShotsNameBox.Hide();
+            //LiqueursNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //CocktailsNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
         }
 
         private void ShotsBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             ShotsNameBox.Show();
-            DrinksNameBox.Hide();
-            LiqueursNameBox.Hide();
-            PunchesNameBox.Hide();
-            CocktailsNameBox.Hide();
-            BeerAleNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            WizardPages.SelectedTab = ShotsTab;
+            //DrinksNameBox.Hide();
+            //LiqueursNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //CocktailsNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
         }
 
         private void LiqueursBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            WizardPages.SelectedTab = LiqueursTab; 
             LiqueursNameBox.Show();
-            DrinksNameBox.Hide();
-            ShotsNameBox.Hide();
-            PunchesNameBox.Hide();
-            CocktailsNameBox.Hide();
-            BeerAleNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            //DrinksNameBox.Show();
+            //ShotsNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //CocktailsNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
         }
 
         private void PunchesBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
