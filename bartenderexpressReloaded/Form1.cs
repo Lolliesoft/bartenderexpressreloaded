@@ -37,6 +37,20 @@ namespace bartenderexpressReloaded
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.coffeetea' table. You can move, or remove it, as needed.
+            this.coffeeteaTableAdapter.Fill(this.xpressShotsDataSet.coffeetea);
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.nonalcoholic' table. You can move, or remove it, as needed.
+            this.nonalcoholicTableAdapter.Fill(this.xpressShotsDataSet.nonalcoholic);
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.beers' table. You can move, or remove it, as needed.
+            this.beersTableAdapter.Fill(this.xpressShotsDataSet.beers);
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.cocktails' table. You can move, or remove it, as needed.
+            this.cocktailsTableAdapter.Fill(this.xpressShotsDataSet.cocktails);
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.punches' table. You can move, or remove it, as needed.
+            this.punchesTableAdapter.Fill(this.xpressShotsDataSet.punches);
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.liqueurs' table. You can move, or remove it, as needed.
+            this.liqueursTableAdapter.Fill(this.xpressShotsDataSet.liqueurs);
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.shots' table. You can move, or remove it, as needed.
+            this.shotsTableAdapter.Fill(this.xpressShotsDataSet.shots);
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
            
@@ -117,62 +131,67 @@ namespace bartenderexpressReloaded
 
         private void PunchesBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            WizardPages.SelectedTab = PunchesTab; 
             PunchesNameBox.Show();
-            DrinksNameBox.Hide();
-            ShotsNameBox.Hide();
-            LiqueursNameBox.Hide(); 
-            CocktailsNameBox.Hide();
-            BeerAleNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            //DrinksNameBox.Hide();
+            //ShotsNameBox.Hide();
+            //LiqueursNameBox.Hide(); 
+            //CocktailsNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
         }
 
         private void CocktailsBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            WizardPages.SelectedTab = CocktailsTab; 
             CocktailsNameBox.Show();
-            DrinksNameBox.Hide();
-            ShotsNameBox.Hide();
-            LiqueursNameBox.Hide();
-            PunchesNameBox.Hide();
-            BeerAleNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            //DrinksNameBox.Hide();
+            //ShotsNameBox.Hide();
+            //LiqueursNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
         }
 
         private void BeerAleBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            WizardPages.SelectedTab = BeerAlesTab; 
             BeerAleNameBox.Show();
-            DrinksNameBox.Hide();
-            ShotsNameBox.Hide();
-            LiqueursNameBox.Hide();
-            PunchesNameBox.Hide();
-            CocktailsNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            //DrinksNameBox.Hide();
+            //ShotsNameBox.Hide();
+            //LiqueursNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //CocktailsNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
         }
 
         private void NonAlcoholicBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            WizardPages.SelectedTab = nonAlcoholicTab; 
             NonAlcoholicNameBox.Show();
-            DrinksNameBox.Hide();
-            ShotsNameBox.Hide();
-            LiqueursNameBox.Hide();
-            PunchesNameBox.Hide();
-            CocktailsNameBox.Hide();
-            BeerAleNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            //DrinksNameBox.Hide();
+            //ShotsNameBox.Hide();
+            //LiqueursNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //CocktailsNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
         }
 
         private void CoffeeTeaBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            WizardPages.SelectedTab = CoffeeTeaTab; 
             CoffeeTeaNameBox.Show();
-            DrinksNameBox.Hide();
-            ShotsNameBox.Hide();
-            LiqueursNameBox.Hide();
-            PunchesNameBox.Hide();
-            CocktailsNameBox.Hide();
-            BeerAleNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
+            //DrinksNameBox.Hide();
+            //ShotsNameBox.Hide();
+            //LiqueursNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //CocktailsNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
            
            
         }
