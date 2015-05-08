@@ -145,5 +145,11 @@ namespace bartenderexpressReloaded
             CoffeeTeaNameBox.Show();
    
         }
+
+        private void CustomItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            WizardPages.SelectedTab = CustomTab;
+            CustomNameBox.Show();
+        }
     }
 }

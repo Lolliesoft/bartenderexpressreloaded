@@ -50,7 +50,7 @@
             this.BeerAleBarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.NonAlcoholicBarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.CoffeeTeaBarItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
+            this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,22 +67,31 @@
             this.nonalcoholicTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.nonalcoholicTableAdapter();
             this.coffeeteaTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.coffeeteaTableAdapter();
             this.CustomTab = new System.Windows.Forms.TabPage();
+            this.CustomNameBox = new DevExpress.XtraEditors.ListBoxControl();
+            this.CustomSearch = new System.Windows.Forms.TextBox();
             this.CoffeeTeaTab = new System.Windows.Forms.TabPage();
+            this.CoffeeTeaSearch = new System.Windows.Forms.TextBox();
             this.CoffeeTeaNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.nonAlcoholicTab = new System.Windows.Forms.TabPage();
+            this.NonAlcoholicSearch = new System.Windows.Forms.TextBox();
             this.NonAlcoholicNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.BeerAlesTab = new System.Windows.Forms.TabPage();
+            this.BeerSearch = new System.Windows.Forms.TextBox();
             this.BeerAleNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.CocktailsTab = new System.Windows.Forms.TabPage();
+            this.CocktailSearch = new System.Windows.Forms.TextBox();
             this.CocktailsNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.PunchesTab = new System.Windows.Forms.TabPage();
+            this.PunchSearch = new System.Windows.Forms.TextBox();
             this.PunchesNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.LiqueursTab = new System.Windows.Forms.TabPage();
+            this.LiqueurSearch = new System.Windows.Forms.TextBox();
             this.LiqueursNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.ShotsTab = new System.Windows.Forms.TabPage();
+            this.ShotSearch = new System.Windows.Forms.TextBox();
             this.ShotsNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.DrinksTab = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DrinkSearch = new System.Windows.Forms.TextBox();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
@@ -99,6 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.beersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nonalcoholicBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffeeteaBindingSource)).BeginInit();
+            this.CustomTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomNameBox)).BeginInit();
             this.CoffeeTeaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeeTeaNameBox)).BeginInit();
             this.nonAlcoholicTab.SuspendLayout();
@@ -196,7 +207,7 @@
             this.BeerAleBarItem,
             this.NonAlcoholicBarItem,
             this.CoffeeTeaBarItem,
-            this.navBarItem9});
+            this.CustomItem});
             this.navBarControl1.Location = new System.Drawing.Point(0, 144);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 175;
@@ -218,7 +229,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.BeerAleBarItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.NonAlcoholicBarItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.CoffeeTeaBarItem),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem9)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.CustomItem)});
             this.TheBarGroup.Name = "TheBarGroup";
             // 
             // DrinksBarItem
@@ -269,10 +280,11 @@
             this.CoffeeTeaBarItem.Name = "CoffeeTeaBarItem";
             this.CoffeeTeaBarItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CoffeeTeaBarItem_LinkClicked);
             // 
-            // navBarItem9
+            // CustomItem
             // 
-            this.navBarItem9.Caption = "Custom Recipies";
-            this.navBarItem9.Name = "navBarItem9";
+            this.CustomItem.Caption = "Custom Recipies";
+            this.CustomItem.Name = "CustomItem";
+            this.CustomItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CustomItem_LinkClicked);
             // 
             // navBarGroup1
             // 
@@ -345,6 +357,8 @@
             // CustomTab
             // 
             this.CustomTab.AutoScroll = true;
+            this.CustomTab.Controls.Add(this.CustomNameBox);
+            this.CustomTab.Controls.Add(this.CustomSearch);
             this.CustomTab.Location = new System.Drawing.Point(4, 58);
             this.CustomTab.Name = "CustomTab";
             this.CustomTab.Padding = new System.Windows.Forms.Padding(3);
@@ -353,9 +367,30 @@
             this.CustomTab.Text = "CustomRecipes";
             this.CustomTab.UseVisualStyleBackColor = true;
             // 
+            // CustomNameBox
+            // 
+            this.CustomNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CustomNameBox.Location = new System.Drawing.Point(0, 28);
+            this.CustomNameBox.Name = "CustomNameBox";
+            this.CustomNameBox.Size = new System.Drawing.Size(272, 438);
+            this.CustomNameBox.TabIndex = 1;
+            // 
+            // CustomSearch
+            // 
+            this.CustomSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CustomSearch.Location = new System.Drawing.Point(0, 2);
+            this.CustomSearch.Name = "CustomSearch";
+            this.CustomSearch.Size = new System.Drawing.Size(272, 21);
+            this.CustomSearch.TabIndex = 0;
+            // 
             // CoffeeTeaTab
             // 
             this.CoffeeTeaTab.AutoScroll = true;
+            this.CoffeeTeaTab.Controls.Add(this.CoffeeTeaSearch);
             this.CoffeeTeaTab.Controls.Add(this.CoffeeTeaNameBox);
             this.CoffeeTeaTab.Location = new System.Drawing.Point(4, 58);
             this.CoffeeTeaTab.Name = "CoffeeTeaTab";
@@ -363,6 +398,16 @@
             this.CoffeeTeaTab.TabIndex = 7;
             this.CoffeeTeaTab.Text = "CoffeeTea";
             this.CoffeeTeaTab.UseVisualStyleBackColor = true;
+            // 
+            // CoffeeTeaSearch
+            // 
+            this.CoffeeTeaSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CoffeeTeaSearch.Location = new System.Drawing.Point(0, 2);
+            this.CoffeeTeaSearch.Name = "CoffeeTeaSearch";
+            this.CoffeeTeaSearch.Size = new System.Drawing.Size(272, 21);
+            this.CoffeeTeaSearch.TabIndex = 12;
             // 
             // CoffeeTeaNameBox
             // 
@@ -380,6 +425,7 @@
             // nonAlcoholicTab
             // 
             this.nonAlcoholicTab.AutoScroll = true;
+            this.nonAlcoholicTab.Controls.Add(this.NonAlcoholicSearch);
             this.nonAlcoholicTab.Controls.Add(this.NonAlcoholicNameBox);
             this.nonAlcoholicTab.Location = new System.Drawing.Point(4, 58);
             this.nonAlcoholicTab.Name = "nonAlcoholicTab";
@@ -387,6 +433,16 @@
             this.nonAlcoholicTab.TabIndex = 6;
             this.nonAlcoholicTab.Text = "nonAlcoholic";
             this.nonAlcoholicTab.UseVisualStyleBackColor = true;
+            // 
+            // NonAlcoholicSearch
+            // 
+            this.NonAlcoholicSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NonAlcoholicSearch.Location = new System.Drawing.Point(0, 2);
+            this.NonAlcoholicSearch.Name = "NonAlcoholicSearch";
+            this.NonAlcoholicSearch.Size = new System.Drawing.Size(272, 21);
+            this.NonAlcoholicSearch.TabIndex = 11;
             // 
             // NonAlcoholicNameBox
             // 
@@ -404,6 +460,7 @@
             // BeerAlesTab
             // 
             this.BeerAlesTab.AutoScroll = true;
+            this.BeerAlesTab.Controls.Add(this.BeerSearch);
             this.BeerAlesTab.Controls.Add(this.BeerAleNameBox);
             this.BeerAlesTab.Location = new System.Drawing.Point(4, 58);
             this.BeerAlesTab.Name = "BeerAlesTab";
@@ -411,6 +468,16 @@
             this.BeerAlesTab.TabIndex = 5;
             this.BeerAlesTab.Text = "BeerandAles";
             this.BeerAlesTab.UseVisualStyleBackColor = true;
+            // 
+            // BeerSearch
+            // 
+            this.BeerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BeerSearch.Location = new System.Drawing.Point(0, 2);
+            this.BeerSearch.Name = "BeerSearch";
+            this.BeerSearch.Size = new System.Drawing.Size(272, 21);
+            this.BeerSearch.TabIndex = 10;
             // 
             // BeerAleNameBox
             // 
@@ -428,6 +495,7 @@
             // CocktailsTab
             // 
             this.CocktailsTab.AutoScroll = true;
+            this.CocktailsTab.Controls.Add(this.CocktailSearch);
             this.CocktailsTab.Controls.Add(this.CocktailsNameBox);
             this.CocktailsTab.Location = new System.Drawing.Point(4, 58);
             this.CocktailsTab.Name = "CocktailsTab";
@@ -435,6 +503,16 @@
             this.CocktailsTab.TabIndex = 4;
             this.CocktailsTab.Text = "Cocktails";
             this.CocktailsTab.UseVisualStyleBackColor = true;
+            // 
+            // CocktailSearch
+            // 
+            this.CocktailSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CocktailSearch.Location = new System.Drawing.Point(0, 2);
+            this.CocktailSearch.Name = "CocktailSearch";
+            this.CocktailSearch.Size = new System.Drawing.Size(272, 21);
+            this.CocktailSearch.TabIndex = 9;
             // 
             // CocktailsNameBox
             // 
@@ -452,6 +530,7 @@
             // PunchesTab
             // 
             this.PunchesTab.AutoScroll = true;
+            this.PunchesTab.Controls.Add(this.PunchSearch);
             this.PunchesTab.Controls.Add(this.PunchesNameBox);
             this.PunchesTab.Location = new System.Drawing.Point(4, 58);
             this.PunchesTab.Name = "PunchesTab";
@@ -459,6 +538,16 @@
             this.PunchesTab.TabIndex = 3;
             this.PunchesTab.Text = "Punches";
             this.PunchesTab.UseVisualStyleBackColor = true;
+            // 
+            // PunchSearch
+            // 
+            this.PunchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PunchSearch.Location = new System.Drawing.Point(0, 2);
+            this.PunchSearch.Name = "PunchSearch";
+            this.PunchSearch.Size = new System.Drawing.Size(272, 21);
+            this.PunchSearch.TabIndex = 8;
             // 
             // PunchesNameBox
             // 
@@ -476,6 +565,7 @@
             // LiqueursTab
             // 
             this.LiqueursTab.AutoScroll = true;
+            this.LiqueursTab.Controls.Add(this.LiqueurSearch);
             this.LiqueursTab.Controls.Add(this.LiqueursNameBox);
             this.LiqueursTab.Location = new System.Drawing.Point(4, 58);
             this.LiqueursTab.Name = "LiqueursTab";
@@ -483,6 +573,16 @@
             this.LiqueursTab.TabIndex = 2;
             this.LiqueursTab.Text = "LiqueursTab";
             this.LiqueursTab.UseVisualStyleBackColor = true;
+            // 
+            // LiqueurSearch
+            // 
+            this.LiqueurSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LiqueurSearch.Location = new System.Drawing.Point(0, 2);
+            this.LiqueurSearch.Name = "LiqueurSearch";
+            this.LiqueurSearch.Size = new System.Drawing.Size(272, 21);
+            this.LiqueurSearch.TabIndex = 7;
             // 
             // LiqueursNameBox
             // 
@@ -500,6 +600,7 @@
             // ShotsTab
             // 
             this.ShotsTab.AutoScroll = true;
+            this.ShotsTab.Controls.Add(this.ShotSearch);
             this.ShotsTab.Controls.Add(this.ShotsNameBox);
             this.ShotsTab.Location = new System.Drawing.Point(4, 58);
             this.ShotsTab.Name = "ShotsTab";
@@ -507,6 +608,16 @@
             this.ShotsTab.TabIndex = 1;
             this.ShotsTab.Text = "Shots";
             this.ShotsTab.UseVisualStyleBackColor = true;
+            // 
+            // ShotSearch
+            // 
+            this.ShotSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ShotSearch.Location = new System.Drawing.Point(0, 2);
+            this.ShotSearch.Name = "ShotSearch";
+            this.ShotSearch.Size = new System.Drawing.Size(272, 21);
+            this.ShotSearch.TabIndex = 6;
             // 
             // ShotsNameBox
             // 
@@ -524,7 +635,7 @@
             // DrinksTab
             // 
             this.DrinksTab.AutoScroll = true;
-            this.DrinksTab.Controls.Add(this.textBox1);
+            this.DrinksTab.Controls.Add(this.DrinkSearch);
             this.DrinksTab.Controls.Add(this.DrinksNameBox);
             this.DrinksTab.Location = new System.Drawing.Point(4, 58);
             this.DrinksTab.Name = "DrinksTab";
@@ -533,15 +644,15 @@
             this.DrinksTab.Text = "Drinks";
             this.DrinksTab.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // DrinkSearch
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DrinkSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(0, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 21);
-            this.textBox1.TabIndex = 2;
+            this.DrinkSearch.Location = new System.Drawing.Point(0, 2);
+            this.DrinkSearch.Name = "DrinkSearch";
+            this.DrinkSearch.Size = new System.Drawing.Size(272, 21);
+            this.DrinkSearch.TabIndex = 2;
             // 
             // DrinksNameBox
             // 
@@ -604,19 +715,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.beersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nonalcoholicBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffeeteaBindingSource)).EndInit();
+            this.CustomTab.ResumeLayout(false);
+            this.CustomTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomNameBox)).EndInit();
             this.CoffeeTeaTab.ResumeLayout(false);
+            this.CoffeeTeaTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeeTeaNameBox)).EndInit();
             this.nonAlcoholicTab.ResumeLayout(false);
+            this.nonAlcoholicTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NonAlcoholicNameBox)).EndInit();
             this.BeerAlesTab.ResumeLayout(false);
+            this.BeerAlesTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BeerAleNameBox)).EndInit();
             this.CocktailsTab.ResumeLayout(false);
+            this.CocktailsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CocktailsNameBox)).EndInit();
             this.PunchesTab.ResumeLayout(false);
+            this.PunchesTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PunchesNameBox)).EndInit();
             this.LiqueursTab.ResumeLayout(false);
+            this.LiqueursTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LiqueursNameBox)).EndInit();
             this.ShotsTab.ResumeLayout(false);
+            this.ShotsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShotsNameBox)).EndInit();
             this.DrinksTab.ResumeLayout(false);
             this.DrinksTab.PerformLayout();
@@ -646,7 +767,7 @@
         private DevExpress.XtraNavBar.NavBarItem BeerAleBarItem;
         private DevExpress.XtraNavBar.NavBarItem NonAlcoholicBarItem;
         private DevExpress.XtraNavBar.NavBarItem CoffeeTeaBarItem;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem9;
+        private DevExpress.XtraNavBar.NavBarItem CustomItem;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private System.Windows.Forms.BindingSource xpressShotsDataSetBindingSource;
@@ -683,7 +804,16 @@
         private System.Windows.Forms.TabPage CoffeeTeaTab;
         private DevExpress.XtraEditors.ListBoxControl CoffeeTeaNameBox;
         private System.Windows.Forms.TabPage CustomTab;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DrinkSearch;
+        private System.Windows.Forms.TextBox ShotSearch;
+        private System.Windows.Forms.TextBox LiqueurSearch;
+        private System.Windows.Forms.TextBox PunchSearch;
+        private System.Windows.Forms.TextBox CocktailSearch;
+        private System.Windows.Forms.TextBox BeerSearch;
+        private System.Windows.Forms.TextBox NonAlcoholicSearch;
+        private System.Windows.Forms.TextBox CoffeeTeaSearch;
+        private DevExpress.XtraEditors.ListBoxControl CustomNameBox;
+        private System.Windows.Forms.TextBox CustomSearch;
     }
 }
 
