@@ -22,7 +22,7 @@ namespace bartenderexpressReloaded
             InitializeComponent();
             
            
-            DrinksNameBox.Hide();
+            DrinksNameBox.Show();
             ShotsNameBox.Hide();
             LiqueursNameBox.Hide();
             PunchesNameBox.Hide();
