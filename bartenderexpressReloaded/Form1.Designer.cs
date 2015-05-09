@@ -93,8 +93,8 @@
             this.DrinksTab = new System.Windows.Forms.TabPage();
             this.DrinkSearch = new System.Windows.Forms.TextBox();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.recipesTableAdapter1 = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.recipesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
@@ -128,8 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ShotsNameBox)).BeginInit();
             this.DrinksTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DrinksNameBox)).BeginInit();
-            this.WizardPages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource1)).BeginInit();
+            this.WizardPages.SuspendLayout();
             this.SuspendLayout();
             // 
             // recipesBindingSource
@@ -389,6 +389,7 @@
             this.CustomSearch.Name = "CustomSearch";
             this.CustomSearch.Size = new System.Drawing.Size(272, 21);
             this.CustomSearch.TabIndex = 0;
+            this.CustomSearch.TextChanged += new System.EventHandler(this.CustomSearch_TextChanged);
             // 
             // CoffeeTeaTab
             // 
@@ -411,6 +412,7 @@
             this.CoffeeTeaSearch.Name = "CoffeeTeaSearch";
             this.CoffeeTeaSearch.Size = new System.Drawing.Size(272, 21);
             this.CoffeeTeaSearch.TabIndex = 12;
+            this.CoffeeTeaSearch.TextChanged += new System.EventHandler(this.CoffeeTeaSearch_TextChanged);
             // 
             // CoffeeTeaNameBox
             // 
@@ -446,6 +448,7 @@
             this.NonAlcoholicSearch.Name = "NonAlcoholicSearch";
             this.NonAlcoholicSearch.Size = new System.Drawing.Size(272, 21);
             this.NonAlcoholicSearch.TabIndex = 11;
+            this.NonAlcoholicSearch.TextChanged += new System.EventHandler(this.NonAlcoholicSearch_TextChanged);
             // 
             // NonAlcoholicNameBox
             // 
@@ -481,6 +484,7 @@
             this.BeerSearch.Name = "BeerSearch";
             this.BeerSearch.Size = new System.Drawing.Size(272, 21);
             this.BeerSearch.TabIndex = 10;
+            this.BeerSearch.TextChanged += new System.EventHandler(this.BeerSearch_TextChanged);
             // 
             // BeerAleNameBox
             // 
@@ -516,6 +520,7 @@
             this.CocktailSearch.Name = "CocktailSearch";
             this.CocktailSearch.Size = new System.Drawing.Size(272, 21);
             this.CocktailSearch.TabIndex = 9;
+            this.CocktailSearch.TextChanged += new System.EventHandler(this.CocktailSearch_TextChanged);
             // 
             // CocktailsNameBox
             // 
@@ -551,6 +556,7 @@
             this.PunchSearch.Name = "PunchSearch";
             this.PunchSearch.Size = new System.Drawing.Size(272, 21);
             this.PunchSearch.TabIndex = 8;
+            this.PunchSearch.TextChanged += new System.EventHandler(this.PunchSearch_TextChanged);
             // 
             // PunchesNameBox
             // 
@@ -586,6 +592,7 @@
             this.LiqueurSearch.Name = "LiqueurSearch";
             this.LiqueurSearch.Size = new System.Drawing.Size(272, 21);
             this.LiqueurSearch.TabIndex = 7;
+            this.LiqueurSearch.TextChanged += new System.EventHandler(this.LiqueurSearch_TextChanged);
             // 
             // LiqueursNameBox
             // 
@@ -621,6 +628,7 @@
             this.ShotSearch.Name = "ShotSearch";
             this.ShotSearch.Size = new System.Drawing.Size(272, 21);
             this.ShotSearch.TabIndex = 6;
+            this.ShotSearch.TextChanged += new System.EventHandler(this.ShotSearch_TextChanged);
             // 
             // ShotsNameBox
             // 
@@ -672,6 +680,11 @@
             this.DrinksNameBox.ValueMember = "name";
             this.DrinksNameBox.DoubleClick += new System.EventHandler(this.nameListCount);
             // 
+            // recipesBindingSource1
+            // 
+            this.recipesBindingSource1.DataMember = "recipes";
+            this.recipesBindingSource1.DataSource = this.xpressShotsDataSetBindingSource;
+            // 
             // WizardPages
             // 
             this.WizardPages.Controls.Add(this.DrinksTab);
@@ -690,11 +703,6 @@
             this.WizardPages.SelectedIndex = 0;
             this.WizardPages.Size = new System.Drawing.Size(280, 526);
             this.WizardPages.TabIndex = 13;
-            // 
-            // recipesBindingSource1
-            // 
-            this.recipesBindingSource1.DataMember = "recipes";
-            this.recipesBindingSource1.DataSource = this.xpressShotsDataSetBindingSource;
             // 
             // recipesTableAdapter1
             // 
@@ -755,8 +763,8 @@
             this.DrinksTab.ResumeLayout(false);
             this.DrinksTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DrinksNameBox)).EndInit();
-            this.WizardPages.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource1)).EndInit();
+            this.WizardPages.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

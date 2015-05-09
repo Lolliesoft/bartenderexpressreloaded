@@ -169,5 +169,81 @@ namespace bartenderexpressReloaded
                 DrinksNameBox.SelectedIndex = index;
             }
         }
+
+        private void ShotSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = ShotsNameBox.FindString(ShotSearch.Text);
+            if (0 <= index)
+            {
+                ShotsNameBox.SelectedIndex = index;
+            }
+
+        }
+
+        private void LiqueurSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = LiqueursNameBox.FindString(LiqueurSearch.Text);
+            if (0 <= index)
+            {
+                LiqueursNameBox.SelectedIndex = index;
+            }
+
+        }
+
+        private void PunchSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = PunchesNameBox.FindString(PunchSearch.Text);
+            if (0 <= index)
+            {
+                PunchesNameBox.SelectedIndex = index;
+            }
+        }
+
+        private void CocktailSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = CocktailsNameBox.FindString(CocktailSearch.Text);
+            if (0 <= index)
+            {
+                CocktailsNameBox.SelectedIndex = index;
+            }
+
+        }
+
+        private void BeerSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = BeerAleNameBox.FindString(BeerSearch.Text);
+            if (0 <= index)
+            {
+                BeerAleNameBox.SelectedIndex = index;
+            }
+
+        }
+
+        private void NonAlcoholicSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = NonAlcoholicNameBox.FindString(NonAlcoholicSearch.Text);
+            if (0 <= index)
+            {
+                NonAlcoholicNameBox.SelectedIndex = index;
+            }
+        }
+
+        private void CoffeeTeaSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = CoffeeTeaNameBox.FindString(CoffeeTeaSearch.Text);
+            if (0 <= index)
+            {
+                CoffeeTeaNameBox.SelectedIndex = index;
+            }
+        }
+
+        private void CustomSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = CustomNameBox.FindString(CustomSearch.Text);
+            if (0 <= index)
+            {
+                CustomNameBox.SelectedIndex = index;
+            }
+        }
     }
 }
