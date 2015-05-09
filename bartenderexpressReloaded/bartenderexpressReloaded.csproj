@@ -83,6 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bartenderExpressDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CueProvider.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

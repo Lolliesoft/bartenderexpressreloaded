@@ -37,6 +37,8 @@ namespace bartenderexpressReloaded
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'xpressShotsDataSet.recipes' table. You can move, or remove it, as needed.
+            this.recipesTableAdapter1.Fill(this.xpressShotsDataSet.recipes);
             // TODO: This line of code loads data into the 'xpressShotsDataSet.coffeetea' table. You can move, or remove it, as needed.
             this.coffeeteaTableAdapter.Fill(this.xpressShotsDataSet.coffeetea);
             // TODO: This line of code loads data into the 'xpressShotsDataSet.nonalcoholic' table. You can move, or remove it, as needed.
@@ -53,8 +55,15 @@ namespace bartenderexpressReloaded
             this.shotsTableAdapter.Fill(this.xpressShotsDataSet.shots);
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
-           
-            
+            CueProvider.SetCue(DrinkSearch, "Search Drinks");
+            CueProvider.SetCue(ShotSearch, "Search Shots");
+            CueProvider.SetCue(LiqueurSearch, "Search Liqueurs");
+            CueProvider.SetCue(PunchSearch, "Search Punches");
+            CueProvider.SetCue(BeerSearch, "Search Beer and Ales");
+            CueProvider.SetCue(CoffeeTeaSearch, "Search Coffee and Teas");
+            CueProvider.SetCue(NonAlcoholicSearch, "Search Non-Alcoholic Drinks");
+            CueProvider.SetCue(CocktailSearch, "Search Cocktails");
+            CueProvider.SetCue(CustomSearch, "Search Your Recipes");                     
         }
 
         private void nameListCount(object sender, EventArgs e)
@@ -150,6 +159,15 @@ namespace bartenderexpressReloaded
         {
             WizardPages.SelectedTab = CustomTab;
             CustomNameBox.Show();
+        }
+
+        private void DrinkSearch_TextChanged(object sender, EventArgs e)
+        {
+            int index = DrinksNameBox.FindString(DrinkSearch.Text);
+            if (0 <= index)
+            {
+                DrinksNameBox.SelectedIndex = index;
+            }
         }
     }
 }
