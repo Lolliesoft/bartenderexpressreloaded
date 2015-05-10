@@ -22,14 +22,14 @@ namespace bartenderexpressReloaded
             InitializeComponent();
             
            
-            DrinksNameBox.Show();
-            ShotsNameBox.Hide();
-            LiqueursNameBox.Hide();
-            PunchesNameBox.Hide();
-            CocktailsNameBox.Hide();
-            BeerAleNameBox.Hide();
-            NonAlcoholicNameBox.Hide();
-            CoffeeTeaNameBox.Hide();
+            //DrinksNameBox.Show();
+            //ShotsNameBox.Hide();
+            //LiqueursNameBox.Hide();
+            //PunchesNameBox.Hide();
+            //CocktailsNameBox.Hide();
+            //BeerAleNameBox.Hide();
+            //NonAlcoholicNameBox.Hide();
+            //CoffeeTeaNameBox.Hide();
            
         }
 
@@ -67,6 +67,34 @@ namespace bartenderexpressReloaded
         }
 
         private void nameListCount(object sender, EventArgs e)
+        {
+            if (DrinksNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT drink_num FROM recipes WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
+                        toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.DrinksNameBox.ItemCount.ToString());
+          
+                    }
+                    
+                   
+                }
+            }
+        }
+
+
+
+
+        private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
             if (DrinksNameBox.SelectedItem != null)
             {
@@ -167,6 +195,7 @@ namespace bartenderexpressReloaded
             if (0 <= index)
             {
                 DrinksNameBox.SelectedIndex = index;
+                
             }
         }
 
@@ -244,6 +273,23 @@ namespace bartenderexpressReloaded
             {
                 CustomNameBox.SelectedIndex = index;
             }
+        }
+
+        private void CheckKeys(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                this.DrinksNameBox_DoubleClick(e.KeyChar, e);
+            }
+        }
+
+        private void DrinksNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.DrinksNameBox_DoubleClick(e.KeyChar, e);
+            }
+
         }
     }
 }
