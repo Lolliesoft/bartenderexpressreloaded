@@ -645,6 +645,7 @@
             this.ShotsNameBox.Size = new System.Drawing.Size(272, 438);
             this.ShotsNameBox.TabIndex = 5;
             this.ShotsNameBox.ValueMember = "name";
+            this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
             // 
             // DrinksTab
             // 
@@ -682,6 +683,7 @@
             this.DrinksNameBox.Size = new System.Drawing.Size(272, 313);
             this.DrinksNameBox.TabIndex = 1;
             this.DrinksNameBox.ValueMember = "name";
+            this.DrinksNameBox.TabStopChanged += new System.EventHandler(this.DrinksNameBox_TabStopChanged);
             this.DrinksNameBox.Click += new System.EventHandler(this.nameListCount);
             this.DrinksNameBox.DoubleClick += new System.EventHandler(this.DrinksNameBox_DoubleClick);
             this.DrinksNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DrinksNameBox_KeyPress);
@@ -729,12 +731,14 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(158, 22);
             this.toolStripStatusLabel1.Text = "Double Click to Open Recipe";
             // 
             // toolStripStatusLabel2
             // 
+            this.toolStripStatusLabel2.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 22);
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";

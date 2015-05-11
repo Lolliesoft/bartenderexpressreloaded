@@ -85,10 +85,33 @@ namespace bartenderexpressReloaded
                         toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.DrinksNameBox.ItemCount.ToString());
           
                     }
-                    
-                   
                 }
             }
+  
+
+        }
+        private void ShotListCount(object sender, EventArgs e)
+        {
+            if (ShotsNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = ShotsNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT shots_key FROM shots WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
+                        toolStripStatusLabel1.Text = "Shot " + reader["shots_key"].ToString() + " of " + (this.ShotsNameBox.ItemCount.ToString());
+
+                    }
+                }
+            }
+
         }
 
 
@@ -131,13 +154,19 @@ namespace bartenderexpressReloaded
             WizardPages.SelectedTab = DrinksTab;
                 
             DrinksNameBox.Show();
-          
-        }
+
+            toolStripStatusLabel1.Text = (this.DrinksNameBox.ItemCount.ToString()) + " Drink Recipes";
+
+         }
+
 
         private void ShotsBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            ShotsNameBox.Show();
             WizardPages.SelectedTab = ShotsTab;
+
+            ShotsNameBox.Show();
+
+            toolStripStatusLabel1.Text = (this.ShotsNameBox.ItemCount.ToString()) + " Shot Recipes";
           
         }
 
@@ -145,6 +174,7 @@ namespace bartenderexpressReloaded
         {
             WizardPages.SelectedTab = LiqueursTab; 
             LiqueursNameBox.Show();
+            toolStripStatusLabel1.Text = (this.LiqueursNameBox.ItemCount.ToString()) + " Liqueurs Recipes";
          
         }
 
@@ -152,6 +182,7 @@ namespace bartenderexpressReloaded
         {
             WizardPages.SelectedTab = PunchesTab; 
             PunchesNameBox.Show();
+            toolStripStatusLabel1.Text = (this.PunchesNameBox.ItemCount.ToString()) + " Punch Recipes";
           
         }
 
@@ -159,6 +190,7 @@ namespace bartenderexpressReloaded
         {
             WizardPages.SelectedTab = CocktailsTab; 
             CocktailsNameBox.Show();
+            toolStripStatusLabel1.Text = (this.CocktailsNameBox.ItemCount.ToString()) + " Cocktail Recipes";
           
         }
 
@@ -166,6 +198,7 @@ namespace bartenderexpressReloaded
         {
             WizardPages.SelectedTab = BeerAlesTab; 
             BeerAleNameBox.Show();
+            toolStripStatusLabel1.Text = (this.BeerAleNameBox.ItemCount.ToString()) + " Beer and Ale Recipes";
          
         }
 
@@ -173,13 +206,14 @@ namespace bartenderexpressReloaded
         {
             WizardPages.SelectedTab = nonAlcoholicTab; 
             NonAlcoholicNameBox.Show();
-           
+            toolStripStatusLabel1.Text = (this.NonAlcoholicNameBox.ItemCount.ToString()) + " Non Alcoholic Recipes ";
         }
 
         private void CoffeeTeaBarItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             WizardPages.SelectedTab = CoffeeTeaTab; 
             CoffeeTeaNameBox.Show();
+            toolStripStatusLabel1.Text = (this.CoffeeTeaNameBox.ItemCount.ToString()) + " Coffee and Tea Recipes ";
    
         }
 
@@ -187,6 +221,7 @@ namespace bartenderexpressReloaded
         {
             WizardPages.SelectedTab = CustomTab;
             CustomNameBox.Show();
+            toolStripStatusLabel1.Text = (this.CustomNameBox.ItemCount.ToString()) + " Custom Recipes ";
         }
 
         private void DrinkSearch_TextChanged(object sender, EventArgs e)
@@ -288,8 +323,19 @@ namespace bartenderexpressReloaded
             if (e.KeyChar == (char)Keys.Enter)
             {
                 this.DrinksNameBox_DoubleClick(e.KeyChar, e);
+                DrinksNameBox.Focus();
             }
 
+            else if (e.KeyChar == (char)Keys.Tab)           
+            {
+                DrinksNameBox.Focus();
+                //SendKeys.Send(e.KeyChar.ToString());
+            }
+        }
+
+        private void DrinksNameBox_TabStopChanged(object sender, EventArgs e)
+        {
+            DrinksNameBox.TabStop = true;
         }
     }
 }
