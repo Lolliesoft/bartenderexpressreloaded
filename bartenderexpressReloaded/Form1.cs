@@ -90,6 +90,7 @@ namespace bartenderexpressReloaded
   
 
         }
+
         private void ShotListCount(object sender, EventArgs e)
         {
             if (ShotsNameBox.SelectedItem != null)
@@ -114,6 +115,30 @@ namespace bartenderexpressReloaded
 
         }
 
+
+        private void PunchesNameBox_Click(object sender, EventArgs e)
+        {
+            if (PunchesNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = PunchesNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT punch_key FROM punches WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
+                        toolStripStatusLabel1.Text = "Punch " + reader["punch_key"].ToString() + " of " + (this.PunchesNameBox.ItemCount.ToString());
+
+                    }
+                }
+            }
+
+        }
 
 
 
@@ -326,16 +351,36 @@ namespace bartenderexpressReloaded
                 DrinksNameBox.Focus();
             }
 
-            else if (e.KeyChar == (char)Keys.Tab)           
-            {
-                DrinksNameBox.Focus();
-                //SendKeys.Send(e.KeyChar.ToString());
-            }
         }
 
         private void DrinksNameBox_TabStopChanged(object sender, EventArgs e)
         {
             DrinksNameBox.TabStop = true;
         }
+
+        private void LiqueursNameBox_Click(object sender, EventArgs e)
+        {
+            if (LiqueursNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = LiqueursNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT liqueur_key FROM liqueur WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
+                        toolStripStatusLabel1.Text = "Liqueur " + reader["liqueur_key"].ToString() + " of " + (this.LiqueursNameBox.ItemCount.ToString());
+
+                    }
+                }
+            }
+        }
+
+
     }
 }
