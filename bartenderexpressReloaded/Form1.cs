@@ -115,8 +115,29 @@ namespace bartenderexpressReloaded
 
         }
 
+        private void LiqueursListCount(object sender, EventArgs e)
+        {
+            //MessageBox.Show("hello");
+            if (LiqueursNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = LiqueursNameBox.SelectedValue.ToString();
 
-        private void PunchesNameBox_Click(object sender, EventArgs e)
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT liqueur_key FROM liqueurs WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        toolStripStatusLabel1.Text = "Liqueurs " + reader["liqueur_key"].ToString() + " of " + (this.LiqueursNameBox.ItemCount.ToString());
+                    }
+                }
+            }
+        }
+
+        private void PunchesListCount(object sender, EventArgs e)
         {
             if (PunchesNameBox.SelectedItem != null)
             {
@@ -137,10 +158,95 @@ namespace bartenderexpressReloaded
                     }
                 }
             }
-
         }
 
+        private void BeerListCount(object sender, EventArgs e)
+        {
+            if (BeerAleNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = BeerAleNameBox.SelectedValue.ToString();
 
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT beer_key FROM beers WHERE name ='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        toolStripStatusLabel1.Text = "Beer " + reader["beer_key"].ToString() + " of " + (this.BeerAleNameBox.ItemCount.ToString());
+                    }
+
+                }
+            }
+        }
+
+        private void NonAlcoholicListCount(object sender, EventArgs e)
+        {
+            if (NonAlcoholicNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = NonAlcoholicNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn7 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn7.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT nonalcoholic_key FROM nonalcoholic WHERE name ='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn7);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    
+                   
+
+                    while (reader.Read())
+                    {
+                        toolStripStatusLabel1.Text = "Non Alcoholic Recipe " + reader["nonalcoholic_key"].ToString() + " of " + (this.NonAlcoholicNameBox.ItemCount.ToString());
+                    }
+                }
+
+            }
+        }
+
+        private void CoffeeTeaListCount(object sender, EventArgs e)
+        {
+            if (CoffeeTeaNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = CoffeeTeaNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn6.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + statusbarrecipe + "'", conn6);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    
+                    while (reader.Read())
+                    {
+                        toolStripStatusLabel1.Text = "Coffee/Tea Recipe " + reader["coffeetea_key"].ToString() + " of " + (this.CoffeeTeaNameBox.ItemCount.ToString());
+                    }
+                }
+            }
+        }
+
+        private void CustomListCount(object sender, EventArgs e)
+        {
+            if (CustomNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = CustomNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn6.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT myrecipes_key FROM myRecipes WHERE name ='" + statusbarrecipe + "'", conn6);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        toolStripStatusLabel1.Text = "Custom Recipe " + reader["myrecipes_key"].ToString() + " of " + (this.CustomNameBox.ItemCount.ToString());
+                    }
+                }
+            }
+        }
 
         private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
@@ -357,30 +463,6 @@ namespace bartenderexpressReloaded
         {
             DrinksNameBox.TabStop = true;
         }
+      }
+  }
 
-        private void LiqueursNameBox_Click(object sender, EventArgs e)
-        {
-            if (LiqueursNameBox.SelectedItem != null)
-            {
-                string statusbarrecipe = LiqueursNameBox.SelectedValue.ToString();
-
-
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
-                {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT liqueur_key FROM liqueur WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
-                    SQLiteDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
-                        toolStripStatusLabel1.Text = "Liqueur " + reader["liqueur_key"].ToString() + " of " + (this.LiqueursNameBox.ItemCount.ToString());
-
-                    }
-                }
-            }
-        }
-
-
-    }
-}
