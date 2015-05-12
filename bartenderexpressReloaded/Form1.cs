@@ -280,6 +280,67 @@ namespace bartenderexpressReloaded
             }
         }
 
+        private void ShotsNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (ShotsNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = ShotsNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM shots WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = ShotsNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+
+                    //MessageBox.Show(reader["id"].ToString());
+
+
+                    //toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.listBoxControl1.Items.Count.ToString());
+                }
+            }
+        }
+
+        private void LiqueursNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (LiqueursNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = LiqueursNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM liqueurs WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = LiqueursNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+                }
+            }
+         }
+        
+
+
         private void DrinksBoxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             WizardPages.SelectedTab = DrinksTab;

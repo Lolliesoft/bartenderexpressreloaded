@@ -615,6 +615,7 @@
             this.LiqueursNameBox.TabIndex = 6;
             this.LiqueursNameBox.ValueMember = "name";
             this.LiqueursNameBox.Click += new System.EventHandler(this.LiqueursListCount);
+            this.LiqueursNameBox.DoubleClick += new System.EventHandler(this.LiqueursNameBox_DoubleClick);
             // 
             // ShotsTab
             // 
@@ -652,6 +653,7 @@
             this.ShotsNameBox.TabIndex = 5;
             this.ShotsNameBox.ValueMember = "name";
             this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
+            this.ShotsNameBox.DoubleClick += new System.EventHandler(this.ShotsNameBox_DoubleClick);
             // 
             // DrinksTab
             // 
