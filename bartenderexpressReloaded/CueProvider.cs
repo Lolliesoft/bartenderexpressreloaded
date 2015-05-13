@@ -28,7 +28,11 @@ namespace bartenderexpressReloaded
         /// <param name="cue">The cue text.</param>
         public static void SetCue (TextBox textBox, string cue)
         {
+            textBox.Font = new System.Drawing.Font();
+
+            //TextBox.DefaultFont.Italic = true;
             SendMessage(textBox.Handle, EM_SETCUEBANNER, 0, cue);
+
         }
 
         /// <summary>

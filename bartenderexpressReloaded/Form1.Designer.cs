@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
-            this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shotsBindingSource = new System.Windows.Forms.BindingSource();
+            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource();
             this.xpressShotsDataSet = new bartenderexpressReloaded.XpressShotsDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -53,12 +52,12 @@
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.punchesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.beersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.liqueursBindingSource = new System.Windows.Forms.BindingSource();
+            this.punchesBindingSource = new System.Windows.Forms.BindingSource();
+            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource();
+            this.beersBindingSource = new System.Windows.Forms.BindingSource();
+            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource();
+            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource();
             this.shotsTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.shotsTableAdapter();
             this.liqueursTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.liqueursTableAdapter();
             this.punchesTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.punchesTableAdapter();
@@ -93,7 +92,7 @@
             this.DrinksTab = new System.Windows.Forms.TabPage();
             this.DrinkSearch = new System.Windows.Forms.TextBox();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource();
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.recipesTableAdapter1 = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.recipesTableAdapter();
             this.statusStrip1 = new System.Windows.Forms.ToolStrip();
@@ -183,7 +182,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl1.Size = new System.Drawing.Size(987, 144);
+            this.ribbonControl1.Size = new System.Drawing.Size(1036, 144);
             // 
             // ribbonPage1
             // 
@@ -219,7 +218,7 @@
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 175;
             this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl1.Size = new System.Drawing.Size(175, 531);
+            this.navBarControl1.Size = new System.Drawing.Size(175, 546);
             this.navBarControl1.TabIndex = 3;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -366,10 +365,10 @@
             this.CustomTab.AutoScroll = true;
             this.CustomTab.Controls.Add(this.CustomNameBox);
             this.CustomTab.Controls.Add(this.CustomSearch);
-            this.CustomTab.Location = new System.Drawing.Point(4, 58);
+            this.CustomTab.Location = new System.Drawing.Point(4, 40);
             this.CustomTab.Name = "CustomTab";
             this.CustomTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CustomTab.Size = new System.Drawing.Size(272, 469);
+            this.CustomTab.Size = new System.Drawing.Size(290, 502);
             this.CustomTab.TabIndex = 8;
             this.CustomTab.Text = "CustomRecipes";
             this.CustomTab.UseVisualStyleBackColor = true;
@@ -400,9 +399,9 @@
             this.CoffeeTeaTab.AutoScroll = true;
             this.CoffeeTeaTab.Controls.Add(this.CoffeeTeaSearch);
             this.CoffeeTeaTab.Controls.Add(this.CoffeeTeaNameBox);
-            this.CoffeeTeaTab.Location = new System.Drawing.Point(4, 58);
+            this.CoffeeTeaTab.Location = new System.Drawing.Point(4, 40);
             this.CoffeeTeaTab.Name = "CoffeeTeaTab";
-            this.CoffeeTeaTab.Size = new System.Drawing.Size(272, 469);
+            this.CoffeeTeaTab.Size = new System.Drawing.Size(290, 502);
             this.CoffeeTeaTab.TabIndex = 7;
             this.CoffeeTeaTab.Text = "CoffeeTea";
             this.CoffeeTeaTab.UseVisualStyleBackColor = true;
@@ -437,9 +436,9 @@
             this.nonAlcoholicTab.AutoScroll = true;
             this.nonAlcoholicTab.Controls.Add(this.NonAlcoholicSearch);
             this.nonAlcoholicTab.Controls.Add(this.NonAlcoholicNameBox);
-            this.nonAlcoholicTab.Location = new System.Drawing.Point(4, 58);
+            this.nonAlcoholicTab.Location = new System.Drawing.Point(4, 40);
             this.nonAlcoholicTab.Name = "nonAlcoholicTab";
-            this.nonAlcoholicTab.Size = new System.Drawing.Size(272, 469);
+            this.nonAlcoholicTab.Size = new System.Drawing.Size(290, 502);
             this.nonAlcoholicTab.TabIndex = 6;
             this.nonAlcoholicTab.Text = "nonAlcoholic";
             this.nonAlcoholicTab.UseVisualStyleBackColor = true;
@@ -474,9 +473,9 @@
             this.BeerAlesTab.AutoScroll = true;
             this.BeerAlesTab.Controls.Add(this.BeerSearch);
             this.BeerAlesTab.Controls.Add(this.BeerAleNameBox);
-            this.BeerAlesTab.Location = new System.Drawing.Point(4, 58);
+            this.BeerAlesTab.Location = new System.Drawing.Point(4, 40);
             this.BeerAlesTab.Name = "BeerAlesTab";
-            this.BeerAlesTab.Size = new System.Drawing.Size(272, 469);
+            this.BeerAlesTab.Size = new System.Drawing.Size(290, 502);
             this.BeerAlesTab.TabIndex = 5;
             this.BeerAlesTab.Text = "BeerandAles";
             this.BeerAlesTab.UseVisualStyleBackColor = true;
@@ -511,9 +510,9 @@
             this.CocktailsTab.AutoScroll = true;
             this.CocktailsTab.Controls.Add(this.CocktailSearch);
             this.CocktailsTab.Controls.Add(this.CocktailsNameBox);
-            this.CocktailsTab.Location = new System.Drawing.Point(4, 58);
+            this.CocktailsTab.Location = new System.Drawing.Point(4, 40);
             this.CocktailsTab.Name = "CocktailsTab";
-            this.CocktailsTab.Size = new System.Drawing.Size(272, 469);
+            this.CocktailsTab.Size = new System.Drawing.Size(290, 502);
             this.CocktailsTab.TabIndex = 4;
             this.CocktailsTab.Text = "Cocktails";
             this.CocktailsTab.UseVisualStyleBackColor = true;
@@ -547,9 +546,9 @@
             this.PunchesTab.AutoScroll = true;
             this.PunchesTab.Controls.Add(this.PunchSearch);
             this.PunchesTab.Controls.Add(this.PunchesNameBox);
-            this.PunchesTab.Location = new System.Drawing.Point(4, 58);
+            this.PunchesTab.Location = new System.Drawing.Point(4, 40);
             this.PunchesTab.Name = "PunchesTab";
-            this.PunchesTab.Size = new System.Drawing.Size(272, 469);
+            this.PunchesTab.Size = new System.Drawing.Size(290, 502);
             this.PunchesTab.TabIndex = 3;
             this.PunchesTab.Text = "Punches";
             this.PunchesTab.UseVisualStyleBackColor = true;
@@ -584,9 +583,9 @@
             this.LiqueursTab.AutoScroll = true;
             this.LiqueursTab.Controls.Add(this.LiqueurSearch);
             this.LiqueursTab.Controls.Add(this.LiqueursNameBox);
-            this.LiqueursTab.Location = new System.Drawing.Point(4, 58);
+            this.LiqueursTab.Location = new System.Drawing.Point(4, 40);
             this.LiqueursTab.Name = "LiqueursTab";
-            this.LiqueursTab.Size = new System.Drawing.Size(272, 469);
+            this.LiqueursTab.Size = new System.Drawing.Size(290, 502);
             this.LiqueursTab.TabIndex = 2;
             this.LiqueursTab.Text = "Liqueurs";
             this.LiqueursTab.UseVisualStyleBackColor = true;
@@ -615,16 +614,15 @@
             this.LiqueursNameBox.TabIndex = 6;
             this.LiqueursNameBox.ValueMember = "name";
             this.LiqueursNameBox.Click += new System.EventHandler(this.LiqueursListCount);
-            this.LiqueursNameBox.DoubleClick += new System.EventHandler(this.LiqueursNameBox_DoubleClick);
             // 
             // ShotsTab
             // 
             this.ShotsTab.AutoScroll = true;
             this.ShotsTab.Controls.Add(this.ShotSearch);
             this.ShotsTab.Controls.Add(this.ShotsNameBox);
-            this.ShotsTab.Location = new System.Drawing.Point(4, 58);
+            this.ShotsTab.Location = new System.Drawing.Point(4, 40);
             this.ShotsTab.Name = "ShotsTab";
-            this.ShotsTab.Size = new System.Drawing.Size(272, 469);
+            this.ShotsTab.Size = new System.Drawing.Size(290, 502);
             this.ShotsTab.TabIndex = 1;
             this.ShotsTab.Text = "Shots";
             this.ShotsTab.UseVisualStyleBackColor = true;
@@ -636,7 +634,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ShotSearch.Location = new System.Drawing.Point(0, 2);
             this.ShotSearch.Name = "ShotSearch";
-            this.ShotSearch.Size = new System.Drawing.Size(272, 21);
+            this.ShotSearch.Size = new System.Drawing.Size(290, 21);
             this.ShotSearch.TabIndex = 6;
             this.ShotSearch.TextChanged += new System.EventHandler(this.ShotSearch_TextChanged);
             // 
@@ -649,7 +647,7 @@
             this.ShotsNameBox.DisplayMember = "name";
             this.ShotsNameBox.Location = new System.Drawing.Point(0, 28);
             this.ShotsNameBox.Name = "ShotsNameBox";
-            this.ShotsNameBox.Size = new System.Drawing.Size(272, 575);
+            this.ShotsNameBox.Size = new System.Drawing.Size(290, 565);
             this.ShotsNameBox.TabIndex = 5;
             this.ShotsNameBox.ValueMember = "name";
             this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
@@ -660,9 +658,9 @@
             this.DrinksTab.AutoScroll = true;
             this.DrinksTab.Controls.Add(this.DrinkSearch);
             this.DrinksTab.Controls.Add(this.DrinksNameBox);
-            this.DrinksTab.Location = new System.Drawing.Point(4, 58);
+            this.DrinksTab.Location = new System.Drawing.Point(4, 40);
             this.DrinksTab.Name = "DrinksTab";
-            this.DrinksTab.Size = new System.Drawing.Size(272, 469);
+            this.DrinksTab.Size = new System.Drawing.Size(290, 502);
             this.DrinksTab.TabIndex = 0;
             this.DrinksTab.Text = "Drinks";
             this.DrinksTab.UseVisualStyleBackColor = true;
@@ -674,18 +672,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DrinkSearch.Location = new System.Drawing.Point(0, 2);
             this.DrinkSearch.Name = "DrinkSearch";
-            this.DrinkSearch.Size = new System.Drawing.Size(272, 21);
+            this.DrinkSearch.Size = new System.Drawing.Size(307, 21);
             this.DrinkSearch.TabIndex = 2;
             this.DrinkSearch.TextChanged += new System.EventHandler(this.DrinkSearch_TextChanged);
             this.DrinkSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DrinksNameBox_KeyPress);
             // 
             // DrinksNameBox
             // 
+            this.DrinksNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DrinksNameBox.DataSource = this.recipesBindingSource1;
             this.DrinksNameBox.DisplayMember = "name";
-            this.DrinksNameBox.Location = new System.Drawing.Point(0, 28);
+            this.DrinksNameBox.Location = new System.Drawing.Point(0, 29);
             this.DrinksNameBox.Name = "DrinksNameBox";
-            this.DrinksNameBox.Size = new System.Drawing.Size(272, 419);
+            this.DrinksNameBox.Size = new System.Drawing.Size(287, 449);
             this.DrinksNameBox.TabIndex = 1;
             this.DrinksNameBox.ValueMember = "name";
             this.DrinksNameBox.TabStopChanged += new System.EventHandler(this.DrinksNameBox_TabStopChanged);
@@ -700,8 +701,7 @@
             // 
             // WizardPages
             // 
-            this.WizardPages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.WizardPages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WizardPages.Controls.Add(this.DrinksTab);
             this.WizardPages.Controls.Add(this.ShotsTab);
@@ -712,11 +712,11 @@
             this.WizardPages.Controls.Add(this.nonAlcoholicTab);
             this.WizardPages.Controls.Add(this.CoffeeTeaTab);
             this.WizardPages.Controls.Add(this.CustomTab);
-            this.WizardPages.Location = new System.Drawing.Point(707, 144);
+            this.WizardPages.Location = new System.Drawing.Point(738, 144);
             this.WizardPages.Multiline = true;
             this.WizardPages.Name = "WizardPages";
             this.WizardPages.SelectedIndex = 0;
-            this.WizardPages.Size = new System.Drawing.Size(280, 531);
+            this.WizardPages.Size = new System.Drawing.Size(298, 546);
             this.WizardPages.TabIndex = 13;
             // 
             // recipesTableAdapter1
@@ -729,10 +729,10 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(175, 650);
+            this.statusStrip1.Location = new System.Drawing.Point(175, 665);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.statusStrip1.Size = new System.Drawing.Size(812, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(861, 25);
             this.statusStrip1.Stretch = true;
             this.statusStrip1.TabIndex = 15;
             this.statusStrip1.Text = "toolStrip1";
@@ -757,7 +757,7 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 675);
+            this.ClientSize = new System.Drawing.Size(1036, 690);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.WizardPages);
             this.Controls.Add(this.navBarControl1);
