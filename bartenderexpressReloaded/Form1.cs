@@ -341,9 +341,169 @@ namespace bartenderexpressReloaded
                 }
             }
          }
-        
+
+        private void PunchesNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (PunchesNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = PunchesNameBox.SelectedValue.ToString();
 
 
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM punches WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = PunchesNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void CocktailsNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (CocktailsNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = CocktailsNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM cocktails WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = CocktailsNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void BeerAleNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (BeerAleNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = BeerAleNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM beers WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = BeerAleNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void NonAlcoholicNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (NonAlcoholicNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = NonAlcoholicNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM nonalcoholic WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = NonAlcoholicNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+                }
+            }
+        }
+
+
+        private void CoffeeTeaNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (CoffeeTeaNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = CoffeeTeaNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM coffeetea WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = CoffeeTeaNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void CustomNameBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (CustomNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = CustomNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM MyRecipes WHERE name ='" + statusbarrecipe + "'", conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    { //MessageBox.Show(reader["directions"].ToString());
+                        Form2 child = new Form2();
+                        child.Text = CustomNameBox.SelectedValue.ToString();
+                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                        child.MdiParent = this;
+                        child.Show();
+
+                        break;
+                    }
+                }
+            }
+        }
         private void DrinksBoxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             WizardPages.SelectedTab = DrinksTab;
