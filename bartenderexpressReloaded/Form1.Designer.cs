@@ -381,9 +381,9 @@
             this.CustomNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CustomNameBox.Location = new System.Drawing.Point(0, 25);
+            this.CustomNameBox.Location = new System.Drawing.Point(1, 24);
             this.CustomNameBox.Name = "CustomNameBox";
-            this.CustomNameBox.Size = new System.Drawing.Size(290, 565);
+            this.CustomNameBox.Size = new System.Drawing.Size(280, 432);
             this.CustomNameBox.TabIndex = 1;
             this.CustomNameBox.Click += new System.EventHandler(this.CustomListCount);
             this.CustomNameBox.DoubleClick += new System.EventHandler(this.CustomNameBox_DoubleClick);
@@ -393,9 +393,9 @@
             this.CustomSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CustomSearch.Location = new System.Drawing.Point(0, 3);
+            this.CustomSearch.Location = new System.Drawing.Point(1, 3);
             this.CustomSearch.Name = "CustomSearch";
-            this.CustomSearch.Size = new System.Drawing.Size(290, 21);
+            this.CustomSearch.Size = new System.Drawing.Size(280, 21);
             this.CustomSearch.TabIndex = 0;
             this.CustomSearch.TextChanged += new System.EventHandler(this.CustomSearch_TextChanged);
             // 
@@ -416,9 +416,9 @@
             this.CoffeeTeaSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CoffeeTeaSearch.Location = new System.Drawing.Point(0, 3);
+            this.CoffeeTeaSearch.Location = new System.Drawing.Point(1, 3);
             this.CoffeeTeaSearch.Name = "CoffeeTeaSearch";
-            this.CoffeeTeaSearch.Size = new System.Drawing.Size(290, 21);
+            this.CoffeeTeaSearch.Size = new System.Drawing.Size(280, 21);
             this.CoffeeTeaSearch.TabIndex = 12;
             this.CoffeeTeaSearch.TextChanged += new System.EventHandler(this.CoffeeTeaSearch_TextChanged);
             // 
@@ -429,9 +429,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CoffeeTeaNameBox.DataSource = this.coffeeteaBindingSource;
             this.CoffeeTeaNameBox.DisplayMember = "name";
-            this.CoffeeTeaNameBox.Location = new System.Drawing.Point(0, 25);
+            this.CoffeeTeaNameBox.IncrementalSearch = true;
+            this.CoffeeTeaNameBox.Location = new System.Drawing.Point(1, 24);
             this.CoffeeTeaNameBox.Name = "CoffeeTeaNameBox";
-            this.CoffeeTeaNameBox.Size = new System.Drawing.Size(290, 565);
+            this.CoffeeTeaNameBox.Size = new System.Drawing.Size(280, 432);
             this.CoffeeTeaNameBox.TabIndex = 11;
             this.CoffeeTeaNameBox.ValueMember = "name";
             this.CoffeeTeaNameBox.Click += new System.EventHandler(this.CoffeeTeaListCount);
@@ -454,9 +455,9 @@
             this.NonAlcoholicSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NonAlcoholicSearch.Location = new System.Drawing.Point(0, 3);
+            this.NonAlcoholicSearch.Location = new System.Drawing.Point(1, 3);
             this.NonAlcoholicSearch.Name = "NonAlcoholicSearch";
-            this.NonAlcoholicSearch.Size = new System.Drawing.Size(290, 21);
+            this.NonAlcoholicSearch.Size = new System.Drawing.Size(280, 21);
             this.NonAlcoholicSearch.TabIndex = 11;
             this.NonAlcoholicSearch.TextChanged += new System.EventHandler(this.NonAlcoholicSearch_TextChanged);
             // 
@@ -467,9 +468,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NonAlcoholicNameBox.DataSource = this.nonalcoholicBindingSource;
             this.NonAlcoholicNameBox.DisplayMember = "NAME";
-            this.NonAlcoholicNameBox.Location = new System.Drawing.Point(0, 25);
+            this.NonAlcoholicNameBox.Location = new System.Drawing.Point(1, 24);
             this.NonAlcoholicNameBox.Name = "NonAlcoholicNameBox";
-            this.NonAlcoholicNameBox.Size = new System.Drawing.Size(290, 565);
+            this.NonAlcoholicNameBox.Size = new System.Drawing.Size(280, 432);
             this.NonAlcoholicNameBox.TabIndex = 10;
             this.NonAlcoholicNameBox.ValueMember = "NAME";
             this.NonAlcoholicNameBox.Click += new System.EventHandler(this.NonAlcoholicListCount);
@@ -492,9 +493,9 @@
             this.BeerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BeerSearch.Location = new System.Drawing.Point(0, 3);
+            this.BeerSearch.Location = new System.Drawing.Point(1, 3);
             this.BeerSearch.Name = "BeerSearch";
-            this.BeerSearch.Size = new System.Drawing.Size(290, 21);
+            this.BeerSearch.Size = new System.Drawing.Size(280, 21);
             this.BeerSearch.TabIndex = 10;
             this.BeerSearch.TextChanged += new System.EventHandler(this.BeerSearch_TextChanged);
             // 
@@ -505,9 +506,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BeerAleNameBox.DataSource = this.beersBindingSource;
             this.BeerAleNameBox.DisplayMember = "name";
-            this.BeerAleNameBox.Location = new System.Drawing.Point(0, 25);
+            this.BeerAleNameBox.Location = new System.Drawing.Point(1, 24);
             this.BeerAleNameBox.Name = "BeerAleNameBox";
-            this.BeerAleNameBox.Size = new System.Drawing.Size(290, 565);
+            this.BeerAleNameBox.Size = new System.Drawing.Size(280, 432);
             this.BeerAleNameBox.TabIndex = 9;
             this.BeerAleNameBox.ValueMember = "name";
             this.BeerAleNameBox.Click += new System.EventHandler(this.BeerListCount);
@@ -530,9 +531,9 @@
             this.CocktailSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CocktailSearch.Location = new System.Drawing.Point(0, 3);
+            this.CocktailSearch.Location = new System.Drawing.Point(1, 3);
             this.CocktailSearch.Name = "CocktailSearch";
-            this.CocktailSearch.Size = new System.Drawing.Size(290, 21);
+            this.CocktailSearch.Size = new System.Drawing.Size(280, 21);
             this.CocktailSearch.TabIndex = 9;
             this.CocktailSearch.TextChanged += new System.EventHandler(this.CocktailSearch_TextChanged);
             // 
@@ -543,9 +544,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CocktailsNameBox.DataSource = this.cocktailsBindingSource;
             this.CocktailsNameBox.DisplayMember = "NAME";
-            this.CocktailsNameBox.Location = new System.Drawing.Point(0, 25);
+            this.CocktailsNameBox.Location = new System.Drawing.Point(1, 24);
             this.CocktailsNameBox.Name = "CocktailsNameBox";
-            this.CocktailsNameBox.Size = new System.Drawing.Size(290, 565);
+            this.CocktailsNameBox.Size = new System.Drawing.Size(280, 432);
             this.CocktailsNameBox.TabIndex = 8;
             this.CocktailsNameBox.ValueMember = "NAME";
             this.CocktailsNameBox.DoubleClick += new System.EventHandler(this.CocktailsNameBox_DoubleClick);
@@ -567,9 +568,9 @@
             this.PunchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PunchSearch.Location = new System.Drawing.Point(0, 3);
+            this.PunchSearch.Location = new System.Drawing.Point(1, 3);
             this.PunchSearch.Name = "PunchSearch";
-            this.PunchSearch.Size = new System.Drawing.Size(290, 21);
+            this.PunchSearch.Size = new System.Drawing.Size(280, 21);
             this.PunchSearch.TabIndex = 8;
             this.PunchSearch.TextChanged += new System.EventHandler(this.PunchSearch_TextChanged);
             // 
@@ -580,9 +581,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PunchesNameBox.DataSource = this.punchesBindingSource;
             this.PunchesNameBox.DisplayMember = "name";
-            this.PunchesNameBox.Location = new System.Drawing.Point(0, 25);
+            this.PunchesNameBox.Location = new System.Drawing.Point(1, 24);
             this.PunchesNameBox.Name = "PunchesNameBox";
-            this.PunchesNameBox.Size = new System.Drawing.Size(290, 565);
+            this.PunchesNameBox.Size = new System.Drawing.Size(280, 432);
             this.PunchesNameBox.TabIndex = 7;
             this.PunchesNameBox.ValueMember = "name";
             this.PunchesNameBox.Click += new System.EventHandler(this.PunchesListCount);
@@ -605,9 +606,9 @@
             this.LiqueurSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LiqueurSearch.Location = new System.Drawing.Point(0, 3);
+            this.LiqueurSearch.Location = new System.Drawing.Point(1, 3);
             this.LiqueurSearch.Name = "LiqueurSearch";
-            this.LiqueurSearch.Size = new System.Drawing.Size(290, 21);
+            this.LiqueurSearch.Size = new System.Drawing.Size(280, 21);
             this.LiqueurSearch.TabIndex = 7;
             this.LiqueurSearch.TextChanged += new System.EventHandler(this.LiqueurSearch_TextChanged);
             // 
@@ -618,9 +619,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LiqueursNameBox.DataSource = this.liqueursBindingSource;
             this.LiqueursNameBox.DisplayMember = "name";
-            this.LiqueursNameBox.Location = new System.Drawing.Point(0, 25);
+            this.LiqueursNameBox.Location = new System.Drawing.Point(1, 24);
             this.LiqueursNameBox.Name = "LiqueursNameBox";
-            this.LiqueursNameBox.Size = new System.Drawing.Size(290, 565);
+            this.LiqueursNameBox.Size = new System.Drawing.Size(280, 432);
             this.LiqueursNameBox.TabIndex = 6;
             this.LiqueursNameBox.ValueMember = "name";
             this.LiqueursNameBox.Click += new System.EventHandler(this.LiqueursListCount);
@@ -643,9 +644,9 @@
             this.ShotSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ShotSearch.Location = new System.Drawing.Point(0, 3);
+            this.ShotSearch.Location = new System.Drawing.Point(1, 3);
             this.ShotSearch.Name = "ShotSearch";
-            this.ShotSearch.Size = new System.Drawing.Size(290, 21);
+            this.ShotSearch.Size = new System.Drawing.Size(280, 21);
             this.ShotSearch.TabIndex = 6;
             this.ShotSearch.TextChanged += new System.EventHandler(this.ShotSearch_TextChanged);
             // 
@@ -656,9 +657,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ShotsNameBox.DataSource = this.shotsBindingSource;
             this.ShotsNameBox.DisplayMember = "name";
-            this.ShotsNameBox.Location = new System.Drawing.Point(0, 25);
+            this.ShotsNameBox.Location = new System.Drawing.Point(1, 24);
             this.ShotsNameBox.Name = "ShotsNameBox";
-            this.ShotsNameBox.Size = new System.Drawing.Size(290, 565);
+            this.ShotsNameBox.Size = new System.Drawing.Size(280, 432);
             this.ShotsNameBox.TabIndex = 5;
             this.ShotsNameBox.ValueMember = "name";
             this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
