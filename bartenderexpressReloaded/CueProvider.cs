@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace bartenderexpressReloaded
 {
@@ -28,9 +29,7 @@ namespace bartenderexpressReloaded
         /// <param name="cue">The cue text.</param>
         public static void SetCue (TextBox textBox, string cue)
         {
-            textBox.Font = new System.Drawing.Font();
-
-            //TextBox.DefaultFont.Italic = true;
+            textBox.Font = new Font("Default", 8, FontStyle.Italic);  
             SendMessage(textBox.Handle, EM_SETCUEBANNER, 0, cue);
 
         }
@@ -42,6 +41,7 @@ namespace bartenderexpressReloaded
         public static void ClearCue
           (TextBox textBox)
         {
+            textBox.Font = new Font("Default", 8, FontStyle.Regular);
             SendMessage (textBox.Handle, EM_SETCUEBANNER, 0, string.Empty);
         }
     }

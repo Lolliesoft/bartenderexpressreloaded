@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+
+
 //using DevExpress.XtraBars.Docking;
 
 namespace bartenderexpressReloaded
@@ -55,7 +57,7 @@ namespace bartenderexpressReloaded
             this.shotsTableAdapter.Fill(this.xpressShotsDataSet.shots);
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
-            CueProvider.SetCue(DrinkSearch, "Search Drinks");
+            CueProvider.SetCue(DrinkSearch,"Search Drinks");
             CueProvider.SetCue(ShotSearch, "Search Shots");
             CueProvider.SetCue(LiqueurSearch, "Search Liqueurs");
             CueProvider.SetCue(PunchSearch, "Search Punches");
@@ -63,7 +65,8 @@ namespace bartenderexpressReloaded
             CueProvider.SetCue(CoffeeTeaSearch, "Search Coffee and Teas");
             CueProvider.SetCue(NonAlcoholicSearch, "Search Non-Alcoholic Drinks");
             CueProvider.SetCue(CocktailSearch, "Search Cocktails");
-            CueProvider.SetCue(CustomSearch, "Search Your Recipes");                     
+            CueProvider.SetCue(CustomSearch, "Search Your Recipes");
+                   
         }
 
         private void nameListCount(object sender, EventArgs e)
@@ -83,11 +86,11 @@ namespace bartenderexpressReloaded
                     {
                         //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
                         toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.DrinksNameBox.ItemCount.ToString());
-          
+
                     }
                 }
             }
-  
+
 
         }
 
@@ -418,16 +421,18 @@ namespace bartenderexpressReloaded
 
         private void DrinkSearch_TextChanged(object sender, EventArgs e)
         {
+            DrinkSearch.Font = new Font("Default", 8, FontStyle.Regular); 
             int index = DrinksNameBox.FindString(DrinkSearch.Text);
             if (0 <= index)
-            {
-                DrinksNameBox.SelectedIndex = index;
-                
+            {              
+                DrinksNameBox.SelectedIndex = index;              
             }
         }
 
         private void ShotSearch_TextChanged(object sender, EventArgs e)
         {
+
+            ShotSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = ShotsNameBox.FindString(ShotSearch.Text);
             if (0 <= index)
             {
@@ -438,6 +443,7 @@ namespace bartenderexpressReloaded
 
         private void LiqueurSearch_TextChanged(object sender, EventArgs e)
         {
+            LiqueurSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = LiqueursNameBox.FindString(LiqueurSearch.Text);
             if (0 <= index)
             {
@@ -448,6 +454,7 @@ namespace bartenderexpressReloaded
 
         private void PunchSearch_TextChanged(object sender, EventArgs e)
         {
+            PunchSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = PunchesNameBox.FindString(PunchSearch.Text);
             if (0 <= index)
             {
@@ -457,6 +464,7 @@ namespace bartenderexpressReloaded
 
         private void CocktailSearch_TextChanged(object sender, EventArgs e)
         {
+            CocktailSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = CocktailsNameBox.FindString(CocktailSearch.Text);
             if (0 <= index)
             {
@@ -467,6 +475,7 @@ namespace bartenderexpressReloaded
 
         private void BeerSearch_TextChanged(object sender, EventArgs e)
         {
+            BeerSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = BeerAleNameBox.FindString(BeerSearch.Text);
             if (0 <= index)
             {
@@ -477,6 +486,7 @@ namespace bartenderexpressReloaded
 
         private void NonAlcoholicSearch_TextChanged(object sender, EventArgs e)
         {
+            NonAlcoholicSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = NonAlcoholicNameBox.FindString(NonAlcoholicSearch.Text);
             if (0 <= index)
             {
@@ -486,6 +496,7 @@ namespace bartenderexpressReloaded
 
         private void CoffeeTeaSearch_TextChanged(object sender, EventArgs e)
         {
+            CoffeeTeaSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = CoffeeTeaNameBox.FindString(CoffeeTeaSearch.Text);
             if (0 <= index)
             {
@@ -495,6 +506,7 @@ namespace bartenderexpressReloaded
 
         private void CustomSearch_TextChanged(object sender, EventArgs e)
         {
+            CoffeeTeaSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = CustomNameBox.FindString(CustomSearch.Text);
             if (0 <= index)
             {
