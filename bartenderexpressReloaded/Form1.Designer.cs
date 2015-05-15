@@ -387,6 +387,7 @@
             this.CustomNameBox.TabIndex = 1;
             this.CustomNameBox.Click += new System.EventHandler(this.CustomListCount);
             this.CustomNameBox.DoubleClick += new System.EventHandler(this.CustomNameBox_DoubleClick);
+            this.CustomNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustomNameBox_KeyPress);
             // 
             // CustomSearch
             // 
@@ -437,6 +438,7 @@
             this.CoffeeTeaNameBox.ValueMember = "name";
             this.CoffeeTeaNameBox.Click += new System.EventHandler(this.CoffeeTeaListCount);
             this.CoffeeTeaNameBox.DoubleClick += new System.EventHandler(this.CoffeeTeaNameBox_DoubleClick);
+            this.CoffeeTeaNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CoffeeTeaNameBox_KeyPress);
             // 
             // nonAlcoholicTab
             // 
@@ -475,6 +477,7 @@
             this.NonAlcoholicNameBox.ValueMember = "NAME";
             this.NonAlcoholicNameBox.Click += new System.EventHandler(this.NonAlcoholicListCount);
             this.NonAlcoholicNameBox.DoubleClick += new System.EventHandler(this.NonAlcoholicNameBox_DoubleClick);
+            this.NonAlcoholicNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NonAlcoholicNameBox_KeyPress);
             // 
             // BeerAlesTab
             // 
@@ -513,6 +516,7 @@
             this.BeerAleNameBox.ValueMember = "name";
             this.BeerAleNameBox.Click += new System.EventHandler(this.BeerListCount);
             this.BeerAleNameBox.DoubleClick += new System.EventHandler(this.BeerAleNameBox_DoubleClick);
+            this.BeerAleNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BeerAleNameBox_KeyPress);
             // 
             // CocktailsTab
             // 
@@ -550,6 +554,7 @@
             this.CocktailsNameBox.TabIndex = 8;
             this.CocktailsNameBox.ValueMember = "NAME";
             this.CocktailsNameBox.DoubleClick += new System.EventHandler(this.CocktailsNameBox_DoubleClick);
+            this.CocktailsNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CocktailsNameBox_KeyPress);
             // 
             // PunchesTab
             // 
@@ -588,6 +593,7 @@
             this.PunchesNameBox.ValueMember = "name";
             this.PunchesNameBox.Click += new System.EventHandler(this.PunchesListCount);
             this.PunchesNameBox.DoubleClick += new System.EventHandler(this.PunchesNameBox_DoubleClick);
+            this.PunchesNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PunchesNameBox_KeyPress);
             // 
             // LiqueursTab
             // 
@@ -626,6 +632,7 @@
             this.LiqueursNameBox.ValueMember = "name";
             this.LiqueursNameBox.Click += new System.EventHandler(this.LiqueursListCount);
             this.LiqueursNameBox.DoubleClick += new System.EventHandler(this.LiqueursNameBox_DoubleClick);
+            this.LiqueursNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LiqueursNameBox_KeyPress);
             // 
             // ShotsTab
             // 
@@ -649,6 +656,7 @@
             this.ShotSearch.Size = new System.Drawing.Size(280, 21);
             this.ShotSearch.TabIndex = 6;
             this.ShotSearch.TextChanged += new System.EventHandler(this.ShotSearch_TextChanged);
+            this.ShotSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShotsNameBox_KeyPress);
             // 
             // ShotsNameBox
             // 
@@ -664,6 +672,7 @@
             this.ShotsNameBox.ValueMember = "name";
             this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
             this.ShotsNameBox.DoubleClick += new System.EventHandler(this.ShotsNameBox_DoubleClick);
+            this.ShotsNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShotsNameBox_KeyPress);
             // 
             // DrinksTab
             // 

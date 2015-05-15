@@ -674,13 +674,14 @@ namespace bartenderexpressReloaded
             }
         }
 
-        private void CheckKeys(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                this.DrinksNameBox_DoubleClick(e.KeyChar, e);
-            }
-        }
+        //private void CheckKeys(object sender, KeyPressEventArgs e)
+        //{
+        //    if (e.KeyChar == (char)13)
+        //    {
+        //        this.DrinksNameBox_DoubleClick(e.KeyChar, e);
+        //        this.ShotsNameBox_DoubleClick(e.KeyChar, e);
+        //    }
+        //}
 
         private void DrinksNameBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -692,10 +693,82 @@ namespace bartenderexpressReloaded
 
         }
 
+        private void ShotsNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.ShotsNameBox_DoubleClick(e.KeyChar, e);
+                ShotsNameBox.Focus();
+            }
+        }
+
+        private void LiqueursNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.LiqueursNameBox_DoubleClick(e.KeyChar, e);
+                LiqueursNameBox.Focus();
+            }
+        }
+
+        private void PunchesNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.PunchesNameBox_DoubleClick(e.KeyChar, e);
+                PunchesNameBox.Focus();
+            }
+        }
+
+        private void CocktailsNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.CocktailsNameBox_DoubleClick(e.KeyChar, e);
+                CocktailsNameBox.Focus();
+            }
+        }
+
+        private void BeerAleNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.BeerAleNameBox_DoubleClick(e.KeyChar, e);
+                BeerAleNameBox.Focus();
+            }
+        }
+
+        private void NonAlcoholicNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.NonAlcoholicNameBox_DoubleClick(e.KeyChar, e);
+                NonAlcoholicNameBox.Focus();
+            }
+        }
+
+        private void CoffeeTeaNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.CoffeeTeaNameBox_DoubleClick(e.KeyChar, e);
+                CoffeeTeaNameBox.Focus();
+            }
+        }
+
+        private void CustomNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.CustomNameBox_DoubleClick(e.KeyChar, e);
+                CustomNameBox.Focus();
+            }
+        }
         private void DrinksNameBox_TabStopChanged(object sender, EventArgs e)
         {
             DrinksNameBox.TabStop = true;
         }
+
       }
   }
 
