@@ -251,37 +251,107 @@ namespace bartenderexpressReloaded
             }
         }
 
+        //private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
+        //{
+        //    if (DrinksNameBox.SelectedItem != null)
+        //    {
+        //        string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+
+
+        //        using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
+        //        {
+        //            conn.Open();
+        //            SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM recipes WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+        //            SQLiteDataReader reader = cmd.ExecuteReader();
+
+        //            while (reader.Read())
+        //            { //MessageBox.Show(reader["directions"].ToString());
+        //                Form2 child = new Form2();
+        //                child.Text = DrinksNameBox.SelectedValue.ToString();
+        //                //child.toolStripStatusLabel1.Text = statusbarrecipe;
+        //                child.MdiParent = this;
+        //                child.Show();
+
+        //                break;
+        //            }
+
+        //            //MessageBox.Show(reader["id"].ToString());
+
+
+        //            //toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.listBoxControl1.Items.Count.ToString());
+        //        }
+        //    }
+        //}
+
         private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
+
             if (DrinksNameBox.SelectedItem != null)
             {
                 string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+                toolStripStatusLabel1.Text = statusbarrecipe;
 
+                //toolStripStatusLabel2.Text = (this.nameListBox.Items.Count.ToString());
 
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
+                using (SQLiteConnection cs = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
                 {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM recipes WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    cs.Open();
+
+                    //Get ID
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM recipes WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", cs);
+                    //SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM recipes WHERE name ='" + statusbarrecipe + "'", cs);
                     SQLiteDataReader reader = cmd.ExecuteReader();
-                   
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
+
+                    //MessageBox.Show(reader["id"].ToString());
+
                     Form2 child = new Form2();
                     child.Text = DrinksNameBox.SelectedValue.ToString();
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
+                   
                     child.MdiParent = this;
                     child.Show();
 
-                    break;
+
+                    while (reader.Read())
+                    {
+                        // Get Ingredients
+                        SQLiteCommand cmding = new SQLiteCommand("SELECT name FROM ingredients INNER JOIN recipeingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs);
+                        SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                        while (rdring.Read())
+                        {
+                            ListViewItem ingredients = new ListViewItem();
+                            ingredients.SubItems[0].Text = rdring[0].ToString();
+                            child.listView2.Items.Add(ingredients);
+
+                        }
+                        //Get Amounts
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amount FROM recipeingredients INNER JOIN ingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs);
+                        SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                        while (rdramt.Read())
+                        {
+                            ListViewItem amount = new ListViewItem();
+                            amount.SubItems[0].Text = rdramt[0].ToString();
+                            child.listView1.Items.Add(amount);
+                        }
+
+                        //Get Directions
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM recipes WHERE id = " + (reader["id"]) + "", cs);
+                        SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                        while (rdr.Read())
+                        {
+                            child.richTextBox1.Text = rdr[0].ToString();
+                        }
+
+
                     }
-                    
-                    //MessageBox.Show(reader["id"].ToString());
-
-
-                    //toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.listBoxControl1.Items.Count.ToString());
                 }
+
             }
         }
+
 
         private void ShotsNameBox_DoubleClick(object sender, EventArgs e)
         {
@@ -768,6 +838,14 @@ namespace bartenderexpressReloaded
         {
             DrinksNameBox.TabStop = true;
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            DrinkSearch.Clear();
+            DrinkSearch.Focus();
+
+        }
+
 
       }
   }

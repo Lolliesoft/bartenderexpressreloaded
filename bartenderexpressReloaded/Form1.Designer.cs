@@ -91,6 +91,7 @@
             this.ShotSearch = new System.Windows.Forms.TextBox();
             this.ShotsNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.DrinksTab = new System.Windows.Forms.TabPage();
+            this.DrinkSearchClear = new DevExpress.XtraEditors.SimpleButton();
             this.DrinkSearch = new System.Windows.Forms.TextBox();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -422,6 +423,7 @@
             this.CoffeeTeaSearch.Size = new System.Drawing.Size(280, 21);
             this.CoffeeTeaSearch.TabIndex = 12;
             this.CoffeeTeaSearch.TextChanged += new System.EventHandler(this.CoffeeTeaSearch_TextChanged);
+            this.CoffeeTeaSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CoffeeTeaNameBox_KeyPress);
             // 
             // CoffeeTeaNameBox
             // 
@@ -462,6 +464,7 @@
             this.NonAlcoholicSearch.Size = new System.Drawing.Size(280, 21);
             this.NonAlcoholicSearch.TabIndex = 11;
             this.NonAlcoholicSearch.TextChanged += new System.EventHandler(this.NonAlcoholicSearch_TextChanged);
+            this.NonAlcoholicSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NonAlcoholicNameBox_KeyPress);
             // 
             // NonAlcoholicNameBox
             // 
@@ -501,6 +504,7 @@
             this.BeerSearch.Size = new System.Drawing.Size(280, 21);
             this.BeerSearch.TabIndex = 10;
             this.BeerSearch.TextChanged += new System.EventHandler(this.BeerSearch_TextChanged);
+            this.BeerSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BeerAleNameBox_KeyPress);
             // 
             // BeerAleNameBox
             // 
@@ -540,6 +544,7 @@
             this.CocktailSearch.Size = new System.Drawing.Size(280, 21);
             this.CocktailSearch.TabIndex = 9;
             this.CocktailSearch.TextChanged += new System.EventHandler(this.CocktailSearch_TextChanged);
+            this.CocktailSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CocktailsNameBox_KeyPress);
             // 
             // CocktailsNameBox
             // 
@@ -578,6 +583,7 @@
             this.PunchSearch.Size = new System.Drawing.Size(280, 21);
             this.PunchSearch.TabIndex = 8;
             this.PunchSearch.TextChanged += new System.EventHandler(this.PunchSearch_TextChanged);
+            this.PunchSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PunchesNameBox_KeyPress);
             // 
             // PunchesNameBox
             // 
@@ -617,6 +623,7 @@
             this.LiqueurSearch.Size = new System.Drawing.Size(280, 21);
             this.LiqueurSearch.TabIndex = 7;
             this.LiqueurSearch.TextChanged += new System.EventHandler(this.LiqueurSearch_TextChanged);
+            this.LiqueurSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LiqueursNameBox_KeyPress);
             // 
             // LiqueursNameBox
             // 
@@ -677,6 +684,7 @@
             // DrinksTab
             // 
             this.DrinksTab.AutoScroll = true;
+            this.DrinksTab.Controls.Add(this.DrinkSearchClear);
             this.DrinksTab.Controls.Add(this.DrinkSearch);
             this.DrinksTab.Controls.Add(this.DrinksNameBox);
             this.DrinksTab.Location = new System.Drawing.Point(4, 58);
@@ -685,6 +693,17 @@
             this.DrinksTab.TabIndex = 0;
             this.DrinksTab.Text = "Drinks";
             this.DrinksTab.UseVisualStyleBackColor = true;
+            // 
+            // DrinkSearchClear
+            // 
+            this.DrinkSearchClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DrinkSearchClear.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.DrinkSearchClear.Location = new System.Drawing.Point(259, 5);
+            this.DrinkSearchClear.Name = "DrinkSearchClear";
+            this.DrinkSearchClear.Size = new System.Drawing.Size(20, 17);
+            this.DrinkSearchClear.TabIndex = 3;
+            this.DrinkSearchClear.Text = "DrinkSearchClear";
+            this.DrinkSearchClear.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // DrinkSearch
             // 
@@ -738,6 +757,7 @@
             this.WizardPages.SelectedIndex = 0;
             this.WizardPages.Size = new System.Drawing.Size(290, 544);
             this.WizardPages.TabIndex = 13;
+            this.WizardPages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustomNameBox_KeyPress);
             // 
             // recipesTableAdapter1
             // 
@@ -910,6 +930,7 @@
         private System.Windows.Forms.ToolStrip statusStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripStatusLabel2;
+        private DevExpress.XtraEditors.SimpleButton DrinkSearchClear;
     }
 }
 
