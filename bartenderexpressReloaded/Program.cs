@@ -20,7 +20,7 @@ namespace bartenderexpressReloaded
             DevExpress.UserSkins.TouchSkins.Register();
 
             DevExpress.LookAndFeel.UserLookAndFeel.Default.UseWindowsXPTheme = false;
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Glass Oceans";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2013";
 
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             DevExpress.Skins.SkinManager.EnableFormSkins();

@@ -40,9 +40,9 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Amount});
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(-2, 12);
+            this.listView1.Location = new System.Drawing.Point(-2, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(214, 189);
+            this.listView1.Size = new System.Drawing.Size(225, 249);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -50,40 +50,38 @@
             // Amount
             // 
             this.Amount.Text = "Amount";
-            this.Amount.Width = 210;
+            this.Amount.Width = 220;
             // 
             // listView2
             // 
-            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Ingredients});
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(212, 12);
+            this.listView2.Location = new System.Drawing.Point(220, 0);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(356, 189);
+            this.listView2.Size = new System.Drawing.Size(345, 249);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-2, 207);
+            this.richTextBox1.Location = new System.Drawing.Point(-2, 269);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(570, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(567, 96);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
             // Ingredients
             // 
             this.Ingredients.Text = "Ingredients";
-            this.Ingredients.Width = 258;
+            this.Ingredients.Width = 340;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 299);
+            this.ClientSize = new System.Drawing.Size(568, 406);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);

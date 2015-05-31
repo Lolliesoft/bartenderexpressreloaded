@@ -357,24 +357,146 @@ namespace bartenderexpressReloaded
         {
             if (ShotsNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = ShotsNameBox.SelectedValue.ToString();
+                
+                string statusbarrecipe2 = ShotsNameBox.SelectedValue.ToString();
+                toolStripStatusLabel1.Text = statusbarrecipe2;
 
 
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                using (SQLiteConnection cs2 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM shots WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
+                    cs2.Open();
+
+
+                    //Get ID
+                    //string selectedvalue
+
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT shots_key FROM shots WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs2);
+                    //SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM recipes WHERE name ='" + statusbarrecipe + "'", cs);
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
-                        Form2 child = new Form2();
-                        child.Text = ShotsNameBox.SelectedValue.ToString();
-                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
-                        child.MdiParent = this;
-                        child.Show();
+                    //MessageBox.Show(reader["id"].ToString());
 
-                        break;
+                    Form2 child = new Form2();
+                    child.Text = ShotsNameBox.SelectedValue.ToString();
+                    //child.toolStripStatusLabel1.Text = statusbarrecipe;
+
+                    child.MdiParent = this;
+                    child.Show();
+
+                    while (reader.Read())
+                    {
+                        // Get Ingredients
+                        SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, ingredient11 FROM shots WHERE shots_key=" + (reader["shots_key"]) + "", cs2);
+                        SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                        while (rdring.Read())
+                        {
+                            ListViewItem ingredient1 = new ListViewItem();
+                            ingredient1.SubItems[0].Text = rdring[0].ToString();
+                            child.listView2.Items.Add(ingredient1);
+
+                            ListViewItem ingredient2 = new ListViewItem();
+                            ingredient2.SubItems[0].Text = rdring[1].ToString();
+                            child.listView2.Items.Add(ingredient2);
+
+                            ListViewItem ingredient3 = new ListViewItem();
+                            ingredient3.SubItems[0].Text = rdring[2].ToString();
+                            child.listView2.Items.Add(ingredient3);
+
+                            ListViewItem ingredient4 = new ListViewItem();
+                            ingredient4.SubItems[0].Text = rdring[3].ToString();
+                            child.listView2.Items.Add(ingredient4);
+
+                            ListViewItem ingredient5 = new ListViewItem();
+                            ingredient5.SubItems[0].Text = rdring[4].ToString();
+                            child.listView2.Items.Add(ingredient5);
+
+                            ListViewItem ingredient6 = new ListViewItem();
+                            ingredient6.SubItems[0].Text = rdring[5].ToString();
+                            child.listView2.Items.Add(ingredient6);
+
+                            ListViewItem ingredient7 = new ListViewItem();
+                            ingredient7.SubItems[0].Text = rdring[6].ToString();
+                            child.listView2.Items.Add(ingredient7);
+
+                            ListViewItem ingredient8 = new ListViewItem();
+                            ingredient8.SubItems[0].Text = rdring[7].ToString();
+                            child.listView2.Items.Add(ingredient8);
+
+                            ListViewItem ingredient9 = new ListViewItem();
+                            ingredient9.SubItems[0].Text = rdring[8].ToString();
+                            child.listView2.Items.Add(ingredient9);
+
+                            ListViewItem ingredient10 = new ListViewItem();
+                            ingredient10.SubItems[0].Text = rdring[9].ToString();
+                            child.listView2.Items.Add(ingredient10);
+
+                            ListViewItem ingredient11 = new ListViewItem();
+                            ingredient11.SubItems[0].Text = rdring[10].ToString();
+                            child.listView2.Items.Add(ingredient11);
+                        }
+                        //Get Amounts
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11 FROM shots WHERE shots_key=" + (reader["shots_key"]) + "", cs2);
+                        SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                        while (rdramt.Read())
+                        {
+                            ListViewItem amt1 = new ListViewItem();
+                            amt1.SubItems[0].Text = rdramt[0].ToString();
+                            //amount.SubItems.Add(rdramt[0].ToString());
+                            child.listView1.Items.Add(amt1);
+
+                            ListViewItem amt2 = new ListViewItem();
+                            amt2.SubItems[0].Text = rdramt[1].ToString();
+                            child.listView1.Items.Add(amt2);
+
+                            ListViewItem amt3 = new ListViewItem();
+                            amt3.SubItems[0].Text = rdramt[2].ToString();
+                            child.listView1.Items.Add(amt3);
+
+                            ListViewItem amt4 = new ListViewItem();
+                            amt4.SubItems[0].Text = rdramt[3].ToString();
+                            child.listView1.Items.Add(amt4);
+
+                            ListViewItem amt5 = new ListViewItem();
+                            amt5.SubItems[0].Text = rdramt[4].ToString();
+                            child.listView1.Items.Add(amt5);
+
+                            ListViewItem amt6 = new ListViewItem();
+                            amt6.SubItems[0].Text = rdramt[5].ToString();
+                            child.listView1.Items.Add(amt6);
+
+                            ListViewItem amt7 = new ListViewItem();
+                            amt7.SubItems[0].Text = rdramt[6].ToString();
+                            child.listView1.Items.Add(amt7);
+
+                            ListViewItem amt8 = new ListViewItem();
+                            amt8.SubItems[0].Text = rdramt[7].ToString();
+                            child.listView1.Items.Add(amt8);
+
+                            ListViewItem amt9 = new ListViewItem();
+                            amt9.SubItems[0].Text = rdramt[8].ToString();
+                            child.listView1.Items.Add(amt9);
+
+                            ListViewItem amt10 = new ListViewItem();
+                            amt10.SubItems[0].Text = rdramt[9].ToString();
+                            child.listView1.Items.Add(amt10);
+
+                            ListViewItem amt11 = new ListViewItem();
+                            amt11.SubItems[0].Text = rdramt[10].ToString();
+                            child.listView1.Items.Add(amt11);
+
+                        }
+
+                        //Get Directions
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM shots WHERE shots_key = " + (reader["shots_key"]) + "", cs2);
+                        SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                        while (rdr.Read())
+                        {
+                            child.richTextBox1.Text = rdr[0].ToString();
+                        }
+
                     }
 
                     //MessageBox.Show(reader["id"].ToString());
@@ -389,24 +511,151 @@ namespace bartenderexpressReloaded
         {
             if (LiqueursNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = LiqueursNameBox.SelectedValue.ToString();
+                string statusbarrecipe3 = LiqueursNameBox.SelectedValue.ToString();
 
 
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                using (SQLiteConnection cs3 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM liqueurs WHERE name ='" + statusbarrecipe + "'", conn);
+                    cs3.Open();
+
+
+                    //Get ID
+                    //string selectedvalue
+
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT liqueur_key FROM liqueurs WHERE name ='" + statusbarrecipe3 + "'", cs3);
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
-                        Form2 child = new Form2();
-                        child.Text = LiqueursNameBox.SelectedValue.ToString();
-                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
-                        child.MdiParent = this;
-                        child.Show();
+                    //MessageBox.Show(reader["id"].ToString());
 
-                        break;
+                    Form2 child = new Form2();
+                    child.Text = LiqueursNameBox.SelectedValue.ToString();
+                    //child.toolStripStatusLabel1.Text = statusbarrecipe;
+
+                    child.MdiParent = this;
+                    child.Show();
+
+                    while (reader.Read())
+                    {
+                        // Get Ingredients
+                        SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, ingredient11, ingredient12 FROM liqueurs WHERE liqueur_key=" + (reader["liqueur_key"]) + "", cs3);
+                        SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                        while (rdring.Read())
+                        {
+                            ListViewItem ingredient1 = new ListViewItem();
+                            ingredient1.SubItems[0].Text = rdring[0].ToString();
+                            child.listView2.Items.Add(ingredient1);
+
+                            ListViewItem ingredient2 = new ListViewItem();
+                            ingredient2.SubItems[0].Text = rdring[1].ToString();
+                            child.listView2.Items.Add(ingredient2);
+
+                            ListViewItem ingredient3 = new ListViewItem();
+                            ingredient3.SubItems[0].Text = rdring[2].ToString();
+                            child.listView2.Items.Add(ingredient3);
+
+                            ListViewItem ingredient4 = new ListViewItem();
+                            ingredient4.SubItems[0].Text = rdring[3].ToString();
+                            child.listView2.Items.Add(ingredient4);
+
+                            ListViewItem ingredient5 = new ListViewItem();
+                            ingredient5.SubItems[0].Text = rdring[4].ToString();
+                            child.listView2.Items.Add(ingredient5);
+
+                            ListViewItem ingredient6 = new ListViewItem();
+                            ingredient6.SubItems[0].Text = rdring[5].ToString();
+                            child.listView2.Items.Add(ingredient6);
+
+                            ListViewItem ingredient7 = new ListViewItem();
+                            ingredient7.SubItems[0].Text = rdring[6].ToString();
+                            child.listView2.Items.Add(ingredient7);
+
+                            ListViewItem ingredient8 = new ListViewItem();
+                            ingredient8.SubItems[0].Text = rdring[7].ToString();
+                            child.listView2.Items.Add(ingredient8);
+
+                            ListViewItem ingredient9 = new ListViewItem();
+                            ingredient9.SubItems[0].Text = rdring[8].ToString();
+                            child.listView2.Items.Add(ingredient9);
+
+                            ListViewItem ingredient10 = new ListViewItem();
+                            ingredient10.SubItems[0].Text = rdring[9].ToString();
+                            child.listView2.Items.Add(ingredient10);
+
+                            ListViewItem ingredient11 = new ListViewItem();
+                            ingredient11.SubItems[0].Text = rdring[10].ToString();
+                            child.listView2.Items.Add(ingredient11);
+
+                            ListViewItem ingredient12 = new ListViewItem();
+                            ingredient12.SubItems[0].Text = rdring[11].ToString();
+                            child.listView2.Items.Add(ingredient12);
+
+                        }
+                        //Get Amounts
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12 FROM liqueurs WHERE liqueur_key=" + (reader["liqueur_key"]) + "", cs3);
+                        SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                        while (rdramt.Read())
+                        {
+                            ListViewItem amt1 = new ListViewItem();
+                            amt1.SubItems[0].Text = rdramt[0].ToString();
+                            //amount.SubItems.Add(rdramt[0].ToString());
+                            child.listView1.Items.Add(amt1);
+
+                            ListViewItem amt2 = new ListViewItem();
+                            amt2.SubItems[0].Text = rdramt[1].ToString();
+                            child.listView1.Items.Add(amt2);
+
+                            ListViewItem amt3 = new ListViewItem();
+                            amt3.SubItems[0].Text = rdramt[2].ToString();
+                            child.listView1.Items.Add(amt3);
+
+                            ListViewItem amt4 = new ListViewItem();
+                            amt4.SubItems[0].Text = rdramt[3].ToString();
+                            child.listView1.Items.Add(amt4);
+
+                            ListViewItem amt5 = new ListViewItem();
+                            amt5.SubItems[0].Text = rdramt[4].ToString();
+                            child.listView1.Items.Add(amt5);
+
+                            ListViewItem amt6 = new ListViewItem();
+                            amt6.SubItems[0].Text = rdramt[5].ToString();
+                            child.listView1.Items.Add(amt6);
+
+                            ListViewItem amt7 = new ListViewItem();
+                            amt7.SubItems[0].Text = rdramt[6].ToString();
+                            child.listView1.Items.Add(amt7);
+
+                            ListViewItem amt8 = new ListViewItem();
+                            amt8.SubItems[0].Text = rdramt[7].ToString();
+                            child.listView1.Items.Add(amt8);
+
+                            ListViewItem amt9 = new ListViewItem();
+                            amt9.SubItems[0].Text = rdramt[8].ToString();
+                            child.listView1.Items.Add(amt9);
+
+                            ListViewItem amt10 = new ListViewItem();
+                            amt10.SubItems[0].Text = rdramt[9].ToString();
+                            child.listView1.Items.Add(amt10);
+
+                            ListViewItem amt11 = new ListViewItem();
+                            amt11.SubItems[0].Text = rdramt[10].ToString();
+                            child.listView1.Items.Add(amt11);
+
+                            ListViewItem amt12 = new ListViewItem();
+                            amt12.SubItems[0].Text = rdramt[11].ToString();
+                            child.listView1.Items.Add(amt12);
+                        }
+
+                        //Get Directions
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM liqueurs WHERE liqueur_key= " + (reader["liqueur_key"]) + "", cs3);
+                        SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                        while (rdr.Read())
+                        {
+                            child.richTextBox1.Text = rdr[0].ToString();
+                        }
+
                     }
                 }
             }
@@ -416,24 +665,171 @@ namespace bartenderexpressReloaded
         {
             if (PunchesNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = PunchesNameBox.SelectedValue.ToString();
-
-
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM punches WHERE name ='" + statusbarrecipe + "'", conn);
-                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    string statusbarrecipe2 = PunchesNameBox.SelectedValue.ToString();
+                    toolStripStatusLabel1.Text = statusbarrecipe2;
 
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
+                    //MessageBox.Show(statusbarrecipe2);
+
+
+
+                    using (SQLiteConnection cs4 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                    {
+                        cs4.Open();
+
+                        //Get ID
+                        //string selectedvalue
+
+                        SQLiteCommand cmd = new SQLiteCommand("SELECT punch_key FROM punches WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs4);
+                        SQLiteDataReader reader = cmd.ExecuteReader();
+
+                        //MessageBox.Show(reader["id"].ToString());
+
                         Form2 child = new Form2();
                         child.Text = PunchesNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
+
                         child.MdiParent = this;
                         child.Show();
 
-                        break;
+                        while (reader.Read())
+                        {
+                            // Get Ingredients
+                            SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, ingredient11, ingredient12, ingredient13, ingredient14 FROM punches WHERE punch_key=" + (reader["punch_key"]) + "", cs4);
+                            SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                            while (rdring.Read())
+                            {
+                                ListViewItem ingredient1 = new ListViewItem();
+                                ingredient1.SubItems[0].Text = rdring[0].ToString();
+                                child.listView2.Items.Add(ingredient1);
+
+                                ListViewItem ingredient2 = new ListViewItem();
+                                ingredient2.SubItems[0].Text = rdring[1].ToString();
+                                child.listView2.Items.Add(ingredient2);
+
+                                ListViewItem ingredient3 = new ListViewItem();
+                                ingredient3.SubItems[0].Text = rdring[2].ToString();
+                                child.listView2.Items.Add(ingredient3);
+
+                                ListViewItem ingredient4 = new ListViewItem();
+                                ingredient4.SubItems[0].Text = rdring[3].ToString();
+                                child.listView2.Items.Add(ingredient4);
+
+                                ListViewItem ingredient5 = new ListViewItem();
+                                ingredient5.SubItems[0].Text = rdring[4].ToString();
+                                child.listView2.Items.Add(ingredient5);
+
+                                ListViewItem ingredient6 = new ListViewItem();
+                                ingredient6.SubItems[0].Text = rdring[5].ToString();
+                                child.listView2.Items.Add(ingredient6);
+
+                                ListViewItem ingredient7 = new ListViewItem();
+                                ingredient7.SubItems[0].Text = rdring[6].ToString();
+                                child.listView2.Items.Add(ingredient7);
+
+                                ListViewItem ingredient8 = new ListViewItem();
+                                ingredient8.SubItems[0].Text = rdring[7].ToString();
+                                child.listView2.Items.Add(ingredient8);
+
+                                ListViewItem ingredient9 = new ListViewItem();
+                                ingredient9.SubItems[0].Text = rdring[8].ToString();
+                                child.listView2.Items.Add(ingredient9);
+
+                                ListViewItem ingredient10 = new ListViewItem();
+                                ingredient10.SubItems[0].Text = rdring[9].ToString();
+                                child.listView2.Items.Add(ingredient10);
+
+                                ListViewItem ingredient11 = new ListViewItem();
+                                ingredient11.SubItems[0].Text = rdring[10].ToString();
+                                child.listView2.Items.Add(ingredient11);
+
+                                ListViewItem ingredient12 = new ListViewItem();
+                                ingredient12.SubItems[0].Text = rdring[11].ToString();
+                                child.listView2.Items.Add(ingredient12);
+
+                                ListViewItem ingredient13 = new ListViewItem();
+                                ingredient13.SubItems[0].Text = rdring[12].ToString();
+                                child.listView2.Items.Add(ingredient13);
+
+                                ListViewItem ingredient14 = new ListViewItem();
+                                ingredient14.SubItems[0].Text = rdring[13].ToString();
+                                child.listView2.Items.Add(ingredient14);
+                            }
+                            //Get Amounts
+                            SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14 FROM punches WHERE punch_key=" + (reader["punch_key"]) + "", cs4);
+                            SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                            while (rdramt.Read())
+                            {
+                                ListViewItem amt1 = new ListViewItem();
+                                amt1.SubItems[0].Text = rdramt[0].ToString();
+                                //amount.SubItems.Add(rdramt[0].ToString());
+                                child.listView1.Items.Add(amt1);
+
+                                ListViewItem amt2 = new ListViewItem();
+                                amt2.SubItems[0].Text = rdramt[1].ToString();
+                                child.listView1.Items.Add(amt2);
+
+                                ListViewItem amt3 = new ListViewItem();
+                                amt3.SubItems[0].Text = rdramt[2].ToString();
+                                child.listView1.Items.Add(amt3);
+
+                                ListViewItem amt4 = new ListViewItem();
+                                amt4.SubItems[0].Text = rdramt[3].ToString();
+                                child.listView1.Items.Add(amt4);
+
+                                ListViewItem amt5 = new ListViewItem();
+                                amt5.SubItems[0].Text = rdramt[4].ToString();
+                                child.listView1.Items.Add(amt5);
+
+                                ListViewItem amt6 = new ListViewItem();
+                                amt6.SubItems[0].Text = rdramt[5].ToString();
+                                child.listView1.Items.Add(amt6);
+
+                                ListViewItem amt7 = new ListViewItem();
+                                amt7.SubItems[0].Text = rdramt[6].ToString();
+                                child.listView1.Items.Add(amt7);
+
+                                ListViewItem amt8 = new ListViewItem();
+                                amt8.SubItems[0].Text = rdramt[7].ToString();
+                                child.listView1.Items.Add(amt8);
+
+                                ListViewItem amt9 = new ListViewItem();
+                                amt9.SubItems[0].Text = rdramt[8].ToString();
+                                child.listView1.Items.Add(amt9);
+
+                                ListViewItem amt10 = new ListViewItem();
+                                amt10.SubItems[0].Text = rdramt[9].ToString();
+                                child.listView1.Items.Add(amt10);
+
+                                ListViewItem amt11 = new ListViewItem();
+                                amt11.SubItems[0].Text = rdramt[10].ToString();
+                                child.listView1.Items.Add(amt11);
+
+                                ListViewItem amt12 = new ListViewItem();
+                                amt12.SubItems[0].Text = rdramt[11].ToString();
+                                child.listView1.Items.Add(amt12);
+
+                                ListViewItem amt13 = new ListViewItem();
+                                amt13.SubItems[0].Text = rdramt[12].ToString();
+                                child.listView1.Items.Add(amt13);
+
+                                ListViewItem amt14 = new ListViewItem();
+                                amt14.SubItems[0].Text = rdramt[13].ToString();
+                                child.listView1.Items.Add(amt14);
+                            }
+
+                            //Get Directions
+                            SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM punches WHERE punch_key= " + (reader["punch_key"]) + "", cs4);
+                            SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                            while (rdr.Read())
+                            {
+                                child.richTextBox1.Text = rdr[0].ToString();
+                            }
+
+                        }
                     }
                 }
             }
@@ -443,53 +839,300 @@ namespace bartenderexpressReloaded
         {
             if (CocktailsNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = CocktailsNameBox.SelectedValue.ToString();
-
-
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM cocktails WHERE name ='" + statusbarrecipe + "'", conn);
-                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    string statusbarrecipe2 = CocktailsNameBox.SelectedValue.ToString();
+                    toolStripStatusLabel1.Text = statusbarrecipe2;
 
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
+                    //MessageBox.Show(statusbarrecipe2);
+
+
+
+                    using (SQLiteConnection cs5 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                    {
+                        cs5.Open();
+
+                        //Get ID
+                        //string selectedvalue
+
+                        SQLiteCommand cmd = new SQLiteCommand("SELECT cocktail_key FROM cocktails WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs5);
+                        SQLiteDataReader reader = cmd.ExecuteReader();
+
+                        //MessageBox.Show(reader["id"].ToString());
+
                         Form2 child = new Form2();
                         child.Text = CocktailsNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
+
                         child.MdiParent = this;
                         child.Show();
 
-                        break;
+                    while (reader.Read())
+                    {
+                        // Get Ingredients
+                        SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, ingredient11, ingredient12, ingredient13 FROM cocktails WHERE cocktail_key=" + (reader["cocktail_key"]) + "", cs5);
+                        SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                        while (rdring.Read())
+                        {
+                            ListViewItem ingredient1 = new ListViewItem();
+                            ingredient1.SubItems[0].Text = rdring[0].ToString();
+                            child.listView2.Items.Add(ingredient1);
+
+                            ListViewItem ingredient2 = new ListViewItem();
+                            ingredient2.SubItems[0].Text = rdring[1].ToString();
+                            child.listView2.Items.Add(ingredient2);
+
+                            ListViewItem ingredient3 = new ListViewItem();
+                            ingredient3.SubItems[0].Text = rdring[2].ToString();
+                            child.listView2.Items.Add(ingredient3);
+
+                            ListViewItem ingredient4 = new ListViewItem();
+                            ingredient4.SubItems[0].Text = rdring[3].ToString();
+                            child.listView2.Items.Add(ingredient4);
+
+                            ListViewItem ingredient5 = new ListViewItem();
+                            ingredient5.SubItems[0].Text = rdring[4].ToString();
+                            child.listView2.Items.Add(ingredient5);
+
+                            ListViewItem ingredient6 = new ListViewItem();
+                            ingredient6.SubItems[0].Text = rdring[5].ToString();
+                            child.listView2.Items.Add(ingredient6);
+
+                            ListViewItem ingredient7 = new ListViewItem();
+                            ingredient7.SubItems[0].Text = rdring[6].ToString();
+                            child.listView2.Items.Add(ingredient7);
+
+                            ListViewItem ingredient8 = new ListViewItem();
+                            ingredient8.SubItems[0].Text = rdring[7].ToString();
+                            child.listView2.Items.Add(ingredient8);
+
+                            ListViewItem ingredient9 = new ListViewItem();
+                            ingredient9.SubItems[0].Text = rdring[8].ToString();
+                            child.listView2.Items.Add(ingredient9);
+
+                            ListViewItem ingredient10 = new ListViewItem();
+                            ingredient10.SubItems[0].Text = rdring[9].ToString();
+                            child.listView2.Items.Add(ingredient10);
+
+                            ListViewItem ingredient11 = new ListViewItem();
+                            ingredient11.SubItems[0].Text = rdring[10].ToString();
+                            child.listView2.Items.Add(ingredient11);
+
+                            ListViewItem ingredient12 = new ListViewItem();
+                            ingredient12.SubItems[0].Text = rdring[11].ToString();
+                            child.listView2.Items.Add(ingredient12);
+
+                            ListViewItem ingredient13 = new ListViewItem();
+                            ingredient13.SubItems[0].Text = rdring[12].ToString();
+                            child.listView2.Items.Add(ingredient13);
+                        }
+                        //Get Amounts
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13 FROM cocktails WHERE cocktail_key=" + (reader["cocktail_key"]) + "", cs5);
+                        SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                        while (rdramt.Read())
+                        {
+                            ListViewItem amt1 = new ListViewItem();
+                            amt1.SubItems[0].Text = rdramt[0].ToString();
+                            //amount.SubItems.Add(rdramt[0].ToString());
+                            child.listView1.Items.Add(amt1);
+
+                            ListViewItem amt2 = new ListViewItem();
+                            amt2.SubItems[0].Text = rdramt[1].ToString();
+                            child.listView1.Items.Add(amt2);
+
+                            ListViewItem amt3 = new ListViewItem();
+                            amt3.SubItems[0].Text = rdramt[2].ToString();
+                            child.listView1.Items.Add(amt3);
+
+                            ListViewItem amt4 = new ListViewItem();
+                            amt4.SubItems[0].Text = rdramt[3].ToString();
+                            child.listView1.Items.Add(amt4);
+
+                            ListViewItem amt5 = new ListViewItem();
+                            amt5.SubItems[0].Text = rdramt[4].ToString();
+                            child.listView1.Items.Add(amt5);
+
+                            ListViewItem amt6 = new ListViewItem();
+                            amt6.SubItems[0].Text = rdramt[5].ToString();
+                            child.listView1.Items.Add(amt6);
+
+                            ListViewItem amt7 = new ListViewItem();
+                            amt7.SubItems[0].Text = rdramt[6].ToString();
+                            child.listView1.Items.Add(amt7);
+
+                            ListViewItem amt8 = new ListViewItem();
+                            amt8.SubItems[0].Text = rdramt[7].ToString();
+                            child.listView1.Items.Add(amt8);
+
+                            ListViewItem amt9 = new ListViewItem();
+                            amt9.SubItems[0].Text = rdramt[8].ToString();
+                            child.listView1.Items.Add(amt9);
+
+                            ListViewItem amt10 = new ListViewItem();
+                            amt10.SubItems[0].Text = rdramt[9].ToString();
+                            child.listView1.Items.Add(amt10);
+
+                            ListViewItem amt11 = new ListViewItem();
+                            amt11.SubItems[0].Text = rdramt[10].ToString();
+                            child.listView1.Items.Add(amt11);
+
+                            ListViewItem amt12 = new ListViewItem();
+                            amt12.SubItems[0].Text = rdramt[11].ToString();
+                            child.listView1.Items.Add(amt12);
+
+                            ListViewItem amt13 = new ListViewItem();
+                            amt13.SubItems[0].Text = rdramt[12].ToString();
+                            child.listView1.Items.Add(amt13);
+
+                        }
+
+                        //Get Directions
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM cocktails WHERE cocktail_key = " + (reader["cocktail_key"]) + "", cs5);
+                        SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                        while (rdr.Read())
+                        {
+                            child.richTextBox1.Text = rdr[0].ToString();
+                        }
+
                     }
                 }
+
             }
         }
+    }
 
         private void BeerAleNameBox_DoubleClick(object sender, EventArgs e)
         {
             if (BeerAleNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = BeerAleNameBox.SelectedValue.ToString();
+                    string statusbarrecipe2 = BeerAleNameBox.SelectedValue.ToString();
+                    toolStripStatusLabel1.Text = statusbarrecipe2;
+
+                    //MessageBox.Show(statusbarrecipe2);
 
 
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
-                {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM beers WHERE name ='" + statusbarrecipe + "'", conn);
-                    SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
+                    using (SQLiteConnection cs6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                    {
+                        cs6.Open();
+
+                        //Get ID
+                        //string selectedvalue
+
+                        SQLiteCommand cmd = new SQLiteCommand("SELECT beer_key FROM beers WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs6);
+                        SQLiteDataReader reader = cmd.ExecuteReader();
+
+                        //MessageBox.Show(reader["id"].ToString());
+
                         Form2 child = new Form2();
                         child.Text = BeerAleNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
+
                         child.MdiParent = this;
                         child.Show();
 
-                        break;
+                    while (reader.Read())
+                    {
+                        // Get Ingredients
+                        SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9 FROM beers WHERE beer_key=" + (reader["beer_key"]) + "", cs6);
+                        SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                        while (rdring.Read())
+                        {
+                            ListViewItem ingredient1 = new ListViewItem();
+                            ingredient1.SubItems[0].Text = rdring[0].ToString();
+                            child.listView2.Items.Add(ingredient1);
+
+                            ListViewItem ingredient2 = new ListViewItem();
+                            ingredient2.SubItems[0].Text = rdring[1].ToString();
+                            child.listView2.Items.Add(ingredient2);
+
+                            ListViewItem ingredient3 = new ListViewItem();
+                            ingredient3.SubItems[0].Text = rdring[2].ToString();
+                            child.listView2.Items.Add(ingredient3);
+
+                            ListViewItem ingredient4 = new ListViewItem();
+                            ingredient4.SubItems[0].Text = rdring[3].ToString();
+                            child.listView2.Items.Add(ingredient4);
+
+                            ListViewItem ingredient5 = new ListViewItem();
+                            ingredient5.SubItems[0].Text = rdring[4].ToString();
+                            child.listView2.Items.Add(ingredient5);
+
+                            ListViewItem ingredient6 = new ListViewItem();
+                            ingredient6.SubItems[0].Text = rdring[5].ToString();
+                            child.listView2.Items.Add(ingredient6);
+
+                            ListViewItem ingredient7 = new ListViewItem();
+                            ingredient7.SubItems[0].Text = rdring[6].ToString();
+                            child.listView2.Items.Add(ingredient7);
+
+                            ListViewItem ingredient8 = new ListViewItem();
+                            ingredient8.SubItems[0].Text = rdring[7].ToString();
+                            child.listView2.Items.Add(ingredient8);
+
+                            ListViewItem ingredient9 = new ListViewItem();
+                            ingredient9.SubItems[0].Text = rdring[8].ToString();
+                            child.listView2.Items.Add(ingredient9);
+                        }
+                        //Get Amounts
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9 FROM beers WHERE beer_key=" + (reader["beer_key"]) + "", cs6);
+                        SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                        while (rdramt.Read())
+                        {
+                            ListViewItem amt1 = new ListViewItem();
+                            amt1.SubItems[0].Text = rdramt[0].ToString();
+                            //amount.SubItems.Add(rdramt[0].ToString());
+                            child.listView1.Items.Add(amt1);
+
+                            ListViewItem amt2 = new ListViewItem();
+                            amt2.SubItems[0].Text = rdramt[1].ToString();
+                            child.listView1.Items.Add(amt2);
+
+                            ListViewItem amt3 = new ListViewItem();
+                            amt3.SubItems[0].Text = rdramt[2].ToString();
+                            child.listView1.Items.Add(amt3);
+
+                            ListViewItem amt4 = new ListViewItem();
+                            amt4.SubItems[0].Text = rdramt[3].ToString();
+                            child.listView1.Items.Add(amt4);
+
+                            ListViewItem amt5 = new ListViewItem();
+                            amt5.SubItems[0].Text = rdramt[4].ToString();
+                            child.listView1.Items.Add(amt5);
+
+                            ListViewItem amt6 = new ListViewItem();
+                            amt6.SubItems[0].Text = rdramt[5].ToString();
+                            child.listView1.Items.Add(amt6);
+
+                            ListViewItem amt7 = new ListViewItem();
+                            amt7.SubItems[0].Text = rdramt[6].ToString();
+                            child.listView1.Items.Add(amt7);
+
+                            ListViewItem amt8 = new ListViewItem();
+                            amt8.SubItems[0].Text = rdramt[7].ToString();
+                            child.listView1.Items.Add(amt8);
+
+                            ListViewItem amt9 = new ListViewItem();
+                            amt9.SubItems[0].Text = rdramt[8].ToString();
+                            child.listView1.Items.Add(amt9);
+                        }
+
+                        //Get Directions
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM beers WHERE beer_key= " + (reader["beer_key"]) + "", cs6);
+                        SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                        while (rdr.Read())
+                        {
+                            child.richTextBox1.Text = rdr[0].ToString();
+                        }
+
                     }
                 }
+
             }
         }
 
@@ -497,52 +1140,294 @@ namespace bartenderexpressReloaded
         {
             if (NonAlcoholicNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = NonAlcoholicNameBox.SelectedValue.ToString();
+                    string statusbarrecipe2 = NonAlcoholicNameBox.SelectedValue.ToString();
+                    toolStripStatusLabel1.Text = statusbarrecipe2;
+
+                    //MessageBox.Show(statusbarrecipe2);
 
 
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
-                {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM nonalcoholic WHERE name ='" + statusbarrecipe + "'", conn);
-                    SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
+                    using (SQLiteConnection cs7 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                    {
+                        cs7.Open();
+
+                        //Get ID
+                        //string selectedvalue
+
+                        SQLiteCommand cmd = new SQLiteCommand("SELECT nonalcoholic_key FROM nonalcoholic WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs7);
+                        SQLiteDataReader reader = cmd.ExecuteReader();
+
+                        //MessageBox.Show(reader["id"].ToString());
+
                         Form2 child = new Form2();
                         child.Text = NonAlcoholicNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
+
                         child.MdiParent = this;
                         child.Show();
 
-                        break;
+
+                    while (reader.Read())
+                    {
+                        // Get Ingredients
+                        SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, ingredient11, ingredient12 FROM nonalcoholic WHERE nonalcoholic_key=" + (reader["nonalcoholic_key"]) + "", cs7);
+                        SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                        while (rdring.Read())
+                        {
+                            ListViewItem ingredient1 = new ListViewItem();
+                            ingredient1.SubItems[0].Text = rdring[0].ToString();
+                            child.listView2.Items.Add(ingredient1);
+
+                            ListViewItem ingredient2 = new ListViewItem();
+                            ingredient2.SubItems[0].Text = rdring[1].ToString();
+                            child.listView2.Items.Add(ingredient2);
+
+                            ListViewItem ingredient3 = new ListViewItem();
+                            ingredient3.SubItems[0].Text = rdring[2].ToString();
+                            child.listView2.Items.Add(ingredient3);
+
+                            ListViewItem ingredient4 = new ListViewItem();
+                            ingredient4.SubItems[0].Text = rdring[3].ToString();
+                            child.listView2.Items.Add(ingredient4);
+
+                            ListViewItem ingredient5 = new ListViewItem();
+                            ingredient5.SubItems[0].Text = rdring[4].ToString();
+                            child.listView2.Items.Add(ingredient5);
+
+                            ListViewItem ingredient6 = new ListViewItem();
+                            ingredient6.SubItems[0].Text = rdring[5].ToString();
+                            child.listView2.Items.Add(ingredient6);
+
+                            ListViewItem ingredient7 = new ListViewItem();
+                            ingredient7.SubItems[0].Text = rdring[6].ToString();
+                            child.listView2.Items.Add(ingredient7);
+
+                            ListViewItem ingredient8 = new ListViewItem();
+                            ingredient8.SubItems[0].Text = rdring[7].ToString();
+                            child.listView2.Items.Add(ingredient8);
+
+                            ListViewItem ingredient9 = new ListViewItem();
+                            ingredient9.SubItems[0].Text = rdring[8].ToString();
+                            child.listView2.Items.Add(ingredient9);
+
+                            ListViewItem ingredient10 = new ListViewItem();
+                            ingredient10.SubItems[0].Text = rdring[9].ToString();
+                            child.listView2.Items.Add(ingredient10);
+
+                            ListViewItem ingredient11 = new ListViewItem();
+                            ingredient11.SubItems[0].Text = rdring[10].ToString();
+                            child.listView2.Items.Add(ingredient11);
+
+                            ListViewItem ingredient12 = new ListViewItem();
+                            ingredient12.SubItems[0].Text = rdring[11].ToString();
+                            child.listView2.Items.Add(ingredient12);
+
+                        }
+                        //Get Amounts
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12 FROM nonalcoholic WHERE nonalcoholic_key=" + (reader["nonalcoholic_key"]) + "", cs7);
+                        SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                        while (rdramt.Read())
+                        {
+                            ListViewItem amt1 = new ListViewItem();
+                            amt1.SubItems[0].Text = rdramt[0].ToString();
+                            //amount.SubItems.Add(rdramt[0].ToString());
+                            child.listView1.Items.Add(amt1);
+
+                            ListViewItem amt2 = new ListViewItem();
+                            amt2.SubItems[0].Text = rdramt[1].ToString();
+                            child.listView1.Items.Add(amt2);
+
+                            ListViewItem amt3 = new ListViewItem();
+                            amt3.SubItems[0].Text = rdramt[2].ToString();
+                            child.listView1.Items.Add(amt3);
+
+                            ListViewItem amt4 = new ListViewItem();
+                            amt4.SubItems[0].Text = rdramt[3].ToString();
+                            child.listView1.Items.Add(amt4);
+
+                            ListViewItem amt5 = new ListViewItem();
+                            amt5.SubItems[0].Text = rdramt[4].ToString();
+                            child.listView1.Items.Add(amt5);
+
+                            ListViewItem amt6 = new ListViewItem();
+                            amt6.SubItems[0].Text = rdramt[5].ToString();
+                            child.listView1.Items.Add(amt6);
+
+                            ListViewItem amt7 = new ListViewItem();
+                            amt7.SubItems[0].Text = rdramt[6].ToString();
+                            child.listView1.Items.Add(amt7);
+
+                            ListViewItem amt8 = new ListViewItem();
+                            amt8.SubItems[0].Text = rdramt[7].ToString();
+                            child.listView1.Items.Add(amt8);
+
+                            ListViewItem amt9 = new ListViewItem();
+                            amt9.SubItems[0].Text = rdramt[8].ToString();
+                            child.listView1.Items.Add(amt9);
+
+                            ListViewItem amt10 = new ListViewItem();
+                            amt10.SubItems[0].Text = rdramt[9].ToString();
+                            child.listView1.Items.Add(amt10);
+
+                            ListViewItem amt11 = new ListViewItem();
+                            amt11.SubItems[0].Text = rdramt[10].ToString();
+                            child.listView1.Items.Add(amt11);
+
+                            ListViewItem amt12 = new ListViewItem();
+                            amt12.SubItems[0].Text = rdramt[11].ToString();
+                            child.listView1.Items.Add(amt12);
+
+                        }
+
+                        //Get Directions
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM nonalcoholic WHERE nonalcoholic_key= " + (reader["nonalcoholic_key"]) + "", cs7);
+                        SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                        while (rdr.Read())
+                        {
+                            child.richTextBox1.Text = rdr[0].ToString();
+                        }
+
                     }
                 }
+
             }
         }
-
+    
 
         private void CoffeeTeaNameBox_DoubleClick(object sender, EventArgs e)
         {
             if (CoffeeTeaNameBox.SelectedItem != null)
             {
-                string statusbarrecipe = CoffeeTeaNameBox.SelectedValue.ToString();
+                string statusbarrecipe2 = CoffeeTeaNameBox.SelectedValue.ToString();
+                toolStripStatusLabel1.Text = statusbarrecipe2;
+
+               MessageBox.Show(statusbarrecipe2);
 
 
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+
+                using (SQLiteConnection cs8 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM coffeetea WHERE name ='" + statusbarrecipe + "'", conn);
+                    cs8.Open();
+
+                    //Get ID
+                    //string selectedvalue
+
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='"statusbarrecipe2"'", cs8);
+                    //SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + (statusbarrecipe2.Trim().Replace("", "'' ")) + "'", cs8);
+                    //SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    //SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + statusbarrecipe2 + " '", cs8);
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
-                    { //MessageBox.Show(reader["directions"].ToString());
-                        Form2 child = new Form2();
-                        child.Text = CoffeeTeaNameBox.SelectedValue.ToString();
-                        //child.toolStripStatusLabel1.Text = statusbarrecipe;
-                        child.MdiParent = this;
-                        child.Show();
+                    MessageBox.Show(reader["coffeetea_key"].ToString());
 
-                        break;
+                    Form2 child = new Form2();
+                    child.Text = CoffeeTeaNameBox.SelectedValue.ToString();
+                    //child.toolStripStatusLabel1.Text = statusbarrecipe;
+
+                    child.MdiParent = this;
+                    child.Show();
+                    {
+                        // Get Ingredients
+                        SQLiteCommand cmding1 = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9 FROM coffeetea WHERE coffeetea_key=" + (reader["coffeetea_key"]) + "", cs8);
+                        SQLiteDataReader rdring = cmding1.ExecuteReader();
+
+                        while (rdring.Read())
+                        {
+                            ListViewItem ingredient1 = new ListViewItem();
+                            ingredient1.SubItems[0].Text = rdring[0].ToString();
+                            child.listView2.Items.Add(ingredient1);
+
+                            ListViewItem ingredient2 = new ListViewItem();
+                            ingredient2.SubItems[0].Text = rdring[1].ToString();
+                            child.listView2.Items.Add(ingredient2);
+
+                            ListViewItem ingredient3 = new ListViewItem();
+                            ingredient3.SubItems[0].Text = rdring[2].ToString();
+                            child.listView2.Items.Add(ingredient3);
+
+                            ListViewItem ingredient4 = new ListViewItem();
+                            ingredient4.SubItems[0].Text = rdring[3].ToString();
+                            child.listView2.Items.Add(ingredient4);
+
+                            ListViewItem ingredient5 = new ListViewItem();
+                            ingredient5.SubItems[0].Text = rdring[4].ToString();
+                            child.listView2.Items.Add(ingredient5);
+
+                            ListViewItem ingredient6 = new ListViewItem();
+                            ingredient6.SubItems[0].Text = rdring[5].ToString();
+                            child.listView2.Items.Add(ingredient6);
+
+                            ListViewItem ingredient7 = new ListViewItem();
+                            ingredient7.SubItems[0].Text = rdring[6].ToString();
+                            child.listView2.Items.Add(ingredient7);
+
+                            ListViewItem ingredient8 = new ListViewItem();
+                            ingredient8.SubItems[0].Text = rdring[7].ToString();
+                            child.listView2.Items.Add(ingredient8);
+
+                            ListViewItem ingredient9 = new ListViewItem();
+                            ingredient9.SubItems[0].Text = rdring[8].ToString();
+                            child.listView2.Items.Add(ingredient9);
+
+                        }
+                        //Get Amounts
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9 FROM coffeetea WHERE coffeetea_key=" + (reader["coffeetea_key"]) + "", cs8);
+                        SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                        while (rdramt.Read())
+                        {
+                            ListViewItem amt1 = new ListViewItem();
+                            amt1.SubItems[0].Text = rdramt[0].ToString();
+                            //amount.SubItems.Add(rdramt[0].ToString());
+                            child.listView1.Items.Add(amt1);
+
+                            ListViewItem amt2 = new ListViewItem();
+                            amt2.SubItems[0].Text = rdramt[1].ToString();
+                            child.listView1.Items.Add(amt2);
+
+                            ListViewItem amt3 = new ListViewItem();
+                            amt3.SubItems[0].Text = rdramt[2].ToString();
+                            child.listView1.Items.Add(amt3);
+
+                            ListViewItem amt4 = new ListViewItem();
+                            amt4.SubItems[0].Text = rdramt[3].ToString();
+                            child.listView1.Items.Add(amt4);
+
+                            ListViewItem amt5 = new ListViewItem();
+                            amt5.SubItems[0].Text = rdramt[4].ToString();
+                            child.listView1.Items.Add(amt5);
+
+                            ListViewItem amt6 = new ListViewItem();
+                            amt6.SubItems[0].Text = rdramt[5].ToString();
+                            child.listView1.Items.Add(amt6);
+
+                            ListViewItem amt7 = new ListViewItem();
+                            amt7.SubItems[0].Text = rdramt[6].ToString();
+                            child.listView1.Items.Add(amt7);
+
+                            ListViewItem amt8 = new ListViewItem();
+                            amt8.SubItems[0].Text = rdramt[7].ToString();
+                            child.listView1.Items.Add(amt8);
+
+                            ListViewItem amt9 = new ListViewItem();
+                            amt9.SubItems[0].Text = rdramt[8].ToString();
+                            child.listView1.Items.Add(amt9);
+
+                        }
+
+                        //Get Directions
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM coffeetea WHERE coffeetea_key= " + (reader["coffeetea_key"]) + "", cs8);
+                        SQLiteDataReader rdr = cmddir.ExecuteReader();
+
+                        while (rdr.Read())
+                        {
+                            child.richTextBox1.Text = rdr[0].ToString();
+                        }
+
                     }
                 }
             }
