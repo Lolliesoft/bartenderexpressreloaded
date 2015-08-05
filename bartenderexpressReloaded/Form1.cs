@@ -1315,8 +1315,8 @@ namespace bartenderexpressReloaded
                     //Get ID
                     //string selectedvalue
 
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='"statusbarrecipe2"'", cs8);
-                    //SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + (statusbarrecipe2.Trim().Replace("", "'' ")) + "'", cs8);
+                    //SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='"statusbarrecipe2"'", cs8);
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + (statusbarrecipe2.Trim().Replace("", "'' ")) + "'", cs8);
                     //SQLiteDataReader reader = cmd.ExecuteReader();
 
                     //SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + statusbarrecipe2 + " '", cs8);
