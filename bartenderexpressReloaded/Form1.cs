@@ -251,38 +251,6 @@ namespace bartenderexpressReloaded
             }
         }
 
-        //private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
-        //{
-        //    if (DrinksNameBox.SelectedItem != null)
-        //    {
-        //        string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
-
-
-        //        using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
-        //        {
-        //            conn.Open();
-        //            SQLiteCommand cmd = new SQLiteCommand("SELECT directions FROM recipes WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn);
-        //            SQLiteDataReader reader = cmd.ExecuteReader();
-
-        //            while (reader.Read())
-        //            { //MessageBox.Show(reader["directions"].ToString());
-        //                Form2 child = new Form2();
-        //                child.Text = DrinksNameBox.SelectedValue.ToString();
-        //                //child.toolStripStatusLabel1.Text = statusbarrecipe;
-        //                child.MdiParent = this;
-        //                child.Show();
-
-        //                break;
-        //            }
-
-        //            //MessageBox.Show(reader["id"].ToString());
-
-
-        //            //toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.listBoxControl1.Items.Count.ToString());
-        //        }
-        //    }
-        //}
-
         private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
 
@@ -1295,7 +1263,6 @@ namespace bartenderexpressReloaded
 
             }
         }
-    
 
         private void CoffeeTeaNameBox_DoubleClick(object sender, EventArgs e)
         {
@@ -1304,25 +1271,19 @@ namespace bartenderexpressReloaded
                 string statusbarrecipe2 = CoffeeTeaNameBox.SelectedValue.ToString();
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
-               MessageBox.Show(statusbarrecipe2);
 
 
+                using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
 
-                using (SQLiteConnection cs8 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
-                    cs8.Open();
+                    conn6.Open();
 
                     //Get ID
                     //string selectedvalue
 
-                    //SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='"statusbarrecipe2"'", cs8);
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + (statusbarrecipe2.Trim().Replace("", "'' ")) + "'", cs8);
-                    //SQLiteDataReader reader = cmd.ExecuteReader();
-
-                    //SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + statusbarrecipe2 + " '", cs8);
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + " '", conn6);
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    MessageBox.Show(reader["coffeetea_key"].ToString());
 
                     Form2 child = new Form2();
                     child.Text = CoffeeTeaNameBox.SelectedValue.ToString();
@@ -1330,10 +1291,13 @@ namespace bartenderexpressReloaded
 
                     child.MdiParent = this;
                     child.Show();
+
+
+                    while (reader.Read())
                     {
                         // Get Ingredients
-                        SQLiteCommand cmding1 = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9 FROM coffeetea WHERE coffeetea_key=" + (reader["coffeetea_key"]) + "", cs8);
-                        SQLiteDataReader rdring = cmding1.ExecuteReader();
+                        SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9 FROM coffeetea WHERE coffeetea_key=" + (reader["coffeetea_key"]) + "", conn6);
+                        SQLiteDataReader rdring = cmding.ExecuteReader();
 
                         while (rdring.Read())
                         {
@@ -1375,7 +1339,7 @@ namespace bartenderexpressReloaded
 
                         }
                         //Get Amounts
-                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9 FROM coffeetea WHERE coffeetea_key=" + (reader["coffeetea_key"]) + "", cs8);
+                        SQLiteCommand cmdamt = new SQLiteCommand("SELECT amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9 FROM coffeetea WHERE coffeetea_key=" + (reader["coffeetea_key"]) + "", conn6);
                         SQLiteDataReader rdramt = cmdamt.ExecuteReader();
 
                         while (rdramt.Read())
@@ -1420,7 +1384,7 @@ namespace bartenderexpressReloaded
                         }
 
                         //Get Directions
-                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM coffeetea WHERE coffeetea_key= " + (reader["coffeetea_key"]) + "", cs8);
+                        SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM coffeetea WHERE coffeetea_key= " + (reader["coffeetea_key"]) + "", conn6);
                         SQLiteDataReader rdr = cmddir.ExecuteReader();
 
                         while (rdr.Read())
@@ -1430,6 +1394,7 @@ namespace bartenderexpressReloaded
 
                     }
                 }
+
             }
         }
 
@@ -1629,15 +1594,6 @@ namespace bartenderexpressReloaded
             }
         }
 
-        //private void CheckKeys(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == (char)13)
-        //    {
-        //        this.DrinksNameBox_DoubleClick(e.KeyChar, e);
-        //        this.ShotsNameBox_DoubleClick(e.KeyChar, e);
-        //    }
-        //}
-
         private void DrinksNameBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -1734,4 +1690,3 @@ namespace bartenderexpressReloaded
 
       }
   }
-
