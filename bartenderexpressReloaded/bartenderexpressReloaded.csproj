@@ -91,6 +91,12 @@
       <DependentUpon>bartenderExpressDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="CueProvider.cs" />
+    <Compile Include="customRecipes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customRecipes.Designer.cs">
+      <DependentUpon>customRecipes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>XpressShotsDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="customRecipes.resx">
+      <DependentUpon>customRecipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
