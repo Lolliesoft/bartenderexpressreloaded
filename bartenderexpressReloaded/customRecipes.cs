@@ -29,7 +29,7 @@ namespace bartenderexpressReloaded
                 SQLiteCommand cmd = new SQLiteCommand();
                 cmd.CommandText = @"INSERT into myRecipes (DrinkName, Amt1) Values (@DrinkName,@Amt1) ";
                 cmd.Connection = conn10;
-                cmd.Parameters.Add(new SQLiteParameter());
+                //cmd.Parameters.Add(new SQLiteParameter());
 
             }
 
