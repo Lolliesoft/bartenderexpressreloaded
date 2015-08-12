@@ -25,12 +25,18 @@ namespace bartenderexpressReloaded
         {
             using (SQLiteConnection conn10 = new SQLiteConnection(connectionString))
             {
-                conn10.Open();
-                SQLiteCommand cmd = new SQLiteCommand();
-                cmd.CommandText = @"INSERT into myRecipes (DrinkName, Amt1) Values (@DrinkName,@Amt1) ";
-                cmd.Connection = conn10;
-                //cmd.Parameters.Add(new SQLiteParameter());
+                
 
+                SQLiteCommand cmd = new SQLiteCommand();
+                cmd.CommandText = @"INSERT into myRecipes (name, amt1) Values (@DrinkName,@Amt1) ";
+                cmd.Connection = conn10;
+                cmd.Parameters.Add(new SQLiteParameter("@DrinkName", txtDrinkName.Text));
+                cmd.Parameters.Add(new SQLiteParameter("@Amt1", txtAmt1.Text));
+
+                conn10.Open();
+                cmd.ExecuteNonQuery();
+
+                conn10.Close();
             }
 
         }

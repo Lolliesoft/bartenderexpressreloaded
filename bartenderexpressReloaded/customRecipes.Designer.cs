@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.DrinkName = new System.Windows.Forms.TextBox();
-            this.Amt1 = new System.Windows.Forms.TextBox();
+            this.txtDrinkName = new System.Windows.Forms.TextBox();
+            this.txtAmt1 = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,19 +53,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Amount 1:";
             // 
-            // DrinkName
+            // txtDrinkName
             // 
-            this.DrinkName.Location = new System.Drawing.Point(90, 10);
-            this.DrinkName.Name = "DrinkName";
-            this.DrinkName.Size = new System.Drawing.Size(161, 20);
-            this.DrinkName.TabIndex = 2;
+            this.txtDrinkName.Location = new System.Drawing.Point(90, 10);
+            this.txtDrinkName.Name = "txtDrinkName";
+            this.txtDrinkName.Size = new System.Drawing.Size(161, 20);
+            this.txtDrinkName.TabIndex = 2;
             // 
-            // Amt1
+            // txtAmt1
             // 
-            this.Amt1.Location = new System.Drawing.Point(90, 38);
-            this.Amt1.Name = "Amt1";
-            this.Amt1.Size = new System.Drawing.Size(161, 20);
-            this.Amt1.TabIndex = 3;
+            this.txtAmt1.Location = new System.Drawing.Point(90, 38);
+            this.txtAmt1.Name = "txtAmt1";
+            this.txtAmt1.Size = new System.Drawing.Size(161, 20);
+            this.txtAmt1.TabIndex = 3;
             // 
             // Save
             // 
@@ -83,8 +83,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.Amt1);
-            this.Controls.Add(this.DrinkName);
+            this.Controls.Add(this.txtAmt1);
+            this.Controls.Add(this.txtDrinkName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "customRecipes";
@@ -98,8 +98,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox DrinkName;
-        private System.Windows.Forms.TextBox Amt1;
+        private System.Windows.Forms.TextBox txtDrinkName;
+        private System.Windows.Forms.TextBox txtAmt1;
         private System.Windows.Forms.Button Save;
     }
 }

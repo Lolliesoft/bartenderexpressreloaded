@@ -1693,6 +1693,12 @@ namespace bartenderexpressReloaded
             AutoUpdater.Start("http://rbsoft.org/updates/right-click-enhancer.xml");
         }
 
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            customRecipes MyRecipes = new customRecipes();
+            MyRecipes.Show();
+        }
+
 
       }
   }
