@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+using AutoUpdaterDotNET;
 
 
 //using DevExpress.XtraBars.Docking;
@@ -1685,6 +1686,11 @@ namespace bartenderexpressReloaded
             DrinkSearch.Clear();
             DrinkSearch.Focus();
 
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AutoUpdater.Start("http://rbsoft.org/updates/right-click-enhancer.xml");
         }
 
 
