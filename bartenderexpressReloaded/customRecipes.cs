@@ -13,9 +13,10 @@ namespace bartenderexpressReloaded
 {
     public partial class customRecipes : Form
     {
+        
         string connectionString;
-
         public customRecipes()
+
         {
             InitializeComponent();
             connectionString = @"Data Source = |DataDirectory|\\XpressShots.db";    
