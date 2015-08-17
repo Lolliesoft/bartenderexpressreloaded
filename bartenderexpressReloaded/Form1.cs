@@ -1414,7 +1414,7 @@ namespace bartenderexpressReloaded
 
                     while (reader.Read())
                     { //MessageBox.Show(reader["directions"].ToString());
-                        Form2 child = new Form2();
+                        customRecipes child = new customRecipes();
                         child.Text = CustomNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
                         child.MdiParent = this;
@@ -1496,8 +1496,14 @@ namespace bartenderexpressReloaded
         private void CustomItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             WizardPages.SelectedTab = CustomTab;
-            CustomNameBox.Show();
+            //CustomNameBox.Show();
             toolStripStatusLabel1.Text = (this.CustomNameBox.ItemCount.ToString()) + " Custom Recipes ";
+            customRecipes child = new customRecipes();
+            //child.Text = CustomNameBox.SelectedValue.ToString();
+            //child.toolStripStatusLabel1.Text = statusbarrecipe;
+            child.MdiParent = this;
+            child.Show();
+
         }
 
         private void DrinkSearch_TextChanged(object sender, EventArgs e)
