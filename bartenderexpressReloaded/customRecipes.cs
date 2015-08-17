@@ -41,5 +41,15 @@ namespace bartenderexpressReloaded
             }
 
         }
+
+        private void customRecipes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
