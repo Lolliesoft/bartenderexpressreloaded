@@ -333,7 +333,6 @@
             this.Ingredient7Label.Size = new System.Drawing.Size(66, 13);
             this.Ingredient7Label.TabIndex = 26;
             this.Ingredient7Label.Text = "Ingredient 7:";
-            this.Ingredient7Label.Click += new System.EventHandler(this.label20_Click);
             // 
             // Ingredient8Label
             // 
@@ -692,7 +691,6 @@
             this.Controls.Add(this.DrinkNameLabel);
             this.Name = "customRecipes";
             this.Text = "customRecipes";
-            this.Load += new System.EventHandler(this.customRecipes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

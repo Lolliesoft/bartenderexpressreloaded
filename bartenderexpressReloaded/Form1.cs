@@ -1293,6 +1293,8 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     child.Show();
 
+                    
+
 
                     while (reader.Read())
                     {
@@ -1419,8 +1421,6 @@ namespace bartenderexpressReloaded
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
                         child.MdiParent = this;
                         child.Show();
-
-                        break;
                     }
                 }
             }
@@ -1494,6 +1494,19 @@ namespace bartenderexpressReloaded
         }
 
         private void CustomItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            WizardPages.SelectedTab = CustomTab;
+            CustomNameBox.Show();
+            toolStripStatusLabel1.Text = (this.CustomNameBox.ItemCount.ToString()) + " Custom Recipes ";
+            //customRecipes child = new customRecipes();
+            //child.Text = CustomNameBox.SelectedValue.ToString();
+            //child.toolStripStatusLabel1.Text = statusbarrecipe;
+            //child.MdiParent = this;
+            //child.Show();
+
+        }
+
+        private void AddRecipeItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             WizardPages.SelectedTab = CustomTab;
             //CustomNameBox.Show();
@@ -1704,7 +1717,5 @@ namespace bartenderexpressReloaded
             customRecipes MyRecipes = new customRecipes();
             MyRecipes.Show();
         }
-
-
       }
   }
