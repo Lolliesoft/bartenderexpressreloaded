@@ -926,7 +926,7 @@
             // 
             // tileItem2
             // 
-            tileItemElement2.Text = "tileItem2";
+            tileItemElement2.Text = "Search";
             this.tileItem2.Elements.Add(tileItemElement2);
             this.tileItem2.Id = 2;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
@@ -934,7 +934,7 @@
             // 
             // tileItem3
             // 
-            tileItemElement3.Text = "tileItem3";
+            tileItemElement3.Text = "My Liquor Cabinet";
             this.tileItem3.Elements.Add(tileItemElement3);
             this.tileItem3.Id = 3;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
@@ -942,7 +942,7 @@
             // 
             // tileItem5
             // 
-            tileItemElement4.Text = "tileItem5";
+            tileItemElement4.Text = "Recipe of the Day";
             this.tileItem5.Elements.Add(tileItemElement4);
             this.tileItem5.Id = 10;
             this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
@@ -950,7 +950,7 @@
             // 
             // tileItem7
             // 
-            tileItemElement5.Text = "tileItem7";
+            tileItemElement5.Text = "Check For Updates";
             this.tileItem7.Elements.Add(tileItemElement5);
             this.tileItem7.Id = 11;
             this.tileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
@@ -958,7 +958,7 @@
             // 
             // tileItem8
             // 
-            tileItemElement6.Text = "tileItem8";
+            tileItemElement6.Text = "Measurement Calculator";
             this.tileItem8.Elements.Add(tileItemElement6);
             this.tileItem8.Id = 12;
             this.tileItem8.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
@@ -966,7 +966,7 @@
             // 
             // tileItem9
             // 
-            tileItemElement7.Text = "tileItem9";
+            tileItemElement7.Text = "Lolliesoft";
             this.tileItem9.Elements.Add(tileItemElement7);
             this.tileItem9.Id = 13;
             this.tileItem9.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
