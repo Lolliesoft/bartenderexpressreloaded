@@ -23,19 +23,26 @@ namespace bartenderexpressReloaded
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "Lolliesoft"));
             InitializeComponent();
-            
-           
-            //DrinksNameBox.Show();
-            //ShotsNameBox.Hide();
-            //LiqueursNameBox.Hide();
-            //PunchesNameBox.Hide();
-            //CocktailsNameBox.Hide();
-            //BeerAleNameBox.Hide();
-            //NonAlcoholicNameBox.Hide();
-            //CoffeeTeaNameBox.Hide();
-           
-        }
+            //Find the MdiClient and hold it by a variable
+            client = Controls.OfType<MdiClient>().First();
+            //This will check whenever client gets focused and there aren't any
+            //child forms opened, Send the client to back so that the other controls can be shown back.
+            client.GotFocus += (s, e) =>
+            {
+                if (!MdiChildren.Any(x => x.Visible)) client.SendToBack();
 
+
+                //DrinksNameBox.Show();
+                //ShotsNameBox.Hide();
+                //LiqueursNameBox.Hide();
+                //PunchesNameBox.Hide();
+                //CocktailsNameBox.Hide();
+                //BeerAleNameBox.Hide();
+                //NonAlcoholicNameBox.Hide();
+                //CoffeeTeaNameBox.Hide();
+            };
+        }
+        MdiClient client;
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -278,6 +285,7 @@ namespace bartenderexpressReloaded
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
                    
                     child.MdiParent = this;
+                    client.BringToFront();//This will make your child form shown on top.
                     child.Show();
 
 
@@ -350,6 +358,7 @@ namespace bartenderexpressReloaded
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
+                    client.BringToFront();//This will make your child form shown on top.
                     child.Show();
 
                     while (reader.Read())
@@ -501,6 +510,7 @@ namespace bartenderexpressReloaded
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
+                    client.BringToFront();//This will make your child form shown on top.
                     child.Show();
 
                     while (reader.Read())
@@ -659,6 +669,7 @@ namespace bartenderexpressReloaded
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                         child.MdiParent = this;
+                        client.BringToFront();//This will make your child form shown on top.
                         child.Show();
 
                         while (reader.Read())
@@ -833,6 +844,7 @@ namespace bartenderexpressReloaded
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                         child.MdiParent = this;
+                        client.BringToFront();//This will make your child form shown on top.
                         child.Show();
 
                     while (reader.Read())
@@ -1000,6 +1012,7 @@ namespace bartenderexpressReloaded
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                         child.MdiParent = this;
+                        client.BringToFront();//This will make your child form shown on top.
                         child.Show();
 
                     while (reader.Read())
@@ -1133,6 +1146,7 @@ namespace bartenderexpressReloaded
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                         child.MdiParent = this;
+                        client.BringToFront();//This will make your child form shown on top.
                         child.Show();
 
 
@@ -1291,6 +1305,7 @@ namespace bartenderexpressReloaded
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
+                    client.BringToFront();//This will make your child form shown on top.
                     child.Show();
 
                     
@@ -1420,6 +1435,7 @@ namespace bartenderexpressReloaded
                         child.Text = CustomNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
                         child.MdiParent = this;
+                        client.BringToFront();//This will make your child form shown on top.
                         child.Show();
                     }
                 }
@@ -1515,6 +1531,7 @@ namespace bartenderexpressReloaded
             //child.Text = CustomNameBox.SelectedValue.ToString();
             //child.toolStripStatusLabel1.Text = statusbarrecipe;
             child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.
             child.Show();
 
         }
@@ -1715,6 +1732,7 @@ namespace bartenderexpressReloaded
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             customRecipes MyRecipes = new customRecipes();
+            client.BringToFront();//This will make your child form shown on top.
             MyRecipes.Show();
         }
       }
