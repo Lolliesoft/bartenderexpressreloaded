@@ -20,10 +20,12 @@ namespace bartenderexpressReloaded
             DevExpress.UserSkins.TouchSkins.Register();
 
             DevExpress.LookAndFeel.UserLookAndFeel.Default.UseWindowsXPTheme = false;
+            //DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2013";
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Glass Oceans";
 
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             DevExpress.Skins.SkinManager.EnableFormSkins();
+
             Application.Run(new Form1());
         }
     }
