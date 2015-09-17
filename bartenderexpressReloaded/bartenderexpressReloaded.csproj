@@ -74,9 +74,6 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="randomDrink">
-      <HintPath>.\randomDrink.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -130,6 +127,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyRecipes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyRecipes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -171,6 +173,17 @@
       <DependentUpon>bartenderExpressDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram1.cd" />
+    <None Include="MyRecipes.xsc">
+      <DependentUpon>MyRecipes.xsd</DependentUpon>
+    </None>
+    <None Include="MyRecipes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyRecipes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyRecipes.xss">
+      <DependentUpon>MyRecipes.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

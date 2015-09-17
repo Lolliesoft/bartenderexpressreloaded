@@ -14,7 +14,7 @@ namespace bartenderexpressReloaded
     /// </summary>
     /// <summary>
     
-    public static class CueProvider
+    public class CueProvider
     {
         private const int EM_SETCUEBANNER = 0x1501;
 
@@ -27,7 +27,7 @@ namespace bartenderexpressReloaded
         /// </summary>
         /// <param name="textBox">The text box.</param>
         /// <param name="cue">The cue text.</param>
-        public static void SetCue (TextBox textBox, string cue)
+        public void SetCue (TextBox textBox, string cue)
         {
             textBox.Font = new Font("Default", 8, FontStyle.Italic);  
             SendMessage(textBox.Handle, EM_SETCUEBANNER, 0, cue);
@@ -38,7 +38,7 @@ namespace bartenderexpressReloaded
         /// Clears a text box's cue text.
         /// </summary>
         /// <param name="textBox">The text box</param>
-        public static void ClearCue
+        public void ClearCue
           (TextBox textBox)
         {
             textBox.Font = new Font("Default", 8, FontStyle.Regular);

@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SQLite;
 using AutoUpdaterDotNET;
-using randomDrink;
 using DevExpress.XtraEditors;
 
 
@@ -50,6 +49,8 @@ namespace bartenderexpressReloaded
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'myRecipes.myRecipes' table. You can move, or remove it, as needed.
+            this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
             // TODO: This line of code loads data into the 'xpressShotsDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter1.Fill(this.xpressShotsDataSet.recipes);
             // TODO: This line of code loads data into the 'xpressShotsDataSet.coffeetea' table. You can move, or remove it, as needed.
@@ -68,16 +69,16 @@ namespace bartenderexpressReloaded
             this.shotsTableAdapter.Fill(this.xpressShotsDataSet.shots);
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
-            CueProvider.SetCue(DrinkSearch, "Search Drinks");
-            CueProvider.SetCue(ShotSearch, "Search Shots");
-            CueProvider.SetCue(LiqueurSearch, "Search Liqueurs");
-            CueProvider.SetCue(PunchSearch, "Search Punches");
-            CueProvider.SetCue(BeerSearch, "Search Beer and Ales");
-            CueProvider.SetCue(CoffeeTeaSearch, "Search Coffee and Teas");
-            CueProvider.SetCue(NonAlcoholicSearch, "Search Non-Alcoholic Drinks");
-            CueProvider.SetCue(CocktailSearch, "Search Cocktails");
-            CueProvider.SetCue(CustomSearch, "Search Your Recipes");
-
+            CueProvider CreateaCue = new CueProvider();
+            CreateaCue.SetCue(DrinkSearch, "Search Drinks");
+            CreateaCue.SetCue(ShotSearch, "Search Shots");
+            CreateaCue.SetCue(LiqueurSearch, "Search Liqueurs");
+            CreateaCue.SetCue(PunchSearch, "Search Punches");
+            CreateaCue.SetCue(BeerSearch, "Search Beer and Ales");
+            CreateaCue.SetCue(CoffeeTeaSearch, "Search Coffee and Teas");
+            CreateaCue.SetCue(NonAlcoholicSearch, "Search Non-Alcoholic Drinks");
+            CreateaCue.SetCue(CocktailSearch, "Search Cocktails");
+            CreateaCue.SetCue(CustomSearch, "Search Your Recipes");
         }
 
         private void nameListCount(object sender, EventArgs e)
@@ -1521,7 +1522,6 @@ namespace bartenderexpressReloaded
             //child.toolStripStatusLabel1.Text = statusbarrecipe;
             //child.MdiParent = this;
             //child.Show();
-
         }
 
         private void AddRecipeItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -1535,7 +1535,14 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
+        }
 
+
+        private void MyRecipesItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            WizardPages.SelectedTab = CustomTab;
+            CustomNameBox.Show();
+            toolStripStatusLabel1.Text = (this.CustomNameBox.ItemCount.ToString()) + " Custom Recipes ";
         }
 
         private void DrinkSearch_TextChanged(object sender, EventArgs e)
@@ -1625,7 +1632,7 @@ namespace bartenderexpressReloaded
 
         private void CustomSearch_TextChanged(object sender, EventArgs e)
         {
-            CoffeeTeaSearch.Font = new Font("Default", 8, FontStyle.Regular);
+            CustomSearch.Font = new Font("Default", 8, FontStyle.Regular);
             int index = CustomNameBox.FindString(CustomSearch.Text);
             if (0 <= index)
             {
