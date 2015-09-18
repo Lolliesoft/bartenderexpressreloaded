@@ -1435,7 +1435,7 @@ namespace bartenderexpressReloaded
 
                     if (reader.Read())
                     {
-                        MessageBox.Show(reader["myrecipes_key"].ToString());
+                        //MessageBox.Show(reader["myrecipes_key"].ToString());
                         Form2 child = new Form2();
                         child.Text = CustomNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;

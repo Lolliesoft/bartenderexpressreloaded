@@ -38,6 +38,9 @@ namespace bartenderexpressReloaded
                 cmd.ExecuteNonQuery();
 
                 conn10.Close();
+                
+                MessageBox.Show("Custom Recipe Saved", "MyRecipe Added", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
 
         }
