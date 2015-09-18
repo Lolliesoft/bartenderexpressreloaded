@@ -1856,6 +1856,8 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront(); //This will make your child form shown on top.
             child.Show();
+            listBox1.DataSource = null;
+            listBox1.DataSource = data;
         }
         public void randomDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
