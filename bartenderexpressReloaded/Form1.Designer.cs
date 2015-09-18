@@ -55,13 +55,14 @@
             DevExpress.XtraEditors.TileItemFrame tileItemFrame8 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -78,8 +79,6 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.AddRecipeGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.AddCustomRecipe = new DevExpress.XtraNavBar.NavBarItem();
             this.TheBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.DrinksBarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.ShotsBarItem = new DevExpress.XtraNavBar.NavBarItem();
@@ -90,6 +89,8 @@
             this.NonAlcoholicBarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.CoffeeTeaBarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.My_Recipes = new DevExpress.XtraNavBar.NavBarItem();
+            this.AddRecipeGroup = new DevExpress.XtraNavBar.NavBarGroup();
+            this.AddCustomRecipe = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
@@ -141,7 +142,6 @@
             this.recipesTableAdapter1 = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.recipesTableAdapter();
             this.statusStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup = new DevExpress.XtraEditors.TileGroup();
             this.tileItem2 = new DevExpress.XtraEditors.TileItem();
@@ -271,7 +271,7 @@
             this.barButtonItem2.Id = 3;
             this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AddRecipeButton_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -294,7 +294,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.AddRecipeGroup;
+            this.navBarControl1.ActiveGroup = this.TheBarGroup;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.TheBarGroup,
@@ -321,23 +321,10 @@
             this.navBarControl1.TabIndex = 3;
             this.navBarControl1.Text = "navBarControl1";
             // 
-            // AddRecipeGroup
-            // 
-            this.AddRecipeGroup.Caption = "Add Recipes";
-            this.AddRecipeGroup.Expanded = true;
-            this.AddRecipeGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.AddCustomRecipe)});
-            this.AddRecipeGroup.Name = "AddRecipeGroup";
-            // 
-            // AddCustomRecipe
-            // 
-            this.AddCustomRecipe.Caption = "Add Custom Recipe";
-            this.AddCustomRecipe.Name = "AddCustomRecipe";
-            this.AddCustomRecipe.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.AddRecipeItem_LinkClicked);
-            // 
             // TheBarGroup
             // 
             this.TheBarGroup.Caption = "Bartender Recipes";
+            this.TheBarGroup.Expanded = true;
             this.TheBarGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.DrinksBarItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShotsBarItem),
@@ -403,6 +390,19 @@
             this.My_Recipes.Caption = "MyRecipes";
             this.My_Recipes.Name = "My_Recipes";
             this.My_Recipes.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.MyRecipesItem_LinkClicked);
+            // 
+            // AddRecipeGroup
+            // 
+            this.AddRecipeGroup.Caption = "Add Recipes";
+            this.AddRecipeGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.AddCustomRecipe)});
+            this.AddRecipeGroup.Name = "AddRecipeGroup";
+            // 
+            // AddCustomRecipe
+            // 
+            this.AddCustomRecipe.Caption = "Add Custom Recipe";
+            this.AddCustomRecipe.Name = "AddCustomRecipe";
+            this.AddCustomRecipe.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.AddRecipeItem_LinkClicked);
             // 
             // navBarGroup1
             // 
@@ -901,8 +901,7 @@
             this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(175, 665);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -917,14 +916,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(158, 22);
             this.toolStripStatusLabel1.Text = "Double Click to Open Recipe";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 22);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Visible = false;
             // 
             // tileControl1
             // 
@@ -1177,20 +1168,24 @@
             this.tileItem3.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem3.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem3.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement15.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement15.Image")));
-            tileItemElement15.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileItem3.CurrentFrameIndex = 1;
+            tileItemElement15.Text = "Liquor Cabinet";
+            tileItemElement15.TextLocation = new System.Drawing.Point(0, 5);
+            tileItemElement16.Text = "Check to see what recipes you can make with what you have!";
+            tileItemElement16.TextLocation = new System.Drawing.Point(0, 60);
             this.tileItem3.Elements.Add(tileItemElement15);
+            this.tileItem3.Elements.Add(tileItemElement16);
             this.tileItem3.FrameAnimationInterval = 4500;
-            tileItemElement16.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement16.Image")));
-            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame9.Elements.Add(tileItemElement16);
+            tileItemElement17.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement17.Image")));
+            tileItemElement17.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame9.Elements.Add(tileItemElement17);
             tileItemFrame9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame9.Image")));
-            tileItemElement17.Text = "Liquor Cabinet";
-            tileItemElement17.TextLocation = new System.Drawing.Point(0, 5);
-            tileItemElement18.Text = "Check to see what recipes you can make with what you have!";
-            tileItemElement18.TextLocation = new System.Drawing.Point(0, 60);
-            tileItemFrame10.Elements.Add(tileItemElement17);
+            tileItemElement18.Text = "Liquor Cabinet";
+            tileItemElement18.TextLocation = new System.Drawing.Point(0, 5);
+            tileItemElement19.Text = "Check to see what recipes you can make with what you have!";
+            tileItemElement19.TextLocation = new System.Drawing.Point(0, 60);
             tileItemFrame10.Elements.Add(tileItemElement18);
+            tileItemFrame10.Elements.Add(tileItemElement19);
             this.tileItem3.Frames.Add(tileItemFrame9);
             this.tileItem3.Frames.Add(tileItemFrame10);
             this.tileItem3.Id = 17;
@@ -1199,16 +1194,16 @@
             // 
             // tileItem6
             // 
-            tileItemElement19.Text = "tileItem6";
-            this.tileItem6.Elements.Add(tileItemElement19);
+            tileItemElement20.Text = "tileItem6";
+            this.tileItem6.Elements.Add(tileItemElement20);
             this.tileItem6.Id = 7;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem6.Name = "tileItem6";
             // 
             // tileItem4
             // 
-            tileItemElement20.Text = "tileItem4";
-            this.tileItem4.Elements.Add(tileItemElement20);
+            tileItemElement21.Text = "tileItem4";
+            this.tileItem4.Elements.Add(tileItemElement21);
             this.tileItem4.Id = 4;
             this.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem4.Name = "tileItem4";
@@ -1354,7 +1349,6 @@
         private XpressShotsDataSetTableAdapters.recipesTableAdapter recipesTableAdapter1;
         private System.Windows.Forms.ToolStrip statusStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripStatusLabel2;
         private DevExpress.XtraEditors.SimpleButton DrinkSearchClear;
         private DevExpress.XtraEditors.ListBoxControl DrinksNameBox;
         private DevExpress.XtraBars.BarButtonItem CheckUpdateBtn;
