@@ -1856,13 +1856,23 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront(); //This will make your child form shown on top.
             child.Show();
-            listBox1.DataSource = null;
-            listBox1.DataSource = data;
         }
         public void randomDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
             Connection shuffle = new Connection();
             shuffle.RandomConnection();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //Refresh database
+            CustomNameBox.DataSource = null;
+            CustomNameBox.Items.Clear();
+            //loads data into the 'custom_RecipesDataSet' table.
+            this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
+            CustomNameBox.DataSource = myRecipes.Tables["myRecipes"];
+            CustomNameBox.DisplayMember = "name";
+            CustomNameBox.ValueMember = "name";
         }
     }
   }
