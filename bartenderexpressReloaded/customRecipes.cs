@@ -1,25 +1,46 @@
-﻿using System;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using System.Windows.Forms;
+//using System.Data.SQLite;
+
+using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using System.Data.SQLite;
+using DevExpress.Skins;
+using DevExpress.LookAndFeel;
+using DevExpress.UserSkins;
+using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars.Helpers;
+
 
 namespace bartenderexpressReloaded
 {
-    public partial class customRecipes : Form
+    public partial class customRecipes : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         
         string connectionString;
-        public customRecipes()
 
+        public customRecipes()
+            
         {
             InitializeComponent();
-            connectionString = @"Data Source = |DataDirectory|\\XpressShots.db";    
+            connectionString = @"Data Source = |DataDirectory|\\XpressShots.db";
+            
         }
 
         private void Save_Click(object sender, EventArgs e)
@@ -75,10 +96,31 @@ namespace bartenderexpressReloaded
                 conn10.Close();
                 
                 MessageBox.Show("Custom Recipe Saved", "MyRecipe Added", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //Refresh database
 
             }
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
+        }
+            //Refresh database
+        //    CustomNameBox.DataSource = null;
+        //    CustomNameBox.Items.Clear();
+        //    //loads data into the 'custom_RecipesDataSet' table.
+        //    this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
+        //    CustomNameBox.DataSource = myRecipes.Tables["myRecipes"];
+        //    CustomNameBox.DisplayMember = "name";
+        //    CustomNameBox.ValueMember = "name";
+        //}
+
+        private void customRecipes_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'myRecipes.myRecipes' table. You can move, or remove it, as needed.
+            this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
+
+        }
     }
 }

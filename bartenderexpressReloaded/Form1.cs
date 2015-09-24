@@ -1865,6 +1865,20 @@ namespace bartenderexpressReloaded
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
+        }
+
+        private void CustomNameBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int oldFocusedIndex = CustomNameBox.SelectedIndex;
+        }
+
+
+        private void RefreshMyRecipes()
+        {
+
+            int oldFocusedIndex = CustomNameBox.SelectedIndex;
+
             //Refresh database
             CustomNameBox.DataSource = null;
             CustomNameBox.Items.Clear();
@@ -1873,6 +1887,14 @@ namespace bartenderexpressReloaded
             CustomNameBox.DataSource = myRecipes.Tables["myRecipes"];
             CustomNameBox.DisplayMember = "name";
             CustomNameBox.ValueMember = "name";
+
+            CustomNameBox.SelectedIndex = oldFocusedIndex;
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            RefreshMyRecipes();
         }
     }
-  }
+}
+
