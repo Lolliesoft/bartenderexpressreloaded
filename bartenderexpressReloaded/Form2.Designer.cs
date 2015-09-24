@@ -42,7 +42,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(-2, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(225, 249);
+            this.listView1.Size = new System.Drawing.Size(225, 349);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -59,7 +59,7 @@
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(220, 0);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(345, 249);
+            this.listView2.Size = new System.Drawing.Size(345, 349);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -71,9 +71,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-2, 269);
+            this.richTextBox1.Location = new System.Drawing.Point(-2, 348);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(567, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(567, 180);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 406);
+            this.ClientSize = new System.Drawing.Size(568, 530);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);

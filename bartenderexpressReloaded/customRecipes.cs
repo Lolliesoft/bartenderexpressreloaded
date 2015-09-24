@@ -32,22 +32,21 @@ namespace bartenderexpressReloaded
 {
     public partial class customRecipes : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        
+
         string connectionString;
 
         public customRecipes()
-            
         {
             InitializeComponent();
             connectionString = @"Data Source = |DataDirectory|\\XpressShots.db";
-            
+
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
             using (SQLiteConnection conn10 = new SQLiteConnection(connectionString))
             {
-                
+
 
                 SQLiteCommand cmd = new SQLiteCommand();
                 cmd.CommandText = @"INSERT into myRecipes (name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions,
@@ -94,32 +93,11 @@ namespace bartenderexpressReloaded
                 cmd.ExecuteNonQuery();
 
                 conn10.Close();
-                
+
                 MessageBox.Show("Custom Recipe Saved", "MyRecipe Added", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 //Refresh database
 
             }
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
-        }
-            //Refresh database
-        //    CustomNameBox.DataSource = null;
-        //    CustomNameBox.Items.Clear();
-        //    //loads data into the 'custom_RecipesDataSet' table.
-        //    this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
-        //    CustomNameBox.DataSource = myRecipes.Tables["myRecipes"];
-        //    CustomNameBox.DisplayMember = "name";
-        //    CustomNameBox.ValueMember = "name";
-        //}
-
-        private void customRecipes_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'myRecipes.myRecipes' table. You can move, or remove it, as needed.
-            this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
 
         }
     }

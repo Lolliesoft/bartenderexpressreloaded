@@ -712,7 +712,6 @@
             this.Controls.Add(this.DrinkNameLabel);
             this.Name = "customRecipes";
             this.Text = "customRecipes";
-            this.Load += new System.EventHandler(this.customRecipes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.myRecipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRecipesBindingSource)).EndInit();
             this.ResumeLayout(false);
