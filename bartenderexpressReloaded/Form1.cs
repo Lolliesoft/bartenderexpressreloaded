@@ -1945,34 +1945,51 @@ namespace bartenderexpressReloaded
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-             //SaveFileDialog SaveDialog = new SaveFileDialog();
+            //SaveFileDialog sdb = new SaveFileDialog();
+
+            //sdb.Filter = "Data Base File |*.db";
+            //sdb.FilterIndex = 1;
+            ////sdb.Multiselect = true;
+            //string destinationfolderPath = string.Empty;
+
+            //if (sdb.ShowDialog() == DialogResult.OK)
+            //{
+            //    string directoryPath = System.IO.Path.GetDirectoryName(sdb.FileName);
+            //    destinationfolderPath = sdb.FileName;
+            //    using (var source = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db; Version=3;"))
+            //    using (var destination = new SQLiteConnection("Data Source=" + destinationfolderPath + "; Version=3;"))
+            //    {
+            //        source.Open();
+            //        destination.Open();
+            //        source.BackupDatabase(destination, "main", "main", -1, null, 0);
+            //    }
+            //}
+
+
+            //SaveFileDialog SaveDialog = new SaveFileDialog();
             //set intial directory
             //SaveDialog.InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments);
             //SaveDialog.Filter = "SQLite|*.db";
             //SaveDialog.Title = "MyRecipes Backup";
             //SaveDialog.FileName = "BackupDb.db";
             //SaveDialog.ShowDialog();
-            
+
             string folderPath = string.Empty;
             string fullfolderPath = string.Empty;
-           
 
-            using (FolderBrowserDialog fdb = new FolderBrowserDialog())     
+
+            using (FolderBrowserDialog fdb = new FolderBrowserDialog())
             {
                 fdb.Description = "Select Backup Location for My Recipes backup";
                 fdb.RootFolder = Environment.SpecialFolder.Desktop;
-                
+
                 if (fdb.ShowDialog() == DialogResult.OK)
                 {
-                    
+
                     folderPath = fdb.SelectedPath;
                     fullfolderPath = folderPath + "\\Backup.db";
-                    
-                    
-
 
                     using (var source = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db; Version=3;"))
-                    //using (var destination = new SQLiteConnection("Data Source=" + folderPath + "; Version=3;"))
                     using (var destination = new SQLiteConnection("Data Source=" + fullfolderPath + "; Version=3;"))
                     {
                         source.Open();
@@ -1980,11 +1997,37 @@ namespace bartenderexpressReloaded
                         source.BackupDatabase(destination, "main", "main", -1, null, 0);
                     }
 
-                    MessageBox.Show("Backup.db saved to: " + fullfolderPath + "\n" + "Use this file to restore your custom Recipes at a later time","Custom Recipes Backed up", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Backup.db saved to: " + fullfolderPath + "\n" + "Use this file to restore your custom Recipes at a later time", "Custom Recipes Backed up", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
-          }  
+          }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog odb = new OpenFileDialog();
+
+            odb.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            odb.Filter = "Data Base File |*.db";
+            odb.FilterIndex = 1;
+            odb.Multiselect = true;
+            string restorefolderPath = string.Empty;
+
+            if (odb.ShowDialog() == DialogResult.OK)
+            {
+                string directoryPath = System.IO.Path.GetDirectoryName(odb.FileName);
+                restorefolderPath = odb.FileName;
+                using (var source = new SQLiteConnection("Data Source=" + restorefolderPath + "; Version=3;"))
+                using (var destination = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db; Version=3;"))
+                {
+                    source.Open();
+                    destination.Open();
+                    source.BackupDatabase(destination, "main", "main", -1, null, 0);
+                }
+
+                MessageBox.Show("Backup.db restored" + "\n" + "All custom recipes exported", "Custom Recipes Restored", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }  
        } 
     }
 
