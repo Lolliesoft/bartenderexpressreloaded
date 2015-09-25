@@ -1945,22 +1945,31 @@ namespace bartenderexpressReloaded
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-             SaveFileDialog SaveDialog = new SaveFileDialog();
+             //SaveFileDialog SaveDialog = new SaveFileDialog();
             //set intial directory
             //SaveDialog.InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments);
-            SaveDialog.Filter = "SQLite|*.db";
-            SaveDialog.Title = "MyRecipes Backup";
-            SaveDialog.FileName = "BackupDb.db";
+            //SaveDialog.Filter = "SQLite|*.db";
+            //SaveDialog.Title = "MyRecipes Backup";
+            //SaveDialog.FileName = "BackupDb.db";
             //SaveDialog.ShowDialog();
+            
             string folderPath = string.Empty;
             string fullfolderPath = string.Empty;
+           
 
-            using (FolderBrowserDialog fdb = new FolderBrowserDialog())
+            using (FolderBrowserDialog fdb = new FolderBrowserDialog())     
             {
+                fdb.Description = "Select Backup Location for My Recipes backup";
+                fdb.RootFolder = Environment.SpecialFolder.Desktop;
+                
                 if (fdb.ShowDialog() == DialogResult.OK)
                 {
+                    
                     folderPath = fdb.SelectedPath;
-                    fullfolderPath = folderPath + "\\XpressShots.db";
+                    fullfolderPath = folderPath + "\\Backup.db";
+                    
+                    
+
 
                     using (var source = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db; Version=3;"))
                     //using (var destination = new SQLiteConnection("Data Source=" + folderPath + "; Version=3;"))
@@ -1970,8 +1979,11 @@ namespace bartenderexpressReloaded
                         destination.Open();
                         source.BackupDatabase(destination, "main", "main", -1, null, 0);
                     }
-                 }
-             } 
+
+                    MessageBox.Show("Backup.db saved to: " + fullfolderPath + "\n" + "Use this file to restore your custom Recipes at a later time","Custom Recipes Backed up", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
           }  
        } 
     }
