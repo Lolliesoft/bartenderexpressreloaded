@@ -265,6 +265,16 @@ namespace bartenderexpressReloaded
             }
         }
 
+
+        public Image byteArrayToImage(byte[] imagepic)
+        {
+            MemoryStream ms = new MemoryStream(imagepic);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+
+        }
+
+
         private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
 
@@ -325,8 +335,30 @@ namespace bartenderexpressReloaded
 
                         while (rdr.Read())
                         {
-                            child.richTextBox1.Text = rdr[0].ToString();
+                            child.DirectionsLabel.Text = rdr[0].ToString();
                         }
+
+                        //Get glasstype
+                        //SQLiteCommand cmdglass = new SQLiteCommand("SELECT glasstype FROM recipes WHERE id = " + (reader["id"]) + "", cs);
+
+                        SQLiteCommand cmdglass = new SQLiteCommand("SELECT pictures.picture FROM pictures INNER JOIN recipes ON pictures.id = recipes.id WHERE pictures.id IN (SELECT recipes.glasstype FROM recipes WHERE id = " + (reader["id"]) + ")", cs);
+
+                        
+
+                        SQLiteDataReader rdrglass = cmdglass.ExecuteReader();
+                        //MessageBox.Show(rdrglass["pictures.picture"].ToString());
+
+                        while (rdrglass.Read())
+                        {
+                            //For Image inside a BLOB
+
+                            byte[] imagepic = (byte[])rdrglass[0];
+                            MemoryStream ms = new MemoryStream(imagepic);
+                            Clipboard.SetImage(Image.FromStream(ms, true));
+                            //child.richTextBox1.Paste();
+                            child.DrinkBox.Image = Image.FromStream(ms, true);
+                        }
+                       
 
 
                     }
@@ -1947,35 +1979,6 @@ namespace bartenderexpressReloaded
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //SaveFileDialog sdb = new SaveFileDialog();
-
-            //sdb.Filter = "Data Base File |*.db";
-            //sdb.FilterIndex = 1;
-            ////sdb.Multiselect = true;
-            //string destinationfolderPath = string.Empty;
-
-            //if (sdb.ShowDialog() == DialogResult.OK)
-            //{
-            //    string directoryPath = System.IO.Path.GetDirectoryName(sdb.FileName);
-            //    destinationfolderPath = sdb.FileName;
-            //    using (var source = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db; Version=3;"))
-            //    using (var destination = new SQLiteConnection("Data Source=" + destinationfolderPath + "; Version=3;"))
-            //    {
-            //        source.Open();
-            //        destination.Open();
-            //        source.BackupDatabase(destination, "main", "main", -1, null, 0);
-            //    }
-            //}
-
-
-            //SaveFileDialog SaveDialog = new SaveFileDialog();
-            //set intial directory
-            //SaveDialog.InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments);
-            //SaveDialog.Filter = "SQLite|*.db";
-            //SaveDialog.Title = "MyRecipes Backup";
-            //SaveDialog.FileName = "BackupDb.db";
-            //SaveDialog.ShowDialog();
-
             string folderPath = string.Empty;
             string fullfolderPath = string.Empty;
 
