@@ -42,5 +42,15 @@ namespace bartenderexpressReloaded.Properties {
                 return ((string)(this["XpressShotsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\PCH-BurneyA\\AppData\\Roaming\\Lolliesoft\\Custom.db")]
+        public string Custom {
+            get {
+                return ((string)(this["Custom"]));
+            }
+        }
     }
 }

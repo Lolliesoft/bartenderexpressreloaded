@@ -38,7 +38,7 @@ namespace bartenderexpressReloaded
         public customRecipes()
         {
             InitializeComponent();
-            connectionString = @"Data Source = |DataDirectory|\\XpressShots.db";
+            connectionString = @"Data Source = |DataDirectory|\\Custom.db";
 
         }
 

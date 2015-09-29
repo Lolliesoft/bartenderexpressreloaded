@@ -49,6 +49,8 @@ namespace bartenderexpressReloaded
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'customDataSet.myRecipes' table. You can move, or remove it, as needed.
+            this.myRecipesTableAdapter1.Fill(this.customDataSet.myRecipes);
             // TODO: This line of code loads data into the 'myRecipes.myRecipes' table. You can move, or remove it, as needed.
             this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
             // TODO: This line of code loads data into the 'xpressShotsDataSet.recipes' table. You can move, or remove it, as needed.
@@ -249,7 +251,7 @@ namespace bartenderexpressReloaded
                 string statusbarrecipe = CustomNameBox.SelectedValue.ToString();
 
 
-                using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
                 {
                     conn6.Open();
                     SQLiteCommand cmd = new SQLiteCommand("SELECT myrecipes_key FROM myRecipes WHERE name ='" + statusbarrecipe + "'", conn6);
@@ -1427,7 +1429,7 @@ namespace bartenderexpressReloaded
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
 
-                using (SQLiteConnection conn21 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                using (SQLiteConnection conn21 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
                 {
                     conn21.Open();
                     SQLiteCommand cmd = new SQLiteCommand("SELECT myrecipes_key FROM MyRecipes WHERE name ='" + statusbarrecipe2 + "'", conn21);
@@ -1930,8 +1932,8 @@ namespace bartenderexpressReloaded
             CustomNameBox.DataSource = null;
             CustomNameBox.Items.Clear();
             //loads data into the 'custom_RecipesDataSet' table.
-            this.myRecipesTableAdapter.Fill(this.myRecipes.myRecipes);
-            CustomNameBox.DataSource = myRecipes.Tables["myRecipes"];
+            this.myRecipesTableAdapter1.Fill(this.customDataSet.myRecipes);
+            CustomNameBox.DataSource = customDataSet.Tables["myRecipes"];
             CustomNameBox.DisplayMember = "name";
             CustomNameBox.ValueMember = "name";
 
@@ -1989,7 +1991,7 @@ namespace bartenderexpressReloaded
                     folderPath = fdb.SelectedPath;
                     fullfolderPath = folderPath + "\\Backup.db";
 
-                    using (var source = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db; Version=3;"))
+                    using (var source = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db; Version=3;"))
                     using (var destination = new SQLiteConnection("Data Source=" + fullfolderPath + "; Version=3;"))
                     {
                         source.Open();
@@ -2018,7 +2020,7 @@ namespace bartenderexpressReloaded
                 string directoryPath = System.IO.Path.GetDirectoryName(odb.FileName);
                 restorefolderPath = odb.FileName;
                 using (var source = new SQLiteConnection("Data Source=" + restorefolderPath + "; Version=3;"))
-                using (var destination = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db; Version=3;"))
+                using (var destination = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db; Version=3;"))
                 {
                     source.Open();
                     destination.Open();

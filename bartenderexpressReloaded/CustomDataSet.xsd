@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CustomDataSet" targetNamespace="http://tempuri.org/CustomDataSet.xsd" xmlns:mstns="http://tempuri.org/CustomDataSet.xsd" xmlns="http://tempuri.org/CustomDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Custom" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Custom (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.bartenderexpressReloaded.Properties.Settings.GlobalReference.Default.Setting" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="myRecipesTableAdapter" GeneratorDataComponentClassName="myRecipesTableAdapter" Name="myRecipes" UserDataComponentName="myRecipesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Custom (Settings)" DbObjectName="main.myRecipes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [name] FROM [myRecipes]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CustomDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CustomDataSet" msprop:Generator_UserDSName="CustomDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="myRecipes" msprop:Generator_TableClassName="myRecipesDataTable" msprop:Generator_TableVarName="tablemyRecipes" msprop:Generator_TablePropName="myRecipes" msprop:Generator_RowDeletingName="myRecipesRowDeleting" msprop:Generator_RowChangingName="myRecipesRowChanging" msprop:Generator_RowEvHandlerName="myRecipesRowChangeEventHandler" msprop:Generator_RowDeletedName="myRecipesRowDeleted" msprop:Generator_UserTableName="myRecipes" msprop:Generator_RowChangedName="myRecipesRowChanged" msprop:Generator_RowEvArgName="myRecipesRowChangeEvent" msprop:Generator_RowClassName="myRecipesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

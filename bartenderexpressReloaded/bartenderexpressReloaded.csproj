@@ -109,6 +109,11 @@
     </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="CueProvider.cs" />
+    <Compile Include="CustomDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="customRecipes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +178,17 @@
       <DependentUpon>bartenderExpressDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram1.cd" />
+    <None Include="CustomDataSet1.xsc">
+      <DependentUpon>CustomDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CustomDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomDataSet1.xss">
+      <DependentUpon>CustomDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="MyRecipes.xsc">
       <DependentUpon>MyRecipes.xsd</DependentUpon>
     </None>
