@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
@@ -35,6 +36,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.DrinkBox = new System.Windows.Forms.PictureBox();
             this.DrinkTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,11 +99,24 @@
             this.DrinkTextBox.Size = new System.Drawing.Size(345, 198);
             this.DrinkTextBox.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(542, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Tag = "Add to Favorites";
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 560);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.DrinkTextBox);
             this.Controls.Add(this.DrinkBox);
             this.Controls.Add(this.richTextBox1);
@@ -127,5 +142,6 @@
         private System.Windows.Forms.ColumnHeader Ingredients;
         public System.Windows.Forms.PictureBox DrinkBox;
         public System.Windows.Forms.TextBox DrinkTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }
