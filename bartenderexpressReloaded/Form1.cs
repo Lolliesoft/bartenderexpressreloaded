@@ -332,10 +332,12 @@ namespace bartenderexpressReloaded
                         //Get Directions
                         SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM recipes WHERE id = " + (reader["id"]) + "", cs);
                         SQLiteDataReader rdr = cmddir.ExecuteReader();
+                        child.DrinkTextBox.Font = new Font("Consolas", 14);
 
                         while (rdr.Read())
                         {
-                            child.DirectionsLabel.Text = rdr[0].ToString();
+
+                            child.DrinkTextBox.Text = rdr[0].ToString();
                         }
 
                         //Get glasstype

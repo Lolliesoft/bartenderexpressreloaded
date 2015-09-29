@@ -33,8 +33,8 @@
             this.listView2 = new System.Windows.Forms.ListView();
             this.Ingredients = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.DirectionsLabel = new DevExpress.XtraEditors.LabelControl();
             this.DrinkBox = new System.Windows.Forms.PictureBox();
+            this.DrinkTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,30 +80,30 @@
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
-            // DirectionsLabel
-            // 
-            this.DirectionsLabel.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.DirectionsLabel.Location = new System.Drawing.Point(222, 356);
-            this.DirectionsLabel.Name = "DirectionsLabel";
-            this.DirectionsLabel.Size = new System.Drawing.Size(321, 13);
-            this.DirectionsLabel.TabIndex = 3;
-            this.DirectionsLabel.Text = "labelControl1";
-            // 
             // DrinkBox
             // 
-            this.DrinkBox.Location = new System.Drawing.Point(10, 356);
+            this.DrinkBox.Location = new System.Drawing.Point(10, 354);
             this.DrinkBox.Name = "DrinkBox";
             this.DrinkBox.Size = new System.Drawing.Size(200, 200);
             this.DrinkBox.TabIndex = 4;
             this.DrinkBox.TabStop = false;
+            // 
+            // DrinkTextBox
+            // 
+            this.DrinkTextBox.Location = new System.Drawing.Point(220, 355);
+            this.DrinkTextBox.Multiline = true;
+            this.DrinkTextBox.Name = "DrinkTextBox";
+            this.DrinkTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DrinkTextBox.Size = new System.Drawing.Size(345, 198);
+            this.DrinkTextBox.TabIndex = 5;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 560);
+            this.Controls.Add(this.DrinkTextBox);
             this.Controls.Add(this.DrinkBox);
-            this.Controls.Add(this.DirectionsLabel);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -114,6 +114,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,7 +125,7 @@
         protected internal System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ColumnHeader Amount;
         private System.Windows.Forms.ColumnHeader Ingredients;
-        public DevExpress.XtraEditors.LabelControl DirectionsLabel;
         public System.Windows.Forms.PictureBox DrinkBox;
+        public System.Windows.Forms.TextBox DrinkTextBox;
     }
 }
