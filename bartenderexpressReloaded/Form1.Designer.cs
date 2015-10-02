@@ -55,13 +55,14 @@
             DevExpress.XtraEditors.TileItemFrame tileItemFrame8 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -160,6 +161,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
+            this.Favorites = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -326,7 +328,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.TheBarGroup;
+            this.navBarControl1.ActiveGroup = this.navBarGroup1;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.TheBarGroup,
@@ -356,7 +358,6 @@
             // TheBarGroup
             // 
             this.TheBarGroup.Caption = "Bartender Recipes";
-            this.TheBarGroup.Expanded = true;
             this.TheBarGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.DrinksBarItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShotsBarItem),
@@ -439,6 +440,7 @@
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Favorites";
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
             this.navBarGroup1.Name = "navBarGroup1";
@@ -926,6 +928,7 @@
             this.WizardPages.Controls.Add(this.nonAlcoholicTab);
             this.WizardPages.Controls.Add(this.CoffeeTeaTab);
             this.WizardPages.Controls.Add(this.CustomTab);
+            this.WizardPages.Controls.Add(this.Favorites);
             this.WizardPages.Dock = System.Windows.Forms.DockStyle.Right;
             this.WizardPages.Location = new System.Drawing.Point(746, 144);
             this.WizardPages.Multiline = true;
@@ -1197,20 +1200,24 @@
             this.tileItem3.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem3.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem3.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement15.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement15.Image")));
-            tileItemElement15.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileItem3.CurrentFrameIndex = 1;
+            tileItemElement15.Text = "Liquor Cabinet";
+            tileItemElement15.TextLocation = new System.Drawing.Point(0, 5);
+            tileItemElement16.Text = "Check to see what recipes you can make with what you have!";
+            tileItemElement16.TextLocation = new System.Drawing.Point(0, 60);
             this.tileItem3.Elements.Add(tileItemElement15);
+            this.tileItem3.Elements.Add(tileItemElement16);
             this.tileItem3.FrameAnimationInterval = 4500;
-            tileItemElement16.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement16.Image")));
-            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame9.Elements.Add(tileItemElement16);
+            tileItemElement17.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement17.Image")));
+            tileItemElement17.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame9.Elements.Add(tileItemElement17);
             tileItemFrame9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame9.Image")));
-            tileItemElement17.Text = "Liquor Cabinet";
-            tileItemElement17.TextLocation = new System.Drawing.Point(0, 5);
-            tileItemElement18.Text = "Check to see what recipes you can make with what you have!";
-            tileItemElement18.TextLocation = new System.Drawing.Point(0, 60);
-            tileItemFrame10.Elements.Add(tileItemElement17);
+            tileItemElement18.Text = "Liquor Cabinet";
+            tileItemElement18.TextLocation = new System.Drawing.Point(0, 5);
+            tileItemElement19.Text = "Check to see what recipes you can make with what you have!";
+            tileItemElement19.TextLocation = new System.Drawing.Point(0, 60);
             tileItemFrame10.Elements.Add(tileItemElement18);
+            tileItemFrame10.Elements.Add(tileItemElement19);
             this.tileItem3.Frames.Add(tileItemFrame9);
             this.tileItem3.Frames.Add(tileItemFrame10);
             this.tileItem3.Id = 17;
@@ -1219,16 +1226,16 @@
             // 
             // tileItem6
             // 
-            tileItemElement19.Text = "tileItem6";
-            this.tileItem6.Elements.Add(tileItemElement19);
+            tileItemElement20.Text = "tileItem6";
+            this.tileItem6.Elements.Add(tileItemElement20);
             this.tileItem6.Id = 7;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem6.Name = "tileItem6";
             // 
             // tileItem4
             // 
-            tileItemElement20.Text = "tileItem4";
-            this.tileItem4.Elements.Add(tileItemElement20);
+            tileItemElement21.Text = "tileItem4";
+            this.tileItem4.Elements.Add(tileItemElement21);
             this.tileItem4.Id = 4;
             this.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem4.Name = "tileItem4";
@@ -1246,6 +1253,16 @@
             // myRecipesTableAdapter1
             // 
             this.myRecipesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // Favorites
+            // 
+            this.Favorites.Location = new System.Drawing.Point(4, 58);
+            this.Favorites.Name = "Favorites";
+            this.Favorites.Padding = new System.Windows.Forms.Padding(3);
+            this.Favorites.Size = new System.Drawing.Size(282, 539);
+            this.Favorites.TabIndex = 9;
+            this.Favorites.Text = "Favorites";
+            this.Favorites.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1417,6 +1434,7 @@
         private CustomDataSet customDataSet;
         private System.Windows.Forms.BindingSource myRecipesBindingSource1;
         private CustomDataSetTableAdapters.myRecipesTableAdapter myRecipesTableAdapter1;
+        private System.Windows.Forms.TabPage Favorites;
     }
 }
 
