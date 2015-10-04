@@ -360,9 +360,6 @@ namespace bartenderexpressReloaded
                             //child.richTextBox1.Paste();
                             child.DrinkBox.Image = Image.FromStream(ms, true);
                         }
-                       
-
-
                     }
                 }
 
@@ -393,7 +390,7 @@ namespace bartenderexpressReloaded
 
                     //MessageBox.Show(reader["id"].ToString());
 
-                    Form2 child = new Form2();
+                    Form3 child = new Form3();
                     child.Text = ShotsNameBox.SelectedValue.ToString();
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
@@ -545,7 +542,7 @@ namespace bartenderexpressReloaded
 
                     //MessageBox.Show(reader["id"].ToString());
 
-                    Form2 child = new Form2();
+                    Form3 child = new Form3();
                     child.Text = LiqueursNameBox.SelectedValue.ToString();
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
@@ -704,7 +701,7 @@ namespace bartenderexpressReloaded
 
                         //MessageBox.Show(reader["id"].ToString());
 
-                        Form2 child = new Form2();
+                        Form3 child = new Form3();
                         child.Text = PunchesNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
@@ -879,7 +876,7 @@ namespace bartenderexpressReloaded
 
                         //MessageBox.Show(reader["id"].ToString());
 
-                        Form2 child = new Form2();
+                        Form3 child = new Form3();
                         child.Text = CocktailsNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
@@ -1047,7 +1044,7 @@ namespace bartenderexpressReloaded
 
                     //MessageBox.Show(reader["id"].ToString());
 
-                    Form2 child = new Form2();
+                    Form3 child = new Form3();
                     child.Text = BeerAleNameBox.SelectedValue.ToString();
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
@@ -1181,7 +1178,7 @@ namespace bartenderexpressReloaded
 
                     //MessageBox.Show(reader["id"].ToString());
 
-                    Form2 child = new Form2();
+                    Form3 child = new Form3();
                     child.Text = NonAlcoholicNameBox.SelectedValue.ToString();
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
@@ -1339,7 +1336,7 @@ namespace bartenderexpressReloaded
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
 
-                    Form2 child = new Form2();
+                    Form3 child = new Form3();
                     child.Text = CoffeeTeaNameBox.SelectedValue.ToString();
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
@@ -1472,7 +1469,7 @@ namespace bartenderexpressReloaded
                     if (reader.Read())
                     {
                         //MessageBox.Show(reader["myrecipes_key"].ToString());
-                        Form2 child = new Form2();
+                        Form3 child = new Form3();
                         child.Text = CustomNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
                         child.MdiParent = this;
