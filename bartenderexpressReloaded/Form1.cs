@@ -83,6 +83,8 @@ namespace bartenderexpressReloaded
             CreateaCue.SetCue(NonAlcoholicSearch, "Search Non-Alcoholic Drinks");
             CreateaCue.SetCue(CocktailSearch, "Search Cocktails");
             CreateaCue.SetCue(CustomSearch, "Search Your Recipes");
+            CreateaCue.SetCue(FavoriteSearch, "Search Your Favorites");
+
         }
 
         private void nameListCount(object sender, EventArgs e)
@@ -394,6 +396,9 @@ namespace bartenderexpressReloaded
 
                     Form3 child = new Form3();
                     child.Text = ShotsNameBox.SelectedValue.ToString();
+                    child.FavoritesButton.Name = child.Text;
+                    child.FavoritesButton.Text = "shots";
+                    //child.FavoritesButton.Text = statusbarrecipe2.Substring(0, statusbarrecipe2.LastIndexOf("Name") + 1);
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
