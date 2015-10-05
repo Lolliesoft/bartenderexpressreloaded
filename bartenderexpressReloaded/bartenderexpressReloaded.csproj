@@ -120,6 +120,11 @@
     <Compile Include="customRecipes.Designer.cs">
       <DependentUpon>customRecipes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FavoritesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FavoritesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +193,7 @@
       <DependentUpon>bartenderExpressDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Custom.db" />
     <None Include="CustomDataSet1.xsc">
       <DependentUpon>CustomDataSet1.xsd</DependentUpon>
     </None>
@@ -198,6 +204,17 @@
     </None>
     <None Include="CustomDataSet1.xss">
       <DependentUpon>CustomDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FavoritesDataSet.xsc">
+      <DependentUpon>FavoritesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FavoritesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FavoritesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FavoritesDataSet.xss">
+      <DependentUpon>FavoritesDataSet.xsd</DependentUpon>
     </None>
     <None Include="MyRecipes.xsc">
       <DependentUpon>MyRecipes.xsd</DependentUpon>
