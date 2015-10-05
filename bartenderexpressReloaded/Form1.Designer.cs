@@ -55,14 +55,13 @@
             DevExpress.XtraEditors.TileItemFrame tileItemFrame8 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -81,6 +80,8 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.TheBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.DrinksBarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.ShotsBarItem = new DevExpress.XtraNavBar.NavBarItem();
@@ -93,8 +94,6 @@
             this.My_Recipes = new DevExpress.XtraNavBar.NavBarItem();
             this.AddRecipeGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.AddCustomRecipe = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
             this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.punchesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -143,6 +142,7 @@
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
+            this.Favorites = new System.Windows.Forms.TabPage();
             this.recipesTableAdapter1 = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.recipesTableAdapter();
             this.statusStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -161,7 +161,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
-            this.Favorites = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -257,7 +256,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl1.Size = new System.Drawing.Size(1036, 144);
+            this.ribbonControl1.Size = new System.Drawing.Size(1036, 146);
             // 
             // CheckUpdateBtn
             // 
@@ -328,7 +327,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup1;
+            this.navBarControl1.ActiveGroup = this.TheBarGroup;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.TheBarGroup,
@@ -347,17 +346,33 @@
             this.AddCustomRecipe,
             this.navBarItem1,
             this.My_Recipes});
-            this.navBarControl1.Location = new System.Drawing.Point(0, 144);
+            this.navBarControl1.Location = new System.Drawing.Point(0, 146);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 175;
             this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl1.Size = new System.Drawing.Size(175, 601);
+            this.navBarControl1.Size = new System.Drawing.Size(175, 599);
             this.navBarControl1.TabIndex = 3;
             this.navBarControl1.Text = "navBarControl1";
+            // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "Favorites";
+            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "Favorite Recipes";
+            this.navBarItem1.Name = "navBarItem1";
+            toolTipTitleItem1.Text = "Favorite Recipes";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.navBarItem1.SuperTip = superToolTip1;
             // 
             // TheBarGroup
             // 
             this.TheBarGroup.Caption = "Bartender Recipes";
+            this.TheBarGroup.Expanded = true;
             this.TheBarGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.DrinksBarItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShotsBarItem),
@@ -437,22 +452,6 @@
             this.AddCustomRecipe.Name = "AddCustomRecipe";
             this.AddCustomRecipe.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.AddRecipeItem_LinkClicked);
             // 
-            // navBarGroup1
-            // 
-            this.navBarGroup1.Caption = "Favorites";
-            this.navBarGroup1.Expanded = true;
-            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
-            this.navBarGroup1.Name = "navBarGroup1";
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "Favorite Recipes";
-            this.navBarItem1.Name = "navBarItem1";
-            toolTipTitleItem1.Text = "Favorite Recipes";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.navBarItem1.SuperTip = superToolTip1;
-            // 
             // CustomItem
             // 
             this.CustomItem.Caption = "Custom Recipies";
@@ -525,7 +524,7 @@
             this.CustomTab.Location = new System.Drawing.Point(4, 58);
             this.CustomTab.Name = "CustomTab";
             this.CustomTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CustomTab.Size = new System.Drawing.Size(282, 539);
+            this.CustomTab.Size = new System.Drawing.Size(282, 537);
             this.CustomTab.TabIndex = 8;
             this.CustomTab.Text = "CustomRecipes";
             this.CustomTab.UseVisualStyleBackColor = true;
@@ -586,7 +585,7 @@
             this.CoffeeTeaTab.Controls.Add(this.CoffeeTeaNameBox);
             this.CoffeeTeaTab.Location = new System.Drawing.Point(4, 58);
             this.CoffeeTeaTab.Name = "CoffeeTeaTab";
-            this.CoffeeTeaTab.Size = new System.Drawing.Size(282, 539);
+            this.CoffeeTeaTab.Size = new System.Drawing.Size(282, 537);
             this.CoffeeTeaTab.TabIndex = 7;
             this.CoffeeTeaTab.Text = "CoffeeTea";
             this.CoffeeTeaTab.UseVisualStyleBackColor = true;
@@ -627,7 +626,7 @@
             this.nonAlcoholicTab.Controls.Add(this.NonAlcoholicNameBox);
             this.nonAlcoholicTab.Location = new System.Drawing.Point(4, 58);
             this.nonAlcoholicTab.Name = "nonAlcoholicTab";
-            this.nonAlcoholicTab.Size = new System.Drawing.Size(282, 539);
+            this.nonAlcoholicTab.Size = new System.Drawing.Size(282, 537);
             this.nonAlcoholicTab.TabIndex = 6;
             this.nonAlcoholicTab.Text = "nonAlcoholic";
             this.nonAlcoholicTab.UseVisualStyleBackColor = true;
@@ -667,7 +666,7 @@
             this.BeerAlesTab.Controls.Add(this.BeerAleNameBox);
             this.BeerAlesTab.Location = new System.Drawing.Point(4, 58);
             this.BeerAlesTab.Name = "BeerAlesTab";
-            this.BeerAlesTab.Size = new System.Drawing.Size(282, 539);
+            this.BeerAlesTab.Size = new System.Drawing.Size(282, 537);
             this.BeerAlesTab.TabIndex = 5;
             this.BeerAlesTab.Text = "BeerandAles";
             this.BeerAlesTab.UseVisualStyleBackColor = true;
@@ -707,7 +706,7 @@
             this.CocktailsTab.Controls.Add(this.CocktailsNameBox);
             this.CocktailsTab.Location = new System.Drawing.Point(4, 58);
             this.CocktailsTab.Name = "CocktailsTab";
-            this.CocktailsTab.Size = new System.Drawing.Size(282, 539);
+            this.CocktailsTab.Size = new System.Drawing.Size(282, 537);
             this.CocktailsTab.TabIndex = 4;
             this.CocktailsTab.Text = "Cocktails";
             this.CocktailsTab.UseVisualStyleBackColor = true;
@@ -746,7 +745,7 @@
             this.PunchesTab.Controls.Add(this.PunchesNameBox);
             this.PunchesTab.Location = new System.Drawing.Point(4, 58);
             this.PunchesTab.Name = "PunchesTab";
-            this.PunchesTab.Size = new System.Drawing.Size(282, 539);
+            this.PunchesTab.Size = new System.Drawing.Size(282, 537);
             this.PunchesTab.TabIndex = 3;
             this.PunchesTab.Text = "Punches";
             this.PunchesTab.UseVisualStyleBackColor = true;
@@ -786,7 +785,7 @@
             this.LiqueursTab.Controls.Add(this.LiqueursNameBox);
             this.LiqueursTab.Location = new System.Drawing.Point(4, 58);
             this.LiqueursTab.Name = "LiqueursTab";
-            this.LiqueursTab.Size = new System.Drawing.Size(282, 539);
+            this.LiqueursTab.Size = new System.Drawing.Size(282, 537);
             this.LiqueursTab.TabIndex = 2;
             this.LiqueursTab.Text = "Liqueurs";
             this.LiqueursTab.UseVisualStyleBackColor = true;
@@ -826,7 +825,7 @@
             this.ShotsTab.Controls.Add(this.ShotsNameBox);
             this.ShotsTab.Location = new System.Drawing.Point(4, 58);
             this.ShotsTab.Name = "ShotsTab";
-            this.ShotsTab.Size = new System.Drawing.Size(282, 539);
+            this.ShotsTab.Size = new System.Drawing.Size(282, 537);
             this.ShotsTab.TabIndex = 1;
             this.ShotsTab.Text = "Shots";
             this.ShotsTab.UseVisualStyleBackColor = true;
@@ -867,7 +866,7 @@
             this.DrinksTab.Controls.Add(this.DrinksNameBox);
             this.DrinksTab.Location = new System.Drawing.Point(4, 58);
             this.DrinksTab.Name = "DrinksTab";
-            this.DrinksTab.Size = new System.Drawing.Size(282, 539);
+            this.DrinksTab.Size = new System.Drawing.Size(282, 537);
             this.DrinksTab.TabIndex = 0;
             this.DrinksTab.Text = "Drinks";
             this.DrinksTab.UseVisualStyleBackColor = true;
@@ -904,7 +903,7 @@
             this.DrinksNameBox.DisplayMember = "name";
             this.DrinksNameBox.Location = new System.Drawing.Point(1, 24);
             this.DrinksNameBox.Name = "DrinksNameBox";
-            this.DrinksNameBox.Size = new System.Drawing.Size(280, 489);
+            this.DrinksNameBox.Size = new System.Drawing.Size(280, 487);
             this.DrinksNameBox.TabIndex = 1;
             this.DrinksNameBox.ValueMember = "name";
             this.DrinksNameBox.TabStopChanged += new System.EventHandler(this.DrinksNameBox_TabStopChanged);
@@ -930,13 +929,23 @@
             this.WizardPages.Controls.Add(this.CustomTab);
             this.WizardPages.Controls.Add(this.Favorites);
             this.WizardPages.Dock = System.Windows.Forms.DockStyle.Right;
-            this.WizardPages.Location = new System.Drawing.Point(746, 144);
+            this.WizardPages.Location = new System.Drawing.Point(746, 146);
             this.WizardPages.Multiline = true;
             this.WizardPages.Name = "WizardPages";
             this.WizardPages.SelectedIndex = 0;
-            this.WizardPages.Size = new System.Drawing.Size(290, 601);
+            this.WizardPages.Size = new System.Drawing.Size(290, 599);
             this.WizardPages.TabIndex = 13;
             this.WizardPages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustomNameBox_KeyPress);
+            // 
+            // Favorites
+            // 
+            this.Favorites.Location = new System.Drawing.Point(4, 58);
+            this.Favorites.Name = "Favorites";
+            this.Favorites.Padding = new System.Windows.Forms.Padding(3);
+            this.Favorites.Size = new System.Drawing.Size(282, 537);
+            this.Favorites.TabIndex = 9;
+            this.Favorites.Text = "Favorites";
+            this.Favorites.UseVisualStyleBackColor = true;
             // 
             // recipesTableAdapter1
             // 
@@ -970,13 +979,13 @@
             this.tileControl1.BackColor = System.Drawing.Color.White;
             this.tileControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileControl1.Groups.Add(this.tileGroup);
-            this.tileControl1.Location = new System.Drawing.Point(175, 144);
+            this.tileControl1.Location = new System.Drawing.Point(175, 146);
             this.tileControl1.MaxId = 18;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Padding = new System.Windows.Forms.Padding(24, 18, 17, 18);
             this.tileControl1.ScrollButtonFadeAnimationTime = 6000;
             this.tileControl1.SelectionColor = System.Drawing.Color.Transparent;
-            this.tileControl1.Size = new System.Drawing.Size(571, 576);
+            this.tileControl1.Size = new System.Drawing.Size(571, 574);
             this.tileControl1.TabIndex = 21;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -1014,11 +1023,8 @@
             this.tileItem1.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement2.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
-            tileItemElement2.Text = "";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tileItem1.CurrentFrameIndex = 1;
+            tileItemElement2.Text = "Click for a random drink recipe!";
             this.tileItem1.Elements.Add(tileItemElement2);
             tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
             tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
@@ -1055,11 +1061,25 @@
             this.tileItem7.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.LightBlue;
             this.tileItem7.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem7.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
-            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
-            tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement6.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement6.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement6.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem7.CurrentFrameIndex = 1;
+            tileItemElement6.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement6.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Normal.Options.UseFont = true;
+            tileItemElement6.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Selected.Options.UseFont = true;
+            tileItemElement6.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Text = "Check for the latest version of Bartender Express";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement6.TextLocation = new System.Drawing.Point(4, 11);
             this.tileItem7.Elements.Add(tileItemElement6);
             this.tileItem7.FrameAnimationInterval = 19000;
             tileItemFrame3.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1102,11 +1122,25 @@
             this.tileItem8.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.RoyalBlue;
             this.tileItem8.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem8.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement9.Image")));
-            tileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement9.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement9.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement9.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem8.CurrentFrameIndex = 1;
+            tileItemElement9.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement9.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement9.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement9.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement9.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement9.Appearance.Normal.Options.UseFont = true;
+            tileItemElement9.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement9.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement9.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement9.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement9.Appearance.Selected.Options.UseFont = true;
+            tileItemElement9.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement9.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement9.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement9.Text = "Calculate measurements for your recipes";
+            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement9.TextLocation = new System.Drawing.Point(4, 11);
             this.tileItem8.Elements.Add(tileItemElement9);
             this.tileItem8.FrameAnimationInterval = 28000;
             tileItemFrame5.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1151,11 +1185,25 @@
             this.tileItem5.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem5.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem5.BackgroundImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement12.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement12.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement12.ImageSize = new System.Drawing.Size(248, 120);
+            this.tileItem5.CurrentFrameIndex = 1;
+            tileItemElement12.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement12.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Normal.Options.UseFont = true;
+            tileItemElement12.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Selected.Options.UseFont = true;
+            tileItemElement12.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Text = "Blood Alcohol Calculator";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement12.TextLocation = new System.Drawing.Point(4, 0);
             this.tileItem5.Elements.Add(tileItemElement12);
             this.tileItem5.FrameAnimationInterval = 9000;
             tileItemFrame7.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1200,24 +1248,20 @@
             this.tileItem3.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem3.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem3.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            this.tileItem3.CurrentFrameIndex = 1;
-            tileItemElement15.Text = "Liquor Cabinet";
-            tileItemElement15.TextLocation = new System.Drawing.Point(0, 5);
-            tileItemElement16.Text = "Check to see what recipes you can make with what you have!";
-            tileItemElement16.TextLocation = new System.Drawing.Point(0, 60);
+            tileItemElement15.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement15.Image")));
+            tileItemElement15.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             this.tileItem3.Elements.Add(tileItemElement15);
-            this.tileItem3.Elements.Add(tileItemElement16);
             this.tileItem3.FrameAnimationInterval = 4500;
-            tileItemElement17.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement17.Image")));
-            tileItemElement17.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame9.Elements.Add(tileItemElement17);
+            tileItemElement16.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement16.Image")));
+            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame9.Elements.Add(tileItemElement16);
             tileItemFrame9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame9.Image")));
-            tileItemElement18.Text = "Liquor Cabinet";
-            tileItemElement18.TextLocation = new System.Drawing.Point(0, 5);
-            tileItemElement19.Text = "Check to see what recipes you can make with what you have!";
-            tileItemElement19.TextLocation = new System.Drawing.Point(0, 60);
+            tileItemElement17.Text = "Liquor Cabinet";
+            tileItemElement17.TextLocation = new System.Drawing.Point(0, 5);
+            tileItemElement18.Text = "Check to see what recipes you can make with what you have!";
+            tileItemElement18.TextLocation = new System.Drawing.Point(0, 60);
+            tileItemFrame10.Elements.Add(tileItemElement17);
             tileItemFrame10.Elements.Add(tileItemElement18);
-            tileItemFrame10.Elements.Add(tileItemElement19);
             this.tileItem3.Frames.Add(tileItemFrame9);
             this.tileItem3.Frames.Add(tileItemFrame10);
             this.tileItem3.Id = 17;
@@ -1226,16 +1270,16 @@
             // 
             // tileItem6
             // 
-            tileItemElement20.Text = "tileItem6";
-            this.tileItem6.Elements.Add(tileItemElement20);
+            tileItemElement19.Text = "tileItem6";
+            this.tileItem6.Elements.Add(tileItemElement19);
             this.tileItem6.Id = 7;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem6.Name = "tileItem6";
             // 
             // tileItem4
             // 
-            tileItemElement21.Text = "tileItem4";
-            this.tileItem4.Elements.Add(tileItemElement21);
+            tileItemElement20.Text = "tileItem4";
+            this.tileItem4.Elements.Add(tileItemElement20);
             this.tileItem4.Id = 4;
             this.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem4.Name = "tileItem4";
@@ -1253,16 +1297,6 @@
             // myRecipesTableAdapter1
             // 
             this.myRecipesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // Favorites
-            // 
-            this.Favorites.Location = new System.Drawing.Point(4, 58);
-            this.Favorites.Name = "Favorites";
-            this.Favorites.Padding = new System.Windows.Forms.Padding(3);
-            this.Favorites.Size = new System.Drawing.Size(282, 539);
-            this.Favorites.TabIndex = 9;
-            this.Favorites.Text = "Favorites";
-            this.Favorites.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

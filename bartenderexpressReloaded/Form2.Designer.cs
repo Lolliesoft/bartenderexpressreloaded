@@ -103,7 +103,7 @@
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(542, 3);
+            this.button1.Location = new System.Drawing.Point(542, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 6;
@@ -142,6 +142,6 @@
         private System.Windows.Forms.ColumnHeader Ingredients;
         public System.Windows.Forms.PictureBox DrinkBox;
         public System.Windows.Forms.TextBox DrinkTextBox;
-        private System.Windows.Forms.Button button1;
+        protected internal System.Windows.Forms.Button button1;
     }
 }
