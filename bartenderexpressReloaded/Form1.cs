@@ -2177,6 +2177,25 @@ namespace bartenderexpressReloaded
             CustomNameBox.SelectedIndex = oldFocusedIndex;
 
         }
+
+        //private void RefreshFavorites()
+        //{
+
+        //    int oldFocusedIndex = CustomNameBox.SelectedIndex;
+
+        //    //Refresh database
+        //    CustomNameBox.DataSource = null;
+        //    CustomNameBox.Items.Clear();
+        //    //loads data into the 'custom_RecipesDataSet' table.
+        //    this.myRecipesTableAdapter1.Fill(this.customDataSet.myRecipes);
+        //    CustomNameBox.DataSource = customDataSet.Tables["myRecipes"];
+        //    CustomNameBox.DisplayMember = "name";
+        //    CustomNameBox.ValueMember = "name";
+
+        //    CustomNameBox.SelectedIndex = oldFocusedIndex;
+
+        //}
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             RefreshMyRecipes();
