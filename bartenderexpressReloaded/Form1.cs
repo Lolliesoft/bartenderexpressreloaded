@@ -2178,27 +2178,28 @@ namespace bartenderexpressReloaded
 
         }
 
-        //private void RefreshFavorites()
-        //{
+        private void RefreshFavorites()
+        {
 
-        //    int oldFocusedIndex = CustomNameBox.SelectedIndex;
+            int oldFocusedIndex1 = FavoritesNameBox.SelectedIndex;
 
-        //    //Refresh database
-        //    CustomNameBox.DataSource = null;
-        //    CustomNameBox.Items.Clear();
-        //    //loads data into the 'custom_RecipesDataSet' table.
-        //    this.myRecipesTableAdapter1.Fill(this.customDataSet.myRecipes);
-        //    CustomNameBox.DataSource = customDataSet.Tables["myRecipes"];
-        //    CustomNameBox.DisplayMember = "name";
-        //    CustomNameBox.ValueMember = "name";
+            //Refresh database
+            FavoritesNameBox.DataSource = null;
+            FavoritesNameBox.Items.Clear();
+            //loads data into the 'custom_RecipesDataSet' table.
+            this.favoritesTableAdapter.Fill(this.favoritesDataSet.Favorites);
+            FavoritesNameBox.DataSource = favoritesDataSet.Tables["Favorites"];
+            FavoritesNameBox.DisplayMember = "name";
+            FavoritesNameBox.ValueMember = "name";
 
-        //    CustomNameBox.SelectedIndex = oldFocusedIndex;
+            FavoritesNameBox.SelectedIndex = oldFocusedIndex1;
 
-        //}
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             RefreshMyRecipes();
+            RefreshFavorites();
         }
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
