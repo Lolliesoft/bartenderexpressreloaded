@@ -551,6 +551,8 @@ namespace bartenderexpressReloaded
 
                     Form3 child = new Form3();
                     child.Text = LiqueursNameBox.SelectedValue.ToString();
+                    child.FavoritesButton.Name = child.Text;
+                    child.FavoritesButton.Text = "liqueurs";
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
