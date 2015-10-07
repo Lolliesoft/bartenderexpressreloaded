@@ -26,6 +26,7 @@ namespace bartenderexpressReloaded
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FavoritesButton.Enabled = false;
             string FavoriteName = FavoritesButton.Name;
             string FavoritesTable = FavoritesButton.Text;
 
