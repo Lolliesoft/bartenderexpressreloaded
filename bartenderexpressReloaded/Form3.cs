@@ -29,15 +29,19 @@ namespace bartenderexpressReloaded
             FavoritesButton.Enabled = false;
             string FavoriteName = FavoritesButton.Name;
             string FavoritesTable = FavoritesButton.Text;
+            //string FavoritesKey = FavoritesTable.TrimEnd('s');
+            string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
 
             using (SQLiteConnection cs22 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
             {
                 cs22.Open();
 
-                SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTable.TrimEnd('s')+ "_key FROM " + FavoritesTable + " WHERE name ='" + FavoriteName + "'", cs22);
+                //"SELECT cocktail_key FROM cocktails WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs5);
+
+                SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs22);
                 SQLiteDataReader rdr1 = cmd.ExecuteReader();
 
-                string FavoritesTablekey = FavoritesTable.TrimEnd('s')+ "_key";
+                
 
                 while (rdr1.Read())
                 {
