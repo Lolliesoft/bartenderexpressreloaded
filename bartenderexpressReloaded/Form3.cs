@@ -40,6 +40,7 @@ namespace bartenderexpressReloaded
                 if (FavoritesButton.Text == "coffeetea")
                 {
                     string FavoritesTablekey = FavoritesTable + "_key";
+
                     SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName) + "'", cs22);
                     SQLiteDataReader rdr1 = cmd.ExecuteReader();
 
@@ -48,7 +49,7 @@ namespace bartenderexpressReloaded
 
                         //MessageBox.Show(rdr1["FavoritesTablekey"].ToString());
 
-                        MessageBox.Show(rdr1["beer_key"].ToString());
+                        MessageBox.Show(rdr1[FavoritesTablekey].ToString());
 
                         SQLiteCommand cmd1 = new SQLiteCommand("SELECT name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions," +
                                                                 "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9," +
@@ -107,30 +108,28 @@ namespace bartenderexpressReloaded
                             }
                     }
                 }
-                else
+
+                if (FavoritesButton.Text == "liqueurs")
                 {
+                    //string FavoritesTablekey = FavoritesTable + "_key";
+                    string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
 
-                    using (SQLiteConnection cs26 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                    SQLiteCommand cmd3 = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName) + "'", cs22);
+                    SQLiteDataReader rdr1 = cmd3.ExecuteReader();
+
+                    if (rdr1.Read())
                     {
-                        cs26.Open();
-                        //string FavoritesKey = FavoritesTable.TrimEnd('s');
-                        string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
-
-
-
-                        SQLiteCommand cmd = new SQLiteCommand("SELECT beer_key FROM beers WHERE name ='UGLY'", cs26);
-                        SQLiteDataReader rdr2 = cmd.ExecuteReader();
-
-                        MessageBox.Show(rdr2["beer_key"].ToString());
+                        // MessageBox.Show(rdr2[FavoritesTablekey].ToString());
 
                         SQLiteCommand cmd1 = new SQLiteCommand("SELECT name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions," +
                                                                 "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9," +
-                                                            "ingredient10, ingredient11, ingredient12, ingredient13, ingredient14, ingredient15 FROM " + FavoritesTable + " WHERE " + FavoritesTablekey + "=" + (rdr2[FavoritesTablekey]) + "", cs26);
+                                                            "ingredient10, ingredient11, ingredient12, ingredient13, ingredient14, ingredient15 FROM " + FavoritesTable + " WHERE " + FavoritesTablekey + "=" + (rdr1[FavoritesTablekey]) + "", cs22);
                         SQLiteDataReader rdring = cmd1.ExecuteReader();
 
 
 
                         using (SQLiteConnection cs23 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
+
                             if (rdring.Read())
                             {
                                 MessageBox.Show(rdring[0].ToString());
