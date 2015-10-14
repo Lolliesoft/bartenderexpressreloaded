@@ -769,6 +769,8 @@ namespace bartenderexpressReloaded
 
                         Form3 child = new Form3();
                         child.Text = PunchesNameBox.SelectedValue.ToString();
+                        child.FavoritesButton.Name = child.Text;
+                        child.FavoritesButton.Text = "punches";
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                         child.MdiParent = this;
@@ -948,6 +950,9 @@ namespace bartenderexpressReloaded
 
                         Form3 child = new Form3();
                         child.Text = CocktailsNameBox.SelectedValue.ToString();
+                        child.FavoritesButton.Name = child.Text;
+                        child.FavoritesButton.Text = "cocktails";
+
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                         child.MdiParent = this;
@@ -1133,6 +1138,8 @@ namespace bartenderexpressReloaded
 
                     Form3 child = new Form3();
                     child.Text = BeerAleNameBox.SelectedValue.ToString();
+                    child.FavoritesButton.Name = child.Text;
+                    child.FavoritesButton.Text = "beers";
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
@@ -1315,6 +1322,9 @@ namespace bartenderexpressReloaded
 
                     Form3 child = new Form3();
                     child.Text = NonAlcoholicNameBox.SelectedValue.ToString();
+                    child.FavoritesButton.Name = child.Text;
+                    child.FavoritesButton.Text = "nonalcoholic";
+
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
