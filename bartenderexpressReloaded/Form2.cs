@@ -39,7 +39,7 @@ namespace bartenderexpressReloaded
             
             
             
-            FavoritesDrinkButton.Enabled = false;
+            //FavoritesDrinkButton.Enabled = false;
             string FavoriteName = FavoritesDrinkButton.Name;
             string FavoritesTable = FavoritesDrinkButton.Text;
 
@@ -49,6 +49,31 @@ namespace bartenderexpressReloaded
             using (SQLiteConnection cs30 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
             {
                 cs30.Open();
+
+                //check to see if drink is already a favorite  SELECT favorite FROM drinks WHERE name = 'ABERFOYLE'
+                                                                                                                    
+                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName) + "'", cs30);
+               
+
+                SQLiteDataReader rdr4 = cmd4.ExecuteReader();
+                while (rdr4.Read())
+                {
+                    string FavoriteValue = rdr4[0].ToString();
+
+                    //Convert.ToBoolean(FavoriteValue);
+
+                    if (Convert.ToBoolean(FavoriteValue))
+                    {
+                        FavoritesDrinkButton.Enabled = false;
+                    }
+                }
+               // int 
+
+               ////if the boolean result is the value of 1 from the FavoriteValue then...  
+               //if (result = FavoriteValue == 1)  {
+               //    FavoritesDrinkButton.Enabled = false;
+               //     }
+
 
                 if (FavoritesDrinkButton.Text == "drinks")
                 {
