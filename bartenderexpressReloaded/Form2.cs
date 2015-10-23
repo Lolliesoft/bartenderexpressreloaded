@@ -61,19 +61,14 @@ namespace bartenderexpressReloaded
                     string FavoriteValue = rdr4[0].ToString();
 
                     //Convert.ToBoolean(FavoriteValue);
+                    ////if the boolean result is the value of 1 from the FavoriteValue then... 
 
                     if (Convert.ToBoolean(FavoriteValue))
                     {
                         FavoritesDrinkButton.Enabled = false;
                     }
                 }
-               // int 
-
-               ////if the boolean result is the value of 1 from the FavoriteValue then...  
-               //if (result = FavoriteValue == 1)  {
-               //    FavoritesDrinkButton.Enabled = false;
-               //     }
-
+           
 
                 if (FavoritesDrinkButton.Text == "drinks")
                 {
