@@ -36,7 +36,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.DrinkBox = new System.Windows.Forms.PictureBox();
             this.DrinkTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FavoritesDrinkButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,24 +99,24 @@
             this.DrinkTextBox.Size = new System.Drawing.Size(345, 198);
             this.DrinkTextBox.TabIndex = 5;
             // 
-            // button1
+            // FavoritesDrinkButton
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(542, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Tag = "Add to Favorites";
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.FavoritesDrinkButton.ForeColor = System.Drawing.Color.Black;
+            this.FavoritesDrinkButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesDrinkButton.Image")));
+            this.FavoritesDrinkButton.Location = new System.Drawing.Point(542, 0);
+            this.FavoritesDrinkButton.Name = "FavoritesDrinkButton";
+            this.FavoritesDrinkButton.Size = new System.Drawing.Size(23, 23);
+            this.FavoritesDrinkButton.TabIndex = 6;
+            this.FavoritesDrinkButton.Tag = "Add to Favorites";
+            this.FavoritesDrinkButton.Text = "button1";
+            this.FavoritesDrinkButton.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 560);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.FavoritesDrinkButton);
             this.Controls.Add(this.DrinkTextBox);
             this.Controls.Add(this.DrinkBox);
             this.Controls.Add(this.richTextBox1);
@@ -142,6 +142,6 @@
         private System.Windows.Forms.ColumnHeader Ingredients;
         public System.Windows.Forms.PictureBox DrinkBox;
         public System.Windows.Forms.TextBox DrinkTextBox;
-        protected internal System.Windows.Forms.Button button1;
+        protected internal System.Windows.Forms.Button FavoritesDrinkButton;
     }
 }
