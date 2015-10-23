@@ -110,6 +110,7 @@
             this.FavoritesDrinkButton.Tag = "Add to Favorites";
             this.FavoritesDrinkButton.Text = "button1";
             this.FavoritesDrinkButton.UseVisualStyleBackColor = true;
+            this.FavoritesDrinkButton.Click += new System.EventHandler(this.FavoritesDrinkButton_Click);
             // 
             // Form2
             // 
