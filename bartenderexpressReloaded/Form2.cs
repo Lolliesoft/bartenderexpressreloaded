@@ -35,12 +35,16 @@ namespace bartenderexpressReloaded
 
         private void FavoritesDrinkButton_Click(object sender, EventArgs e)
         {
+            //check to see if button should be disabled, check if it has a favorite value of true
+            
+            
+            
             FavoritesDrinkButton.Enabled = false;
             string FavoriteName = FavoritesDrinkButton.Name;
             string FavoritesTable = FavoritesDrinkButton.Text;
 
 
-
+            //if FavoritesDrinkButton.Enabled = True.... then do this, disable button in the end
 
             using (SQLiteConnection cs30 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
             {
@@ -48,9 +52,12 @@ namespace bartenderexpressReloaded
 
                 if (FavoritesDrinkButton.Text == "drinks")
                 {
+                    
                     string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
-
                     SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName) + "'", cs30);
+                    //Set Favorite to true
+                    SQLiteCommand cmd3 = new SQLiteCommand("UPDATE " + FavoritesTable + " SET favorite = 1 WHERE name ='" + (FavoriteName) + "'", cs30);
+                    cmd3.ExecuteNonQuery();
                     SQLiteDataReader rdr1 = cmd.ExecuteReader();
 
                     if (rdr1.Read())
