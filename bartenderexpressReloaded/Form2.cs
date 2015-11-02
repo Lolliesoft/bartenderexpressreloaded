@@ -14,18 +14,43 @@ namespace bartenderexpressReloaded
 {
     public partial class Form2 : Form
     {
-        public Form2()
+
+        public Form2(string DrinkName)
         {
             InitializeComponent();
+            FavoritesDrinkButton.Text = DrinkName;
+
+
+            //if FavoritesDrinkButton.Enabled = True.... then do this, disable button in the end
+
+            using (SQLiteConnection cs33 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+            {
+                cs33.Open();
+
+                //check to see if drink is already a favorite  SELECT favorite FROM drinks WHERE name = 'ABERFOYLE'
+                
+                //string  statusbarrecipe = Form1.DrinksNameBox.SelectedValue.ToString();
+                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM drinks WHERE name ='" + (FavoritesDrinkButton.Text.Trim().Replace("'", "''")) + "'", cs33);
+
+
+                SQLiteDataReader rdr4 = cmd4.ExecuteReader();
+                while (rdr4.Read())
+                {
+                    string FavoriteValue = rdr4[0].ToString();
+
+                    //Convert.ToBoolean(FavoriteValue);
+                    ////if the boolean result is the value of 1 from the FavoriteValue then... 
+
+                    if (Convert.ToBoolean(FavoriteValue))
+                    {
+                        FavoritesDrinkButton.Enabled = false;
+                    }
+                }
+                cs33.Close();
+            }
+
         }
 
-        //public Form2(Form1 parent)
-        //{
-        //    InitializeComponent();
-
-        //    MdiParent = parent;
-
-        //}
 
         private void Form2_KeyDown(object sender, KeyEventArgs e)
         {
@@ -39,7 +64,7 @@ namespace bartenderexpressReloaded
             
             
             
-            //FavoritesDrinkButton.Enabled = false;
+            FavoritesDrinkButton.Enabled = false;
             string FavoriteName = FavoritesDrinkButton.Name;
             string FavoritesTable = FavoritesDrinkButton.Text;
 
@@ -51,8 +76,8 @@ namespace bartenderexpressReloaded
                 cs30.Open();
 
                 //check to see if drink is already a favorite  SELECT favorite FROM drinks WHERE name = 'ABERFOYLE'
-                                                                                                                    
-                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName) + "'", cs30);
+
+                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs30);
                
 
                 SQLiteDataReader rdr4 = cmd4.ExecuteReader();
@@ -74,9 +99,9 @@ namespace bartenderexpressReloaded
                 {
                     
                     string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName) + "'", cs30);
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs30);
                     //Set Favorite to true
-                    SQLiteCommand cmd3 = new SQLiteCommand("UPDATE " + FavoritesTable + " SET favorite = 1 WHERE name ='" + (FavoriteName) + "'", cs30);
+                    SQLiteCommand cmd3 = new SQLiteCommand("UPDATE " + FavoritesTable + " SET favorite = 1 WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs30);
                     cmd3.ExecuteNonQuery();
                     SQLiteDataReader rdr1 = cmd.ExecuteReader();
 

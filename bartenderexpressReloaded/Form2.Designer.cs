@@ -37,6 +37,7 @@
             this.DrinkBox = new System.Windows.Forms.PictureBox();
             this.DrinkTextBox = new System.Windows.Forms.TextBox();
             this.FavoritesDrinkButton = new System.Windows.Forms.Button();
+            this.toolStripStatusLabel = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,11 +113,19 @@
             this.FavoritesDrinkButton.UseVisualStyleBackColor = true;
             this.FavoritesDrinkButton.Click += new System.EventHandler(this.FavoritesDrinkButton_Click);
             // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Location = new System.Drawing.Point(0, 557);
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(568, 22);
+            this.toolStripStatusLabel.TabIndex = 7;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 560);
+            this.ClientSize = new System.Drawing.Size(568, 579);
+            this.Controls.Add(this.toolStripStatusLabel);
             this.Controls.Add(this.FavoritesDrinkButton);
             this.Controls.Add(this.DrinkTextBox);
             this.Controls.Add(this.DrinkBox);
@@ -144,5 +153,6 @@
         public System.Windows.Forms.PictureBox DrinkBox;
         public System.Windows.Forms.TextBox DrinkTextBox;
         protected internal System.Windows.Forms.Button FavoritesDrinkButton;
+        public System.Windows.Forms.StatusStrip toolStripStatusLabel;
     }
 }
