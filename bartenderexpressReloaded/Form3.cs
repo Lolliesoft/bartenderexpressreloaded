@@ -417,7 +417,8 @@ namespace bartenderexpressReloaded
                 else if (FavoritesButton.Text == "punches")
                 {
                     //string FavoritesTablekey = FavoritesTable + "_key";
-                    string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
+                    //string FavoritesTablekey = FavoritesTable.TrimEnd('e') + "_key";
+                    string FavoritesTablekey = FavoritesTable.Remove(FavoritesTable.Length - 2) + "_key";
 
                     SQLiteCommand cmd3 = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName) + "'", cs22);
                     SQLiteDataReader rdr1 = cmd3.ExecuteReader();

@@ -18,7 +18,9 @@ namespace bartenderexpressReloaded
         public Form2(string DrinkName)
         {
             InitializeComponent();
+            this.Refresh();
             FavoritesDrinkButton.Text = DrinkName;
+            
 
 
             //if FavoritesDrinkButton.Enabled = True.... then do this, disable button in the end
