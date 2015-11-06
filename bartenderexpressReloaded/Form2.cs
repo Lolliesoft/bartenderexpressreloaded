@@ -15,12 +15,13 @@ namespace bartenderexpressReloaded
     public partial class Form2 : Form
     {
 
-        public Form2(string DrinkName)
+        public Form2(string DrinkName, string tablename)
         {
             InitializeComponent();
             this.Refresh();
-            FavoritesDrinkButton.Text = DrinkName;
-            
+            FavoritesDrinkButton.Name = DrinkName;
+            string FavoriteName = DrinkName;
+            string FavoritesTable = tablename;
 
 
             //if FavoritesDrinkButton.Enabled = True.... then do this, disable button in the end
@@ -30,13 +31,13 @@ namespace bartenderexpressReloaded
                 cs33.Open();
 
                 //check to see if drink is already a favorite  SELECT favorite FROM drinks WHERE name = 'ABERFOYLE'
-                
+
                 //string  statusbarrecipe = Form1.DrinksNameBox.SelectedValue.ToString();
-                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM drinks WHERE name ='" + (FavoritesDrinkButton.Text.Trim().Replace("'", "''")) + "'", cs33);
+                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM drinks WHERE name ='" + (DrinkName.Trim().Replace("'", "''")) + "'", cs33);
 
 
                 SQLiteDataReader rdr4 = cmd4.ExecuteReader();
-                while (rdr4.Read())
+                if (rdr4.Read())
                 {
                     string FavoriteValue = rdr4[0].ToString();
 
@@ -48,12 +49,10 @@ namespace bartenderexpressReloaded
                         FavoritesDrinkButton.Enabled = false;
                     }
                 }
-                cs33.Close();
+
             }
 
         }
-
-
         private void Form2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -63,65 +62,60 @@ namespace bartenderexpressReloaded
         private void FavoritesDrinkButton_Click(object sender, EventArgs e)
         {
             //check to see if button should be disabled, check if it has a favorite value of true
-            
-            
-            
+
+
             FavoritesDrinkButton.Enabled = false;
             string FavoriteName = FavoritesDrinkButton.Name;
             string FavoritesTable = FavoritesDrinkButton.Text;
 
+            //using (SQLiteConnection cs36 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+            //{
+            //    SQLiteCommand cmd3 = new SQLiteCommand("UPDATE " + FavoritesTable + " SET favorite = 1 WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs36);
+            //    cs36.Open();
+            //    cmd3.ExecuteNonQuery();
+            //    cs36.Close();
+            //}
 
-            //if FavoritesDrinkButton.Enabled = True.... then do this, disable button in the end
 
-            using (SQLiteConnection cs30 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
-            {
-                cs30.Open();
 
-                //check to see if drink is already a favorite  SELECT favorite FROM drinks WHERE name = 'ABERFOYLE'
 
-                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs30);
+                using (SQLiteConnection cs31 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+
                
+                {if (FavoritesDrinkButton.Text == "drinks")
+                 {
+                     
 
-                SQLiteDataReader rdr4 = cmd4.ExecuteReader();
-                while (rdr4.Read())
-                {
-                    string FavoriteValue = rdr4[0].ToString();
-
-                    //Convert.ToBoolean(FavoriteValue);
-                    ////if the boolean result is the value of 1 from the FavoriteValue then... 
-
-                    if (Convert.ToBoolean(FavoriteValue))
-                    {
-                        FavoritesDrinkButton.Enabled = false;
-                    }
-                }
-           
-
-                if (FavoritesDrinkButton.Text == "drinks")
-                {
-                    
                     string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs30);
+
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs31);
                     //Set Favorite to true
-                    SQLiteCommand cmd3 = new SQLiteCommand("UPDATE " + FavoritesTable + " SET favorite = 1 WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs30);
-                    cmd3.ExecuteNonQuery();
+                
+                    
+                    
+
+                    cs31.Open();
                     SQLiteDataReader rdr1 = cmd.ExecuteReader();
 
                     if (rdr1.Read())
                     {
-
+                        
                         //MessageBox.Show(rdr1["FavoritesTablekey"].ToString());
 
                         //MessageBox.Show(rdr1[FavoritesTablekey].ToString());
 
                         SQLiteCommand cmd1 = new SQLiteCommand("SELECT name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions," +
                                                                 "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9," +
-                                                            "ingredient10, ingredient11, ingredient12, ingredient13, ingredient14, ingredient15 FROM " + FavoritesTable + " WHERE " + FavoritesTablekey + "=" + (rdr1[FavoritesTablekey]) + "", cs30);
+                                                            "ingredient10, ingredient11, ingredient12, ingredient13, ingredient14, ingredient15 FROM " + FavoritesTable + " WHERE " + FavoritesTablekey + "=" + (rdr1[FavoritesTablekey]) + "", cs31);
                         SQLiteDataReader rdring = cmd1.ExecuteReader();
+                    
 
-                        using (SQLiteConnection cs31 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
+                        using (SQLiteConnection cs32 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
+                          
                             if (rdring.Read())
                             {
+                                cs32.Close();
+                                //cs32.Open();
                                 //MessageBox.Show(rdring[0].ToString());
                                 SQLiteCommand cmd2 = new SQLiteCommand();
                                 cmd2.CommandText = @"INSERT into Favorites (name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions,
@@ -130,7 +124,7 @@ namespace bartenderexpressReloaded
                                      Values (@DrinkName,@Amt1,@Amt2,@Amt3,@Amt4,@Amt5,@Amt6,@Amt7,@Amt8,@Amt9,@Amt10,@Amt11,@Amt12,@Amt13,@Amt14,@Amt15,@Directions,
                                                             @Ing1,@Ing2,@Ing3,@Ing4,@Ing5,@Ing6,@Ing7,@Ing8,@Ing9,@Ing10,@Ing11,@Ing12,@Ing13,@Ing14,@Ing15)";
 
-                                cmd2.Connection = cs31;
+                                cmd2.Connection = cs32;
                                 //string DrinkName = rdring[0].ToString();
                                 cmd2.Parameters.Add(new SQLiteParameter("@DrinkName", rdring[0]));
                                 cmd2.Parameters.Add(new SQLiteParameter("@Amt1", rdring[1]));
@@ -165,13 +159,16 @@ namespace bartenderexpressReloaded
                                 cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                 cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
-                                cs31.Open();
+                                cs32.Open();
                                 cmd2.ExecuteNonQuery();
+                                cs32.Close();
                                 cs31.Close();
                             }
+
+
+                       
                     }
                 }
-
             }
         }
     }
