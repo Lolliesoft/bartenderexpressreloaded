@@ -279,13 +279,23 @@ namespace bartenderexpressReloaded
         }
 
 
-        private void DrinksNameBox_DoubleClick(object sender, EventArgs e)
+       
+
+        public void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
+           
+              //string _statusbarrecipe2 = DrinksNameBox.SelectedValue.ToString();
+
 
             if (DrinksNameBox.SelectedItem != null)
             {
+
                 string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+                string tablename = "drinks";
                 toolStripStatusLabel1.Text = statusbarrecipe;
+
+
+
 
                 //toolStripStatusLabel2.Text = (this.nameListBox.Items.Count.ToString());
 
@@ -300,8 +310,11 @@ namespace bartenderexpressReloaded
 
                     //MessageBox.Show(reader["id"].ToString());
 
-                    Form2 child = new Form2();
+                    Form2 child = new Form2(statusbarrecipe, tablename);
+                    child.toolStripStatusLabel.Text = statusbarrecipe;
                     child.Text = DrinksNameBox.SelectedValue.ToString();
+                    child.FavoritesDrinkButton.Name = child.Text;
+                    child.FavoritesDrinkButton.Text = "drinks";
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
@@ -349,7 +362,7 @@ namespace bartenderexpressReloaded
 
                         SQLiteCommand cmdglass = new SQLiteCommand("SELECT pictures.picture FROM pictures INNER JOIN recipes ON pictures.id = recipes.id WHERE pictures.id IN (SELECT recipes.glasstype FROM recipes WHERE id = " + (reader["id"]) + ")", cs);
 
-                        
+
 
                         SQLiteDataReader rdrglass = cmdglass.ExecuteReader();
                         //MessageBox.Show(rdrglass["pictures.picture"].ToString());
@@ -365,14 +378,28 @@ namespace bartenderexpressReloaded
                             child.DrinkBox.Image = Image.FromStream(ms, true);
                         }
                     }
+                   
+                    cs.Close();
                 }
-
             }
         }
 
 
+        //private string myDrinkName;
+
+        //public string DrinkName
+        //{
+        //    get { return myDrinkName; }
+        //    set { myDrinkName = toolStripStatusLabel1.Text;}
+        //}
+        
+           
+
+   
         private void ShotsNameBox_DoubleClick(object sender, EventArgs e)
         {
+
+           
             if (ShotsNameBox.SelectedItem != null)
             {
 
