@@ -2386,6 +2386,14 @@ namespace bartenderexpressReloaded
             shuffle.RandomConnection();
         }
 
+        public void favoritesDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            WizardPages.SelectedTab = Favorites;
+            FavoritesNameBox.Show();
+            FavoritesNameBox.Focus();
+            toolStripStatusLabel1.Text = (this.FavoritesNameBox.ItemCount.ToString()) + " Favorites Recipes ";
+        }
+
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             

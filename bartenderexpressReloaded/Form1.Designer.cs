@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
@@ -59,14 +60,14 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
-            this.shotsBindingSource = new System.Windows.Forms.BindingSource();
-            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource();
+            this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.xpressShotsDataSet = new bartenderexpressReloaded.XpressShotsDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.CheckUpdateBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -92,12 +93,12 @@
             this.AddRecipeGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.AddCustomRecipe = new DevExpress.XtraNavBar.NavBarItem();
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.liqueursBindingSource = new System.Windows.Forms.BindingSource();
-            this.punchesBindingSource = new System.Windows.Forms.BindingSource();
-            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource();
-            this.beersBindingSource = new System.Windows.Forms.BindingSource();
-            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource();
-            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource();
+            this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.punchesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.beersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shotsTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.shotsTableAdapter();
             this.liqueursTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.liqueursTableAdapter();
             this.punchesTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.punchesTableAdapter();
@@ -107,10 +108,10 @@
             this.coffeeteaTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.coffeeteaTableAdapter();
             this.CustomTab = new System.Windows.Forms.TabPage();
             this.CustomNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource();
+            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.customDataSet = new bartenderexpressReloaded.CustomDataSet();
             this.CustomSearch = new System.Windows.Forms.TextBox();
-            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource();
+            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myRecipes = new bartenderexpressReloaded.MyRecipes();
             this.CoffeeTeaTab = new System.Windows.Forms.TabPage();
             this.CoffeeTeaSearch = new System.Windows.Forms.TextBox();
@@ -137,12 +138,12 @@
             this.DrinkSearchClear = new DevExpress.XtraEditors.SimpleButton();
             this.DrinkSearch = new System.Windows.Forms.TextBox();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource();
+            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.Favorites = new System.Windows.Forms.TabPage();
             this.FavoriteSearch = new System.Windows.Forms.TextBox();
             this.FavoritesNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.favoritesBindingSource = new System.Windows.Forms.BindingSource();
+            this.favoritesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.favoritesDataSet = new bartenderexpressReloaded.FavoritesDataSet();
             this.recipesTableAdapter1 = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.recipesTableAdapter();
             this.statusStrip1 = new System.Windows.Forms.ToolStrip();
@@ -159,7 +160,7 @@
             this.tileItem6 = new DevExpress.XtraEditors.TileItem();
             this.tileItem4 = new DevExpress.XtraEditors.TileItem();
             this.myRecipesTableAdapter = new bartenderexpressReloaded.MyRecipesTableAdapters.myRecipesTableAdapter();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
@@ -1054,6 +1055,7 @@
             this.tileItem2.Id = 2;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem2.Name = "tileItem2";
+            this.tileItem2.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.favoritesDrinkClick);
             // 
             // tileItem1
             // 
@@ -1100,10 +1102,25 @@
             this.tileItem7.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.LightBlue;
             this.tileItem7.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem7.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
-            tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement6.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement6.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement6.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem7.CurrentFrameIndex = 1;
+            tileItemElement6.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement6.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Normal.Options.UseFont = true;
+            tileItemElement6.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Selected.Options.UseFont = true;
+            tileItemElement6.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Text = "Check for the latest version of Bartender Express";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement6.TextLocation = new System.Drawing.Point(4, 11);
             this.tileItem7.Elements.Add(tileItemElement6);
             this.tileItem7.FrameAnimationInterval = 19000;
             tileItemFrame3.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
