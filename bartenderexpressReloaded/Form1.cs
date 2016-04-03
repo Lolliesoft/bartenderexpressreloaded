@@ -279,12 +279,12 @@ namespace bartenderexpressReloaded
         }
 
 
-       
+
 
         public void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
-           
-              //string _statusbarrecipe2 = DrinksNameBox.SelectedValue.ToString();
+
+            //string _statusbarrecipe2 = DrinksNameBox.SelectedValue.ToString();
 
 
             if (DrinksNameBox.SelectedItem != null)
@@ -378,7 +378,7 @@ namespace bartenderexpressReloaded
                             child.DrinkBox.Image = Image.FromStream(ms, true);
                         }
                     }
-                   
+
                     cs.Close();
                 }
             }
@@ -392,14 +392,14 @@ namespace bartenderexpressReloaded
         //    get { return myDrinkName; }
         //    set { myDrinkName = toolStripStatusLabel1.Text;}
         //}
-        
-           
 
-   
+
+
+
         private void ShotsNameBox_DoubleClick(object sender, EventArgs e)
         {
 
-           
+
             if (ShotsNameBox.SelectedItem != null)
             {
 
@@ -1877,7 +1877,7 @@ namespace bartenderexpressReloaded
             }
 
         }
-            
+
         private void FavoritesNameBox_DoubleClick(object sender, EventArgs e)
         {
             if (FavoritesNameBox.SelectedItem != null)
@@ -2271,7 +2271,7 @@ namespace bartenderexpressReloaded
             {
                 FavoritesNameBox.SelectedIndex = index;
             }
-        }  
+        }
 
         private void DrinksNameBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -2382,8 +2382,66 @@ namespace bartenderexpressReloaded
         }
         public void randomDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            Connection shuffle = new Connection();
-            shuffle.RandomConnection();
+            //Connection shuffle = new Connection();
+            //shuffle.RandomConnection();
+            //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+            //string tablename = "drinks";
+            //toolStripStatusLabel1.Text = statusbarrecipe;
+
+            using (SQLiteConnection cs101 = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
+            {
+                cs101.Open();
+
+                //Get ID
+                SQLiteCommand cmd = new SQLiteCommand("SELECT id,name FROM recipes ORDER BY RANDOM() LIMIT 1", cs101);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                Form3 child = new Form3();
+                child.MdiParent = this;
+                client.BringToFront();//This will make your child form shown on top.
+                child.Show();
+
+
+                while (reader.Read())
+                {
+                    string DrinkName = reader["name"].ToString();
+                    child.Text = DrinkName;
+                    child.FavoritesButton.Name = child.Text;
+                    //child.toolStripStatusLabel1.Text = child.Text;
+                    // Get Ingredients
+                    SQLiteCommand cmding = new SQLiteCommand("SELECT name FROM ingredients INNER JOIN recipeingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs101);
+                    SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                    while (rdring.Read())
+                    {
+                        ListViewItem ingredients = new ListViewItem();
+                        ingredients.SubItems[0].Text = rdring[0].ToString();
+                        child.listView2.Items.Add(ingredients);
+
+                    }
+                    //Get Amounts
+                    SQLiteCommand cmdamt = new SQLiteCommand("SELECT amount FROM recipeingredients INNER JOIN ingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs101);
+                    SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                    while (rdramt.Read())
+                    {
+                        ListViewItem amount = new ListViewItem();
+                        amount.SubItems[0].Text = rdramt[0].ToString();
+                        child.listView1.Items.Add(amount);
+                    }
+
+                    //Get Directions
+                    SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM recipes WHERE id = " + (reader["id"]) + "", cs101);
+                    SQLiteDataReader rdr = cmddir.ExecuteReader();
+                    child.richTextBox1.Font = new Font("Consolas", 14);
+
+                    while (rdr.Read())
+                    {
+                        child.richTextBox1.Text = rdr[0].ToString();
+                        
+                    }
+                }
+            }
         }
 
         public void favoritesDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
@@ -2396,7 +2454,7 @@ namespace bartenderexpressReloaded
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+
         }
 
         private void CustomNameBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2476,7 +2534,7 @@ namespace bartenderexpressReloaded
                 }
             }
 
-          }
+        }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -2503,9 +2561,9 @@ namespace bartenderexpressReloaded
                 MessageBox.Show("Backup.db restored" + "\n" + "All custom recipes exported", "Custom Recipes Restored", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-       } 
     }
-
+} 
+    
 
 
 
