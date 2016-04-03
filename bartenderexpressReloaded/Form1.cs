@@ -2387,6 +2387,7 @@ namespace bartenderexpressReloaded
             //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
             //string tablename = "drinks";
             //toolStripStatusLabel1.Text = statusbarrecipe;
+            
 
             using (SQLiteConnection cs101 = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
             {
@@ -2396,21 +2397,27 @@ namespace bartenderexpressReloaded
                 SQLiteCommand cmd = new SQLiteCommand("SELECT id,name FROM recipes ORDER BY RANDOM() LIMIT 1", cs101);
                 SQLiteDataReader reader = cmd.ExecuteReader();
 
-                Form3 child = new Form3();
-                child.MdiParent = this;
-                client.BringToFront();//This will make your child form shown on top.
-                child.Show();
-
+                
 
                 while (reader.Read())
                 {
+                    //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+                    string tablename = "drinks";
+                    
                     string DrinkName = reader["name"].ToString();
-                    child.Text = DrinkName;
-                    child.FavoritesButton.Name = child.Text;
-                    //child.toolStripStatusLabel1.Text = child.Text;
+                    toolStripStatusLabel1.Text = DrinkName;
+                    
                     // Get Ingredients
                     SQLiteCommand cmding = new SQLiteCommand("SELECT name FROM ingredients INNER JOIN recipeingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs101);
                     SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                    Form2 child = new Form2(DrinkName, tablename);
+                    child.Text = DrinkName;
+                    //child.FavoritesButton.Name = child.Text;
+                    //child.toolStripStatusLabel1.Text = child.Text;
+                    child.MdiParent = this;
+                    client.BringToFront(); //This will make your child form shown on top.
+                    child.Show();
 
                     while (rdring.Read())
                     {
@@ -2437,8 +2444,29 @@ namespace bartenderexpressReloaded
 
                     while (rdr.Read())
                     {
-                        child.richTextBox1.Text = rdr[0].ToString();
-                        
+                        child.DrinkTextBox.Text = rdr[0].ToString();
+
+                    }
+
+                    //Get glasstype
+                    //SQLiteCommand cmdglass = new SQLiteCommand("SELECT glasstype FROM recipes WHERE id = " + (reader["id"]) + "", cs);
+
+                    SQLiteCommand cmdglass = new SQLiteCommand("SELECT pictures.picture FROM pictures INNER JOIN recipes ON pictures.id = recipes.id WHERE pictures.id IN (SELECT recipes.glasstype FROM recipes WHERE id = " + (reader["id"]) + ")", cs101);
+
+
+
+                    SQLiteDataReader rdrglass = cmdglass.ExecuteReader();
+                    //MessageBox.Show(rdrglass["pictures.picture"].ToString());
+
+                    while (rdrglass.Read())
+                    {
+                        //For Image inside a BLOB
+
+                        byte[] imagepic = (byte[])rdrglass[0];
+                        MemoryStream ms = new MemoryStream(imagepic);
+                        Clipboard.SetImage(Image.FromStream(ms, true));
+                        //child.richTextBox1.Paste();
+                        child.DrinkBox.Image = Image.FromStream(ms, true);
                     }
                 }
             }

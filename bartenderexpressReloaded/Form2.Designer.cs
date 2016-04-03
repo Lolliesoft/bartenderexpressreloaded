@@ -87,7 +87,7 @@
             // 
             this.DrinkBox.Location = new System.Drawing.Point(10, 354);
             this.DrinkBox.Name = "DrinkBox";
-            this.DrinkBox.Size = new System.Drawing.Size(200, 200);
+            this.DrinkBox.Size = new System.Drawing.Size(200, 223);
             this.DrinkBox.TabIndex = 4;
             this.DrinkBox.TabStop = false;
             // 
@@ -97,7 +97,7 @@
             this.DrinkTextBox.Multiline = true;
             this.DrinkTextBox.Name = "DrinkTextBox";
             this.DrinkTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DrinkTextBox.Size = new System.Drawing.Size(345, 198);
+            this.DrinkTextBox.Size = new System.Drawing.Size(345, 222);
             this.DrinkTextBox.TabIndex = 5;
             // 
             // FavoritesDrinkButton
@@ -119,6 +119,7 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(568, 22);
             this.toolStripStatusLabel.TabIndex = 7;
+            this.toolStripStatusLabel.Visible = false;
             // 
             // Form2
             // 
