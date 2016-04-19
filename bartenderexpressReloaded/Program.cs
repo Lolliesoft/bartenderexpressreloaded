@@ -1,8 +1,30 @@
-﻿using System;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Threading.Tasks;
+//using System.Windows.Forms;
+//using DevExpress.XtraEditors;
+//using DevExpress.XtraBars.Helpers;
+//using DevExpress.Skins;
+//using DevExpress.LookAndFeel;
+//using DevExpress.UserSkins;
+//using DevExpress.XtraEditors.Controls;
+
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 using System.Windows.Forms;
+using DevExpress.Skins;
+using DevExpress.LookAndFeel;
+using DevExpress.UserSkins;
+using System.IO;
+using System.Threading;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace bartenderexpressReloaded
 {
@@ -16,19 +38,18 @@ namespace bartenderexpressReloaded
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
-            DevExpress.UserSkins.TouchSkins.Register();
-
+            UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");          
             DevExpress.LookAndFeel.UserLookAndFeel.Default.UseWindowsXPTheme = false;
-            //DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2013";
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Glass Oceans";
-
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             DevExpress.Skins.SkinManager.EnableFormSkins();
 
             Application.Run(new Form1());
         }
     }
+
 
     public class WizardPages : TabControl
     {

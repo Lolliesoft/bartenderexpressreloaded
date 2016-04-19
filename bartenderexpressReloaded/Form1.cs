@@ -12,7 +12,11 @@ using System.Data.SqlClient;
 using System.Data.SQLite;
 using AutoUpdaterDotNET;
 using DevExpress.XtraEditors;
-
+using DevExpress.Skins;
+using DevExpress.LookAndFeel;
+using DevExpress.UserSkins;
+using DevExpress.XtraBars;
+using DevExpress.XtraBars.Helpers;
 
 
 //using DevExpress.XtraBars.Docking;
@@ -25,6 +29,8 @@ namespace bartenderexpressReloaded
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "Lolliesoft"));
             InitializeComponent();
+            InitSkinGallery();
+            HideSkins(skinsToHide);
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
             //This will check whenever client gets focused and there aren't any
@@ -46,6 +52,40 @@ namespace bartenderexpressReloaded
         }
         MdiClient client;
 
+        void InitSkinGallery()
+        {
+            //SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1, true);
+            SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1);
+        }
+
+        string[] skinsToHide = { "DevExpress Style", "DevExpress Dark Style", "Seven Classic", "Seven" }; // populate with names of unnecessary skins
+
+        private void HideSkins(string[] skinsToHide)
+        {
+            for (var i = 0; i < skinRibbonGalleryBarItem1.Gallery.Groups.Count; i++)
+            {
+                var group = skinRibbonGalleryBarItem1.Gallery.Groups[i];
+                if (group == null)
+                {
+                    continue;
+                }
+                for (var j = 0; j < group.Items.Count; j++)
+                {
+                    var item = group.Items[j];
+                    if (item == null)
+                    {
+                        continue;
+                    }
+                    foreach (var skin in skinsToHide)
+                    {
+                        if (String.Equals(item.Caption, skin))
+                        {
+                            item.Visible = false;
+                        }
+                    }
+                }
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
