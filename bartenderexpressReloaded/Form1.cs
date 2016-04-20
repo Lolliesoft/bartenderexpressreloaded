@@ -2629,6 +2629,16 @@ namespace bartenderexpressReloaded
                 MessageBox.Show("Backup.db restored" + "\n" + "All custom recipes exported", "Custom Recipes Restored", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            WizardPages.SelectedTab = CustomTab;
+            toolStripStatusLabel1.Text = (this.CustomNameBox.ItemCount.ToString()) + " Custom Recipes ";
+            customRecipes child = new customRecipes();
+            child.MdiParent = this;
+            client.BringToFront(); //This will make your child form shown on top.
+            child.Show();
+        }
     }
 } 
     

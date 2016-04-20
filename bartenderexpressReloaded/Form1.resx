@@ -123,20 +123,11 @@
   <metadata name="bartenderExpressDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="bartenderExpressDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="shotsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>254, 56</value>
   </metadata>
   <metadata name="xpressShotsDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
-  </metadata>
-  <metadata name="xpressShotsDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="xpressShotsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>887, 17</value>
   </metadata>
   <metadata name="xpressShotsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>887, 17</value>
@@ -148,13 +139,46 @@
     <value>537, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>28</value>
+    <value>30</value>
   </metadata>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
   <metadata name="WizardPages.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="recipesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>567, 134</value>
+  </metadata>
+  <metadata name="liqueursBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>567, 56</value>
+  </metadata>
+  <metadata name="punchesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>909, 56</value>
+  </metadata>
+  <metadata name="cocktailsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 95</value>
+  </metadata>
+  <metadata name="beersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>535, 95</value>
+  </metadata>
+  <metadata name="nonalcoholicBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>849, 95</value>
+  </metadata>
+  <metadata name="coffeeteaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>211, 134</value>
+  </metadata>
+  <metadata name="myRecipesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>776, 165</value>
+  </metadata>
+  <metadata name="customDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>642, 165</value>
+  </metadata>
+  <metadata name="favoritesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>158, 204</value>
+  </metadata>
+  <metadata name="favoritesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 204</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CheckUpdateBtn.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -407,7 +431,7 @@
   <data name="barButtonItem5.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKnSURBVEhLtVW/axRBFF5EREQsxEKsLMVKxMLaUoKIhaWV
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAKnSURBVEhLtVW/axRBFF5EREQsxEKsLMVKxMLaUoKIhaWV
         pBDxLxAXsm9PtAgSLK6QKNzOqFemEpuIVZAUQW5nD5EYrGQ5JMhxhHBwfu/Nm7vkch6rFz943NzMm+/9
         no0OA81WfMwUtNj4Ep/SrcMFG7BFOoCRj41WelG3Dw9iwKUDNpK55IfJ05t6FEW2oE6WJzsGgt/SOFqq
         EqptJ9dMTp+NS7q418O9QRD871tHz4TH5vSLLQeBAg7TbHU1PqpcB/DG0WXolcFrkbF1JjxUj6xL1ADt
@@ -422,7 +446,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="galleryItem6.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem1.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABfhJREFUaEPV
         mk2IFEcUx5fBwx4kBFmGRUQWCUFEZAlhD7MiOYiHICHkIL0hBBEPS5CwLCLiQQg5SBAPnroleAgSQggh
@@ -453,10 +477,10 @@
         m9kQVqnr2RX66E5oFkzDD+D4xMS/nbr/wzLH4AEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="galleryItem6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAkRJREFUSEutldFnlnEUx98/YIyIEbGrGLuNFDHGGDFiuoguEhGjq9hVRFcxYhpj
+        wgAADsIBFShKgAAAAkRJREFUSEutldFnlnEUx98/YIyIEbGrGLuNFDHGGDFiuoguEhGjq9hVRFcxYhpj
         RDMiXmKMJSKbxSibkUUsaXe7HOPp83ne82t73v1ez/vQ4cPzPr9zvud5z/n9zq9VZ9fvvBqCu/ACFoK5
         eDcUbs2N4BvwEQ7gJTyAKbgVzyb8CZ9hLMLqDecBeAs7MAn+g4fgl78LfDaJa2OwDW0YCJm84XAJvsJz
         MHgeTqDogWsm0/cJfIfhkKsaC4Og+D2wPL8hJ5pD35swDXswGLKnxkvL8gyuwTFURCbuLxVb3w6KZHs/
@@ -469,7 +493,7 @@
         SsoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="galleryItem7.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem2.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAACIhJREFUaEPF
         mX+EllkUx0cykiQjayTJGEmSkSRZoxlZGWskSTKysn8kSVZWVmKNJGtlZK2VtZL9IxkrK8nK846VlYwk
@@ -511,10 +535,10 @@
         DD6L4drImzF8NZiD4W1t/wFn3lbrfk7wtQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="galleryItem7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAk1JREFUOE9tU8tOU1EU7dhHUsWo+BYM+IRGg88En3RqHBg1RjEaRyZGlG9wYEL4
+        wgAADsIBFShKgAAAAk1JREFUOE9tU8tOU1EU7dhHUsWo+BYM+IRGg88En3RqHBg1RjEaRyZGlG9wYEL4
         A0107MCpE8bQQosFDK2iRENb+vJiX7e97XKt01tTqTtZ955z9llr77PPPp71tiWAA8T4zmlMHAkDAsdT
         WpPP3dZudHq16cQscDcGjC4DYysNjH4HbkWBoxRzhbwurWFa6AgidHkeuP8FeLIEPCdJxBfEU+Lx14bI
         +TmgI4DQPyJSPRMBri8C75bXkF1bw4dECXeYyW2SRLxJ3KDfvwD0MUtxmmRfVwgYZPSrRKlcRr5QwGS2
@@ -527,7 +551,7 @@
         Hs8fKPuoxoQh3sgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="galleryItem8.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem3.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAABAfSURBVGhDtVl3VNRXGh1RgQEBa4zGqFgpIiBFlCJS
@@ -602,10 +626,10 @@
         sSi2LIOv+dlvQrh1IyLJ/wBlqpVWX5rxjQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="galleryItem8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAaNJREFUSEvN1sErBGEcxvFNcpIkJ0nb5ig57ElO0rYHOTnIwdFBkuTgOAeHPTs6
+        wgAADsIBFShKgAAAAaNJREFUSEvN1sErBGEcxvFNcpIkJ0nb5ig57ElO0rYHOTnIwdFBkuTgOAeHPTs6
         SvIXSPIXODhJ2ubgoE2SJElSPN/6Tb1t77zzSiNTn3bnN+/7Pjvzvu+0lSRJUnkpSUpAR75K0vl3Ae/y
         Kh9OLSQqgAGPZF6qMmKfDTmWN/H1Q2HArcwK7QaEQZdkRvqkRxbkUXz9gwH3MiEMsi1P4l5vS72iQ5/c
         3afVXcGALWHwTaHzg1wI85C1uZEhYZwTq7lyAxhkUIaF6ww+KbRvidu2aXex1lVHbkDbOs3Z+YFQorZq
@@ -615,7 +639,7 @@
         iQr4jb8JKPFvS5J+AyrPL6PSHsq9AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="galleryItem9.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem4.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAACFpJREFUaEPt
         mXGEV1kUx5MkSZJkjbVWcl/W+yVjJUkykqy1VpKMMZKsJEmyf2UZycjKSFZWkoyMrCRJsn9kJcnKWllJ
@@ -656,10 +680,10 @@
         +1nhaKesJ/Z6vZ0yUHgt73SX/DxtW8ktVmpMs2a9A3XJqWi6sTprAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="galleryItem9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAVpJREFUOE+V0z8ohHEcx/FnlAySwSDDDUhZZDJcBkm6ZDCYZDQYDCaDySSTDAaD
+        wgAADsIBFShKgAAAAVpJREFUOE+V0z8ohHEcx/FnlAySwSDDDUhZZDJcBkm6ZDCYZDQYDCaDySSTDAaD
         JEmSJBmkS5IMl+GSZNDFZZRk5f1++j16Ti53v3r1/Pv+Pvd7fs/3ovR46e06RD/O0R1u1z6YNIsl3KMF
         k2iGoW3IhdK/BwXteMMqdnGETaxhCHehtPqgqIgR5DGOY9QVcIk+nGEMBriiYRRDWfVBkb9swHY4X8cK
         TlFTQCca0YRBNKAVHegJZZWDBxnswV/0Fa6C61+85/N9ZML0n2X76XygV3wFN3hPXSfyYXoc8IQLDGAC
@@ -668,10 +692,10 @@
         Zi9LrzYWHNEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="galleryItem10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="galleryItem5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEoSURBVDhPY6AYPNFVO/BUR+3XEx31PyD8VFf9PzoGi+uo
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAEoSURBVDhPY6AYPNFVO/BUR+3XEx31PyD8VFf9PzoGi+uo
         nwPiJ0D1u4D0BxD9RFf9CMMTHbUv2DShY6AhGUANi57pqJsALdwEodW/gVzw6amuWg85GGQ5A8g5UN+Q
         DMB6B68BT7W05ID+LANjIBsqjAIwDHhqbMz1RkWFD8QGhnoSIhbUUkBiIDmQGhAbBFAMeKSlJQRkA+Na
         7QZQUxXQgHtIUXgPGIU1QHwNrMZYTQTDAKDkHISNhLDaPAwDXuiqKiEnKlDqA6aRM2CMlEJBaoCuVcEw
@@ -681,24 +705,6 @@
   </data>
   <metadata name="ribbonMiniToolbar1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>727, 17</value>
-  </metadata>
-  <metadata name="liqueursBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>567, 56</value>
-  </metadata>
-  <metadata name="punchesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>909, 56</value>
-  </metadata>
-  <metadata name="cocktailsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>187, 95</value>
-  </metadata>
-  <metadata name="beersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>535, 95</value>
-  </metadata>
-  <metadata name="nonalcoholicBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>849, 95</value>
-  </metadata>
-  <metadata name="coffeeteaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 134</value>
   </metadata>
   <metadata name="shotsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>413, 56</value>
@@ -721,62 +727,11 @@
   <metadata name="coffeeteaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>392, 134</value>
   </metadata>
-  <metadata name="myRecipesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>776, 165</value>
-  </metadata>
-  <metadata name="myRecipesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>776, 165</value>
-  </metadata>
-  <metadata name="customDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>642, 165</value>
-  </metadata>
-  <metadata name="customDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>642, 165</value>
-  </metadata>
   <metadata name="myRecipesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 173</value>
   </metadata>
   <metadata name="myRecipes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>912, 134</value>
-  </metadata>
-  <metadata name="myRecipes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>912, 134</value>
-  </metadata>
-  <metadata name="coffeeteaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 134</value>
-  </metadata>
-  <metadata name="nonalcoholicBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>849, 95</value>
-  </metadata>
-  <metadata name="beersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>535, 95</value>
-  </metadata>
-  <metadata name="cocktailsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>187, 95</value>
-  </metadata>
-  <metadata name="punchesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>909, 56</value>
-  </metadata>
-  <metadata name="liqueursBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>567, 56</value>
-  </metadata>
-  <metadata name="recipesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>567, 134</value>
-  </metadata>
-  <metadata name="recipesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>567, 134</value>
-  </metadata>
-  <metadata name="favoritesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>158, 204</value>
-  </metadata>
-  <metadata name="favoritesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>158, 204</value>
-  </metadata>
-  <metadata name="favoritesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 204</value>
-  </metadata>
-  <metadata name="favoritesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 204</value>
   </metadata>
   <metadata name="recipesTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>742, 134</value>
