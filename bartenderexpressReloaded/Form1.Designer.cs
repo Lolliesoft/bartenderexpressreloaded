@@ -29,28 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame11 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement23 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame12 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame11 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement24 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame12 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement25 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement26 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame13 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement27 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame14 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame13 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement28 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame14 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement29 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame15 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement30 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame16 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame15 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement31 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame16 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement32 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame17 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement33 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame18 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame17 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement34 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame18 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement35 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement36 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame19 = new DevExpress.XtraEditors.TileItemFrame();
@@ -60,6 +59,12 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement39 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement40 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement41 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem10 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.shotsBindingSource = new System.Windows.Forms.BindingSource();
@@ -70,16 +75,15 @@
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.CheckUpdateBtn = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.TheBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.DrinksBarItem = new DevExpress.XtraNavBar.NavBarItem();
@@ -167,6 +171,9 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -256,17 +263,18 @@
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.CheckUpdateBtn,
-            this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem1,
             this.barButtonItem4,
-            this.skinRibbonGalleryBarItem1});
+            this.skinRibbonGalleryBarItem1,
+            this.barButtonItem2,
+            this.barButtonItem5,
+            this.ribbonGalleryBarItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.MaxItemId = 7;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage2});
+            this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl1.Size = new System.Drawing.Size(1036, 143);
             // 
@@ -278,16 +286,6 @@
             this.CheckUpdateBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CheckUpdateBtn.LargeGlyph")));
             this.CheckUpdateBtn.Name = "CheckUpdateBtn";
             this.CheckUpdateBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
-            this.barButtonItem2.Caption = "Add Recipe";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
-            this.barButtonItem2.Id = 3;
-            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AddRecipeButton_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -325,36 +323,43 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Home";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup2.ItemLinks.Add(this.ribbonGalleryBarItem1);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.ShowCaptionButton = false;
+            this.ribbonPageGroup2.Text = "Tools";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.ShowCaptionButton = false;
+            this.ribbonPageGroup5.Text = "Skin Manager";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.ShowCaptionButton = false;
+            this.ribbonPageGroup4.Text = "Backup/Restore";
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.CheckUpdateBtn);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Skins";
+            this.ribbonPageGroup1.ShowCaptionButton = false;
+            this.ribbonPageGroup1.Text = "Update";
             // 
             // navBarControl1
             // 
@@ -1075,8 +1080,8 @@
             this.tileItem2.AppearanceItem.Normal.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileItem2.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem2.AppearanceItem.Normal.Options.UseFont = true;
-            tileItemElement21.Text = "Favorites";
-            this.tileItem2.Elements.Add(tileItemElement21);
+            tileItemElement22.Text = "Favorites";
+            this.tileItem2.Elements.Add(tileItemElement22);
             this.tileItem2.Id = 2;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem2.Name = "tileItem2";
@@ -1090,18 +1095,18 @@
             this.tileItem1.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement22.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement22.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
-            tileItemElement22.Text = "";
-            tileItemElement22.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            this.tileItem1.Elements.Add(tileItemElement22);
             tileItemElement23.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement23.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
             tileItemElement23.Text = "";
             tileItemElement23.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemFrame11.Elements.Add(tileItemElement23);
-            tileItemElement24.Text = "Click for a random drink recipe!";
-            tileItemFrame12.Elements.Add(tileItemElement24);
+            this.tileItem1.Elements.Add(tileItemElement23);
+            tileItemElement24.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement24.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
+            tileItemElement24.Text = "";
+            tileItemElement24.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemFrame11.Elements.Add(tileItemElement24);
+            tileItemElement25.Text = "Click for a random drink recipe!";
+            tileItemFrame12.Elements.Add(tileItemElement25);
             this.tileItem1.Frames.Add(tileItemFrame11);
             this.tileItem1.Frames.Add(tileItemFrame12);
             this.tileItem1.Id = 1;
@@ -1113,9 +1118,9 @@
             // 
             this.tileItem9.AppearanceItem.Normal.BackColor = System.Drawing.Color.White;
             this.tileItem9.AppearanceItem.Normal.Options.UseBackColor = true;
-            tileItemElement25.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement25.Text = "Lolliesoft";
-            this.tileItem9.Elements.Add(tileItemElement25);
+            tileItemElement26.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement26.Text = "Lolliesoft";
+            this.tileItem9.Elements.Add(tileItemElement26);
             this.tileItem9.FrameAnimationInterval = 30000;
             this.tileItem9.Id = 13;
             this.tileItem9.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
@@ -1128,52 +1133,52 @@
             this.tileItem7.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem7.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
             this.tileItem7.CurrentFrameIndex = 1;
-            tileItemElement26.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement26.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement26.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement26.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement26.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement26.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement26.Appearance.Normal.Options.UseFont = true;
-            tileItemElement26.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement26.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement26.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement26.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement26.Appearance.Selected.Options.UseFont = true;
-            tileItemElement26.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement26.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement26.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement26.Text = "Check for the latest version of Bartender Express";
-            tileItemElement26.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement26.TextLocation = new System.Drawing.Point(4, 11);
-            this.tileItem7.Elements.Add(tileItemElement26);
+            tileItemElement27.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement27.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement27.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement27.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement27.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement27.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement27.Appearance.Normal.Options.UseFont = true;
+            tileItemElement27.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement27.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement27.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement27.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement27.Appearance.Selected.Options.UseFont = true;
+            tileItemElement27.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement27.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement27.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement27.Text = "Check for the latest version of Bartender Express";
+            tileItemElement27.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement27.TextLocation = new System.Drawing.Point(4, 11);
+            this.tileItem7.Elements.Add(tileItemElement27);
             this.tileItem7.FrameAnimationInterval = 19000;
             tileItemFrame13.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
-            tileItemElement27.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement27.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement27.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement27.ImageSize = new System.Drawing.Size(120, 120);
-            tileItemFrame13.Elements.Add(tileItemElement27);
+            tileItemElement28.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement28.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement28.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement28.ImageSize = new System.Drawing.Size(120, 120);
+            tileItemFrame13.Elements.Add(tileItemElement28);
             tileItemFrame14.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
-            tileItemElement28.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement28.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement28.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement28.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement28.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement28.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement28.Appearance.Normal.Options.UseFont = true;
-            tileItemElement28.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement28.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement28.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement28.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement28.Appearance.Selected.Options.UseFont = true;
-            tileItemElement28.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement28.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement28.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement28.Text = "Check for the latest version of Bartender Express";
-            tileItemElement28.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement28.TextLocation = new System.Drawing.Point(4, 11);
-            tileItemFrame14.Elements.Add(tileItemElement28);
+            tileItemElement29.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement29.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement29.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement29.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement29.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement29.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement29.Appearance.Normal.Options.UseFont = true;
+            tileItemElement29.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement29.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement29.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement29.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement29.Appearance.Selected.Options.UseFont = true;
+            tileItemElement29.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement29.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement29.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement29.Text = "Check for the latest version of Bartender Express";
+            tileItemElement29.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement29.TextLocation = new System.Drawing.Point(4, 11);
+            tileItemFrame14.Elements.Add(tileItemElement29);
             this.tileItem7.Frames.Add(tileItemFrame13);
             this.tileItem7.Frames.Add(tileItemFrame14);
             this.tileItem7.Id = 11;
@@ -1186,38 +1191,53 @@
             this.tileItem8.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.RoyalBlue;
             this.tileItem8.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem8.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement29.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement29.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement29.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement29.ImageSize = new System.Drawing.Size(120, 120);
-            this.tileItem8.Elements.Add(tileItemElement29);
+            this.tileItem8.CurrentFrameIndex = 1;
+            tileItemElement30.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement30.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement30.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement30.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement30.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement30.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement30.Appearance.Normal.Options.UseFont = true;
+            tileItemElement30.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement30.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement30.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement30.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement30.Appearance.Selected.Options.UseFont = true;
+            tileItemElement30.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement30.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement30.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement30.Text = "Calculate measurements for your recipes";
+            tileItemElement30.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement30.TextLocation = new System.Drawing.Point(4, 11);
+            this.tileItem8.Elements.Add(tileItemElement30);
             this.tileItem8.FrameAnimationInterval = 28000;
             tileItemFrame15.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
-            tileItemElement30.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement30.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement30.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement30.ImageSize = new System.Drawing.Size(120, 120);
-            tileItemFrame15.Elements.Add(tileItemElement30);
+            tileItemElement31.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement31.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement31.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement31.ImageSize = new System.Drawing.Size(120, 120);
+            tileItemFrame15.Elements.Add(tileItemElement31);
             tileItemFrame16.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
-            tileItemElement31.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement31.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement31.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement31.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement31.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement31.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement31.Appearance.Normal.Options.UseFont = true;
-            tileItemElement31.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement31.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement31.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement31.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement31.Appearance.Selected.Options.UseFont = true;
-            tileItemElement31.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement31.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement31.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement31.Text = "Calculate measurements for your recipes";
-            tileItemElement31.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement31.TextLocation = new System.Drawing.Point(4, 11);
-            tileItemFrame16.Elements.Add(tileItemElement31);
+            tileItemElement32.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement32.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement32.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement32.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement32.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement32.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement32.Appearance.Normal.Options.UseFont = true;
+            tileItemElement32.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement32.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement32.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement32.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement32.Appearance.Selected.Options.UseFont = true;
+            tileItemElement32.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement32.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement32.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement32.Text = "Calculate measurements for your recipes";
+            tileItemElement32.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement32.TextLocation = new System.Drawing.Point(4, 11);
+            tileItemFrame16.Elements.Add(tileItemElement32);
             this.tileItem8.Frames.Add(tileItemFrame15);
             this.tileItem8.Frames.Add(tileItemFrame16);
             this.tileItem8.Id = 12;
@@ -1232,53 +1252,38 @@
             this.tileItem5.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem5.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem5.BackgroundImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            this.tileItem5.CurrentFrameIndex = 1;
-            tileItemElement32.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement32.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement32.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement32.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement32.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement32.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement32.Appearance.Normal.Options.UseFont = true;
-            tileItemElement32.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement32.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement32.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement32.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement32.Appearance.Selected.Options.UseFont = true;
-            tileItemElement32.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement32.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement32.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement32.Text = "Blood Alcohol Calculator";
-            tileItemElement32.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement32.TextLocation = new System.Drawing.Point(4, 0);
-            this.tileItem5.Elements.Add(tileItemElement32);
-            this.tileItem5.FrameAnimationInterval = 9000;
-            tileItemFrame17.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
             tileItemElement33.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileItemElement33.ImageLocation = new System.Drawing.Point(-12, -8);
             tileItemElement33.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
             tileItemElement33.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemFrame17.Elements.Add(tileItemElement33);
+            this.tileItem5.Elements.Add(tileItemElement33);
+            this.tileItem5.FrameAnimationInterval = 9000;
+            tileItemFrame17.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
+            tileItemElement34.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement34.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement34.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement34.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemFrame17.Elements.Add(tileItemElement34);
             tileItemFrame18.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
-            tileItemElement34.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement34.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement34.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement34.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement34.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement34.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement34.Appearance.Normal.Options.UseFont = true;
-            tileItemElement34.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement34.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement34.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement34.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement34.Appearance.Selected.Options.UseFont = true;
-            tileItemElement34.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement34.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement34.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement34.Text = "Blood Alcohol Calculator";
-            tileItemElement34.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement34.TextLocation = new System.Drawing.Point(4, 0);
-            tileItemFrame18.Elements.Add(tileItemElement34);
+            tileItemElement35.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement35.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement35.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement35.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement35.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement35.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement35.Appearance.Normal.Options.UseFont = true;
+            tileItemElement35.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement35.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement35.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement35.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement35.Appearance.Selected.Options.UseFont = true;
+            tileItemElement35.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement35.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement35.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement35.Text = "Blood Alcohol Calculator";
+            tileItemElement35.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement35.TextLocation = new System.Drawing.Point(4, 0);
+            tileItemFrame18.Elements.Add(tileItemElement35);
             this.tileItem5.Frames.Add(tileItemFrame17);
             this.tileItem5.Frames.Add(tileItemFrame18);
             this.tileItem5.Id = 16;
@@ -1293,12 +1298,7 @@
             this.tileItem3.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem3.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem3.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            this.tileItem3.CurrentFrameIndex = 1;
-            tileItemElement35.Text = "Liquor Cabinet";
-            tileItemElement35.TextLocation = new System.Drawing.Point(0, 5);
-            tileItemElement36.Text = "Check to see what recipes you can make with what you have!";
-            tileItemElement36.TextLocation = new System.Drawing.Point(0, 60);
-            this.tileItem3.Elements.Add(tileItemElement35);
+            tileItemElement36.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             this.tileItem3.Elements.Add(tileItemElement36);
             this.tileItem3.FrameAnimationInterval = 4500;
             tileItemElement37.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
@@ -1348,6 +1348,55 @@
             // favoritesTableAdapter
             // 
             this.favoritesTableAdapter.ClearBeforeFill = true;
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Add Drink";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
+            this.barButtonItem2.Id = 4;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Random Drink";
+            this.barButtonItem5.Id = 5;
+            this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            // 
+            // 
+            // 
+            this.ribbonGalleryBarItem1.Gallery.AllowHoverImages = true;
+            this.ribbonGalleryBarItem1.Gallery.ColumnCount = 2;
+            galleryItemGroup2.Caption = "Group3";
+            galleryItem6.Caption = "Item4";
+            galleryItem6.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem6.HoverImage")));
+            galleryItem6.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem6.Image")));
+            galleryItem7.Caption = "Item5";
+            galleryItem7.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem7.HoverImage")));
+            galleryItem7.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem7.Image")));
+            galleryItem8.Caption = "Item6";
+            galleryItem8.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem8.HoverImage")));
+            galleryItem8.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem8.Image")));
+            galleryItem9.Caption = "Item7";
+            galleryItem9.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem9.HoverImage")));
+            galleryItem9.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem9.Image")));
+            galleryItem10.Caption = "Item8";
+            galleryItem10.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem10.Image")));
+            galleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem6,
+            galleryItem7,
+            galleryItem8,
+            galleryItem9,
+            galleryItem10});
+            this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup2});
+            this.ribbonGalleryBarItem1.Id = 6;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
             // Form1
             // 
@@ -1493,7 +1542,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripStatusLabel1;
         private DevExpress.XtraEditors.SimpleButton DrinkSearchClear;
         private DevExpress.XtraBars.BarButtonItem CheckUpdateBtn;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraNavBar.NavBarGroup AddRecipeGroup;
         private DevExpress.XtraNavBar.NavBarItem AddCustomRecipe;
@@ -1531,8 +1579,11 @@
         protected internal DevExpress.XtraEditors.ListBoxControl ShotsNameBox;
         public DevExpress.XtraEditors.ListBoxControl DrinksNameBox;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
     }
 }
 
