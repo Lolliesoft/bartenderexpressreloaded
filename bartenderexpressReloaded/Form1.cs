@@ -2639,7 +2639,94 @@ namespace bartenderexpressReloaded
             client.BringToFront(); //This will make your child form shown on top.
             child.Show();
         }
+
+        private void randomdrink_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (SQLiteConnection cs102 = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
+            {
+                cs102.Open();
+
+                //Get ID
+                SQLiteCommand cmd = new SQLiteCommand("SELECT id,name FROM recipes ORDER BY RANDOM() LIMIT 1", cs102);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+
+
+                while (reader.Read())
+                {
+                    //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+                    string tablename = "drinks";
+
+                    string DrinkName = reader["name"].ToString();
+                    toolStripStatusLabel1.Text = DrinkName;
+
+                    // Get Ingredients
+                    SQLiteCommand cmding = new SQLiteCommand("SELECT name FROM ingredients INNER JOIN recipeingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs102);
+                    SQLiteDataReader rdring = cmding.ExecuteReader();
+
+                    Form2 child = new Form2(DrinkName, tablename);
+                    child.Text = DrinkName;
+                    //child.FavoritesButton.Name = child.Text;
+                    //child.toolStripStatusLabel1.Text = child.Text;
+                    child.MdiParent = this;
+                    client.BringToFront(); //This will make your child form shown on top.
+                    child.Show();
+
+                    while (rdring.Read())
+                    {
+                        ListViewItem ingredients = new ListViewItem();
+                        ingredients.SubItems[0].Text = rdring[0].ToString();
+                        child.listView2.Items.Add(ingredients);
+
+                    }
+                    //Get Amounts
+                    SQLiteCommand cmdamt = new SQLiteCommand("SELECT amount FROM recipeingredients INNER JOIN ingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs102);
+                    SQLiteDataReader rdramt = cmdamt.ExecuteReader();
+
+                    while (rdramt.Read())
+                    {
+                        ListViewItem amount = new ListViewItem();
+                        amount.SubItems[0].Text = rdramt[0].ToString();
+                        child.listView1.Items.Add(amount);
+                    }
+
+                    //Get Directions
+                    SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM recipes WHERE id = " + (reader["id"]) + "", cs102);
+                    SQLiteDataReader rdr = cmddir.ExecuteReader();
+                    child.richTextBox1.Font = new Font("Consolas", 14);
+
+                    while (rdr.Read())
+                    {
+                        child.DrinkTextBox.Text = rdr[0].ToString();
+
+                    }
+
+                    //Get glasstype
+                    //SQLiteCommand cmdglass = new SQLiteCommand("SELECT glasstype FROM recipes WHERE id = " + (reader["id"]) + "", cs);
+
+                    SQLiteCommand cmdglass = new SQLiteCommand("SELECT pictures.picture FROM pictures INNER JOIN recipes ON pictures.id = recipes.id WHERE pictures.id IN (SELECT recipes.glasstype FROM recipes WHERE id = " + (reader["id"]) + ")", cs102);
+
+
+
+                    SQLiteDataReader rdrglass = cmdglass.ExecuteReader();
+                    //MessageBox.Show(rdrglass["pictures.picture"].ToString());
+
+                    while (rdrglass.Read())
+                    {
+                        //For Image inside a BLOB
+
+                        byte[] imagepic = (byte[])rdrglass[0];
+                        MemoryStream ms = new MemoryStream(imagepic);
+                        Clipboard.SetImage(Image.FromStream(ms, true));
+                        //child.richTextBox1.Paste();
+                        child.DrinkBox.Image = Image.FromStream(ms, true);
+                    }
+                }
+            }
+        }
+
     }
+    
 } 
     
 
