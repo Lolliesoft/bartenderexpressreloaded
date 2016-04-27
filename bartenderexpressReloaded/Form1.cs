@@ -2727,7 +2727,7 @@ namespace bartenderexpressReloaded
 
         private void Liqueur_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form4 child = new Form4();
+            CabinetSearch child = new CabinetSearch();
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
