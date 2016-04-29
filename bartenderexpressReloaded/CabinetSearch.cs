@@ -21,7 +21,7 @@ namespace bartenderexpressReloaded
 
         void fill_box()
         {
-            SQLiteConnection cs103 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db");        
+            SQLiteConnection cs103 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db");
             {
                 cs103.Open();
 
@@ -45,13 +45,22 @@ namespace bartenderexpressReloaded
             }
             else
             {
-                while(listBox1.SelectedItems.Count != 0)
+                while (listBox1.SelectedItems.Count != 0)
                 {
                     listBox2.Items.Add(listBox1.SelectedItems[0]);
-                    listBox1.Items.Remove(listBox1.SelectedItems[0]);
+                    listBox1.Items.Remove(listBox1.SelectedItems[0]);        
                 }
-                
+
             }
+            ListCount();
+        }
+
+        private void ListCount()
+
+        { 
+                String ItemCount;
+                ItemCount = listBox2.Items.Count.ToString();
+                MessageBox.Show(ItemCount);
         }
     }
 }

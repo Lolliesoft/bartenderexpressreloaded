@@ -124,6 +124,8 @@ namespace bartenderexpressReloaded
             CreateaCue.SetCue(CocktailSearch, "Search Cocktails");
             CreateaCue.SetCue(CustomSearch, "Search Your Recipes");
             CreateaCue.SetCue(FavoriteSearch, "Search Your Favorites");
+            CreateaCue.SetCue(IngredientsSearch, "Search Your Ingredients Recipe results");
+
 
         }
 
@@ -2208,6 +2210,20 @@ namespace bartenderexpressReloaded
             toolStripStatusLabel1.Text = (this.CustomNameBox.ItemCount.ToString()) + " Custom Recipes ";
         }
 
+
+        private void IBoxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            CabinetSearch child = new CabinetSearch();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.
+            child.Show();
+            WizardPages.SelectedTab = IngredientsTab;
+            IngredientsNameBox.Show();
+            IngredientsNameBox.Focus();
+            toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
+
+        }
         private void DrinkSearch_TextChanged(object sender, EventArgs e)
         {
             DrinkSearch.Font = new Font("Default", 8, FontStyle.Regular);
@@ -2310,6 +2326,16 @@ namespace bartenderexpressReloaded
             if (0 <= index)
             {
                 FavoritesNameBox.SelectedIndex = index;
+            }
+        }
+
+        private void IngredientsSearch_TextChanged(object sender, EventArgs e)
+        {
+            IngredientsSearch.Font = new Font("Default", 8, FontStyle.Regular);
+            int index = IngredientsNameBox.FindString(DrinkSearch.Text);
+            if (0 <= index)
+            {
+                IngredientsNameBox.SelectedIndex = index;
             }
         }
 
@@ -2732,6 +2758,7 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
         }
+
     }
     
 } 
