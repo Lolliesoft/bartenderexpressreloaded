@@ -28,40 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CabinetSearch));
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.AddButton = new DevExpress.XtraEditors.SimpleButton();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
+            this.listBoxControl2 = new DevExpress.XtraEditors.ListBoxControl();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(25, 31);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox1.Size = new System.Drawing.Size(219, 355);
-            this.listBox1.TabIndex = 0;
-            // 
-            // AddButton
-            // 
-            this.AddButton.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.Location = new System.Drawing.Point(265, 145);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(37, 44);
-            this.AddButton.TabIndex = 1;
-            this.AddButton.Click += new System.EventHandler(this.add_c);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(321, 31);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(229, 355);
-            this.listBox2.TabIndex = 3;
             // 
             // label1
             // 
@@ -81,29 +54,48 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Your Ingredients";
             // 
+            // listBoxControl1
+            // 
+            this.listBoxControl1.Location = new System.Drawing.Point(25, 45);
+            this.listBoxControl1.Name = "listBoxControl1";
+            this.listBoxControl1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxControl1.Size = new System.Drawing.Size(252, 355);
+            this.listBoxControl1.TabIndex = 6;
+            this.listBoxControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxControl1_MouseDown);
+            this.listBoxControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxControl1_MouseMove);
+            // 
+            // listBoxControl2
+            // 
+            this.listBoxControl2.AllowDrop = true;
+            this.listBoxControl2.Location = new System.Drawing.Point(298, 45);
+            this.listBoxControl2.Name = "listBoxControl2";
+            this.listBoxControl2.Size = new System.Drawing.Size(252, 355);
+            this.listBoxControl2.TabIndex = 7;
+            this.listBoxControl2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragDrop);
+            this.listBoxControl2.DragOver += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragOver);
+            // 
             // CabinetSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 424);
+            this.Controls.Add(this.listBoxControl2);
+            this.Controls.Add(this.listBoxControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.listBox1);
             this.Name = "CabinetSearch";
             this.Text = "Liqueur Cabinet";
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
-        private DevExpress.XtraEditors.SimpleButton AddButton;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
+        private DevExpress.XtraEditors.ListBoxControl listBoxControl2;
     }
 }

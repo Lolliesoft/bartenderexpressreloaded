@@ -2420,9 +2420,24 @@ namespace bartenderexpressReloaded
                 CustomNameBox.Focus();
             }
         }
+
+        private void IngredientNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.DrinksNameBox_DoubleClick(e.KeyChar, e);
+                DrinksNameBox.Focus();
+            }
+
+        }
         private void DrinksNameBox_TabStopChanged(object sender, EventArgs e)
         {
             DrinksNameBox.TabStop = true;
+        }
+
+        private void IngredientsNameBox_TabStopChanged(object sender, EventArgs e)
+        {
+            IngredientsNameBox.TabStop = true;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
