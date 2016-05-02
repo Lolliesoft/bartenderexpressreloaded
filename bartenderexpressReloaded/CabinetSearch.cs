@@ -141,26 +141,165 @@ namespace bartenderexpressReloaded
             {
                 cs104.Open();
 
-                //Get Drink Name frommasterdrinks table
-                //SQLiteCommand cmd = new SQLiteCommand("SELECT Name FROM masterdrinks WHERE Ingredient1 IN '" + (SelectedIngredients.Trim().Replace(",", "")) + "'", cs104);
+                //Get Drink Name from masterdrinks table
 
+                String sql1 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + SelectedIngredients + ")";
 
-                //"SELECT cocktail_key FROM cocktails WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs5);
-                String sql = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + SelectedIngredients + ") AND Ingredient2 IN (" + SelectedIngredients + ") AND Ingredient3 IN (" + SelectedIngredients + ")";
+                String sql2 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ")";
+                String sql3 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ")";
+                String sql4 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ")";
+                String sql5 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ")";
+                String sql6 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ")";
+                String sql7 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ")";
+                String sql8 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ")";
+                String sql9 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ") AND Ingredient9 IN (" +
+                                SelectedIngredients + ")";
+                String sql10 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ") AND Ingredient9 IN (" +
+                                SelectedIngredients + ") AND Ingredient10 IN (" +
+                                SelectedIngredients + ")";
+                String sql11 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ") AND Ingredient9 IN (" +
+                                SelectedIngredients + ") AND Ingredient10 IN (" +
+                                SelectedIngredients + ") AND Ingredient11 IN (" +
+                                SelectedIngredients + ")";
+                String sql12 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ") AND Ingredient9 IN (" +
+                                SelectedIngredients + ") AND Ingredient10 IN (" +
+                                SelectedIngredients + ") AND Ingredient11 IN (" +
+                                SelectedIngredients + ") AND Ingredient12 IN (" +
+                                SelectedIngredients + ")";
+                String sql13 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ") AND Ingredient9 IN (" +
+                                SelectedIngredients + ") AND Ingredient10 IN (" +
+                                SelectedIngredients + ") AND Ingredient11 IN (" +
+                                SelectedIngredients + ") AND Ingredient12 IN (" +
+                                SelectedIngredients + ") AND Ingredient13 IN (" +
+                                SelectedIngredients + ")";
+                String sql14 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ") AND Ingredient9 IN (" +
+                                SelectedIngredients + ") AND Ingredient10 IN (" +
+                                SelectedIngredients + ") AND Ingredient11 IN (" +
+                                SelectedIngredients + ") AND Ingredient12 IN (" +
+                                SelectedIngredients + ") AND Ingredient13 IN (" +
+                                SelectedIngredients + ") AND Ingredient14 IN (" +
+                                SelectedIngredients + ")";
+                String sql15 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
+                                SelectedIngredients + ") AND Ingredient2 IN (" + 
+                                SelectedIngredients + ") AND Ingredient3 IN (" +
+                                SelectedIngredients + ") AND Ingredient4 IN (" +
+                                SelectedIngredients + ") AND Ingredient5 IN (" +
+                                SelectedIngredients + ") AND Ingredient6 IN (" +
+                                SelectedIngredients + ") AND Ingredient7 IN (" +
+                                SelectedIngredients + ") AND Ingredient8 IN (" +
+                                SelectedIngredients + ") AND Ingredient9 IN (" +
+                                SelectedIngredients + ") AND Ingredient10 IN (" +
+                                SelectedIngredients + ") AND Ingredient11 IN (" +
+                                SelectedIngredients + ") AND Ingredient12 IN (" +
+                                SelectedIngredients + ") AND Ingredient13 IN (" +
+                                SelectedIngredients + ") AND Ingredient14 IN (" +
+                                SelectedIngredients + ") AND Ingredient15 IN (" +
+                                SelectedIngredients + ")";
+                //Determine the number of items dragged into listBoxControl2
+                int IngCount;
+                IngCount = listBoxControl2.Items.Count;
 
-                SQLiteCommand cmd = new SQLiteCommand(sql, cs104);
+                SQLiteCommand cmd1 = new SQLiteCommand(sql1, cs104);
 
+                SQLiteDataReader reader1 = cmd1.ExecuteReader();
 
+                
 
-
-                //+ "'+ AND Ingredient2 IN ('" + (SelectedIngredients) + ") AND Ingredient3 IN ('" + (SelectedIngredients) + "')", cs104);
-
-                SQLiteDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                while (reader1.Read())
                 {
-                               string sName = reader["name"].ToString();
-                               MessageBox.Show(sName);
+                    if (IngCount == 1)
+                     { 
+
+                        string sName = reader["name"].ToString();
+                        MessageBox.Show(sName);
+                     }
+
+                    
+
+                }
                 }
 
 
