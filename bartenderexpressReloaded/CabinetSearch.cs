@@ -282,29 +282,247 @@ namespace bartenderexpressReloaded
                 int IngCount;
                 IngCount = listBoxControl2.Items.Count;
 
-                SQLiteCommand cmd1 = new SQLiteCommand(sql1, cs104);
-
-                SQLiteDataReader reader1 = cmd1.ExecuteReader();
+                if (IngCount == 1)
+                { 
+                    SQLiteCommand cmd1 = new SQLiteCommand(sql1, cs104);
+                    SQLiteDataReader reader1 = cmd1.ExecuteReader();
 
                 
 
-                while (reader1.Read())
+                     while (reader1.Read())
+               
+                        { 
+                            string sName = reader1["name"].ToString();
+                            MessageBox.Show(sName);
+                        }
+
+                }
+
+                if (IngCount == 2)
                 {
-                    if (IngCount == 1)
-                     { 
+                    SQLiteCommand cmd2 = new SQLiteCommand(sql2, cs104);
+                    SQLiteDataReader reader2 = cmd2.ExecuteReader();
 
-                        string sName = reader["name"].ToString();
+
+
+                    while (reader2.Read())
+
+                    {
+                        string sName = reader2["name"].ToString();
                         MessageBox.Show(sName);
-                     }
-
-                    
+                    }
 
                 }
+
+                if (IngCount == 3)
+                {
+                    SQLiteCommand cmd3 = new SQLiteCommand(sql3, cs104);
+                    SQLiteDataReader reader3 = cmd3.ExecuteReader();
+
+
+
+                    while (reader3.Read())
+
+                    {
+                        string sName = reader3["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
                 }
 
+                if (IngCount == 4)
+                {
+                    SQLiteCommand cmd4 = new SQLiteCommand(sql4, cs104);
+                    SQLiteDataReader reader4 = cmd4.ExecuteReader();
 
-                 }
 
+
+                    while (reader4.Read())
+
+                    {
+                        string sName = reader4["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 5)
+                {
+                    SQLiteCommand cmd5 = new SQLiteCommand(sql5, cs104);
+                    SQLiteDataReader reader5 = cmd5.ExecuteReader();
+
+
+
+                    while (reader5.Read())
+
+                    {
+                        string sName = reader5["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 6)
+                {
+                    SQLiteCommand cmd6 = new SQLiteCommand(sql6, cs104);
+                    SQLiteDataReader reader6 = cmd6.ExecuteReader();
+
+
+
+                    while (reader6.Read())
+
+                    {
+                        string sName = reader6["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 7)
+                {
+                    SQLiteCommand cmd7 = new SQLiteCommand(sql7, cs104);
+                    SQLiteDataReader reader7 = cmd7.ExecuteReader();
+
+
+
+                    while (reader7.Read())
+
+                    {
+                        string sName = reader7["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 8)
+                {
+                    SQLiteCommand cmd8 = new SQLiteCommand(sql8, cs104);
+                    SQLiteDataReader reader8 = cmd8.ExecuteReader();
+
+
+
+                    while (reader8.Read())
+
+                    {
+                        string sName = reader8["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 9)
+                {
+                    SQLiteCommand cmd9 = new SQLiteCommand(sql9, cs104);
+                    SQLiteDataReader reader9 = cmd9.ExecuteReader();
+
+
+
+                    while (reader9.Read())
+
+                    {
+                        string sName = reader9["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 10)
+                {
+                    SQLiteCommand cmd10 = new SQLiteCommand(sql10, cs104);
+                    SQLiteDataReader reader10 = cmd10.ExecuteReader();
+
+
+
+                    while (reader10.Read())
+
+                    {
+                        string sName = reader10["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 11)
+                {
+                    SQLiteCommand cmd11 = new SQLiteCommand(sql11, cs104);
+                    SQLiteDataReader reader11 = cmd11.ExecuteReader();
+
+
+
+                    while (reader11.Read())
+
+                    {
+                        string sName = reader11["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 12)
+                {
+                    SQLiteCommand cmd12 = new SQLiteCommand(sql12, cs104);
+                    SQLiteDataReader reader12 = cmd12.ExecuteReader();
+
+
+
+                    while (reader12.Read())
+
+                    {
+                        string sName = reader12["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 13)
+                {
+                    SQLiteCommand cmd13 = new SQLiteCommand(sql13, cs104);
+                    SQLiteDataReader reader13 = cmd13.ExecuteReader();
+
+
+
+                    while (reader13.Read())
+
+                    {
+                        string sName = reader13["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 14)
+                {
+                    SQLiteCommand cmd14 = new SQLiteCommand(sql14, cs104);
+                    SQLiteDataReader reader14 = cmd14.ExecuteReader();
+
+
+
+                    while (reader14.Read())
+
+                    {
+                        string sName = reader14["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+                if (IngCount == 15)
+                {
+                    SQLiteCommand cmd15 = new SQLiteCommand(sql15, cs104);
+                    SQLiteDataReader reader15 = cmd15.ExecuteReader();
+
+
+
+                    while (reader15.Read())
+
+                    {
+                        string sName = reader15["name"].ToString();
+                        MessageBox.Show(sName);
+                    }
+
+                }
+
+            }
             }
         }
     }
