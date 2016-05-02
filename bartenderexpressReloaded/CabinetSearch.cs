@@ -130,8 +130,7 @@ namespace bartenderexpressReloaded
 
             foreach (string item in listBoxControl2.Items)
             {
-                SelectedIngredients += "'" + item.ToString() + "'" + ",";
-                //SelectedIngredients +=  item.ToString()  + ",";
+                SelectedIngredients += "'" + item.ToString() + "'" + ",";          
             }
 
             SelectedIngredients = SelectedIngredients.Remove(SelectedIngredients.Length - 1);
@@ -524,25 +523,6 @@ namespace bartenderexpressReloaded
 
             }
         }
-
-        //private void listBoxControl2_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    if (e.Button == MouseButtons.Right)
-        //    {
-        //        if (e.Button == MouseButtons.Right)
-        //        {
-        //            var item = listBoxControl2.IndexFromPoint(e.Location);
-        //            if (item >= 0)
-        //            {
-        //                listBoxControl2.SelectedIndex = item;
-                        
-
-
-
-        //            }
-        //        }
-        //    }
-        //}
 
         private void listBoxControl2_contextMenuStrip_Click(object sender, EventArgs e)
         {

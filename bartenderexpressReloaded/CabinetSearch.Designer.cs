@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(328, 9);
+            this.label2.Location = new System.Drawing.Point(295, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 5;
@@ -60,10 +60,10 @@
             // 
             // listBoxControl1
             // 
-            this.listBoxControl1.Location = new System.Drawing.Point(25, 45);
+            this.listBoxControl1.Location = new System.Drawing.Point(25, 66);
             this.listBoxControl1.Name = "listBoxControl1";
             this.listBoxControl1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxControl1.Size = new System.Drawing.Size(252, 355);
+            this.listBoxControl1.Size = new System.Drawing.Size(252, 334);
             this.listBoxControl1.TabIndex = 6;
             this.listBoxControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxControl1_MouseDown);
             this.listBoxControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxControl1_MouseMove);
@@ -72,26 +72,25 @@
             // 
             this.listBoxControl2.AllowDrop = true;
             this.listBoxControl2.ContextMenuStrip = this.listBoxControl2_contextMenuStrip;
-            this.listBoxControl2.Location = new System.Drawing.Point(298, 45);
+            this.listBoxControl2.Location = new System.Drawing.Point(298, 66);
             this.listBoxControl2.Name = "listBoxControl2";
-            this.listBoxControl2.Size = new System.Drawing.Size(252, 355);
+            this.listBoxControl2.Size = new System.Drawing.Size(252, 334);
             this.listBoxControl2.TabIndex = 7;
             this.listBoxControl2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragDrop);
             this.listBoxControl2.DragOver += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragOver);
-            //this.listBoxControl2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxControl2_MouseDown);
             // 
             // listBoxControl2_contextMenuStrip
             // 
             this.listBoxControl2_contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.listBoxControl2_contextMenuStrip.Name = "contextMenuStrip1";
-            this.listBoxControl2_contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            this.listBoxControl2_contextMenuStrip.Size = new System.Drawing.Size(118, 26);
             this.listBoxControl2_contextMenuStrip.Click += new System.EventHandler(this.listBoxControl2_contextMenuStrip_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItem1.Text = "Remove";
             // 
             // CabinetSearch
