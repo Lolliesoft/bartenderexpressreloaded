@@ -130,8 +130,8 @@ namespace bartenderexpressReloaded
 
             foreach (string item in listBoxControl2.Items)
             {
-                //SelectedIngredients += "'" + item.ToString() + "'" + ",";
-                SelectedIngredients +=  item.ToString()  + ",";
+                SelectedIngredients += "'" + item.ToString() + "'" + ",";
+                //SelectedIngredients +=  item.ToString()  + ",";
             }
 
             SelectedIngredients = SelectedIngredients.Remove(SelectedIngredients.Length - 1);
@@ -146,7 +146,7 @@ namespace bartenderexpressReloaded
 
 
                 //"SELECT cocktail_key FROM cocktails WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs5);
-                String sql = "SELECT name FROM masterdrinks WHERE Ingredient1 IN ('" + SelectedIngredients + "')";
+                String sql = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + SelectedIngredients + ") AND Ingredient2 IN (" + SelectedIngredients + ") AND Ingredient3 IN (" + SelectedIngredients + ")";
 
                 SQLiteCommand cmd = new SQLiteCommand(sql, cs104);
 
