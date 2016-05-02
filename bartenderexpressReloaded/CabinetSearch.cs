@@ -100,7 +100,7 @@ namespace bartenderexpressReloaded
             {
                 listBox.Items.Insert(selectedIndex, item);
             }
-            ListCount();
+            // ListCount();
             DrinksfromIngredients();
         }
 
@@ -121,7 +121,7 @@ namespace bartenderexpressReloaded
                 SelectedIngredients += "'" + item.ToString() + "'" + ",";
             }
 
-           // MessageBox.Show(SelectedIngredients);
+            // MessageBox.Show(SelectedIngredients);
         }
 
         private void DrinksfromIngredients()
@@ -137,13 +137,13 @@ namespace bartenderexpressReloaded
             SelectedIngredients = SelectedIngredients.Remove(SelectedIngredients.Length - 1);
 
 
-        SQLiteConnection cs104 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db");
+            SQLiteConnection cs104 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db");
             {
                 cs104.Open();
 
                 //Get Drink Name from masterdrinks table
 
-                String sql1 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + SelectedIngredients + ")";
+                String sql1 = "SELECT name FROM masterdrinks WHERE Ingredient1 = (" + SelectedIngredients + ")";
 
                 String sql2 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
                                 SelectedIngredients + ") AND Ingredient2 IN (" +
@@ -263,7 +263,7 @@ namespace bartenderexpressReloaded
                                 SelectedIngredients + ") AND Ingredient14 IN (" +
                                 SelectedIngredients + ")";
                 String sql15 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" + 
+                                SelectedIngredients + ") AND Ingredient2 IN (" +
                                 SelectedIngredients + ") AND Ingredient3 IN (" +
                                 SelectedIngredients + ") AND Ingredient4 IN (" +
                                 SelectedIngredients + ") AND Ingredient5 IN (" +
@@ -283,18 +283,18 @@ namespace bartenderexpressReloaded
                 IngCount = listBoxControl2.Items.Count;
 
                 if (IngCount == 1)
-                { 
+                {
                     SQLiteCommand cmd1 = new SQLiteCommand(sql1, cs104);
                     SQLiteDataReader reader1 = cmd1.ExecuteReader();
 
-                
 
-                     while (reader1.Read())
-               
-                        { 
-                            string sName = reader1["name"].ToString();
-                            MessageBox.Show(sName);
-                        }
+
+                    while (reader1.Read())
+
+                    {
+                        string sName = reader1["name"].ToString();
+                        //MessageBox.Show(sName);
+                    }
 
                 }
 
@@ -523,6 +523,33 @@ namespace bartenderexpressReloaded
                 }
 
             }
-            }
+        }
+
+        //private void listBoxControl2_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Button == MouseButtons.Right)
+        //    {
+        //        if (e.Button == MouseButtons.Right)
+        //        {
+        //            var item = listBoxControl2.IndexFromPoint(e.Location);
+        //            if (item >= 0)
+        //            {
+        //                listBoxControl2.SelectedIndex = item;
+                        
+
+
+
+        //            }
+        //        }
+        //    }
+        //}
+
+        private void listBoxControl2_contextMenuStrip_Click(object sender, EventArgs e)
+        {
+
+            string selecteditem2 = listBoxControl2.SelectedItem.ToString();
+          
+            listBoxControl2.Items.Remove(selecteditem2);
         }
     }
+}

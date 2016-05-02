@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
             this.listBoxControl2 = new DevExpress.XtraEditors.ListBoxControl();
+            this.listBoxControl2_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).BeginInit();
+            this.listBoxControl2_contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -67,12 +71,28 @@
             // listBoxControl2
             // 
             this.listBoxControl2.AllowDrop = true;
+            this.listBoxControl2.ContextMenuStrip = this.listBoxControl2_contextMenuStrip;
             this.listBoxControl2.Location = new System.Drawing.Point(298, 45);
             this.listBoxControl2.Name = "listBoxControl2";
             this.listBoxControl2.Size = new System.Drawing.Size(252, 355);
             this.listBoxControl2.TabIndex = 7;
             this.listBoxControl2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragDrop);
             this.listBoxControl2.DragOver += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragOver);
+            //this.listBoxControl2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxControl2_MouseDown);
+            // 
+            // listBoxControl2_contextMenuStrip
+            // 
+            this.listBoxControl2_contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.listBoxControl2_contextMenuStrip.Name = "contextMenuStrip1";
+            this.listBoxControl2_contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            this.listBoxControl2_contextMenuStrip.Click += new System.EventHandler(this.listBoxControl2_contextMenuStrip_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1.Text = "Remove";
             // 
             // CabinetSearch
             // 
@@ -87,6 +107,7 @@
             this.Text = "Liqueur Cabinet";
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).EndInit();
+            this.listBoxControl2_contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +118,7 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
         private DevExpress.XtraEditors.ListBoxControl listBoxControl2;
+        private System.Windows.Forms.ContextMenuStrip listBoxControl2_contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
