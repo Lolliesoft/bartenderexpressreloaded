@@ -286,8 +286,6 @@ namespace bartenderexpressReloaded
                     SQLiteCommand cmd1 = new SQLiteCommand(sql1, cs104);
                     SQLiteDataReader reader1 = cmd1.ExecuteReader();
 
-
-
                     while (reader1.Read())
 
                     {
@@ -530,6 +528,39 @@ namespace bartenderexpressReloaded
             string selecteditem2 = listBoxControl2.SelectedItem.ToString();
           
             listBoxControl2.Items.Remove(selecteditem2);
+        }
+
+        private void DeleteItemButton_Click(object sender, EventArgs e)
+        {
+            string selecteditem2 = listBoxControl2.SelectedItem.ToString();
+
+            listBoxControl2.Items.Remove(selecteditem2);
+        }
+
+        private void listBoxControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxControl2.SelectedIndex == -1)
+            {
+                DeleteItemButton.Enabled = false;
+                ClearItemButton.Enabled = false;
+                DeleteItemButton.Visible = false;
+                ClearItemButton.Visible = false;
+            }
+            else
+            {
+                DeleteItemButton.Enabled = true;
+                ClearItemButton.Enabled = true;
+                DeleteItemButton.Visible = true;
+                ClearItemButton.Visible = true;
+            }
+        }
+
+        private void ClearItemButton_Click(object sender, EventArgs e)
+        {
+            if (listBoxControl2.SelectedIndex != -1)
+            {
+                listBoxControl2.Items.Clear();
+            }
         }
     }
 }

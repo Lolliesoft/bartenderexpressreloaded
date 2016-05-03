@@ -2774,6 +2774,10 @@ namespace bartenderexpressReloaded
             child.Show();
         }
 
+        private void IngredientsNameBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 } 

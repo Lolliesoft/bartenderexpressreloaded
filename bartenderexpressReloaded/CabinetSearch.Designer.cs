@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CabinetSearch));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
             this.listBoxControl2 = new DevExpress.XtraEditors.ListBoxControl();
-            this.listBoxControl2_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.listBoxControl2_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteItemButton = new DevExpress.XtraEditors.SimpleButton();
+            this.ClearItemButton = new DevExpress.XtraEditors.SimpleButton();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).BeginInit();
             this.listBoxControl2_contextMenuStrip.SuspendLayout();
@@ -43,7 +46,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Location = new System.Drawing.Point(22, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 4;
@@ -52,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 9);
+            this.label2.Location = new System.Drawing.Point(295, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 5;
@@ -76,15 +79,17 @@
             this.listBoxControl2.Name = "listBoxControl2";
             this.listBoxControl2.Size = new System.Drawing.Size(252, 334);
             this.listBoxControl2.TabIndex = 7;
+            this.listBoxControl2.SelectedIndexChanged += new System.EventHandler(this.listBoxControl2_SelectedIndexChanged);
             this.listBoxControl2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragDrop);
             this.listBoxControl2.DragOver += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragOver);
             // 
             // listBoxControl2_contextMenuStrip
             // 
             this.listBoxControl2_contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
             this.listBoxControl2_contextMenuStrip.Name = "contextMenuStrip1";
-            this.listBoxControl2_contextMenuStrip.Size = new System.Drawing.Size(118, 26);
+            this.listBoxControl2_contextMenuStrip.Size = new System.Drawing.Size(153, 70);
             this.listBoxControl2_contextMenuStrip.Click += new System.EventHandler(this.listBoxControl2_contextMenuStrip_Click);
             // 
             // toolStripMenuItem1
@@ -93,11 +98,48 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItem1.Text = "Remove";
             // 
+            // DeleteItemButton
+            // 
+            this.DeleteItemButton.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.DeleteItemButton.Enabled = false;
+            this.DeleteItemButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteItemButton.Image")));
+            this.DeleteItemButton.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.DeleteItemButton.Location = new System.Drawing.Point(400, 12);
+            this.DeleteItemButton.Name = "DeleteItemButton";
+            this.DeleteItemButton.Size = new System.Drawing.Size(75, 54);
+            this.DeleteItemButton.TabIndex = 8;
+            this.DeleteItemButton.Text = "Remove Item";
+            this.DeleteItemButton.Visible = false;
+            this.DeleteItemButton.Click += new System.EventHandler(this.DeleteItemButton_Click);
+            // 
+            // ClearItemButton
+            // 
+            this.ClearItemButton.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.ClearItemButton.Enabled = false;
+            this.ClearItemButton.Image = ((System.Drawing.Image)(resources.GetObject("ClearItemButton.Image")));
+            this.ClearItemButton.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.ClearItemButton.Location = new System.Drawing.Point(475, 12);
+            this.ClearItemButton.Name = "ClearItemButton";
+            this.ClearItemButton.Size = new System.Drawing.Size(75, 54);
+            this.ClearItemButton.TabIndex = 9;
+            this.ClearItemButton.Text = "Clear All";
+            this.ClearItemButton.Visible = false;
+            this.ClearItemButton.Click += new System.EventHandler(this.ClearItemButton_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Text = "Clear All";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.ClearItemButton_Click);
+            // 
             // CabinetSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 424);
+            this.Controls.Add(this.ClearItemButton);
+            this.Controls.Add(this.DeleteItemButton);
             this.Controls.Add(this.listBoxControl2);
             this.Controls.Add(this.listBoxControl1);
             this.Controls.Add(this.label2);
@@ -119,5 +161,8 @@
         private DevExpress.XtraEditors.ListBoxControl listBoxControl2;
         private System.Windows.Forms.ContextMenuStrip listBoxControl2_contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private DevExpress.XtraEditors.SimpleButton DeleteItemButton;
+        private DevExpress.XtraEditors.SimpleButton ClearItemButton;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
