@@ -302,7 +302,6 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader1["name"].ToString();
-                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -317,8 +316,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader2["name"].ToString();
-                        //textBox1.AppendText(sName);
-                        listBox1.Items.Add(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
                 }
 
@@ -333,7 +331,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader3["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
@@ -571,6 +569,7 @@ namespace bartenderexpressReloaded
             if (listBoxControl2.SelectedIndex != -1)
             {
                 listBoxControl2.Items.Clear();
+                Form1.f1ListBox.Items.Clear();
             }
         }
 

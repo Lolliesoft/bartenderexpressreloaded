@@ -25,17 +25,16 @@ namespace bartenderexpressReloaded
 {
     public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-
-
         public static ListBoxControl f1ListBox;
+
         public Form1()
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "Lolliesoft"));
             InitializeComponent();
             InitSkinGallery();
             HideSkins(skinsToHide);
-            f1ListBox = IngredientsNameBox;
-            // listBoxControl2 in CabinetSearch         
+            // listBoxControl2 in CabinetSearch
+            f1ListBox = IngredientsNameBox;         
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
             //This will check whenever client gets focused and there aren't any
@@ -2775,28 +2774,6 @@ namespace bartenderexpressReloaded
         private void IngredientsNameBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-        }
-
-        public void GetIngredientsFromCabinet()
-        {
-            
-            CabinetSearch cabinet = new CabinetSearch();
-
-            // Show form2 as a modal dialog and determine if DialogResult = OK. 
-            
-                // Read the contents of form2's TextBox. 
-                
-                this.IngredientsNameBox.DataSource = null;
-                this.IngredientsNameBox.Items.Add(cabinet.listBox1.Items);
-
-            
-
-            cabinet.Dispose();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GetIngredientsFromCabinet();
         }
     }
     

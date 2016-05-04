@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
@@ -67,14 +66,14 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
-            this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shotsBindingSource = new System.Windows.Forms.BindingSource();
+            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource();
             this.xpressShotsDataSet = new bartenderexpressReloaded.XpressShotsDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.CheckUpdateBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -109,12 +108,12 @@
             this.FavoritesGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.punchesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.beersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.liqueursBindingSource = new System.Windows.Forms.BindingSource();
+            this.punchesBindingSource = new System.Windows.Forms.BindingSource();
+            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource();
+            this.beersBindingSource = new System.Windows.Forms.BindingSource();
+            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource();
+            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource();
             this.shotsTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.shotsTableAdapter();
             this.liqueursTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.liqueursTableAdapter();
             this.punchesTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.punchesTableAdapter();
@@ -124,10 +123,10 @@
             this.coffeeteaTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.coffeeteaTableAdapter();
             this.CustomTab = new System.Windows.Forms.TabPage();
             this.CustomNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource();
             this.customDataSet = new bartenderexpressReloaded.CustomDataSet();
             this.CustomSearch = new System.Windows.Forms.TextBox();
-            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource();
             this.myRecipes = new bartenderexpressReloaded.MyRecipes();
             this.CoffeeTeaTab = new System.Windows.Forms.TabPage();
             this.CoffeeTeaSearch = new System.Windows.Forms.TextBox();
@@ -154,12 +153,12 @@
             this.DrinkSearchClear = new DevExpress.XtraEditors.SimpleButton();
             this.DrinkSearch = new System.Windows.Forms.TextBox();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource();
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.Favorites = new System.Windows.Forms.TabPage();
             this.FavoriteSearch = new System.Windows.Forms.TextBox();
             this.FavoritesNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.favoritesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.favoritesBindingSource = new System.Windows.Forms.BindingSource();
             this.favoritesDataSet = new bartenderexpressReloaded.FavoritesDataSet();
             this.IngredientsTab = new System.Windows.Forms.TabPage();
             this.IngredientsNameBox = new DevExpress.XtraEditors.ListBoxControl();
@@ -179,11 +178,10 @@
             this.tileItem6 = new DevExpress.XtraEditors.TileItem();
             this.tileItem4 = new DevExpress.XtraEditors.TileItem();
             this.myRecipesTableAdapter = new bartenderexpressReloaded.MyRecipesTableAdapters.myRecipesTableAdapter();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -1474,23 +1472,12 @@
             // 
             this.favoritesTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(709, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 745);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.WizardPages);
@@ -1681,7 +1668,6 @@
         public DevExpress.XtraEditors.ListBoxControl IngredientsNameBox;
         private DevExpress.XtraNavBar.NavBarGroup LiqueurCabinetGroup;
         private DevExpress.XtraNavBar.NavBarItem IngredientSearch;
-        private System.Windows.Forms.Button button1;
     }
 }
 
