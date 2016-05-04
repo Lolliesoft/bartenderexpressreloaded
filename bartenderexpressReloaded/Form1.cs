@@ -35,7 +35,6 @@ namespace bartenderexpressReloaded
             InitSkinGallery();
             HideSkins(skinsToHide);
             f1ListBox = IngredientsNameBox;
-            GetIngredientsFromCabinet();
             // listBoxControl2 in CabinetSearch         
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
@@ -2793,6 +2792,11 @@ namespace bartenderexpressReloaded
             
 
             cabinet.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetIngredientsFromCabinet();
         }
     }
     
