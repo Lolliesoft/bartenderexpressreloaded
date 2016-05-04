@@ -35,6 +35,7 @@ namespace bartenderexpressReloaded
             InitSkinGallery();
             HideSkins(skinsToHide);
             f1ListBox = IngredientsNameBox;
+            GetIngredientsFromCabinet();
             // listBoxControl2 in CabinetSearch         
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
@@ -2783,14 +2784,13 @@ namespace bartenderexpressReloaded
             CabinetSearch cabinet = new CabinetSearch();
 
             // Show form2 as a modal dialog and determine if DialogResult = OK. 
-            if (cabinet.ShowDialog(this) == DialogResult.OK)
-            {
+            
                 // Read the contents of form2's TextBox. 
                 
-                //this.IngredientsNameBox.DataSource = null;
-                //IngredientsNameBox.Items.AddRange(cabinet.textBox1.Text);
+                this.IngredientsNameBox.DataSource = null;
+                this.IngredientsNameBox.Items.Add(cabinet.listBox1.Items);
 
-            }
+            
 
             cabinet.Dispose();
         }

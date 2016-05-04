@@ -576,8 +576,9 @@ namespace bartenderexpressReloaded
 
         public void simpleButton1_Click(object sender, EventArgs e)
         {
-            
+            //IngredientsNameBox.Items.Add(listBox1.Items);
         }
+
     }
 }
 
