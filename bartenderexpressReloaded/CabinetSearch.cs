@@ -14,6 +14,8 @@ namespace bartenderexpressReloaded
 {
     public partial class CabinetSearch : Form
     {
+        //List<string> _items = new List<string>();
+
         public CabinetSearch()
         {
             InitializeComponent();
@@ -21,6 +23,16 @@ namespace bartenderexpressReloaded
             listBoxControl1.SelectedIndex = -1;
         }
 
+        private ListBoxControl IngredientsNameBox;
+
+        private void CabinetSearch_Load(object sender, System.EventArgs e)
+        {
+            new Form1().Show();
+
+            // note we access the ListBox from
+            // the Class Form1, not the instance of Form1
+            IngredientsNameBox = Form1.f1ListBox;
+        }
         void fill_box()
         {
             SQLiteConnection cs103 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db");
@@ -124,7 +136,7 @@ namespace bartenderexpressReloaded
             // MessageBox.Show(SelectedIngredients);
         }
 
-        private void DrinksfromIngredients()
+        public void DrinksfromIngredients()
         {
             string SelectedIngredients = "";
 
@@ -301,17 +313,13 @@ namespace bartenderexpressReloaded
                     SQLiteDataReader reader2 = cmd2.ExecuteReader();
 
 
-
                     while (reader2.Read())
 
                     {
                         string sName = reader2["name"].ToString();
-                        //MessageBox.Show(sName);
-
-                        IngredientsNameBox.Items.Add(sName);
-
+                        //textBox1.AppendText(sName);
+                        listBox1.Items.Add(sName);
                     }
-
                 }
 
                 if (IngCount == 3)
@@ -325,7 +333,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader3["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -341,7 +349,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader4["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -357,7 +365,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader5["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -373,7 +381,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader6["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -389,7 +397,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader7["name"].ToString();
-                        MessageBox.Show(sName);
+                       //MessageBox.Show(sName);
                     }
 
                 }
@@ -405,7 +413,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader8["name"].ToString();
-                        MessageBox.Show(sName);
+                       // MessageBox.Show(sName);
                     }
 
                 }
@@ -421,7 +429,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader9["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -437,7 +445,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader10["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -453,7 +461,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader11["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -469,7 +477,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader12["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -485,7 +493,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader13["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -501,7 +509,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader14["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -517,7 +525,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader15["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
                     }
 
                 }
@@ -566,24 +574,9 @@ namespace bartenderexpressReloaded
             }
         }
 
-
-        private ListBoxControl IngredientsNameBox;
-
-        private void CabinetSearch_Load(object sender, System.EventArgs e)
+        public void simpleButton1_Click(object sender, EventArgs e)
         {
-            new Form1().Show();
-
-            // note we access the ListBox from
-            // the Class Form1, not the instance of Form1
-            IngredientsNameBox = Form1.f2ListBox;
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace("test")) return;
-
-            // add the item to the ListBox on Form2
-            IngredientsNameBox.Items.Add("test");
+            
         }
     }
 }
