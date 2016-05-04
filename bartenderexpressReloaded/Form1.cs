@@ -25,12 +25,15 @@ namespace bartenderexpressReloaded
 {
     public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static ListBoxControl f2ListBox;
         public Form1()
         {
             AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "Lolliesoft"));
             InitializeComponent();
             InitSkinGallery();
             HideSkins(skinsToHide);
+            // listBoxControl2 in CabinetSearch
+            f2ListBox = IngredientsNameBox;
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
             //This will check whenever client gets focused and there aren't any
@@ -39,18 +42,11 @@ namespace bartenderexpressReloaded
             {
                 if (!MdiChildren.Any(x => x.Visible)) client.SendToBack();
 
-
-                //DrinksNameBox.Show();
-                //ShotsNameBox.Hide();
-                //LiqueursNameBox.Hide();
-                //PunchesNameBox.Hide();
-                //CocktailsNameBox.Hide();
-                //BeerAleNameBox.Hide();
-                //NonAlcoholicNameBox.Hide();
-                //CoffeeTeaNameBox.Hide();
             };
         }
         MdiClient client;
+
+       
 
         void InitSkinGallery()
         {
@@ -2776,7 +2772,7 @@ namespace bartenderexpressReloaded
 
         private void IngredientsNameBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
     

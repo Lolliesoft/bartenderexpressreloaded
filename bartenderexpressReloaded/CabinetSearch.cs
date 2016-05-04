@@ -306,7 +306,10 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader2["name"].ToString();
-                        MessageBox.Show(sName);
+                        //MessageBox.Show(sName);
+
+                        IngredientsNameBox.Items.Add(sName);
+
                     }
 
                 }
@@ -562,5 +565,26 @@ namespace bartenderexpressReloaded
                 listBoxControl2.Items.Clear();
             }
         }
+
+
+        private ListBoxControl IngredientsNameBox;
+
+        private void CabinetSearch_Load(object sender, System.EventArgs e)
+        {
+            new Form1().Show();
+
+            // note we access the ListBox from
+            // the Class Form1, not the instance of Form1
+            IngredientsNameBox = Form1.f2ListBox;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace("test")) return;
+
+            // add the item to the ListBox on Form2
+            IngredientsNameBox.Items.Add("test");
+        }
     }
 }
+
