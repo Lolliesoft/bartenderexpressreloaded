@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CabinetSearch));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
             this.listBoxControl2 = new DevExpress.XtraEditors.ListBoxControl();
-            this.listBoxControl2_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
+            this.listBoxControl2_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteItemButton = new DevExpress.XtraEditors.SimpleButton();
@@ -81,6 +82,7 @@
             this.listBoxControl2.Size = new System.Drawing.Size(252, 334);
             this.listBoxControl2.TabIndex = 7;
             this.listBoxControl2.SelectedIndexChanged += new System.EventHandler(this.listBoxControl2_SelectedIndexChanged);
+            this.listBoxControl2.ContextMenuStripChanged += new System.EventHandler(this.listBoxControl2_contextMenuStrip_Click);
             this.listBoxControl2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragDrop);
             this.listBoxControl2.DragOver += new System.Windows.Forms.DragEventHandler(this.listBoxControl2_DragOver);
             // 
@@ -90,14 +92,15 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2});
             this.listBoxControl2_contextMenuStrip.Name = "contextMenuStrip1";
-            this.listBoxControl2_contextMenuStrip.Size = new System.Drawing.Size(119, 48);
+            this.listBoxControl2_contextMenuStrip.Size = new System.Drawing.Size(153, 70);
             this.listBoxControl2_contextMenuStrip.Click += new System.EventHandler(this.listBoxControl2_contextMenuStrip_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem1.Text = "Remove";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.listBoxControl2_contextMenuStrip_Click);
             // 
             // toolStripMenuItem2
             // 
