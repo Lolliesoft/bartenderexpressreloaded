@@ -295,6 +295,7 @@ namespace bartenderexpressReloaded
 
                 if (IngCount == 1)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd1 = new SQLiteCommand(sql1, cs104);
                     SQLiteDataReader reader1 = cmd1.ExecuteReader();
 
@@ -302,12 +303,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader1["name"].ToString();
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 2)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd2 = new SQLiteCommand(sql2, cs104);
                     SQLiteDataReader reader2 = cmd2.ExecuteReader();
 
@@ -322,6 +325,7 @@ namespace bartenderexpressReloaded
 
                 if (IngCount == 3)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd3 = new SQLiteCommand(sql3, cs104);
                     SQLiteDataReader reader3 = cmd3.ExecuteReader();
 
@@ -338,6 +342,7 @@ namespace bartenderexpressReloaded
 
                 if (IngCount == 4)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd4 = new SQLiteCommand(sql4, cs104);
                     SQLiteDataReader reader4 = cmd4.ExecuteReader();
 
@@ -347,13 +352,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader4["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 5)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd5 = new SQLiteCommand(sql5, cs104);
                     SQLiteDataReader reader5 = cmd5.ExecuteReader();
 
@@ -363,13 +369,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader5["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 6)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd6 = new SQLiteCommand(sql6, cs104);
                     SQLiteDataReader reader6 = cmd6.ExecuteReader();
 
@@ -379,13 +386,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader6["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 7)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd7 = new SQLiteCommand(sql7, cs104);
                     SQLiteDataReader reader7 = cmd7.ExecuteReader();
 
@@ -395,13 +403,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader7["name"].ToString();
-                       //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 8)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd8 = new SQLiteCommand(sql8, cs104);
                     SQLiteDataReader reader8 = cmd8.ExecuteReader();
 
@@ -411,13 +420,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader8["name"].ToString();
-                       // MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 9)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd9 = new SQLiteCommand(sql9, cs104);
                     SQLiteDataReader reader9 = cmd9.ExecuteReader();
 
@@ -427,13 +437,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader9["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 10)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd10 = new SQLiteCommand(sql10, cs104);
                     SQLiteDataReader reader10 = cmd10.ExecuteReader();
 
@@ -443,13 +454,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader10["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 11)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd11 = new SQLiteCommand(sql11, cs104);
                     SQLiteDataReader reader11 = cmd11.ExecuteReader();
 
@@ -459,13 +471,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader11["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 12)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd12 = new SQLiteCommand(sql12, cs104);
                     SQLiteDataReader reader12 = cmd12.ExecuteReader();
 
@@ -475,13 +488,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader12["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 13)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd13 = new SQLiteCommand(sql13, cs104);
                     SQLiteDataReader reader13 = cmd13.ExecuteReader();
 
@@ -491,13 +505,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader13["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 14)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd14 = new SQLiteCommand(sql14, cs104);
                     SQLiteDataReader reader14 = cmd14.ExecuteReader();
 
@@ -507,13 +522,14 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader14["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
 
                 if (IngCount == 15)
                 {
+                    Form1.f1ListBox.Items.Clear();
                     SQLiteCommand cmd15 = new SQLiteCommand(sql15, cs104);
                     SQLiteDataReader reader15 = cmd15.ExecuteReader();
 
@@ -523,7 +539,7 @@ namespace bartenderexpressReloaded
 
                     {
                         string sName = reader15["name"].ToString();
-                        //MessageBox.Show(sName);
+                        Form1.f1ListBox.Items.Add(sName);
                     }
 
                 }
