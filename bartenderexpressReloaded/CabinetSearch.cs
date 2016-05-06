@@ -531,19 +531,24 @@ namespace bartenderexpressReloaded
             }
         }
 
-        private void listBoxControl2_contextMenuStrip_Click(object sender, EventArgs e)
-        {
-
-            string selecteditem2 = listBoxControl2.SelectedItem.ToString();
-          
-            listBoxControl2.Items.Remove(selecteditem2);
-        }
-
         private void DeleteItemButton_Click(object sender, EventArgs e)
         {
             string selecteditem2 = listBoxControl2.SelectedItem.ToString();
 
-            listBoxControl2.Items.Remove(selecteditem2);
+            //listBoxControl2.Items.Remove(selecteditem2);
+
+            if (listBoxControl2.SelectedIndex >= 1)
+            {
+                listBoxControl2.Items.Remove(selecteditem2);
+                Form1.f1ListBox.Items.Clear();
+                DrinksfromIngredients();
+            }
+            else
+            {
+                listBoxControl2.Items.Clear();
+                Form1.f1ListBox.Items.Clear();
+            }
+
         }
 
         private void listBoxControl2_SelectedIndexChanged(object sender, EventArgs e)
@@ -577,7 +582,6 @@ namespace bartenderexpressReloaded
         {
             //IngredientsNameBox.Items.Add(listBox1.Items);
         }
-
     }
 }
 
