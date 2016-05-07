@@ -111,8 +111,6 @@ namespace bartenderexpressReloaded
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
             CueProvider CreateaCue = new CueProvider();
-            CreateaCue.SetCue(DrinkSearch, "Search Drinks");
-            CreateaCue.SetCue(ShotSearch, "Search Shots");
             CreateaCue.SetCue(LiqueurSearch, "Search Liqueurs");
             CreateaCue.SetCue(PunchSearch, "Search Punches");
             CreateaCue.SetCue(BeerSearch, "Search Beer and Ales");
@@ -2418,27 +2416,6 @@ namespace bartenderexpressReloaded
             toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
 
         }
-        private void DrinkSearch_TextChanged(object sender, EventArgs e)
-        {
-            DrinkSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = DrinksNameBox.FindString(DrinkSearch.Text);
-            if (0 <= index)
-            {
-                DrinksNameBox.SelectedIndex = index;
-            }
-        }
-
-        private void ShotSearch_TextChanged(object sender, EventArgs e)
-        {
-
-            ShotSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = ShotsNameBox.FindString(ShotSearch.Text);
-            if (0 <= index)
-            {
-                ShotsNameBox.SelectedIndex = index;
-            }
-
-        }
 
         private void LiqueurSearch_TextChanged(object sender, EventArgs e)
         {
@@ -2526,7 +2503,7 @@ namespace bartenderexpressReloaded
         private void IngredientsSearch_TextChanged(object sender, EventArgs e)
         {
             IngredientsSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = IngredientsNameBox.FindString(DrinkSearch.Text);
+            int index = IngredientsNameBox.FindString(IngredientsSearch.Text);
             if (0 <= index)
             {
                 IngredientsNameBox.SelectedIndex = index;
@@ -2632,13 +2609,6 @@ namespace bartenderexpressReloaded
         private void IngredientsNameBox_TabStopChanged(object sender, EventArgs e)
         {
             IngredientsNameBox.TabStop = true;
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            DrinkSearch.Clear();
-            DrinkSearch.Focus();
-
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
