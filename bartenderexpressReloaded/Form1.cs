@@ -2103,7 +2103,7 @@ namespace bartenderexpressReloaded
             if (IngredientsNameBox.SelectedItem != null)
             {
 
-                string statusbarrecipe2 = IngredientsNameBox.SelectedValue.ToString();
+                string statusbarrecipe2 = f1ListBox.SelectedValue.ToString();
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
 
@@ -2116,28 +2116,24 @@ namespace bartenderexpressReloaded
                     //string selectedvalue
 
                     SQLiteCommand cmd = new SQLiteCommand("SELECT DrinkID FROM masterdrinks WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs106);
-                    //SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM recipes WHERE name ='" + statusbarrecipe + "'", cs);
+                    
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    //MessageBox.Show(reader["id"].ToString());
-
                     Form3 child = new Form3();
-                    child.Text = IngredientsNameBox.SelectedValue.ToString();
+                    child.Text = f1ListBox.SelectedValue.ToString();
                     child.FavoritesButton.Name = child.Text;
                     child.FavoritesButton.Text = "liqueurCabinet";
-                    //child.FavoritesButton.Text = statusbarrecipe2.Substring(0, statusbarrecipe2.LastIndexOf("Name") + 1);
-                    //child.toolStripStatusLabel1.Text = statusbarrecipe;
-
+                                
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
 
                     int i = 0;
 
-                    while (i == 1)
-                    
+                    if (i == 0)
+                    {
                         while (reader.Read())
-                        {  
+                        {
                             // Get Ingredients
                             SQLiteCommand cmding = new SQLiteCommand("SELECT ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, ingredient11, ingredient12, ingredient13, ingredient14, ingredient15 FROM masterdrinks WHERE DrinkID=" + (reader["DrinkID"]) + "", cs106);
                             SQLiteDataReader rdring = cmding.ExecuteReader();
@@ -2282,12 +2278,14 @@ namespace bartenderexpressReloaded
                             {
                                 child.richTextBox1.Text = rdr[0].ToString();
                             }
+
+
                         }
 
+                        i++;
+                    }
 
-                    i++;
-                       // cs106.Close();
-                    
+                    // cs106.Close(); 
                 }
             }
         }

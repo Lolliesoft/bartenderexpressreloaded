@@ -38,10 +38,11 @@ namespace bartenderexpressReloaded
             SQLiteConnection cs103 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db");
             {
                 cs103.Open();
-
-                //Get ID
+                
+                //Get Names
                 SQLiteCommand cmd = new SQLiteCommand("SELECT IngredientName FROM allIngredients", cs103);
                 SQLiteDataReader reader = cmd.ExecuteReader();
+                
 
                 while (reader.Read())
                 {
