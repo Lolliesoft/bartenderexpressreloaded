@@ -60,13 +60,14 @@
             DevExpress.XtraEditors.TileItemFrame tileItemFrame8 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -126,26 +127,19 @@
             this.CustomNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.customDataSet = new bartenderexpressReloaded.CustomDataSet();
-            this.CustomSearch = new System.Windows.Forms.TextBox();
             this.myRecipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myRecipes = new bartenderexpressReloaded.MyRecipes();
             this.CoffeeTeaTab = new System.Windows.Forms.TabPage();
-            this.CoffeeTeaSearch = new System.Windows.Forms.TextBox();
             this.CoffeeTeaNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.nonAlcoholicTab = new System.Windows.Forms.TabPage();
-            this.NonAlcoholicSearch = new System.Windows.Forms.TextBox();
             this.NonAlcoholicNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.BeerAlesTab = new System.Windows.Forms.TabPage();
-            this.BeerSearch = new System.Windows.Forms.TextBox();
             this.BeerAleNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.CocktailsTab = new System.Windows.Forms.TabPage();
-            this.CocktailSearch = new System.Windows.Forms.TextBox();
             this.CocktailsNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.PunchesTab = new System.Windows.Forms.TabPage();
-            this.PunchSearch = new System.Windows.Forms.TextBox();
             this.PunchesNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.LiqueursTab = new System.Windows.Forms.TabPage();
-            this.LiqueurSearch = new System.Windows.Forms.TextBox();
             this.LiqueursNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.ShotsTab = new System.Windows.Forms.TabPage();
             this.searchControl2 = new DevExpress.XtraEditors.SearchControl();
@@ -156,11 +150,11 @@
             this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.Favorites = new System.Windows.Forms.TabPage();
-            this.FavoriteSearch = new System.Windows.Forms.TextBox();
             this.FavoritesNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.favoritesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.favoritesDataSet = new bartenderexpressReloaded.FavoritesDataSet();
             this.IngredientsTab = new System.Windows.Forms.TabPage();
+            this.searchControl3 = new DevExpress.XtraEditors.SearchControl();
             this.IngredientsNameBox = new DevExpress.XtraEditors.ListBoxControl();
             this.IngredientsSearch = new System.Windows.Forms.TextBox();
             this.recipesTableAdapter1 = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.recipesTableAdapter();
@@ -182,6 +176,14 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
+            this.searchControl4 = new DevExpress.XtraEditors.SearchControl();
+            this.searchControl5 = new DevExpress.XtraEditors.SearchControl();
+            this.searchControl6 = new DevExpress.XtraEditors.SearchControl();
+            this.searchControl7 = new DevExpress.XtraEditors.SearchControl();
+            this.searchControl8 = new DevExpress.XtraEditors.SearchControl();
+            this.searchControl9 = new DevExpress.XtraEditors.SearchControl();
+            this.searchControl10 = new DevExpress.XtraEditors.SearchControl();
+            this.searchControl11 = new DevExpress.XtraEditors.SearchControl();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -227,8 +229,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.favoritesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritesDataSet)).BeginInit();
             this.IngredientsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IngredientsNameBox)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl11.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // recipesBindingSource
@@ -659,8 +670,8 @@
             // CustomTab
             // 
             this.CustomTab.AutoScroll = true;
+            this.CustomTab.Controls.Add(this.searchControl8);
             this.CustomTab.Controls.Add(this.CustomNameBox);
-            this.CustomTab.Controls.Add(this.CustomSearch);
             this.CustomTab.Location = new System.Drawing.Point(4, 58);
             this.CustomTab.Name = "CustomTab";
             this.CustomTab.Padding = new System.Windows.Forms.Padding(3);
@@ -696,18 +707,6 @@
             this.customDataSet.DataSetName = "CustomDataSet";
             this.customDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // CustomSearch
-            // 
-            this.CustomSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CustomSearch.Location = new System.Drawing.Point(1, 3);
-            this.CustomSearch.Name = "CustomSearch";
-            this.CustomSearch.Size = new System.Drawing.Size(280, 21);
-            this.CustomSearch.TabIndex = 0;
-            this.CustomSearch.TextChanged += new System.EventHandler(this.CustomSearch_TextChanged);
-            this.CustomSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustomNameBox_KeyPress);
-            // 
             // myRecipesBindingSource
             // 
             this.myRecipesBindingSource.DataMember = "myRecipes";
@@ -721,7 +720,7 @@
             // CoffeeTeaTab
             // 
             this.CoffeeTeaTab.AutoScroll = true;
-            this.CoffeeTeaTab.Controls.Add(this.CoffeeTeaSearch);
+            this.CoffeeTeaTab.Controls.Add(this.searchControl9);
             this.CoffeeTeaTab.Controls.Add(this.CoffeeTeaNameBox);
             this.CoffeeTeaTab.Location = new System.Drawing.Point(4, 58);
             this.CoffeeTeaTab.Name = "CoffeeTeaTab";
@@ -729,18 +728,6 @@
             this.CoffeeTeaTab.TabIndex = 7;
             this.CoffeeTeaTab.Text = "CoffeeTea";
             this.CoffeeTeaTab.UseVisualStyleBackColor = true;
-            // 
-            // CoffeeTeaSearch
-            // 
-            this.CoffeeTeaSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CoffeeTeaSearch.Location = new System.Drawing.Point(1, 3);
-            this.CoffeeTeaSearch.Name = "CoffeeTeaSearch";
-            this.CoffeeTeaSearch.Size = new System.Drawing.Size(280, 21);
-            this.CoffeeTeaSearch.TabIndex = 12;
-            this.CoffeeTeaSearch.TextChanged += new System.EventHandler(this.CoffeeTeaSearch_TextChanged);
-            this.CoffeeTeaSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CoffeeTeaNameBox_KeyPress);
             // 
             // CoffeeTeaNameBox
             // 
@@ -762,7 +749,7 @@
             // nonAlcoholicTab
             // 
             this.nonAlcoholicTab.AutoScroll = true;
-            this.nonAlcoholicTab.Controls.Add(this.NonAlcoholicSearch);
+            this.nonAlcoholicTab.Controls.Add(this.searchControl10);
             this.nonAlcoholicTab.Controls.Add(this.NonAlcoholicNameBox);
             this.nonAlcoholicTab.Location = new System.Drawing.Point(4, 58);
             this.nonAlcoholicTab.Name = "nonAlcoholicTab";
@@ -770,18 +757,6 @@
             this.nonAlcoholicTab.TabIndex = 6;
             this.nonAlcoholicTab.Text = "nonAlcoholic";
             this.nonAlcoholicTab.UseVisualStyleBackColor = true;
-            // 
-            // NonAlcoholicSearch
-            // 
-            this.NonAlcoholicSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NonAlcoholicSearch.Location = new System.Drawing.Point(1, 3);
-            this.NonAlcoholicSearch.Name = "NonAlcoholicSearch";
-            this.NonAlcoholicSearch.Size = new System.Drawing.Size(280, 21);
-            this.NonAlcoholicSearch.TabIndex = 11;
-            this.NonAlcoholicSearch.TextChanged += new System.EventHandler(this.NonAlcoholicSearch_TextChanged);
-            this.NonAlcoholicSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NonAlcoholicNameBox_KeyPress);
             // 
             // NonAlcoholicNameBox
             // 
@@ -802,7 +777,7 @@
             // BeerAlesTab
             // 
             this.BeerAlesTab.AutoScroll = true;
-            this.BeerAlesTab.Controls.Add(this.BeerSearch);
+            this.BeerAlesTab.Controls.Add(this.searchControl11);
             this.BeerAlesTab.Controls.Add(this.BeerAleNameBox);
             this.BeerAlesTab.Location = new System.Drawing.Point(4, 58);
             this.BeerAlesTab.Name = "BeerAlesTab";
@@ -810,18 +785,6 @@
             this.BeerAlesTab.TabIndex = 5;
             this.BeerAlesTab.Text = "BeerandAles";
             this.BeerAlesTab.UseVisualStyleBackColor = true;
-            // 
-            // BeerSearch
-            // 
-            this.BeerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BeerSearch.Location = new System.Drawing.Point(1, 3);
-            this.BeerSearch.Name = "BeerSearch";
-            this.BeerSearch.Size = new System.Drawing.Size(280, 21);
-            this.BeerSearch.TabIndex = 10;
-            this.BeerSearch.TextChanged += new System.EventHandler(this.BeerSearch_TextChanged);
-            this.BeerSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BeerAleNameBox_KeyPress);
             // 
             // BeerAleNameBox
             // 
@@ -842,7 +805,7 @@
             // CocktailsTab
             // 
             this.CocktailsTab.AutoScroll = true;
-            this.CocktailsTab.Controls.Add(this.CocktailSearch);
+            this.CocktailsTab.Controls.Add(this.searchControl5);
             this.CocktailsTab.Controls.Add(this.CocktailsNameBox);
             this.CocktailsTab.Location = new System.Drawing.Point(4, 58);
             this.CocktailsTab.Name = "CocktailsTab";
@@ -850,18 +813,6 @@
             this.CocktailsTab.TabIndex = 4;
             this.CocktailsTab.Text = "Cocktails";
             this.CocktailsTab.UseVisualStyleBackColor = true;
-            // 
-            // CocktailSearch
-            // 
-            this.CocktailSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CocktailSearch.Location = new System.Drawing.Point(1, 3);
-            this.CocktailSearch.Name = "CocktailSearch";
-            this.CocktailSearch.Size = new System.Drawing.Size(280, 21);
-            this.CocktailSearch.TabIndex = 9;
-            this.CocktailSearch.TextChanged += new System.EventHandler(this.CocktailSearch_TextChanged);
-            this.CocktailSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CocktailsNameBox_KeyPress);
             // 
             // CocktailsNameBox
             // 
@@ -881,7 +832,7 @@
             // PunchesTab
             // 
             this.PunchesTab.AutoScroll = true;
-            this.PunchesTab.Controls.Add(this.PunchSearch);
+            this.PunchesTab.Controls.Add(this.searchControl4);
             this.PunchesTab.Controls.Add(this.PunchesNameBox);
             this.PunchesTab.Location = new System.Drawing.Point(4, 58);
             this.PunchesTab.Name = "PunchesTab";
@@ -889,18 +840,6 @@
             this.PunchesTab.TabIndex = 3;
             this.PunchesTab.Text = "Punches";
             this.PunchesTab.UseVisualStyleBackColor = true;
-            // 
-            // PunchSearch
-            // 
-            this.PunchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PunchSearch.Location = new System.Drawing.Point(1, 3);
-            this.PunchSearch.Name = "PunchSearch";
-            this.PunchSearch.Size = new System.Drawing.Size(280, 21);
-            this.PunchSearch.TabIndex = 8;
-            this.PunchSearch.TextChanged += new System.EventHandler(this.PunchSearch_TextChanged);
-            this.PunchSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PunchesNameBox_KeyPress);
             // 
             // PunchesNameBox
             // 
@@ -911,7 +850,7 @@
             this.PunchesNameBox.DisplayMember = "name";
             this.PunchesNameBox.Location = new System.Drawing.Point(1, 24);
             this.PunchesNameBox.Name = "PunchesNameBox";
-            this.PunchesNameBox.Size = new System.Drawing.Size(280, 561);
+            this.PunchesNameBox.Size = new System.Drawing.Size(276, 578);
             this.PunchesNameBox.TabIndex = 7;
             this.PunchesNameBox.ValueMember = "name";
             this.PunchesNameBox.Click += new System.EventHandler(this.PunchesListCount);
@@ -921,7 +860,7 @@
             // LiqueursTab
             // 
             this.LiqueursTab.AutoScroll = true;
-            this.LiqueursTab.Controls.Add(this.LiqueurSearch);
+            this.LiqueursTab.Controls.Add(this.searchControl6);
             this.LiqueursTab.Controls.Add(this.LiqueursNameBox);
             this.LiqueursTab.Location = new System.Drawing.Point(4, 58);
             this.LiqueursTab.Name = "LiqueursTab";
@@ -929,18 +868,6 @@
             this.LiqueursTab.TabIndex = 2;
             this.LiqueursTab.Text = "Liqueurs";
             this.LiqueursTab.UseVisualStyleBackColor = true;
-            // 
-            // LiqueurSearch
-            // 
-            this.LiqueurSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LiqueurSearch.Location = new System.Drawing.Point(1, 3);
-            this.LiqueurSearch.Name = "LiqueurSearch";
-            this.LiqueurSearch.Size = new System.Drawing.Size(280, 21);
-            this.LiqueurSearch.TabIndex = 7;
-            this.LiqueurSearch.TextChanged += new System.EventHandler(this.LiqueurSearch_TextChanged);
-            this.LiqueurSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LiqueursNameBox_KeyPress);
             // 
             // LiqueursNameBox
             // 
@@ -951,7 +878,7 @@
             this.LiqueursNameBox.DisplayMember = "name";
             this.LiqueursNameBox.Location = new System.Drawing.Point(1, 24);
             this.LiqueursNameBox.Name = "LiqueursNameBox";
-            this.LiqueursNameBox.Size = new System.Drawing.Size(280, 561);
+            this.LiqueursNameBox.Size = new System.Drawing.Size(279, 578);
             this.LiqueursNameBox.TabIndex = 6;
             this.LiqueursNameBox.ValueMember = "name";
             this.LiqueursNameBox.Click += new System.EventHandler(this.LiqueursListCount);
@@ -993,7 +920,7 @@
             this.ShotsNameBox.DisplayMember = "name";
             this.ShotsNameBox.Location = new System.Drawing.Point(1, 24);
             this.ShotsNameBox.Name = "ShotsNameBox";
-            this.ShotsNameBox.Size = new System.Drawing.Size(280, 525);
+            this.ShotsNameBox.Size = new System.Drawing.Size(304, 474);
             this.ShotsNameBox.TabIndex = 5;
             this.ShotsNameBox.ValueMember = "name";
             this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
@@ -1037,7 +964,7 @@
             this.DrinksNameBox.DisplayMember = "name";
             this.DrinksNameBox.Location = new System.Drawing.Point(1, 24);
             this.DrinksNameBox.Name = "DrinksNameBox";
-            this.DrinksNameBox.Size = new System.Drawing.Size(280, 525);
+            this.DrinksNameBox.Size = new System.Drawing.Size(304, 474);
             this.DrinksNameBox.TabIndex = 1;
             this.DrinksNameBox.ValueMember = "name";
             this.DrinksNameBox.TabStopChanged += new System.EventHandler(this.DrinksNameBox_TabStopChanged);
@@ -1074,7 +1001,7 @@
             // 
             // Favorites
             // 
-            this.Favorites.Controls.Add(this.FavoriteSearch);
+            this.Favorites.Controls.Add(this.searchControl7);
             this.Favorites.Controls.Add(this.FavoritesNameBox);
             this.Favorites.Location = new System.Drawing.Point(4, 58);
             this.Favorites.Name = "Favorites";
@@ -1083,17 +1010,6 @@
             this.Favorites.TabIndex = 9;
             this.Favorites.Text = "Favorites";
             this.Favorites.UseVisualStyleBackColor = true;
-            // 
-            // FavoriteSearch
-            // 
-            this.FavoriteSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FavoriteSearch.Location = new System.Drawing.Point(1, 3);
-            this.FavoriteSearch.Name = "FavoriteSearch";
-            this.FavoriteSearch.Size = new System.Drawing.Size(280, 21);
-            this.FavoriteSearch.TabIndex = 1;
-            this.FavoriteSearch.TextChanged += new System.EventHandler(this.FavoriteSearch_TextChanged);
             // 
             // FavoritesNameBox
             // 
@@ -1121,6 +1037,7 @@
             // 
             // IngredientsTab
             // 
+            this.IngredientsTab.Controls.Add(this.searchControl3);
             this.IngredientsTab.Controls.Add(this.IngredientsNameBox);
             this.IngredientsTab.Controls.Add(this.IngredientsSearch);
             this.IngredientsTab.Location = new System.Drawing.Point(4, 58);
@@ -1129,6 +1046,20 @@
             this.IngredientsTab.TabIndex = 10;
             this.IngredientsTab.Text = "IngredientsTab";
             this.IngredientsTab.UseVisualStyleBackColor = true;
+            // 
+            // searchControl3
+            // 
+            this.searchControl3.Client = this.IngredientsNameBox;
+            this.searchControl3.Location = new System.Drawing.Point(1, 3);
+            this.searchControl3.MenuManager = this.ribbonControl1;
+            this.searchControl3.Name = "searchControl3";
+            this.searchControl3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl3.Properties.Client = this.IngredientsNameBox;
+            this.searchControl3.Properties.FindDelay = 750;
+            this.searchControl3.Size = new System.Drawing.Size(280, 20);
+            this.searchControl3.TabIndex = 5;
             // 
             // IngredientsNameBox
             // 
@@ -1148,7 +1079,7 @@
             this.IngredientsSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IngredientsSearch.Location = new System.Drawing.Point(1, 3);
+            this.IngredientsSearch.Location = new System.Drawing.Point(-1, 65);
             this.IngredientsSearch.Name = "IngredientsSearch";
             this.IngredientsSearch.Size = new System.Drawing.Size(280, 21);
             this.IngredientsSearch.TabIndex = 3;
@@ -1231,10 +1162,8 @@
             this.tileItem1.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement2.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
-            tileItemElement2.Text = "";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tileItem1.CurrentFrameIndex = 1;
+            tileItemElement2.Text = "Click for a random drink recipe!";
             this.tileItem1.Elements.Add(tileItemElement2);
             tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement3.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
@@ -1268,10 +1197,25 @@
             this.tileItem7.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.LightBlue;
             this.tileItem7.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem7.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
-            tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement6.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement6.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement6.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem7.CurrentFrameIndex = 1;
+            tileItemElement6.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement6.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Normal.Options.UseFont = true;
+            tileItemElement6.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement6.Appearance.Selected.Options.UseFont = true;
+            tileItemElement6.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement6.Text = "Check for the latest version of Bartender Express";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement6.TextLocation = new System.Drawing.Point(4, 11);
             this.tileItem7.Elements.Add(tileItemElement6);
             this.tileItem7.FrameAnimationInterval = 19000;
             tileItemFrame3.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1373,10 +1317,25 @@
             this.tileItem5.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem5.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem5.BackgroundImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement12.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement12.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement12.ImageSize = new System.Drawing.Size(248, 120);
+            this.tileItem5.CurrentFrameIndex = 1;
+            tileItemElement12.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement12.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Normal.Options.UseFont = true;
+            tileItemElement12.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Selected.Options.UseFont = true;
+            tileItemElement12.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Text = "Blood Alcohol Calculator";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement12.TextLocation = new System.Drawing.Point(4, 0);
             this.tileItem5.Elements.Add(tileItemElement12);
             this.tileItem5.FrameAnimationInterval = 9000;
             tileItemFrame7.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1419,17 +1378,22 @@
             this.tileItem3.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem3.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem3.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement15.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileItem3.CurrentFrameIndex = 1;
+            tileItemElement15.Text = "Liquor Cabinet";
+            tileItemElement15.TextLocation = new System.Drawing.Point(0, 5);
+            tileItemElement16.Text = "Check to see what recipes you can make with what you have!";
+            tileItemElement16.TextLocation = new System.Drawing.Point(0, 60);
             this.tileItem3.Elements.Add(tileItemElement15);
+            this.tileItem3.Elements.Add(tileItemElement16);
             this.tileItem3.FrameAnimationInterval = 4500;
-            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame9.Elements.Add(tileItemElement16);
-            tileItemElement17.Text = "Liquor Cabinet";
-            tileItemElement17.TextLocation = new System.Drawing.Point(0, 5);
-            tileItemElement18.Text = "Check to see what recipes you can make with what you have!";
-            tileItemElement18.TextLocation = new System.Drawing.Point(0, 60);
-            tileItemFrame10.Elements.Add(tileItemElement17);
+            tileItemElement17.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame9.Elements.Add(tileItemElement17);
+            tileItemElement18.Text = "Liquor Cabinet";
+            tileItemElement18.TextLocation = new System.Drawing.Point(0, 5);
+            tileItemElement19.Text = "Check to see what recipes you can make with what you have!";
+            tileItemElement19.TextLocation = new System.Drawing.Point(0, 60);
             tileItemFrame10.Elements.Add(tileItemElement18);
+            tileItemFrame10.Elements.Add(tileItemElement19);
             this.tileItem3.Frames.Add(tileItemFrame9);
             this.tileItem3.Frames.Add(tileItemFrame10);
             this.tileItem3.Id = 17;
@@ -1438,16 +1402,16 @@
             // 
             // tileItem6
             // 
-            tileItemElement19.Text = "tileItem6";
-            this.tileItem6.Elements.Add(tileItemElement19);
+            tileItemElement20.Text = "tileItem6";
+            this.tileItem6.Elements.Add(tileItemElement20);
             this.tileItem6.Id = 7;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem6.Name = "tileItem6";
             // 
             // tileItem4
             // 
-            tileItemElement20.Text = "tileItem4";
-            this.tileItem4.Elements.Add(tileItemElement20);
+            tileItemElement21.Text = "tileItem4";
+            this.tileItem4.Elements.Add(tileItemElement21);
             this.tileItem4.Id = 4;
             this.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem4.Name = "tileItem4";
@@ -1469,6 +1433,118 @@
             // favoritesTableAdapter
             // 
             this.favoritesTableAdapter.ClearBeforeFill = true;
+            // 
+            // searchControl4
+            // 
+            this.searchControl4.Client = this.PunchesNameBox;
+            this.searchControl4.Location = new System.Drawing.Point(1, 3);
+            this.searchControl4.MenuManager = this.ribbonControl1;
+            this.searchControl4.Name = "searchControl4";
+            this.searchControl4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl4.Properties.Client = this.PunchesNameBox;
+            this.searchControl4.Properties.FindDelay = 850;
+            this.searchControl4.Size = new System.Drawing.Size(280, 20);
+            this.searchControl4.TabIndex = 9;
+            // 
+            // searchControl5
+            // 
+            this.searchControl5.Client = this.CocktailsNameBox;
+            this.searchControl5.Location = new System.Drawing.Point(1, 3);
+            this.searchControl5.MenuManager = this.ribbonControl1;
+            this.searchControl5.Name = "searchControl5";
+            this.searchControl5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl5.Properties.Client = this.CocktailsNameBox;
+            this.searchControl5.Properties.FindDelay = 850;
+            this.searchControl5.Size = new System.Drawing.Size(280, 20);
+            this.searchControl5.TabIndex = 10;
+            // 
+            // searchControl6
+            // 
+            this.searchControl6.Client = this.LiqueursNameBox;
+            this.searchControl6.Location = new System.Drawing.Point(1, 3);
+            this.searchControl6.MenuManager = this.ribbonControl1;
+            this.searchControl6.Name = "searchControl6";
+            this.searchControl6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl6.Properties.Client = this.LiqueursNameBox;
+            this.searchControl6.Properties.FindDelay = 850;
+            this.searchControl6.Size = new System.Drawing.Size(280, 20);
+            this.searchControl6.TabIndex = 10;
+            // 
+            // searchControl7
+            // 
+            this.searchControl7.Client = this.FavoritesNameBox;
+            this.searchControl7.Location = new System.Drawing.Point(1, 3);
+            this.searchControl7.MenuManager = this.ribbonControl1;
+            this.searchControl7.Name = "searchControl7";
+            this.searchControl7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl7.Properties.Client = this.FavoritesNameBox;
+            this.searchControl7.Properties.FindDelay = 850;
+            this.searchControl7.Size = new System.Drawing.Size(280, 20);
+            this.searchControl7.TabIndex = 10;
+            // 
+            // searchControl8
+            // 
+            this.searchControl8.Client = this.CustomNameBox;
+            this.searchControl8.Location = new System.Drawing.Point(1, 3);
+            this.searchControl8.MenuManager = this.ribbonControl1;
+            this.searchControl8.Name = "searchControl8";
+            this.searchControl8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl8.Properties.Client = this.CustomNameBox;
+            this.searchControl8.Properties.FindDelay = 850;
+            this.searchControl8.Size = new System.Drawing.Size(280, 20);
+            this.searchControl8.TabIndex = 10;
+            // 
+            // searchControl9
+            // 
+            this.searchControl9.Client = this.CoffeeTeaNameBox;
+            this.searchControl9.Location = new System.Drawing.Point(1, 3);
+            this.searchControl9.MenuManager = this.ribbonControl1;
+            this.searchControl9.Name = "searchControl9";
+            this.searchControl9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl9.Properties.Client = this.CoffeeTeaNameBox;
+            this.searchControl9.Properties.FindDelay = 850;
+            this.searchControl9.Size = new System.Drawing.Size(280, 20);
+            this.searchControl9.TabIndex = 12;
+            // 
+            // searchControl10
+            // 
+            this.searchControl10.Client = this.NonAlcoholicNameBox;
+            this.searchControl10.Location = new System.Drawing.Point(1, 3);
+            this.searchControl10.MenuManager = this.ribbonControl1;
+            this.searchControl10.Name = "searchControl10";
+            this.searchControl10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl10.Properties.Client = this.NonAlcoholicNameBox;
+            this.searchControl10.Properties.FindDelay = 850;
+            this.searchControl10.Size = new System.Drawing.Size(280, 20);
+            this.searchControl10.TabIndex = 11;
+            // 
+            // searchControl11
+            // 
+            this.searchControl11.Client = this.BeerAleNameBox;
+            this.searchControl11.Location = new System.Drawing.Point(1, 3);
+            this.searchControl11.MenuManager = this.ribbonControl1;
+            this.searchControl11.Name = "searchControl11";
+            this.searchControl11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl11.Properties.Client = this.BeerAleNameBox;
+            this.searchControl11.Properties.FindDelay = 850;
+            this.searchControl11.Size = new System.Drawing.Size(280, 20);
+            this.searchControl11.TabIndex = 10;
             // 
             // Form1
             // 
@@ -1502,29 +1578,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.nonalcoholicBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffeeteaBindingSource)).EndInit();
             this.CustomTab.ResumeLayout(false);
-            this.CustomTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomNameBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRecipesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRecipesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRecipes)).EndInit();
             this.CoffeeTeaTab.ResumeLayout(false);
-            this.CoffeeTeaTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeeTeaNameBox)).EndInit();
             this.nonAlcoholicTab.ResumeLayout(false);
-            this.nonAlcoholicTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NonAlcoholicNameBox)).EndInit();
             this.BeerAlesTab.ResumeLayout(false);
-            this.BeerAlesTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BeerAleNameBox)).EndInit();
             this.CocktailsTab.ResumeLayout(false);
-            this.CocktailsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CocktailsNameBox)).EndInit();
             this.PunchesTab.ResumeLayout(false);
-            this.PunchesTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PunchesNameBox)).EndInit();
             this.LiqueursTab.ResumeLayout(false);
-            this.LiqueursTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LiqueursNameBox)).EndInit();
             this.ShotsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchControl2.Properties)).EndInit();
@@ -1535,15 +1604,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource1)).EndInit();
             this.WizardPages.ResumeLayout(false);
             this.Favorites.ResumeLayout(false);
-            this.Favorites.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FavoritesNameBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritesDataSet)).EndInit();
             this.IngredientsTab.ResumeLayout(false);
             this.IngredientsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IngredientsNameBox)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl11.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1603,13 +1680,6 @@
         private System.Windows.Forms.TabPage CoffeeTeaTab;
         private DevExpress.XtraEditors.ListBoxControl CoffeeTeaNameBox;
         private System.Windows.Forms.TabPage CustomTab;
-        private System.Windows.Forms.TextBox LiqueurSearch;
-        private System.Windows.Forms.TextBox PunchSearch;
-        private System.Windows.Forms.TextBox CocktailSearch;
-        private System.Windows.Forms.TextBox BeerSearch;
-        private System.Windows.Forms.TextBox NonAlcoholicSearch;
-        private System.Windows.Forms.TextBox CoffeeTeaSearch;
-        private System.Windows.Forms.TextBox CustomSearch;
         private System.Windows.Forms.BindingSource recipesBindingSource1;
         private XpressShotsDataSetTableAdapters.recipesTableAdapter recipesTableAdapter1;
         private System.Windows.Forms.ToolStrip statusStrip1;
@@ -1643,7 +1713,6 @@
         private System.Windows.Forms.BindingSource myRecipesBindingSource1;
         private CustomDataSetTableAdapters.myRecipesTableAdapter myRecipesTableAdapter1;
         private System.Windows.Forms.TabPage Favorites;
-        private System.Windows.Forms.TextBox FavoriteSearch;
         private DevExpress.XtraEditors.ListBoxControl FavoritesNameBox;
         private FavoritesDataSet favoritesDataSet;
         private System.Windows.Forms.BindingSource favoritesBindingSource;
@@ -1666,6 +1735,15 @@
         private DevExpress.XtraNavBar.NavBarItem IngredientSearch;
         private DevExpress.XtraEditors.SearchControl searchControl1;
         private DevExpress.XtraEditors.SearchControl searchControl2;
+        private DevExpress.XtraEditors.SearchControl searchControl3;
+        private DevExpress.XtraEditors.SearchControl searchControl6;
+        private DevExpress.XtraEditors.SearchControl searchControl4;
+        private DevExpress.XtraEditors.SearchControl searchControl5;
+        private DevExpress.XtraEditors.SearchControl searchControl11;
+        private DevExpress.XtraEditors.SearchControl searchControl10;
+        private DevExpress.XtraEditors.SearchControl searchControl9;
+        private DevExpress.XtraEditors.SearchControl searchControl8;
+        private DevExpress.XtraEditors.SearchControl searchControl7;
     }
 }
 

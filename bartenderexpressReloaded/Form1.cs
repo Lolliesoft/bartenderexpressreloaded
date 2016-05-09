@@ -110,18 +110,7 @@ namespace bartenderexpressReloaded
             this.shotsTableAdapter.Fill(this.xpressShotsDataSet.shots);
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
-            CueProvider CreateaCue = new CueProvider();
-            CreateaCue.SetCue(LiqueurSearch, "Search Liqueurs");
-            CreateaCue.SetCue(PunchSearch, "Search Punches");
-            CreateaCue.SetCue(BeerSearch, "Search Beer and Ales");
-            CreateaCue.SetCue(CoffeeTeaSearch, "Search Coffee and Teas");
-            CreateaCue.SetCue(NonAlcoholicSearch, "Search Non-Alcoholic Drinks");
-            CreateaCue.SetCue(CocktailSearch, "Search Cocktails");
-            CreateaCue.SetCue(CustomSearch, "Search Your Recipes");
-            CreateaCue.SetCue(FavoriteSearch, "Search Your Favorites");
-            CreateaCue.SetCue(IngredientsSearch, "Search Your Ingredients Recipe results");
-
-
+           
         }
 
         private void nameListCount(object sender, EventArgs e)
@@ -2414,90 +2403,7 @@ namespace bartenderexpressReloaded
             toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
 
         }
-
-        private void LiqueurSearch_TextChanged(object sender, EventArgs e)
-        {
-            LiqueurSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = LiqueursNameBox.FindString(LiqueurSearch.Text);
-            if (0 <= index)
-            {
-                LiqueursNameBox.SelectedIndex = index;
-            }
-
-        }
-
-        private void PunchSearch_TextChanged(object sender, EventArgs e)
-        {
-            PunchSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = PunchesNameBox.FindString(PunchSearch.Text);
-            if (0 <= index)
-            {
-                PunchesNameBox.SelectedIndex = index;
-            }
-        }
-
-        private void CocktailSearch_TextChanged(object sender, EventArgs e)
-        {
-            CocktailSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = CocktailsNameBox.FindString(CocktailSearch.Text);
-            if (0 <= index)
-            {
-                CocktailsNameBox.SelectedIndex = index;
-            }
-
-        }
-
-        private void BeerSearch_TextChanged(object sender, EventArgs e)
-        {
-            BeerSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = BeerAleNameBox.FindString(BeerSearch.Text);
-            if (0 <= index)
-            {
-                BeerAleNameBox.SelectedIndex = index;
-            }
-
-        }
-
-        private void NonAlcoholicSearch_TextChanged(object sender, EventArgs e)
-        {
-            NonAlcoholicSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = NonAlcoholicNameBox.FindString(NonAlcoholicSearch.Text);
-            if (0 <= index)
-            {
-                NonAlcoholicNameBox.SelectedIndex = index;
-            }
-        }
-
-        private void CoffeeTeaSearch_TextChanged(object sender, EventArgs e)
-        {
-            CoffeeTeaSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = CoffeeTeaNameBox.FindString(CoffeeTeaSearch.Text);
-            if (0 <= index)
-            {
-                CoffeeTeaNameBox.SelectedIndex = index;
-            }
-        }
-
-        private void CustomSearch_TextChanged(object sender, EventArgs e)
-        {
-            CustomSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = CustomNameBox.FindString(CustomSearch.Text);
-            if (0 <= index)
-            {
-                CustomNameBox.SelectedIndex = index;
-            }
-        }
-
-        private void FavoriteSearch_TextChanged(object sender, EventArgs e)
-        {
-            FavoriteSearch.Font = new Font("Default", 8, FontStyle.Regular);
-            int index = FavoritesNameBox.FindString(FavoriteSearch.Text);
-            if (0 <= index)
-            {
-                FavoritesNameBox.SelectedIndex = index;
-            }
-        }
-
+    
         private void IngredientsSearch_TextChanged(object sender, EventArgs e)
         {
             IngredientsSearch.Font = new Font("Default", 8, FontStyle.Regular);

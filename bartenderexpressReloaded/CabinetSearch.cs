@@ -21,6 +21,9 @@ namespace bartenderexpressReloaded
             InitializeComponent();
             fill_box();
             listBoxControl1.SelectedIndex = -1;
+            CueProvider CreateaCue = new CueProvider();
+            CreateaCue.SetCue(CabinetSearchBox, "Search For Your Ingredients...");
+
         }
 
         private ListBoxControl IngredientsNameBox;
@@ -550,21 +553,21 @@ namespace bartenderexpressReloaded
 
         private void DeleteItemButton_Click(object sender, EventArgs e)
         {
+            int count = listBoxControl2.Items.Count;
             string selecteditem2 = listBoxControl2.SelectedItem.ToString();
 
-            //listBoxControl2.Items.Remove(selecteditem2);
-
-            if (listBoxControl2.SelectedIndex >= 1)
-            {
-                listBoxControl2.Items.Remove(selecteditem2);
-                Form1.f1ListBox.Items.Clear();
-                DrinksfromIngredients();
-            }
-            else
+            if (listBoxControl2.SelectedIndex == 1 && count == 1)
             {
                 listBoxControl2.Items.Clear();
                 Form1.f1ListBox.Items.Clear();
             }
+
+            else 
+            {
+                listBoxControl2.Items.Remove(selecteditem2);
+                DrinksfromIngredients();
+            }
+       
 
         }
 
