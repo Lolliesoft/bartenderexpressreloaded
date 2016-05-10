@@ -556,7 +556,7 @@ namespace bartenderexpressReloaded
             int count = listBoxControl2.Items.Count;
             string selecteditem2 = listBoxControl2.SelectedItem.ToString();
 
-            if (listBoxControl2.SelectedIndex == 1 && count == 1)
+            if (listBoxControl2.SelectedIndex == 0 && count == 1)
             {
                 listBoxControl2.Items.Clear();
                 Form1.f1ListBox.Items.Clear();
