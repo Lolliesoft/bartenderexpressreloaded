@@ -42,19 +42,6 @@
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.valWeight = new System.Windows.Forms.TextBox();
-            this.valDrinks = new System.Windows.Forms.TextBox();
-            this.valHours = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radMale = new System.Windows.Forms.RadioButton();
-            this.radFemale = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblBAC = new System.Windows.Forms.Label();
-            this.lblAnalysis = new System.Windows.Forms.Label();
-            this.lblAnalysis2 = new System.Windows.Forms.Label();
-            this.lblAnalysis3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
@@ -154,140 +141,12 @@
             // 
             this.recipesTableAdapter.ClearBeforeFill = true;
             // 
-            // valWeight
-            // 
-            this.valWeight.Location = new System.Drawing.Point(589, 36);
-            this.valWeight.Name = "valWeight";
-            this.valWeight.Size = new System.Drawing.Size(100, 20);
-            this.valWeight.TabIndex = 8;
-            this.valWeight.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // valDrinks
-            // 
-            this.valDrinks.Location = new System.Drawing.Point(589, 75);
-            this.valDrinks.Name = "valDrinks";
-            this.valDrinks.Size = new System.Drawing.Size(100, 20);
-            this.valDrinks.TabIndex = 9;
-            // 
-            // valHours
-            // 
-            this.valHours.Location = new System.Drawing.Point(589, 127);
-            this.valHours.Name = "valHours";
-            this.valHours.Size = new System.Drawing.Size(100, 20);
-            this.valHours.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(586, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Weight";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(586, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Number of Drinks";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(586, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Hours Since First Drink";
-            // 
-            // radMale
-            // 
-            this.radMale.AutoSize = true;
-            this.radMale.Location = new System.Drawing.Point(589, 171);
-            this.radMale.Name = "radMale";
-            this.radMale.Size = new System.Drawing.Size(48, 17);
-            this.radMale.TabIndex = 14;
-            this.radMale.TabStop = true;
-            this.radMale.Text = "Male";
-            this.radMale.UseVisualStyleBackColor = true;
-            this.radMale.Click += new System.EventHandler(this.calc);
-            // 
-            // radFemale
-            // 
-            this.radFemale.AutoSize = true;
-            this.radFemale.Location = new System.Drawing.Point(681, 171);
-            this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(59, 17);
-            this.radFemale.TabIndex = 15;
-            this.radFemale.TabStop = true;
-            this.radFemale.Text = "Female";
-            this.radFemale.UseVisualStyleBackColor = true;
-            this.radFemale.Click += new System.EventHandler(this.calc);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(589, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Gender";
-            // 
-            // lblBAC
-            // 
-            this.lblBAC.AutoSize = true;
-            this.lblBAC.Location = new System.Drawing.Point(592, 213);
-            this.lblBAC.Name = "lblBAC";
-            this.lblBAC.Size = new System.Drawing.Size(0, 13);
-            this.lblBAC.TabIndex = 17;
-            // 
-            // lblAnalysis
-            // 
-            this.lblAnalysis.AutoSize = true;
-            this.lblAnalysis.Location = new System.Drawing.Point(592, 230);
-            this.lblAnalysis.Name = "lblAnalysis";
-            this.lblAnalysis.Size = new System.Drawing.Size(0, 13);
-            this.lblAnalysis.TabIndex = 18;
-            // 
-            // lblAnalysis2
-            // 
-            this.lblAnalysis2.AutoSize = true;
-            this.lblAnalysis2.Location = new System.Drawing.Point(595, 258);
-            this.lblAnalysis2.Name = "lblAnalysis2";
-            this.lblAnalysis2.Size = new System.Drawing.Size(0, 13);
-            this.lblAnalysis2.TabIndex = 19;
-            // 
-            // lblAnalysis3
-            // 
-            this.lblAnalysis3.AutoSize = true;
-            this.lblAnalysis3.Location = new System.Drawing.Point(598, 288);
-            this.lblAnalysis3.Name = "lblAnalysis3";
-            this.lblAnalysis3.Size = new System.Drawing.Size(0, 13);
-            this.lblAnalysis3.TabIndex = 20;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(864, 579);
-            this.Controls.Add(this.lblAnalysis3);
-            this.Controls.Add(this.lblAnalysis2);
-            this.Controls.Add(this.lblAnalysis);
-            this.Controls.Add(this.lblBAC);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.radFemale);
-            this.Controls.Add(this.radMale);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.valHours);
-            this.Controls.Add(this.valDrinks);
-            this.Controls.Add(this.valWeight);
             this.Controls.Add(this.toolStripStatusLabel);
             this.Controls.Add(this.FavoritesDrinkButton);
             this.Controls.Add(this.DrinkTextBox);
@@ -324,18 +183,5 @@
         private bartenderExpressDataSetTableAdapters.recipesTableAdapter recipesTableAdapter;
         private bartenderExpressDataSet bartenderExpressDataSet;
         private System.Windows.Forms.BindingSource recipesBindingSource;
-        private System.Windows.Forms.TextBox valWeight;
-        private System.Windows.Forms.TextBox valDrinks;
-        private System.Windows.Forms.TextBox valHours;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radMale;
-        private System.Windows.Forms.RadioButton radFemale;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblBAC;
-        private System.Windows.Forms.Label lblAnalysis;
-        private System.Windows.Forms.Label lblAnalysis2;
-        private System.Windows.Forms.Label lblAnalysis3;
     }
 }

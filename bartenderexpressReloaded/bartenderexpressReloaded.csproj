@@ -135,6 +135,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAC Calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAC Calculator.Designer.cs">
+      <DependentUpon>BAC Calculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="bartenderExpressDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +201,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>XpressShotsDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BAC Calculator.resx">
+      <DependentUpon>BAC Calculator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customRecipes.resx">
       <DependentUpon>customRecipes.cs</DependentUpon>
     </EmbeddedResource>

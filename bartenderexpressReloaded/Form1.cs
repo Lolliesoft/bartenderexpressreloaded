@@ -2841,6 +2841,14 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
         }
+
+        private void tileItem5_ItemClick(object sender, TileItemEventArgs e)
+        {
+            BAC_Calculator child = new BAC_Calculator();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.
+            child.Show();
+        }
     }
     
 } 
