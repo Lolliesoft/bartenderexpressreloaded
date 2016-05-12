@@ -411,17 +411,6 @@ namespace bartenderexpressReloaded
         }
 
 
-        //private string myDrinkName;
-
-        //public string DrinkName
-        //{
-        //    get { return myDrinkName; }
-        //    set { myDrinkName = toolStripStatusLabel1.Text;}
-        //}
-
-
-
-
         private void ShotsNameBox_DoubleClick(object sender, EventArgs e)
         {
 
@@ -455,7 +444,7 @@ namespace bartenderexpressReloaded
                     //child.toolStripStatusLabel1.Text = statusbarrecipe;
 
                     child.MdiParent = this;
-                    client.BringToFront();//This will make your child form shown on top.
+                    client.BringToFront();//This will make your child form shown on top.   
                     child.Show();
 
                     while (reader.Read())
@@ -2846,7 +2835,8 @@ namespace bartenderexpressReloaded
         {
             BAC_Calculator child = new BAC_Calculator();
             child.MdiParent = this;
-            client.BringToFront();//This will make your child form shown on top.
+            client.BringToFront();//This will make your child form shown on top.    
+            child.StartPosition = FormStartPosition.CenterScreen;
             child.Show();
         }
     }

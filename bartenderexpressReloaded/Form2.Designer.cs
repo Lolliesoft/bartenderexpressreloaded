@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
@@ -42,6 +45,15 @@
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
+            this.tileControl1 = new DevExpress.XtraEditors.TileControl();
+            this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
+            this.tileItem1 = new DevExpress.XtraEditors.TileItem();
+            this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
+            this.tileGroup4 = new DevExpress.XtraEditors.TileGroup();
+            this.tileGroup5 = new DevExpress.XtraEditors.TileGroup();
+            this.tileGroup6 = new DevExpress.XtraEditors.TileGroup();
+            this.tileItem2 = new DevExpress.XtraEditors.TileItem();
+            this.tileItem3 = new DevExpress.XtraEditors.TileItem();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
@@ -141,12 +153,79 @@
             // 
             this.recipesTableAdapter.ClearBeforeFill = true;
             // 
+            // tileControl1
+            // 
+            this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
+            this.tileControl1.Groups.Add(this.tileGroup2);
+            this.tileControl1.Groups.Add(this.tileGroup4);
+            this.tileControl1.Groups.Add(this.tileGroup5);
+            this.tileControl1.Groups.Add(this.tileGroup6);
+            this.tileControl1.Location = new System.Drawing.Point(592, 26);
+            this.tileControl1.MaxId = 4;
+            this.tileControl1.Name = "tileControl1";
+            this.tileControl1.Size = new System.Drawing.Size(275, 451);
+            this.tileControl1.TabIndex = 8;
+            this.tileControl1.Text = "tileControl1";
+            // 
+            // tileGroup2
+            // 
+            this.tileGroup2.Items.Add(this.tileItem1);
+            this.tileGroup2.Items.Add(this.tileItem2);
+            this.tileGroup2.Items.Add(this.tileItem3);
+            this.tileGroup2.Name = "tileGroup2";
+            // 
+            // tileItem1
+            // 
+            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
+            tileItemElement7.Text = "tileItem1";
+            this.tileItem1.Elements.Add(tileItemElement7);
+            this.tileItem1.Id = 0;
+            this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItem1.Name = "tileItem1";
+            // 
+            // tileGroup1
+            // 
+            this.tileGroup1.Name = "tileGroup1";
+            // 
+            // tileGroup4
+            // 
+            this.tileGroup4.Name = "tileGroup4";
+            // 
+            // tileGroup5
+            // 
+            this.tileGroup5.Name = "tileGroup5";
+            // 
+            // tileGroup6
+            // 
+            this.tileGroup6.Name = "tileGroup6";
+            // 
+            // tileItem2
+            // 
+            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
+            tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement8.Text = "tileItem2";
+            this.tileItem2.Elements.Add(tileItemElement8);
+            this.tileItem2.Id = 2;
+            this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            this.tileItem2.Name = "tileItem2";
+            // 
+            // tileItem3
+            // 
+            tileItemElement9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement9.Image")));
+            tileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement9.Text = "tileItem3";
+            this.tileItem3.Elements.Add(tileItemElement9);
+            this.tileItem3.Id = 3;
+            this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            this.tileItem3.Name = "tileItem3";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(864, 579);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1098, 579);
+            this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.toolStripStatusLabel);
             this.Controls.Add(this.FavoritesDrinkButton);
             this.Controls.Add(this.DrinkTextBox);
@@ -183,5 +262,14 @@
         private bartenderExpressDataSetTableAdapters.recipesTableAdapter recipesTableAdapter;
         private bartenderExpressDataSet bartenderExpressDataSet;
         private System.Windows.Forms.BindingSource recipesBindingSource;
+        private DevExpress.XtraEditors.TileControl tileControl1;
+        private DevExpress.XtraEditors.TileGroup tileGroup2;
+        private DevExpress.XtraEditors.TileItem tileItem1;
+        private DevExpress.XtraEditors.TileItem tileItem2;
+        private DevExpress.XtraEditors.TileItem tileItem3;
+        private DevExpress.XtraEditors.TileGroup tileGroup4;
+        private DevExpress.XtraEditors.TileGroup tileGroup5;
+        private DevExpress.XtraEditors.TileGroup tileGroup6;
+        private DevExpress.XtraEditors.TileGroup tileGroup1;
     }
 }
