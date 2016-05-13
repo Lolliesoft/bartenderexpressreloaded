@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
@@ -43,17 +45,17 @@
             this.FavoritesDrinkButton = new System.Windows.Forms.Button();
             this.toolStripStatusLabel = new System.Windows.Forms.StatusStrip();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.tileControl1 = new DevExpress.XtraEditors.TileControl();
-            this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
-            this.tileItem1 = new DevExpress.XtraEditors.TileItem();
             this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
-            this.tileGroup4 = new DevExpress.XtraEditors.TileGroup();
-            this.tileGroup5 = new DevExpress.XtraEditors.TileGroup();
-            this.tileGroup6 = new DevExpress.XtraEditors.TileGroup();
-            this.tileItem2 = new DevExpress.XtraEditors.TileItem();
+            this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
+            this.tileItem4 = new DevExpress.XtraEditors.TileItem();
             this.tileItem3 = new DevExpress.XtraEditors.TileItem();
+            this.tileItem2 = new DevExpress.XtraEditors.TileItem();
+            this.tileItem1 = new DevExpress.XtraEditors.TileItem();
+            this.tileControl1 = new DevExpress.XtraEditors.TileControl();
+            this.tileItem5 = new DevExpress.XtraEditors.TileItem();
+            this.tileItem6 = new DevExpress.XtraEditors.TileItem();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
@@ -135,7 +137,7 @@
             // 
             this.toolStripStatusLabel.Location = new System.Drawing.Point(0, 557);
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(864, 22);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(1098, 22);
             this.toolStripStatusLabel.TabIndex = 7;
             this.toolStripStatusLabel.Visible = false;
             // 
@@ -153,71 +155,87 @@
             // 
             this.recipesTableAdapter.ClearBeforeFill = true;
             // 
-            // tileControl1
+            // tileGroup1
             // 
-            this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
-            this.tileControl1.Groups.Add(this.tileGroup2);
-            this.tileControl1.Groups.Add(this.tileGroup4);
-            this.tileControl1.Groups.Add(this.tileGroup5);
-            this.tileControl1.Groups.Add(this.tileGroup6);
-            this.tileControl1.Location = new System.Drawing.Point(592, 26);
-            this.tileControl1.MaxId = 4;
-            this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Size = new System.Drawing.Size(275, 451);
-            this.tileControl1.TabIndex = 8;
-            this.tileControl1.Text = "tileControl1";
+            this.tileGroup1.Name = "tileGroup1";
             // 
             // tileGroup2
             // 
             this.tileGroup2.Items.Add(this.tileItem1);
             this.tileGroup2.Items.Add(this.tileItem2);
             this.tileGroup2.Items.Add(this.tileItem3);
+            this.tileGroup2.Items.Add(this.tileItem4);
+            this.tileGroup2.Items.Add(this.tileItem5);
+            this.tileGroup2.Items.Add(this.tileItem6);
             this.tileGroup2.Name = "tileGroup2";
             // 
-            // tileItem1
+            // tileItem4
             // 
-            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
-            tileItemElement7.Text = "tileItem1";
-            this.tileItem1.Elements.Add(tileItemElement7);
-            this.tileItem1.Id = 0;
-            this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItem1.Name = "tileItem1";
+            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
+            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement4.Text = "tileItem4";
+            this.tileItem4.Elements.Add(tileItemElement4);
+            this.tileItem4.Id = 5;
+            this.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItem4.Name = "tileItem4";
             // 
-            // tileGroup1
+            // tileItem3
             // 
-            this.tileGroup1.Name = "tileGroup1";
-            // 
-            // tileGroup4
-            // 
-            this.tileGroup4.Name = "tileGroup4";
-            // 
-            // tileGroup5
-            // 
-            this.tileGroup5.Name = "tileGroup5";
-            // 
-            // tileGroup6
-            // 
-            this.tileGroup6.Name = "tileGroup6";
+            tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement3.Text = "tileItem3";
+            this.tileItem3.Elements.Add(tileItemElement3);
+            this.tileItem3.Id = 3;
+            this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            this.tileItem3.Name = "tileItem3";
             // 
             // tileItem2
             // 
-            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
-            tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement8.Text = "tileItem2";
-            this.tileItem2.Elements.Add(tileItemElement8);
+            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement2.Text = "tileItem2";
+            this.tileItem2.Elements.Add(tileItemElement2);
             this.tileItem2.Id = 2;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem2.Name = "tileItem2";
             // 
-            // tileItem3
+            // tileItem1
             // 
-            tileItemElement9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement9.Image")));
-            tileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement9.Text = "tileItem3";
-            this.tileItem3.Elements.Add(tileItemElement9);
-            this.tileItem3.Id = 3;
-            this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
-            this.tileItem3.Name = "tileItem3";
+            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
+            tileItemElement1.Text = "tileItem1";
+            this.tileItem1.Elements.Add(tileItemElement1);
+            this.tileItem1.Id = 0;
+            this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItem1.Name = "tileItem1";
+            // 
+            // tileControl1
+            // 
+            this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
+            this.tileControl1.Groups.Add(this.tileGroup2);
+            this.tileControl1.Location = new System.Drawing.Point(592, 0);
+            this.tileControl1.MaxId = 10;
+            this.tileControl1.Name = "tileControl1";
+            this.tileControl1.Size = new System.Drawing.Size(275, 577);
+            this.tileControl1.TabIndex = 8;
+            this.tileControl1.Text = "tileControl1";
+            // 
+            // tileItem5
+            // 
+            tileItemElement5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement5.Image")));
+            tileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement5.Text = "tileItem5";
+            this.tileItem5.Elements.Add(tileItemElement5);
+            this.tileItem5.Id = 8;
+            this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            this.tileItem5.Name = "tileItem5";
+            // 
+            // tileItem6
+            // 
+            tileItemElement6.Text = "tileItem6";
+            this.tileItem6.Elements.Add(tileItemElement6);
+            this.tileItem6.Id = 9;
+            this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            this.tileItem6.Name = "tileItem6";
             // 
             // Form2
             // 
@@ -262,14 +280,14 @@
         private bartenderExpressDataSetTableAdapters.recipesTableAdapter recipesTableAdapter;
         private bartenderExpressDataSet bartenderExpressDataSet;
         private System.Windows.Forms.BindingSource recipesBindingSource;
-        private DevExpress.XtraEditors.TileControl tileControl1;
+        private DevExpress.XtraEditors.TileGroup tileGroup1;
         private DevExpress.XtraEditors.TileGroup tileGroup2;
         private DevExpress.XtraEditors.TileItem tileItem1;
         private DevExpress.XtraEditors.TileItem tileItem2;
         private DevExpress.XtraEditors.TileItem tileItem3;
-        private DevExpress.XtraEditors.TileGroup tileGroup4;
-        private DevExpress.XtraEditors.TileGroup tileGroup5;
-        private DevExpress.XtraEditors.TileGroup tileGroup6;
-        private DevExpress.XtraEditors.TileGroup tileGroup1;
+        private DevExpress.XtraEditors.TileItem tileItem4;
+        private DevExpress.XtraEditors.TileItem tileItem5;
+        private DevExpress.XtraEditors.TileItem tileItem6;
+        private DevExpress.XtraEditors.TileControl tileControl1;
     }
 }
