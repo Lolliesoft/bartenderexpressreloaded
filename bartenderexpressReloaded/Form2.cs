@@ -177,5 +177,10 @@ namespace bartenderexpressReloaded
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
         }
+
+        private void tileItem1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.lolliesoft.com");
+        }
     }
 }
