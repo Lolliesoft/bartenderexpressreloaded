@@ -178,7 +178,7 @@ namespace bartenderexpressReloaded
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
         }
 
-        private void tileItem1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        private void tileItem1_ItemClick_2(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.lolliesoft.com");
         }
