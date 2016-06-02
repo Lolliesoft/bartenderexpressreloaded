@@ -118,6 +118,7 @@
             this.valHours.Name = "valHours";
             this.valHours.Size = new System.Drawing.Size(278, 20);
             this.valHours.TabIndex = 24;
+            this.valHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valHours_KeyPress);
             // 
             // valDrinks
             // 
@@ -126,6 +127,7 @@
             this.valDrinks.Name = "valDrinks";
             this.valDrinks.Size = new System.Drawing.Size(278, 20);
             this.valDrinks.TabIndex = 23;
+            this.valDrinks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valDrinks_KeyPress);
             // 
             // valWeight
             // 
@@ -135,6 +137,7 @@
             this.valWeight.Name = "valWeight";
             this.valWeight.Size = new System.Drawing.Size(278, 20);
             this.valWeight.TabIndex = 22;
+            this.valWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valWeight_KeyPress);
             // 
             // simpleButton1
             // 
