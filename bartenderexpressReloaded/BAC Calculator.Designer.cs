@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.lblAnalysis3 = new System.Windows.Forms.Label();
             this.lblAnalysis2 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.valDrinks = new System.Windows.Forms.TextBox();
             this.valWeight = new System.Windows.Forms.TextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +51,7 @@
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 24);
+            this.label1.Size = new System.Drawing.Size(292, 24);
             this.label1.TabIndex = 31;
             this.label1.Text = "Blood Alcohol Content Calculator";
             // 
@@ -57,18 +60,16 @@
             this.lblAnalysis3.AutoSize = true;
             this.lblAnalysis3.Location = new System.Drawing.Point(33, 337);
             this.lblAnalysis3.Name = "lblAnalysis3";
-            this.lblAnalysis3.Size = new System.Drawing.Size(13, 13);
+            this.lblAnalysis3.Size = new System.Drawing.Size(0, 13);
             this.lblAnalysis3.TabIndex = 30;
-            this.lblAnalysis3.Text = "3";
             // 
             // lblAnalysis2
             // 
             this.lblAnalysis2.AutoSize = true;
             this.lblAnalysis2.Location = new System.Drawing.Point(33, 306);
             this.lblAnalysis2.Name = "lblAnalysis2";
-            this.lblAnalysis2.Size = new System.Drawing.Size(13, 13);
+            this.lblAnalysis2.Size = new System.Drawing.Size(0, 13);
             this.lblAnalysis2.TabIndex = 29;
-            this.lblAnalysis2.Text = "2";
             this.lblAnalysis2.Click += new System.EventHandler(this.lblAnalysis2_Click);
             // 
             // lblAnalysis
@@ -76,9 +77,8 @@
             this.lblAnalysis.AutoSize = true;
             this.lblAnalysis.Location = new System.Drawing.Point(33, 275);
             this.lblAnalysis.Name = "lblAnalysis";
-            this.lblAnalysis.Size = new System.Drawing.Size(13, 13);
+            this.lblAnalysis.Size = new System.Drawing.Size(0, 13);
             this.lblAnalysis.TabIndex = 28;
-            this.lblAnalysis.Text = "1";
             // 
             // lblBAC
             // 
@@ -86,9 +86,8 @@
             this.lblBAC.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBAC.Location = new System.Drawing.Point(381, 99);
             this.lblBAC.Name = "lblBAC";
-            this.lblBAC.Size = new System.Drawing.Size(35, 37);
-            this.lblBAC.TabIndex = 27;
-            this.lblBAC.Text = "1";
+            this.lblBAC.Size = new System.Drawing.Size(0, 37);
+            this.lblBAC.TabIndex = 32;
             // 
             // radFemale
             // 
@@ -131,6 +130,7 @@
             // valWeight
             // 
             this.valWeight.BackColor = System.Drawing.SystemColors.Menu;
+            this.valWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.valWeight.Location = new System.Drawing.Point(38, 72);
             this.valWeight.Name = "valWeight";
             this.valWeight.Size = new System.Drawing.Size(278, 20);
@@ -141,15 +141,30 @@
             this.simpleButton1.Location = new System.Drawing.Point(38, 222);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 32;
+            this.simpleButton1.TabIndex = 27;
             this.simpleButton1.Text = "Calculate";
             this.simpleButton1.Click += new System.EventHandler(this.calc);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.Location = new System.Drawing.Point(148, 221);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.TabIndex = 21;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // BAC_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 417);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAnalysis3);
@@ -163,6 +178,7 @@
             this.Controls.Add(this.valWeight);
             this.Name = "BAC_Calculator";
             this.Text = "Blood Alcoholic Content Calculator";
+            this.Load += new System.EventHandler(this.BAC_Calculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +197,7 @@
         private System.Windows.Forms.TextBox valDrinks;
         private System.Windows.Forms.TextBox valWeight;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
