@@ -490,6 +490,11 @@ namespace bartenderexpressReloaded
 
             }
         }
+
+        private void tileItem1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.lolliesoft.com");
+        }
     }
 }
 

@@ -2506,7 +2506,7 @@ namespace bartenderexpressReloaded
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AutoUpdater.Start("http://rbsoft.org/updates/right-click-enhancer.xml");
+            AutoUpdater.Start("http://lolliesoft.com/updates/software.xml");
         }
 
         private void AddRecipeButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -2520,7 +2520,7 @@ namespace bartenderexpressReloaded
         }
         public void randomDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            //Connection shuffle = new Connection();
+            Connection shuffle = new Connection();
             //shuffle.RandomConnection();
             //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
             //string tablename = "drinks";
