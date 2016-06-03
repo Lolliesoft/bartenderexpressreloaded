@@ -27,7 +27,7 @@ namespace bartenderexpressReloaded
 
         private void BAC_Calculator_Load(object sender, EventArgs e)
         {
-               
+            timer1.Start();
         }
 
         public void calc(object sender, System.EventArgs e)
