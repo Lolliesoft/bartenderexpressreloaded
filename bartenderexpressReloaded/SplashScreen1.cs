@@ -11,6 +11,7 @@ namespace bartenderexpressReloaded
 {
     public partial class SplashScreen1 : SplashScreen
     {
+
         public SplashScreen1()
         {
             InitializeComponent();
