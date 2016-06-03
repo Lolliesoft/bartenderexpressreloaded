@@ -17,6 +17,7 @@ using DevExpress.LookAndFeel;
 using DevExpress.UserSkins;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Helpers;
+using System.Threading;
 
 
 //using DevExpress.XtraBars.Docking;
@@ -46,8 +47,6 @@ namespace bartenderexpressReloaded
             };
         }
         MdiClient client;
-
-       
 
         void InitSkinGallery()
         {
@@ -86,6 +85,10 @@ namespace bartenderexpressReloaded
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < 50; i++)
+            {
+                Thread.Sleep(50);
+            }
             // TODO: This line of code loads data into the 'favoritesDataSet.Favorites' table. You can move, or remove it, as needed.
             this.favoritesTableAdapter.Fill(this.favoritesDataSet.Favorites);
             // TODO: This line of code loads data into the 'customDataSet.myRecipes' table. You can move, or remove it, as needed.
@@ -2838,6 +2841,11 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.    
             child.StartPosition = FormStartPosition.CenterScreen;
             child.Show();
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     
