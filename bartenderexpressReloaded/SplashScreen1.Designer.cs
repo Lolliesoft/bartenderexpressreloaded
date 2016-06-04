@@ -49,6 +49,7 @@
             this.marqueeProgressBarControl1.EditValue = 0;
             this.marqueeProgressBarControl1.Location = new System.Drawing.Point(12, 336);
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
+            this.marqueeProgressBarControl1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.marqueeProgressBarControl1.Size = new System.Drawing.Size(520, 20);
             this.marqueeProgressBarControl1.TabIndex = 5;
             // 

@@ -2832,6 +2832,10 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
+            WizardPages.SelectedTab = IngredientsTab;
+            IngredientsNameBox.Show();
+            IngredientsNameBox.Focus();
+            toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
         }
 
         private void tileItem5_ItemClick(object sender, TileItemEventArgs e)
@@ -2844,6 +2848,11 @@ namespace bartenderexpressReloaded
         }
 
         private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IBoxItem_LinkClicked(object sender, ItemClickEventArgs e)
         {
 
         }
