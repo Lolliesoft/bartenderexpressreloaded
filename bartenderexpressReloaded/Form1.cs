@@ -2623,7 +2623,11 @@ namespace bartenderexpressReloaded
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            BAC_Calculator child = new BAC_Calculator();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.    
+            child.StartPosition = FormStartPosition.CenterScreen;
+            child.Show();
         }
 
         private void CustomNameBox_SelectedIndexChanged(object sender, EventArgs e)
