@@ -2860,6 +2860,33 @@ namespace bartenderexpressReloaded
         {
 
         }
+
+        private void tileItem8_ItemClick(object sender, TileItemEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressCalculatorPro.exe");
+        }
+
+        private void Calculator_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressCalculatorPro.exe");
+        }
+
+        private void tileItem7_ItemClick(object sender, TileItemEventArgs e)
+        {
+            AutoUpdater.Start("http://lolliesoft.com/updates/software.xml");
+        }
+
+        private void tileItem3_ItemClick(object sender, TileItemEventArgs e)
+        {
+            CabinetSearch child = new CabinetSearch();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.
+            child.Show();
+            WizardPages.SelectedTab = IngredientsTab;
+            IngredientsNameBox.Show();
+            IngredientsNameBox.Focus();
+            toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
+        }
     }
     
 } 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::bartenderexpressReloaded.SplashScreen1), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
@@ -69,14 +68,14 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
-            this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shotsBindingSource = new System.Windows.Forms.BindingSource();
+            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource();
             this.xpressShotsDataSet = new bartenderexpressReloaded.XpressShotsDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.CheckUpdateBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -88,6 +87,7 @@
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.Favorite = new DevExpress.XtraBars.BarButtonItem();
             this.Liqueur = new DevExpress.XtraBars.BarButtonItem();
+            this.Calculator = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Tools = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -115,12 +115,12 @@
             this.LiqueurCabinetGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.IngredientSearch = new DevExpress.XtraNavBar.NavBarItem();
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.punchesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.beersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.liqueursBindingSource = new System.Windows.Forms.BindingSource();
+            this.punchesBindingSource = new System.Windows.Forms.BindingSource();
+            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource();
+            this.beersBindingSource = new System.Windows.Forms.BindingSource();
+            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource();
+            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource();
             this.shotsTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.shotsTableAdapter();
             this.liqueursTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.liqueursTableAdapter();
             this.punchesTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.punchesTableAdapter();
@@ -131,9 +131,9 @@
             this.CustomTab = new System.Windows.Forms.TabPage();
             this.searchControl8 = new DevExpress.XtraEditors.SearchControl();
             this.CustomNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource();
             this.customDataSet = new bartenderexpressReloaded.CustomDataSet();
-            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource();
             this.myRecipes = new bartenderexpressReloaded.MyRecipes();
             this.CoffeeTeaTab = new System.Windows.Forms.TabPage();
             this.searchControl9 = new DevExpress.XtraEditors.SearchControl();
@@ -159,12 +159,12 @@
             this.DrinksTab = new System.Windows.Forms.TabPage();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource();
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.Favorites = new System.Windows.Forms.TabPage();
             this.searchControl7 = new DevExpress.XtraEditors.SearchControl();
             this.FavoritesNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.favoritesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.favoritesBindingSource = new System.Windows.Forms.BindingSource();
             this.favoritesDataSet = new bartenderexpressReloaded.FavoritesDataSet();
             this.IngredientsTab = new System.Windows.Forms.TabPage();
             this.searchControl3 = new DevExpress.XtraEditors.SearchControl();
@@ -185,7 +185,7 @@
             this.tileItem6 = new DevExpress.XtraEditors.TileItem();
             this.tileItem4 = new DevExpress.XtraEditors.TileItem();
             this.myRecipesTableAdapter = new bartenderexpressReloaded.MyRecipesTableAdapters.myRecipesTableAdapter();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
@@ -303,9 +303,10 @@
             this.barButtonItem5,
             this.ribbonGalleryBarItem1,
             this.Favorite,
-            this.Liqueur});
+            this.Liqueur,
+            this.Calculator});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.MaxItemId = 10;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -330,6 +331,7 @@
             this.barButtonItem3.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
             this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 4;
+            this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
@@ -432,6 +434,14 @@
             this.Liqueur.Name = "Liqueur";
             this.Liqueur.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Liqueur_ItemClick);
             // 
+            // Calculator
+            // 
+            this.Calculator.Caption = "Measurement Calculator";
+            this.Calculator.Id = 9;
+            this.Calculator.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("Calculator.LargeGlyph")));
+            this.Calculator.Name = "Calculator";
+            this.Calculator.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Calculator_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -446,6 +456,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.Favorite);
             this.ribbonPageGroup2.ItemLinks.Add(this.Liqueur);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Calculator);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Home";
@@ -1055,7 +1066,7 @@
             this.ShotsNameBox.DisplayMember = "name";
             this.ShotsNameBox.Location = new System.Drawing.Point(1, 24);
             this.ShotsNameBox.Name = "ShotsNameBox";
-            this.ShotsNameBox.Size = new System.Drawing.Size(408, 253);
+            this.ShotsNameBox.Size = new System.Drawing.Size(440, 185);
             this.ShotsNameBox.TabIndex = 5;
             this.ShotsNameBox.ValueMember = "name";
             this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
@@ -1099,7 +1110,7 @@
             this.DrinksNameBox.DisplayMember = "name";
             this.DrinksNameBox.Location = new System.Drawing.Point(1, 24);
             this.DrinksNameBox.Name = "DrinksNameBox";
-            this.DrinksNameBox.Size = new System.Drawing.Size(337, 495);
+            this.DrinksNameBox.Size = new System.Drawing.Size(369, 427);
             this.DrinksNameBox.TabIndex = 1;
             this.DrinksNameBox.ValueMember = "name";
             this.DrinksNameBox.TabStopChanged += new System.EventHandler(this.DrinksNameBox_TabStopChanged);
@@ -1398,6 +1409,7 @@
             this.tileItem7.Id = 11;
             this.tileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem7.Name = "tileItem7";
+            this.tileItem7.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem7_ItemClick);
             // 
             // tileItem8
             // 
@@ -1457,6 +1469,7 @@
             this.tileItem8.Id = 12;
             this.tileItem8.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem8.Name = "tileItem8";
+            this.tileItem8.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem8_ItemClick);
             // 
             // tileItem5
             // 
@@ -1466,10 +1479,25 @@
             this.tileItem5.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem5.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem5.BackgroundImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement12.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement12.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement12.ImageSize = new System.Drawing.Size(248, 120);
+            this.tileItem5.CurrentFrameIndex = 1;
+            tileItemElement12.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement12.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Normal.Options.UseFont = true;
+            tileItemElement12.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement12.Appearance.Selected.Options.UseFont = true;
+            tileItemElement12.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Text = "Blood Alcohol Calculator";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement12.TextLocation = new System.Drawing.Point(4, 0);
             this.tileItem5.Elements.Add(tileItemElement12);
             this.tileItem5.FrameAnimationInterval = 9000;
             tileItemFrame7.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1534,6 +1562,7 @@
             this.tileItem3.Id = 17;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem3.Name = "tileItem3";
+            this.tileItem3.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem3_ItemClick);
             // 
             // tileItem6
             // 
@@ -1771,6 +1800,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage Updates;
         private DevExpress.XtraBars.Ribbon.RibbonPage About;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup Social;
+        private DevExpress.XtraBars.BarButtonItem Calculator;
     }
 }
 
