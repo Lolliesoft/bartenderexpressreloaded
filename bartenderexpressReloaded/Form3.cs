@@ -61,7 +61,7 @@ namespace bartenderexpressReloaded
 
                         //MessageBox.Show(rdr1["FavoritesTablekey"].ToString());
 
-                        MessageBox.Show(rdr1[FavoritesTablekey].ToString());
+                        //MessageBox.Show(rdr1[FavoritesTablekey].ToString());
 
                         SQLiteCommand cmd1 = new SQLiteCommand("SELECT name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions," +
                                                                 "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9," +
@@ -71,7 +71,7 @@ namespace bartenderexpressReloaded
                         using (SQLiteConnection cs23 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
                             if (rdring.Read())
                             {
-                                MessageBox.Show(rdring[0].ToString());
+                                //MessageBox.Show(rdring[0].ToString());
                                 SQLiteCommand cmd2 = new SQLiteCommand();
                                 cmd2.CommandText = @"INSERT into Favorites (name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions,
                                                             ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9,
@@ -424,7 +424,7 @@ namespace bartenderexpressReloaded
 
                         //MessageBox.Show(rdr1["FavoritesTablekey"].ToString());
 
-                        MessageBox.Show(rdr1[FavoritesTablekey].ToString());
+                        //MessageBox.Show(rdr1[FavoritesTablekey].ToString());
 
                         SQLiteCommand cmd1 = new SQLiteCommand("SELECT name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions," +
                                                                 "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9," +
@@ -434,7 +434,7 @@ namespace bartenderexpressReloaded
                         using (SQLiteConnection cs23 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
                             if (rdring.Read())
                             {
-                                MessageBox.Show(rdring[0].ToString());
+                                //MessageBox.Show(rdring[0].ToString());
                                 SQLiteCommand cmd2 = new SQLiteCommand();
                                 cmd2.CommandText = @"INSERT into Favorites (name, amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8, amt9, amt10, amt11, amt12, amt13, amt14, amt15, directions,
                                                             ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9,
