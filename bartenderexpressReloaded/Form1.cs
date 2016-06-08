@@ -1913,7 +1913,7 @@ namespace bartenderexpressReloaded
                     if (reader.Read())
                     {
                         //MessageBox.Show(reader["myrecipes_key"].ToString());
-                        Form3 child = new Form3();
+                        Form4 child = new Form4();
                         child.Text = FavoritesNameBox.SelectedValue.ToString();
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
                         child.MdiParent = this;
