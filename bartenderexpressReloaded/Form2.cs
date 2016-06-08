@@ -22,10 +22,6 @@ namespace bartenderexpressReloaded
             FavoritesDrinkButton.Name = DrinkName;
             string FavoriteName = DrinkName;
             string FavoritesTable = tablename;
-            
-
-
-
 
             //if FavoritesDrinkButton.Enabled = True.... then do this, disable button in the end
 
@@ -34,9 +30,9 @@ namespace bartenderexpressReloaded
                 cs33.Open();
 
                 //check to see if drink is already a favorite  SELECT favorite FROM drinks WHERE name = 'ABERFOYLE'
-
                 //string  statusbarrecipe = Form1.DrinksNameBox.SelectedValue.ToString();
-                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM drinks WHERE name ='" + (DrinkName.Trim().Replace("'", "''")) + "'", cs33);
+
+                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM " + FavoritesTable + " WHERE name ='" + (DrinkName.Trim().Replace("'", "''")) + "'", cs33);
 
 
                 SQLiteDataReader rdr4 = cmd4.ExecuteReader();
@@ -71,31 +67,17 @@ namespace bartenderexpressReloaded
             string FavoriteName = FavoritesDrinkButton.Name;
             string FavoritesTable = FavoritesDrinkButton.Text;
 
-            //using (SQLiteConnection cs36 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
-            //{
-            //    SQLiteCommand cmd3 = new SQLiteCommand("UPDATE " + FavoritesTable + " SET favorite = 1 WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs36);
-            //    cs36.Open();
-            //    cmd3.ExecuteNonQuery();
-            //    cs36.Close();
-            //}
-
-
-
-
                 using (SQLiteConnection cs31 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
 
                
                 {if (FavoritesDrinkButton.Text == "drinks")
                  {
-                     
-
+                    
                     string FavoritesTablekey = FavoritesTable.TrimEnd('s') + "_key";
 
                     SQLiteCommand cmd = new SQLiteCommand("SELECT " + FavoritesTablekey + " FROM " + FavoritesTable + " WHERE name ='" + (FavoriteName.Trim().Replace("'", "''")) + "'", cs31);
                     //Set Favorite to true
                 
-                    
-                    
 
                     cs31.Open();
                     SQLiteDataReader rdr1 = cmd.ExecuteReader();
