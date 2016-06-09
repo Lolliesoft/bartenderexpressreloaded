@@ -349,6 +349,8 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
+                    
+
 
 
                     while (reader.Read())
@@ -449,6 +451,10 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.   
                     child.Show();
+                    //disables button in form3, if the favorite drink is present
+                    child.DrinkfavoriteCheck();
+
+
 
                     while (reader.Read())
                     {
@@ -636,6 +642,10 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
+                    //disables button in form3, if the favorite drink is present
+                    child.DrinkfavoriteCheck();
+
+
 
                     while (reader.Read())
                     {
@@ -821,6 +831,10 @@ namespace bartenderexpressReloaded
                         child.MdiParent = this;
                         client.BringToFront();//This will make your child form shown on top.
                         child.Show();
+                        //disables button in form3, if the favorite drink is present
+                        child.DrinkfavoriteCheck();
+
+
 
                         while (reader.Read())
                         {
@@ -1003,6 +1017,10 @@ namespace bartenderexpressReloaded
                         child.MdiParent = this;
                         client.BringToFront();//This will make your child form shown on top.
                         child.Show();
+                        //disables button in form3, if the favorite drink is present
+                        child.DrinkfavoriteCheck();
+
+
 
                         while (reader.Read())
                         {
@@ -1190,6 +1208,10 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
+                    //disables button in form3, if the favorite drink is present
+                    child.DrinkfavoriteCheck();
+
+
 
                     while (reader.Read())
                     {
@@ -1375,6 +1397,9 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
+                    //disables button in form3, if the favorite drink is present
+                    child.DrinkfavoriteCheck();
+
 
 
                     while (reader.Read())
