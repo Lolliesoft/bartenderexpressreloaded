@@ -1709,11 +1709,12 @@ namespace bartenderexpressReloaded
                         {
                             child.richTextBox1.Text = rdr[0].ToString();
                         }
-
+                        
                     }
-                }
-
+                    conn6.Close();
+                }             
             }
+
         }
 
         private void CustomNameBox_DoubleClick(object sender, EventArgs e)

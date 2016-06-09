@@ -15,7 +15,7 @@ namespace bartenderexpressReloaded
     {
         public Form3()
         {
-            InitializeComponent();
+            InitializeComponent();         
         }
 
         private void Form3_KeyDown(object sender, KeyEventArgs e)
@@ -35,15 +35,35 @@ namespace bartenderexpressReloaded
             { this._favoritesName = value; }
         }
         
+        //check to see if drink is already a favorite
+        //create method to check if already a favorite
+
+        private void DrinkfavoriteCheck()
+        {
+            string FavoriteName = FavoritesButton.Name;
+            string FavoritesTable = FavoritesButton.Text;
+            //check db to see if drinkname is a favorite
+            using (SQLiteConnection cs230 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
+            {
+                cs230.Open();
+
+                SQLiteCommand cmd = new SQLiteCommand("SELECT Name FROM Favorites WHERE name ='" + FavoriteName + "'", cs230);
+                SQLiteDataReader rdr230 = cmd.ExecuteReader();
+
+                if (rdr230.Read())
+                {
+                    
+                    MessageBox.Show(rdr230[0].ToString());
+                }
+            }         
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FavoritesButton.Enabled = false;
             string FavoriteName = FavoritesButton.Name;
             string FavoritesTable = FavoritesButton.Text;
-
-
-
+            
 
             using (SQLiteConnection cs22 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
             {
