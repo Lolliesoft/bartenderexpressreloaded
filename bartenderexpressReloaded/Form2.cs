@@ -22,36 +22,44 @@ namespace bartenderexpressReloaded
             FavoritesDrinkButton.Name = DrinkName;
             string FavoriteName = DrinkName;
             string FavoritesTable = tablename;
+        }
 
-            //if FavoritesDrinkButton.Enabled = True.... then do this, disable button in the end
+             public void DrinkfavoriteCheckForm1()
+        {
 
-            using (SQLiteConnection cs33 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+            string FavoriteName = FavoritesDrinkButton.Name;
+            string FavoritesTable = FavoritesDrinkButton.Text;
+            //check db to see if drinkname is a favorite
+            using (SQLiteConnection cs230 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
             {
-                cs33.Open();
-
-                //check to see if drink is already a favorite  SELECT favorite FROM drinks WHERE name = 'ABERFOYLE'
-                //string  statusbarrecipe = Form1.DrinksNameBox.SelectedValue.ToString();
-
-                SQLiteCommand cmd4 = new SQLiteCommand("SELECT favorite FROM " + FavoritesTable + " WHERE name ='" + (DrinkName.Trim().Replace("'", "''")) + "'", cs33);
+                cs230.Open();
 
 
-                SQLiteDataReader rdr4 = cmd4.ExecuteReader();
-                if (rdr4.Read())
+                SQLiteCommand cmd = new SQLiteCommand("SELECT Name FROM Favorites WHERE name ='" + FavoriteName + "'", cs230);
+                SQLiteDataReader rdr230 = cmd.ExecuteReader();
+
+                while (rdr230.Read())
                 {
-                    string FavoriteValue = rdr4[0].ToString();
 
-                    //Convert.ToBoolean(FavoriteValue);
-                    ////if the boolean result is the value of 1 from the FavoriteValue then... 
+                    //MessageBox.Show(rdr230[0].ToString());
+                    string firstValue = rdr230[0].ToString();
 
-                    if (Convert.ToBoolean(FavoriteValue))
+                    if (string.IsNullOrEmpty(firstValue) == false)
+
                     {
                         FavoritesDrinkButton.Enabled = false;
                     }
+                    else
+                    {
+                        FavoritesDrinkButton.Enabled = true;
+                    }
                 }
-
+                cs230.Close();
             }
-
         }
+
+ 
+
         private void Form2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)

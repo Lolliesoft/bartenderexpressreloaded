@@ -349,9 +349,8 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
+                    child.DrinkfavoriteCheckForm1();
                     
-
-
 
                     while (reader.Read())
                     {
