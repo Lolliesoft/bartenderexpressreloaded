@@ -15,7 +15,8 @@ namespace bartenderexpressReloaded
     {
         public Form3()
         {
-            InitializeComponent();         
+            InitializeComponent();
+           
         }
 
         private void Form3_KeyDown(object sender, KeyEventArgs e)
@@ -38,8 +39,9 @@ namespace bartenderexpressReloaded
         //check to see if drink is already a favorite
         //create method to check if already a favorite
 
-        private void DrinkfavoriteCheck()
+        public void DrinkfavoriteCheck()
         {
+           
             string FavoriteName = FavoritesButton.Name;
             string FavoritesTable = FavoritesButton.Text;
             //check db to see if drinkname is a favorite
@@ -47,19 +49,34 @@ namespace bartenderexpressReloaded
             {
                 cs230.Open();
 
+              
                 SQLiteCommand cmd = new SQLiteCommand("SELECT Name FROM Favorites WHERE name ='" + FavoriteName + "'", cs230);
                 SQLiteDataReader rdr230 = cmd.ExecuteReader();
 
-                if (rdr230.Read())
+                while (rdr230.Read())
                 {
+
+                    //MessageBox.Show(rdr230[0].ToString());
+                    string firstValue = rdr230[0].ToString();
                     
-                    MessageBox.Show(rdr230[0].ToString());
+                    if (string.IsNullOrEmpty(firstValue)  == false)
+
+                        {
+                            FavoritesButton.Enabled = false;
+                        }
+                    else
+                        {
+                            FavoritesButton.Enabled = true;
+                        }
                 }
+                cs230.Close();
             }         
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
+            DrinkfavoriteCheck();
             FavoritesButton.Enabled = false;
             string FavoriteName = FavoritesButton.Name;
             string FavoritesTable = FavoritesButton.Text;
@@ -586,6 +603,7 @@ namespace bartenderexpressReloaded
         {
             System.Diagnostics.Process.Start("http://www.lolliesoft.com");
         }
+
     }
 }
 

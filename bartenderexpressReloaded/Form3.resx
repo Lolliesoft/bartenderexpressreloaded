@@ -121,7 +121,7 @@
   <data name="FavoritesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAAd0SU1FB98JHRIpKZmJmfAAAAAHdEVYdEF1dGhvcgCprsxIAAAADHRFWHREZXNj
+        wwAADsMBx2+oZAAAAAd0SU1FB98JHRIpKZmJmfAAAAAHdEVYdEF1dGhvcgCprsxIAAAADHRFWHREZXNj
         cmlwdGlvbgATCSEjAAAACnRFWHRDb3B5cmlnaHQArA/MOgAAAAl0RVh0U29mdHdhcmUAXXD/OgAAAAd0
         RVh0U291cmNlAPX/g+sAAAAIdEVYdENvbW1lbnQA9syWvwAAAAZ0RVh0VGl0bGUAqO7SJwAAAH1JREFU
         SEtjuHP1xX9aYYZLJx/+pxUeNRwrxm74CRIxNjOAGKfhlpaWROFRw7HiUcOx4lHDsWKqGN7e3g7G6OIU
@@ -129,10 +129,10 @@
         ABPPXzkwt883AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="tileItemElement4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPAAAAA8CAYAAABYfzddAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAewUAAHsFAXEUcDIAADJkSURBVHhe7b0HlFRF+r9fYFp0
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAewQAAHsEAaNTktYAADJkSURBVHhe7b0HlFRF+r9fYFp0
         xTWvIFlAJAgS1F1RAQMqCuqaQQyICZRgImdRUVcBBUHCDDPAMAiSoxInx+6Z7skZFERE3TXtd6V+79Mz
         xRaXOzONtP8/njOc85we7r11U9en3lDvva201jXUUMMfFNeFNdRQwx8D14U11FDDHwPXhTXUUMMfA9eF
         EJfRpkpivC1UQuZVqqBslCrd/4FKzOqu4jOvV+nZdwo9VHpOT+UvHKhyS19Vntx7hV4BfIVPqOK976r8
@@ -351,7 +351,7 @@
         YII=
 </value>
   </data>
-  <data name="tileItemElement5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAgEAAAAAAAD/7gAOQWRvYmUAZAAAAAAB/9sAQwAHBQUFBQUHBQUHCQYFBgkLCAcH
         CAsNCgoLCgoNEAwMDAwMDBAMDg8QDw4MFBQVFRQUHRwcHB0gICAgICAgICAg/9sAQwEHBwcNDA0ZEBAZ
@@ -2333,7 +2333,7 @@
         T4ePhTBK73XHw16VDAzdirsVd2xV/9k=
 </value>
   </data>
-  <data name="tileItemElement6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4QCqRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
         AAcAAAB0AAAALAAAAABDAFIARQBBAFQATwBSADoAIABnAGQALQBqAHAAZQBnACAAdgAxAC4AMAAgACgA

@@ -1536,7 +1536,7 @@ namespace bartenderexpressReloaded
             {
                 string statusbarrecipe2 = CoffeeTeaNameBox.SelectedValue.ToString();
                 toolStripStatusLabel1.Text = statusbarrecipe2;
-
+                
 
 
                 using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
@@ -1559,7 +1559,8 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
-
+                    //disables button in form3, if the favorite drink is present
+                    child.DrinkfavoriteCheck();
 
 
 

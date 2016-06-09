@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
@@ -145,15 +145,15 @@
             this.tileItem1.AppearanceItem.Selected.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Selected.Options.UseBorderColor = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement4.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
-            tileItemElement4.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
-            tileItemElement4.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
-            tileItemElement4.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement4.Appearance.Hovered.Options.UseBorderColor = true;
-            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
-            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement4.Text = "";
-            this.tileItem1.Elements.Add(tileItemElement4);
+            tileItemElement1.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
+            tileItemElement1.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
+            tileItemElement1.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
+            tileItemElement1.Appearance.Hovered.Options.UseBackColor = true;
+            tileItemElement1.Appearance.Hovered.Options.UseBorderColor = true;
+            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement1.Text = "";
+            this.tileItem1.Elements.Add(tileItemElement1);
             this.tileItem1.Id = 11;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem1.Name = "tileItem1";
@@ -161,20 +161,20 @@
             // 
             // tileItem3
             // 
-            tileItemElement5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement5.Image")));
-            tileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement5.Text = "";
-            this.tileItem3.Elements.Add(tileItemElement5);
+            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement2.Text = "";
+            this.tileItem3.Elements.Add(tileItemElement2);
             this.tileItem3.Id = 15;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem2
             // 
-            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
-            tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement6.Text = "";
-            this.tileItem2.Elements.Add(tileItemElement6);
+            tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement3.Text = "";
+            this.tileItem2.Elements.Add(tileItemElement3);
             this.tileItem2.Id = 12;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
