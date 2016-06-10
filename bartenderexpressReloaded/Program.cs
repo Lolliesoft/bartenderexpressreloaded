@@ -13,6 +13,7 @@ using System.IO;
 using System.Threading;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using SecureApp;
 
 namespace bartenderexpressReloaded
 {
@@ -34,7 +35,22 @@ namespace bartenderexpressReloaded
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             DevExpress.Skins.SkinManager.EnableFormSkins();
 
-            Application.Run(new Form1());
+            //secureApp
+            String abc = @"Software\LollieSoft\Bartender Express";
+            string[,] passwordSt = new string[,] // 5X10
+            {
+                {"ASDZ","QWEY","MKOX","EDFW","CVBV","DRFU","HNKT","GHES","RERR","SWVQ"},
+                {"ASDP","HJUO","VGTN","VFDM","PCFL","GEIJ","CWTK","GETI","ETDH","EFQG"},
+                {"HGFE","POLF","DFRC","NBGD","JYUC","GECB","DFWA","GQAN","VRYP","CAEV"},
+                {"GFHM", "OPHL","GHSF","JNYU","CFFJ","VS5R","CD3F","C67E","F34Z","F8J6"},
+                {"DRFX", "HNKI","GHEL","RERC","SWVK","E4N9","2C8Y","3F5M","3CFS","F5UQ"}
+            };
+            Secure sec = new Secure();
+
+            bool logic = sec.Algorithm(passwordSt, abc);
+            if (logic == true)
+
+                Application.Run(new Form1());
         }
     }
 
