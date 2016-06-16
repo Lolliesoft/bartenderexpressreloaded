@@ -123,7 +123,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="SecureApp, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>G:\Make Combination of Keys for our Trial Version Application\SecureApp\SecureApp\bin\Debug\SecureApp.dll</HintPath>
+      <HintPath>F:\Make Combination of Keys for our Trial Version Application\SecureApp\SecureApp\bin\Debug\SecureApp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
