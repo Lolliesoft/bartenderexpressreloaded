@@ -158,141 +158,71 @@ namespace bartenderexpressReloaded
 
                 //Get Drink Name from masterdrinks table
 
-                String sql1 = "SELECT name FROM masterdrinks WHERE Ingredient1 = (" + SelectedIngredients + ")";
+                SQLiteCommand sql1 = cs104.CreateCommand();
+                sql1.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 = @SelectedIngredients";
+                sql1.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
-                String sql2 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ")";
-                String sql3 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ")";
-                String sql4 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ")";
-                String sql5 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ")";
-                String sql6 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ")";
-                String sql7 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ")";
-                String sql8 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ")";
-                String sql9 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ") AND Ingredient9 IN (" +
-                                SelectedIngredients + ")";
-                String sql10 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ") AND Ingredient9 IN (" +
-                                SelectedIngredients + ") AND Ingredient10 IN (" +
-                                SelectedIngredients + ")";
-                String sql11 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ") AND Ingredient9 IN (" +
-                                SelectedIngredients + ") AND Ingredient10 IN (" +
-                                SelectedIngredients + ") AND Ingredient11 IN (" +
-                                SelectedIngredients + ")";
-                String sql12 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ") AND Ingredient9 IN (" +
-                                SelectedIngredients + ") AND Ingredient10 IN (" +
-                                SelectedIngredients + ") AND Ingredient11 IN (" +
-                                SelectedIngredients + ") AND Ingredient12 IN (" +
-                                SelectedIngredients + ")";
-                String sql13 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ") AND Ingredient9 IN (" +
-                                SelectedIngredients + ") AND Ingredient10 IN (" +
-                                SelectedIngredients + ") AND Ingredient11 IN (" +
-                                SelectedIngredients + ") AND Ingredient12 IN (" +
-                                SelectedIngredients + ") AND Ingredient13 IN (" +
-                                SelectedIngredients + ")";
-                String sql14 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ") AND Ingredient9 IN (" +
-                                SelectedIngredients + ") AND Ingredient10 IN (" +
-                                SelectedIngredients + ") AND Ingredient11 IN (" +
-                                SelectedIngredients + ") AND Ingredient12 IN (" +
-                                SelectedIngredients + ") AND Ingredient13 IN (" +
-                                SelectedIngredients + ") AND Ingredient14 IN (" +
-                                SelectedIngredients + ")";
-                String sql15 = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" +
-                                SelectedIngredients + ") AND Ingredient2 IN (" +
-                                SelectedIngredients + ") AND Ingredient3 IN (" +
-                                SelectedIngredients + ") AND Ingredient4 IN (" +
-                                SelectedIngredients + ") AND Ingredient5 IN (" +
-                                SelectedIngredients + ") AND Ingredient6 IN (" +
-                                SelectedIngredients + ") AND Ingredient7 IN (" +
-                                SelectedIngredients + ") AND Ingredient8 IN (" +
-                                SelectedIngredients + ") AND Ingredient9 IN (" +
-                                SelectedIngredients + ") AND Ingredient10 IN (" +
-                                SelectedIngredients + ") AND Ingredient11 IN (" +
-                                SelectedIngredients + ") AND Ingredient12 IN (" +
-                                SelectedIngredients + ") AND Ingredient13 IN (" +
-                                SelectedIngredients + ") AND Ingredient14 IN (" +
-                                SelectedIngredients + ") AND Ingredient15 IN (" +
-                                SelectedIngredients + ")";
+                SQLiteCommand sql2 = cs104.CreateCommand();
+                sql2.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients)";
+                sql2.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql3 = cs104.CreateCommand();
+                sql3.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN (@SelectedIngredients)";
+                sql3.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql4 = cs104.CreateCommand();
+                sql4.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients)";              
+                sql4.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+
+                SQLiteCommand sql5 = cs104.CreateCommand();
+                sql5.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients)";
+                sql5.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql6 = cs104.CreateCommand();
+                sql6.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients)";
+                sql6.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql7 = cs104.CreateCommand();
+                sql7.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients)";
+                sql7.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql8 = cs104.CreateCommand();
+                sql8.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients)";
+                sql8.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql9 = cs104.CreateCommand();
+                sql9.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients) AND Ingredient9 IN (@SelectedIngredients)";
+                sql9.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql10 = cs104.CreateCommand();
+                sql10.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients) AND Ingredient9 IN (@SelectedIngredients) AND Ingredient10 IN (@SelectedIngredients)";
+                sql10.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+
+                SQLiteCommand sql11 = cs104.CreateCommand();
+                sql11.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients) AND Ingredient9 IN (@SelectedIngredients) AND Ingredient10 IN (@SelectedIngredients) AND Ingredient11 IN (@SelectedIngredients)";
+                sql11.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+
+                SQLiteCommand sql12 = cs104.CreateCommand();
+                sql12.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients) AND Ingredient9 IN (@SelectedIngredients) AND Ingredient10 IN (@SelectedIngredients) AND Ingredient11 IN (@SelectedIngredients) AND Ingredient12 IN (@SelectedIngredients)";
+                sql12.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+                SQLiteCommand sql13 = cs104.CreateCommand();
+                sql13.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients) AND Ingredient9 IN (@SelectedIngredients) AND Ingredient10 IN (@SelectedIngredients) AND Ingredient11 IN (@SelectedIngredients) AND Ingredient12 IN (@SelectedIngredients) AND Ingredient13 IN (@SelectedIngredients)";
+                sql13.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+
+                SQLiteCommand sql14 = cs104.CreateCommand();
+                sql14.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients) AND Ingredient9 IN (@SelectedIngredients) AND Ingredient10 IN (@SelectedIngredients) AND Ingredient11 IN (@SelectedIngredients) AND Ingredient12 IN (@SelectedIngredients) AND Ingredient13 IN (@SelectedIngredients) AND Ingredient14 IN (@SelectedIngredients)";
+                sql14.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
+
+                SQLiteCommand sql15 = cs104.CreateCommand();
+                sql15.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (@SelectedIngredients) AND Ingredient2 IN (@SelectedIngredients) AND Ingredient3 IN(@SelectedIngredients) AND Ingredient4 IN (@SelectedIngredients) AND Ingredient5 IN (@SelectedIngredients) AND Ingredient6 IN (@SelectedIngredients) AND Ingredient7 IN (@SelectedIngredients) AND Ingredient8 IN (@SelectedIngredients) AND Ingredient9 IN (@SelectedIngredients) AND Ingredient10 IN (@SelectedIngredients) AND Ingredient11 IN (@SelectedIngredients) AND Ingredient12 IN (@SelectedIngredients) AND Ingredient13 IN (@SelectedIngredients) AND Ingredient14 IN (@SelectedIngredients) AND Ingredient15 IN (@SelectedIngredients)";
+                sql15.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
+
                 //Determine the number of items dragged into listBoxControl2
                 int IngCount;
                 IngCount = listBoxControl2.Items.Count;
@@ -300,8 +230,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 1)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd1 = new SQLiteCommand(sql1, cs104);
-                    SQLiteDataReader reader1 = cmd1.ExecuteReader();
+                    
+                    SQLiteDataReader reader1 = sql1.ExecuteReader();
 
                     while (reader1.Read())
 
@@ -315,9 +245,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 2)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd2 = new SQLiteCommand(sql2, cs104);
-                    SQLiteDataReader reader2 = cmd2.ExecuteReader();
 
+                    SQLiteDataReader reader2 = sql2.ExecuteReader();
 
                     while (reader2.Read())
 
@@ -330,10 +259,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 3)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd3 = new SQLiteCommand(sql3, cs104);
-                    SQLiteDataReader reader3 = cmd3.ExecuteReader();
-
-
+                    
+                    SQLiteDataReader reader3 = sql3.ExecuteReader();
 
                     while (reader3.Read())
 
@@ -347,9 +274,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 4)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd4 = new SQLiteCommand(sql4, cs104);
-                    SQLiteDataReader reader4 = cmd4.ExecuteReader();
 
+                    SQLiteDataReader reader4 = sql4.ExecuteReader();
 
 
                     while (reader4.Read())
@@ -364,9 +290,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 5)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd5 = new SQLiteCommand(sql5, cs104);
-                    SQLiteDataReader reader5 = cmd5.ExecuteReader();
-
+                    
+                    SQLiteDataReader reader5 = sql5.ExecuteReader();
 
 
                     while (reader5.Read())
@@ -381,8 +306,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 6)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd6 = new SQLiteCommand(sql6, cs104);
-                    SQLiteDataReader reader6 = cmd6.ExecuteReader();
+
+                    SQLiteDataReader reader6 = sql6.ExecuteReader();
 
 
 
@@ -398,9 +323,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 7)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd7 = new SQLiteCommand(sql7, cs104);
-                    SQLiteDataReader reader7 = cmd7.ExecuteReader();
 
+                    SQLiteDataReader reader7 = sql7.ExecuteReader();
 
 
                     while (reader7.Read())
@@ -415,9 +339,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 8)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd8 = new SQLiteCommand(sql8, cs104);
-                    SQLiteDataReader reader8 = cmd8.ExecuteReader();
 
+                    SQLiteDataReader reader8 = sql8.ExecuteReader();
 
 
                     while (reader8.Read())
@@ -432,10 +355,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 9)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd9 = new SQLiteCommand(sql9, cs104);
-                    SQLiteDataReader reader9 = cmd9.ExecuteReader();
 
-
+                    SQLiteDataReader reader9 = sql9.ExecuteReader();
 
                     while (reader9.Read())
 
@@ -449,10 +370,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 10)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd10 = new SQLiteCommand(sql10, cs104);
-                    SQLiteDataReader reader10 = cmd10.ExecuteReader();
 
-
+                    SQLiteDataReader reader10 = sql10.ExecuteReader();
 
                     while (reader10.Read())
 
@@ -466,10 +385,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 11)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd11 = new SQLiteCommand(sql11, cs104);
-                    SQLiteDataReader reader11 = cmd11.ExecuteReader();
 
-
+                    SQLiteDataReader reader11 = sql11.ExecuteReader();
 
                     while (reader11.Read())
 
@@ -483,10 +400,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 12)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd12 = new SQLiteCommand(sql12, cs104);
-                    SQLiteDataReader reader12 = cmd12.ExecuteReader();
 
-
+                    SQLiteDataReader reader12 = sql12.ExecuteReader();
 
                     while (reader12.Read())
 
@@ -500,10 +415,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 13)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd13 = new SQLiteCommand(sql13, cs104);
-                    SQLiteDataReader reader13 = cmd13.ExecuteReader();
 
-
+                    SQLiteDataReader reader13 = sql13.ExecuteReader();
 
                     while (reader13.Read())
 
@@ -517,10 +430,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 14)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd14 = new SQLiteCommand(sql14, cs104);
-                    SQLiteDataReader reader14 = cmd14.ExecuteReader();
 
-
+                    SQLiteDataReader reader14 = sql14.ExecuteReader();
 
                     while (reader14.Read())
 
@@ -534,9 +445,8 @@ namespace bartenderexpressReloaded
                 if (IngCount == 15)
                 {
                     Form1.f1ListBox.Items.Clear();
-                    SQLiteCommand cmd15 = new SQLiteCommand(sql15, cs104);
-                    SQLiteDataReader reader15 = cmd15.ExecuteReader();
 
+                    SQLiteDataReader reader15 = sql15.ExecuteReader();
 
 
                     while (reader15.Read())
@@ -545,6 +455,18 @@ namespace bartenderexpressReloaded
                         string sName = reader15["name"].ToString();
                         Form1.f1ListBox.Items.Add(sName);
                     }
+
+                }
+
+                if (IngCount > 15)
+                {
+                    MessageBox.Show("Please limit to 15 or less ingredients!",
+                                    "Maximum ingredients have been entered",
+                                    MessageBoxButtons.OKCancel,
+                                    MessageBoxIcon.Warning,
+                                    MessageBoxDefaultButton.Button1,
+                                    MessageBoxOptions.RightAlign,
+                                    true);
 
                 }
 
