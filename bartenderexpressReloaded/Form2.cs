@@ -28,6 +28,8 @@ namespace bartenderexpressReloaded
         {
 
             string FavoriteName = FavoritesDrinkButton.Name;
+            FavoriteName = FavoriteName.Replace("'", "''");
+           
             string FavoritesTable = FavoritesDrinkButton.Text;
             //check db to see if drinkname is a favorite
             using (SQLiteConnection cs230 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
@@ -35,8 +37,11 @@ namespace bartenderexpressReloaded
                 cs230.Open();
 
                 SQLiteCommand cmd = cs230.CreateCommand();
-                cmd.CommandText = "SELECT Name FROM Favorites WHERE name = @FavoriteName";
+
                 cmd.Parameters.Add(new SQLiteParameter("@FavoriteName", FavoriteName));
+                cmd.CommandText = "SELECT Name FROM Favorites WHERE name ='" + @FavoriteName + "'";
+                
+
                 //cmd.ExecuteNonQuery();
 
                 //SQLiteCommand cmd = new SQLiteCommand("SELECT Name FROM Favorites WHERE name ='" + @FavoriteName + "'", cs230);
