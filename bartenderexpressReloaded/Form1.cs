@@ -1784,10 +1784,15 @@ namespace bartenderexpressReloaded
                         //MessageBox.Show(reader["myrecipes_key"].ToString());
                         Form3 child = new Form3();
                         child.Text = CustomNameBox.SelectedValue.ToString();
+                        child.FavoritesButton.Name = child.Text;
+                        child.FavoritesButton.Text = "myRecipes";
                         //child.toolStripStatusLabel1.Text = statusbarrecipe;
                         child.MdiParent = this;
                         client.BringToFront();//This will make your child form shown on top.
                         child.Show();
+
+                        //disables button in form3, if the favorite drink is present
+                        child.DrinkfavoriteCheck();
 
 
                         //if (reader.Read())
