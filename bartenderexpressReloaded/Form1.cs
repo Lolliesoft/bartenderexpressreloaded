@@ -171,12 +171,17 @@ namespace bartenderexpressReloaded
             if (LiqueursNameBox.SelectedItem != null)
             {
                 string statusbarrecipe = LiqueursNameBox.SelectedValue.ToString();
-
+                statusbarrecipe = statusbarrecipe.Replace("'", "''");
 
                 using (SQLiteConnection conn = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
                     conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT liqueur_key FROM liqueurs WHERE name ='" + statusbarrecipe + "'", conn);
+
+                    SQLiteCommand cmd = conn.CreateCommand();
+
+                    cmd.Parameters.Add(new SQLiteParameter("@statusbarrecipe", statusbarrecipe));
+                    cmd.CommandText = "SELECT liqueur_key FROM liqueurs WHERE name ='" + @statusbarrecipe + "'";
+
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -261,12 +266,17 @@ namespace bartenderexpressReloaded
             if (CoffeeTeaNameBox.SelectedItem != null)
             {
                 string statusbarrecipe = CoffeeTeaNameBox.SelectedValue.ToString();
+                statusbarrecipe = statusbarrecipe.Replace("'", "''");
 
 
                 using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
                 {
                     conn6.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT coffeetea_key FROM coffeetea WHERE name ='" + statusbarrecipe + "'", conn6);
+                    SQLiteCommand cmd = conn6.CreateCommand();
+
+                    cmd.Parameters.Add(new SQLiteParameter("@statusbarrecipe", statusbarrecipe));
+                    cmd.CommandText = "SELECT coffeetea_key FROM coffeetea WHERE name ='" + @statusbarrecipe + "'";
+
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -282,12 +292,17 @@ namespace bartenderexpressReloaded
             if (CustomNameBox.SelectedItem != null)
             {
                 string statusbarrecipe = CustomNameBox.SelectedValue.ToString();
-
+                statusbarrecipe = statusbarrecipe.Replace("'", "''");
 
                 using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
                 {
                     conn6.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT myrecipes_key FROM myRecipes WHERE name ='" + statusbarrecipe + "'", conn6);
+
+                    SQLiteCommand cmd = conn6.CreateCommand();
+
+                    cmd.Parameters.Add(new SQLiteParameter("@statusbarrecipe", statusbarrecipe));
+                    cmd.CommandText = "SELECT myrecipes_key FROM myRecipes WHERE name ='" + @statusbarrecipe + "'";
+
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -617,6 +632,7 @@ namespace bartenderexpressReloaded
             if (LiqueursNameBox.SelectedItem != null)
             {
                 string statusbarrecipe3 = LiqueursNameBox.SelectedValue.ToString();
+                statusbarrecipe3 = statusbarrecipe3.Replace("'", "''");
 
 
                 using (SQLiteConnection cs3 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
@@ -624,10 +640,11 @@ namespace bartenderexpressReloaded
                     cs3.Open();
 
 
-                    //Get ID
-                    //string selectedvalue
+                    SQLiteCommand cmd = cs3.CreateCommand();
 
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT liqueur_key FROM liqueurs WHERE name ='" + statusbarrecipe3 + "'", cs3);
+                    cmd.Parameters.Add(new SQLiteParameter("@statusbarrecipe3", statusbarrecipe3));
+                    cmd.CommandText = "SELECT liqueur_key FROM liqueurs WHERE name ='" + @statusbarrecipe3 + "'";
+
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     //MessageBox.Show(reader["id"].ToString());
@@ -1747,13 +1764,19 @@ namespace bartenderexpressReloaded
             if (CustomNameBox.SelectedItem != null)
             {
                 string statusbarrecipe2 = CustomNameBox.SelectedValue.ToString();
+                statusbarrecipe2 = statusbarrecipe2.Replace("'", "''");
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
 
                 using (SQLiteConnection conn21 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
                 {
                     conn21.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT myrecipes_key FROM MyRecipes WHERE name ='" + statusbarrecipe2 + "'", conn21);
+
+                    SQLiteCommand cmd = conn21.CreateCommand();
+
+                    cmd.Parameters.Add(new SQLiteParameter("@statusbarrecipe2", statusbarrecipe2));
+                    cmd.CommandText = "SELECT myrecipes_key FROM MyRecipes WHERE name ='" + @statusbarrecipe2 + "'";
+
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
@@ -1927,14 +1950,21 @@ namespace bartenderexpressReloaded
             if (FavoritesNameBox.SelectedItem != null)
             {
                 string statusbarrecipe2 = FavoritesNameBox.SelectedValue.ToString();
+                statusbarrecipe2 = statusbarrecipe2.Replace("'", "''");
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
 
                 using (SQLiteConnection conn22 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
                 {
                     conn22.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("SELECT favorites_key FROM Favorites WHERE name ='" + statusbarrecipe2 + "'", conn22);
+
+                    SQLiteCommand cmd = conn22.CreateCommand();
+
+                    cmd.Parameters.Add(new SQLiteParameter("@statusbarrecipe2", statusbarrecipe2));
+                    cmd.CommandText = "SELECT favorites_key FROM Favorites WHERE name ='" + @statusbarrecipe2 + "'";
+
                     SQLiteDataReader reader = cmd.ExecuteReader();
+
 
                     if (reader.Read())
                     {

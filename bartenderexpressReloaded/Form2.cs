@@ -40,11 +40,7 @@ namespace bartenderexpressReloaded
 
                 cmd.Parameters.Add(new SQLiteParameter("@FavoriteName", FavoriteName));
                 cmd.CommandText = "SELECT Name FROM Favorites WHERE name ='" + @FavoriteName + "'";
-                
 
-                //cmd.ExecuteNonQuery();
-
-                //SQLiteCommand cmd = new SQLiteCommand("SELECT Name FROM Favorites WHERE name ='" + @FavoriteName + "'", cs230);
                 SQLiteDataReader rdr230 = cmd.ExecuteReader();
                 
 
