@@ -158,10 +158,14 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs240.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs240.Close();
                                     cs228.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
@@ -239,9 +243,13 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs231.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs231.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
@@ -310,9 +318,13 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs232.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs232.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
@@ -383,9 +395,13 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs233.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs233.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
@@ -457,9 +473,13 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs234.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs234.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
@@ -530,9 +550,13 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs235.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs235.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
@@ -602,9 +626,13 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs236.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs236.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
@@ -676,9 +704,13 @@ namespace bartenderexpressReloaded
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing14", rdring[30]));
                                     cmd2.Parameters.Add(new SQLiteParameter("@Ing15", rdring[31]));
 
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                     cs237.Open();
                                     cmd2.ExecuteNonQuery();
                                     cs237.Close();
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
                                 }
                         }
                     }
