@@ -2948,6 +2948,104 @@ namespace bartenderexpressReloaded
             IngredientsNameBox.Focus();
             toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
         }
+
+        private void RemovecustomDrink()
+        {
+            string statusbarrecipe = CustomNameBox.SelectedValue.ToString();
+            statusbarrecipe = statusbarrecipe.Replace("'", "''");
+            toolStripStatusLabel1.Text = statusbarrecipe;
+
+            if (statusbarrecipe != null)
+            {
+                using (SQLiteConnection cs403 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
+                {
+
+                    //create command
+                    SQLiteCommand cmd2 = new SQLiteCommand();
+                    cmd2.CommandText = "DELETE FROM MyRecipes WHERE name='" + statusbarrecipe + "'";
+                    cmd2.Connection = cs403;
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    cs403.Open();
+                    cmd2.ExecuteNonQuery();
+                    cs403.Close();
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                }
+                using (SQLiteConnection cs404 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+
+                    //create command
+                    SQLiteCommand cmd3 = new SQLiteCommand();
+                    cmd3.CommandText = "DELETE FROM MyRecipes WHERE name='" + statusbarrecipe + "'";
+                    cmd3.Connection = cs404;
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    cs404.Open();
+                    cmd3.ExecuteNonQuery();
+                    cs404.Close();
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                }
+            }       
+        }
+        private void DeleteDrink_Click(object sender, EventArgs e)
+        {
+        
+            if (CustomNameBox.SelectedValue == null)
+
+            {
+                MessageBox.Show("Please Select a recipe to be deleted");
+            }
+            
+            else
+            {
+                RemovecustomDrink();
+            }
+        }
+
+        private void RemoveFavoriteDrink()
+        {
+            string statusbarrecipe = FavoritesNameBox.SelectedValue.ToString();
+            statusbarrecipe = statusbarrecipe.Replace("'", "''");
+            toolStripStatusLabel1.Text = statusbarrecipe;
+
+            if (statusbarrecipe != null)
+            {
+                using (SQLiteConnection cs403 = new SQLiteConnection("Data Source = |DataDirectory|\\Custom.db"))
+                {
+
+                    //create command
+                    SQLiteCommand cmd2 = new SQLiteCommand();
+                    cmd2.CommandText = "DELETE FROM Favorites WHERE name='" + statusbarrecipe + "'";
+                    cmd2.Connection = cs403;
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    cs403.Open();
+                    cmd2.ExecuteNonQuery();
+                    cs403.Close();
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                }
+                
+            }
+        }
+        private void DeleteFavorite_Click(object sender, EventArgs e)
+        {
+            if (FavoritesNameBox.SelectedValue == null)
+
+            {
+                MessageBox.Show("Please Select a recipe to be deleted");
+            }
+
+            else
+            {
+                RemoveFavoriteDrink();
+            }
+        }
     }
     
 } 
