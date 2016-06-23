@@ -35,7 +35,8 @@ namespace bartenderexpressReloaded
             InitSkinGallery();
             HideSkins(skinsToHide);
             // listBoxControl2 in CabinetSearch
-            f1ListBox = IngredientsNameBox;         
+            f1ListBox = IngredientsNameBox;
+            
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
             //This will check whenever client gets focused and there aren't any
@@ -80,6 +81,37 @@ namespace bartenderexpressReloaded
                         }
                     }
                 }
+            }
+        }
+
+        private void ribbonGalleryBarItem1_GalleryItemClick(object sender, DevExpress.XtraBars.Ribbon.GalleryItemClickEventArgs e)
+        {
+            //MessageBox.Show(e.Item.Caption+" is being clicked!");
+            switch (e.Item.Caption)
+            {
+                case "Facebook":
+                    System.Diagnostics.Process.Start("https://www.facebook.com/lolliesoft");
+                    break;
+                case "Twitter":
+                    System.Diagnostics.Process.Start("https://twitter.com/lolliesoft");
+                    break;
+                case "Lolliesoft":
+                    System.Diagnostics.Process.Start("http://www.lolliesoft.com");
+                    break;
+                case "Vimeo":
+                    MessageBox.Show("Coming soon");
+                    //System.Diagnostics.Process.Start("http://www.lolliesoft.com");
+                    break;
+                case "YouTube":
+                    MessageBox.Show("Coming soon");
+                    //System.Diagnostics.Process.Start("http://www.lolliesoft.com");
+                    break;
+                case "Pinterest":
+                    System.Diagnostics.Process.Start("https://www.pinterest.com/lolliesoft");
+                    break;
+                //default:
+                //    MessageBox.Show("Not valid");
+                //    break;
             }
         }
 
