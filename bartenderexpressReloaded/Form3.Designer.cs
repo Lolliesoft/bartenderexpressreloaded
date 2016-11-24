@@ -94,9 +94,9 @@
             // 
             this.FavoritesButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesButton.Image")));
-            this.FavoritesButton.Location = new System.Drawing.Point(542, 0);
+            this.FavoritesButton.Location = new System.Drawing.Point(536, 1);
             this.FavoritesButton.Name = "FavoritesButton";
-            this.FavoritesButton.Size = new System.Drawing.Size(23, 23);
+            this.FavoritesButton.Size = new System.Drawing.Size(22, 22);
             this.FavoritesButton.TabIndex = 7;
             this.FavoritesButton.Tag = "Add to Favorites";
             this.FavoritesButton.Text = "FavoritesButton";

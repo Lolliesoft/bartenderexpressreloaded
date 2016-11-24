@@ -40,6 +40,7 @@
             this.DeleteItemButton = new DevExpress.XtraEditors.SimpleButton();
             this.ClearItemButton = new DevExpress.XtraEditors.SimpleButton();
             this.CabinetSearchBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl2)).BeginInit();
             this.listBoxControl2_contextMenuStrip.SuspendLayout();
@@ -141,16 +142,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CabinetSearchBox.Location = new System.Drawing.Point(25, 40);
+            this.CabinetSearchBox.MaximumSize = new System.Drawing.Size(252, 20);
+            this.CabinetSearchBox.MinimumSize = new System.Drawing.Size(252, 20);
             this.CabinetSearchBox.Name = "CabinetSearchBox";
-            this.CabinetSearchBox.Size = new System.Drawing.Size(263, 20);
+            this.CabinetSearchBox.Size = new System.Drawing.Size(252, 20);
             this.CabinetSearchBox.TabIndex = 10;
             this.CabinetSearchBox.TextChanged += new System.EventHandler(this.CabinetSearchBox_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Drag and Drop your Ingredients!";
             // 
             // CabinetSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 424);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.CabinetSearchBox);
             this.Controls.Add(this.ClearItemButton);
             this.Controls.Add(this.DeleteItemButton);
@@ -179,5 +192,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         public DevExpress.XtraEditors.ListBoxControl listBoxControl2;
         private System.Windows.Forms.TextBox CabinetSearchBox;
+        private System.Windows.Forms.Label label3;
     }
 }
