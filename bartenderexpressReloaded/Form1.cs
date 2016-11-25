@@ -18,9 +18,14 @@ using DevExpress.UserSkins;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Helpers;
 using System.Threading;
-
-
-//using DevExpress.XtraBars.Docking;
+using System.Collections;
+using System.Diagnostics;
+using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars.Ribbon.Gallery;
+using DevExpress.Utils.Drawing;
+using DevExpress.Utils;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraBars.Ribbon.ViewInfo;
 
 namespace bartenderexpressReloaded
 {
@@ -36,7 +41,7 @@ namespace bartenderexpressReloaded
             HideSkins(skinsToHide);
             // listBoxControl2 in CabinetSearch
             f1ListBox = IngredientsNameBox;
-            
+
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
             //This will check whenever client gets focused and there aren't any
@@ -49,11 +54,13 @@ namespace bartenderexpressReloaded
         }
         MdiClient client;
 
+
         void InitSkinGallery()
         {
             //SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1, true);
             SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1);
         }
+
 
         string[] skinsToHide = { "DevExpress Style", "DevExpress Dark Style", "Seven Classic", "Seven" }; // populate with names of unnecessary skins
 
@@ -109,13 +116,13 @@ namespace bartenderexpressReloaded
                 case "Pinterest":
                     System.Diagnostics.Process.Start("https://www.pinterest.com/lolliesoft");
                     break;
-                //default:
-                //    MessageBox.Show("Not valid");
-                //    break;
+                    //default:
+                    //    MessageBox.Show("Not valid");
+                    //    break;
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+    
+    private void Form1_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < 50; i++)
             {
@@ -3081,7 +3088,7 @@ namespace bartenderexpressReloaded
     }
     
 } 
-    
+   
 
 
 
