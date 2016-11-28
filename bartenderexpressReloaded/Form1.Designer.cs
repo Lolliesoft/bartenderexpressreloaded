@@ -192,6 +192,8 @@
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
             this.ribbonLogoHelper1 = new DevExpress.XtraBars.Ribbon.RibbonLogoHelper();
+            this.TipDrinksNameBox = new System.Windows.Forms.ToolTip();
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -389,23 +391,11 @@
             this.ribbonGalleryBarItem1.Gallery.ColumnCount = 6;
             galleryItemGroup1.Caption = "Group3";
             galleryItem1.Caption = "Facebook";
-            galleryItem1.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem1.HoverImage")));
-            galleryItem1.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem1.Image")));
             galleryItem2.Caption = "Twitter";
-            galleryItem2.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem2.HoverImage")));
-            galleryItem2.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem2.Image")));
             galleryItem3.Caption = "Lolliesoft";
-            galleryItem3.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem3.HoverImage")));
-            galleryItem3.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem3.Image")));
             galleryItem4.Caption = "Vimeo";
-            galleryItem4.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem4.HoverImage")));
-            galleryItem4.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem4.Image")));
             galleryItem5.Caption = "YouTube";
-            galleryItem5.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem5.HoverImage")));
-            galleryItem5.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem5.Image")));
             galleryItem6.Caption = "Pinterest";
-            galleryItem6.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem6.HoverImage")));
-            galleryItem6.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem6.Image")));
             galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
             galleryItem1,
             galleryItem2,
@@ -1157,6 +1147,8 @@
             this.DrinksNameBox.Click += new System.EventHandler(this.nameListCount);
             this.DrinksNameBox.DoubleClick += new System.EventHandler(this.DrinksNameBox_DoubleClick);
             this.DrinksNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DrinksNameBox_KeyPress);
+            this.DrinksNameBox.MouseLeave += new System.EventHandler(this.DrinksNameBox_MouseLeave);
+            this.DrinksNameBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrinksNameBox_MouseMove);
             // 
             // recipesBindingSource1
             // 
@@ -1381,10 +1373,8 @@
             this.tileItem1.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement2.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
-            tileItemElement2.Text = "";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tileItem1.CurrentFrameIndex = 1;
+            tileItemElement2.Text = "Click for a random drink recipe!";
             this.tileItem1.Elements.Add(tileItemElement2);
             tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement3.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
@@ -1480,25 +1470,10 @@
             this.tileItem5.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem5.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem5.BackgroundImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            this.tileItem5.CurrentFrameIndex = 1;
-            tileItemElement9.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement9.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement9.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement9.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement9.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement9.Appearance.Normal.Options.UseFont = true;
-            tileItemElement9.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement9.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement9.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement9.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement9.Appearance.Selected.Options.UseFont = true;
-            tileItemElement9.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement9.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement9.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement9.Text = "Blood Alcohol Calculator";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement9.TextLocation = new System.Drawing.Point(4, 0);
+            tileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement9.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement9.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement9.ImageSize = new System.Drawing.Size(248, 120);
             this.tileItem5.Elements.Add(tileItemElement9);
             this.tileItem5.FrameAnimationInterval = 9000;
             tileItemFrame5.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1571,25 +1546,10 @@
             this.tileItem8.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.RoyalBlue;
             this.tileItem8.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem8.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            this.tileItem8.CurrentFrameIndex = 1;
-            tileItemElement17.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement17.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement17.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement17.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement17.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement17.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement17.Appearance.Normal.Options.UseFont = true;
-            tileItemElement17.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement17.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement17.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement17.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement17.Appearance.Selected.Options.UseFont = true;
-            tileItemElement17.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement17.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement17.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement17.Text = "Calculate measurements for your recipes";
-            tileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement17.TextLocation = new System.Drawing.Point(4, 11);
+            tileItemElement17.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement17.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement17.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement17.ImageSize = new System.Drawing.Size(120, 120);
             this.tileItem8.Elements.Add(tileItemElement17);
             this.tileItem8.FrameAnimationInterval = 28000;
             tileItemFrame9.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1663,6 +1623,10 @@
             // 
             this.ribbonLogoHelper1.Image = global::bartenderexpressReloaded.Properties.Resources.logo;
             this.ribbonLogoHelper1.RibbonControl = this.ribbonControl1;
+            // 
+            // TipDrinksNameBox
+            // 
+            this.TipDrinksNameBox.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Form1
             // 
@@ -1870,6 +1834,8 @@
         private DevExpress.XtraEditors.SimpleButton DeleteDrink;
         private DevExpress.XtraEditors.SimpleButton DeleteFavorite;
         private DevExpress.XtraBars.Ribbon.RibbonLogoHelper ribbonLogoHelper1;
+        private System.Windows.Forms.ToolTip TipDrinksNameBox;
+        private DevExpress.Utils.ToolTipController toolTipController1;
     }
 }
 

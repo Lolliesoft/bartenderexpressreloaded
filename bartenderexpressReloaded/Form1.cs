@@ -3085,9 +3085,33 @@ namespace bartenderexpressReloaded
                 RemoveFavoriteDrink();
             }
         }
+
+        private void DrinksNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl DrinksNameBox = sender as ListBoxControl;
+            int index = DrinksNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = DrinksNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, DrinksNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+
+        }
+
+        private void DrinksNameBox_MouseLeave(object sender, EventArgs e)
+        {
+            toolTipController1.HideHint();
+        }
+
     }
+
+}
     
-} 
+
    
 
 
