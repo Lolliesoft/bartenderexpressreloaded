@@ -3099,7 +3099,156 @@ namespace bartenderexpressReloaded
             {
                 toolTipController1.HideHint();
             }
+        }
 
+        private void ShotsNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl ShotsNameBox = sender as ListBoxControl;
+            int index = ShotsNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = ShotsNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, ShotsNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void LiqueursNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl LiqueursNameBox = sender as ListBoxControl;
+            int index = LiqueursNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = LiqueursNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, LiqueursNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void PunchesNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl PunchesNameBox = sender as ListBoxControl;
+            int index = PunchesNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = PunchesNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, PunchesNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void CocktailsNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl CocktailsNameBox = sender as ListBoxControl;
+            int index = CocktailsNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = CocktailsNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, CocktailsNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void CustomNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl CustomNameBox = sender as ListBoxControl;
+            int index = CustomNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = CustomNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, CustomNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void FavoritesNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl FavoritesNameBox = sender as ListBoxControl;
+            int index = FavoritesNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = FavoritesNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, FavoritesNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void IngredientsNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl IngredientsNameBox = sender as ListBoxControl;
+            int index = IngredientsNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = IngredientsNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, IngredientsNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void CoffeeTeaNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl CoffeeTeaNameBox = sender as ListBoxControl;
+            int index = CoffeeTeaNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = CoffeeTeaNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, CoffeeTeaNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void NonAlcoholicNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl NonAlcoholicNameBox = sender as ListBoxControl;
+            int index = NonAlcoholicNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = NonAlcoholicNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, NonAlcoholicNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
+        }
+
+        private void BeerAleNameBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            ListBoxControl BeerAleNameBox = sender as ListBoxControl;
+            int index = BeerAleNameBox.IndexFromPoint(new Point(e.X, e.Y));
+            if (index != -1)
+            {
+                string item = BeerAleNameBox.GetItemValue(index) as string;
+                toolTipController1.ShowHint(item, BeerAleNameBox.PointToScreen(new Point(e.X, e.Y)));
+            }
+            else
+            {
+                toolTipController1.HideHint();
+            }
         }
 
         private void DrinksNameBox_MouseLeave(object sender, EventArgs e)
