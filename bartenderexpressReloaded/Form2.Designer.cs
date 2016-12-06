@@ -64,9 +64,11 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Amount});
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(-2, 0);
+            this.listView1.Location = new System.Drawing.Point(-3, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(225, 349);
+            this.listView1.Scrollable = false;
+            this.listView1.Size = new System.Drawing.Size(299, 429);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -74,16 +76,18 @@
             // Amount
             // 
             this.Amount.Text = "Amount";
-            this.Amount.Width = 220;
+            this.Amount.Width = 294;
             // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Ingredients});
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(220, 0);
+            this.listView2.Location = new System.Drawing.Point(293, 0);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(345, 349);
+            this.listView2.Scrollable = false;
+            this.listView2.Size = new System.Drawing.Size(459, 429);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -91,41 +95,45 @@
             // Ingredients
             // 
             this.Ingredients.Text = "Ingredients";
-            this.Ingredients.Width = 340;
+            this.Ingredients.Width = 455;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-2, 348);
+            this.richTextBox1.Location = new System.Drawing.Point(-3, 428);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(567, 208);
+            this.richTextBox1.Size = new System.Drawing.Size(755, 255);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
             // DrinkBox
             // 
-            this.DrinkBox.Location = new System.Drawing.Point(10, 354);
+            this.DrinkBox.Location = new System.Drawing.Point(-3, 428);
+            this.DrinkBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DrinkBox.Name = "DrinkBox";
-            this.DrinkBox.Size = new System.Drawing.Size(200, 223);
+            this.DrinkBox.Size = new System.Drawing.Size(299, 282);
             this.DrinkBox.TabIndex = 4;
             this.DrinkBox.TabStop = false;
             // 
             // DrinkTextBox
             // 
-            this.DrinkTextBox.Location = new System.Drawing.Point(220, 355);
+            this.DrinkTextBox.Location = new System.Drawing.Point(293, 428);
+            this.DrinkTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DrinkTextBox.Multiline = true;
             this.DrinkTextBox.Name = "DrinkTextBox";
             this.DrinkTextBox.ReadOnly = true;
             this.DrinkTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DrinkTextBox.Size = new System.Drawing.Size(345, 222);
+            this.DrinkTextBox.Size = new System.Drawing.Size(459, 281);
             this.DrinkTextBox.TabIndex = 5;
             // 
             // FavoritesDrinkButton
             // 
             this.FavoritesDrinkButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesDrinkButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesDrinkButton.Image")));
-            this.FavoritesDrinkButton.Location = new System.Drawing.Point(536, 1);
+            this.FavoritesDrinkButton.Location = new System.Drawing.Point(715, 1);
+            this.FavoritesDrinkButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FavoritesDrinkButton.Name = "FavoritesDrinkButton";
-            this.FavoritesDrinkButton.Size = new System.Drawing.Size(22, 22);
+            this.FavoritesDrinkButton.Size = new System.Drawing.Size(29, 27);
             this.FavoritesDrinkButton.TabIndex = 6;
             this.FavoritesDrinkButton.Tag = "Add to Favorites";
             this.FavoritesDrinkButton.Text = "button1";
@@ -134,9 +142,11 @@
             // 
             // toolStripStatusLabel
             // 
-            this.toolStripStatusLabel.Location = new System.Drawing.Point(0, 557);
+            this.toolStripStatusLabel.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStripStatusLabel.Location = new System.Drawing.Point(0, 686);
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(1098, 22);
+            this.toolStripStatusLabel.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(1464, 27);
             this.toolStripStatusLabel.TabIndex = 7;
             this.toolStripStatusLabel.Visible = false;
             // 
@@ -162,10 +172,12 @@
             // 
             this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
             this.tileControl1.Groups.Add(this.tileGroup2);
-            this.tileControl1.Location = new System.Drawing.Point(592, 0);
+            this.tileControl1.Location = new System.Drawing.Point(789, 0);
+            this.tileControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tileControl1.MaxId = 16;
             this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Size = new System.Drawing.Size(279, 577);
+            this.tileControl1.Padding = new System.Windows.Forms.Padding(24, 22, 24, 22);
+            this.tileControl1.Size = new System.Drawing.Size(372, 710);
             this.tileControl1.TabIndex = 8;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -250,10 +262,10 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1098, 579);
+            this.ClientSize = new System.Drawing.Size(1464, 713);
             this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.toolStripStatusLabel);
             this.Controls.Add(this.FavoritesDrinkButton);
@@ -263,6 +275,7 @@
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Form2";

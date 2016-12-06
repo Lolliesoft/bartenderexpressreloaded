@@ -2951,15 +2951,15 @@ namespace bartenderexpressReloaded
             child.Show();
         }
 
-        private void ribbonControl1_Click(object sender, EventArgs e)
-        {
+        //private void ribbonControl1_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void IBoxItem_LinkClicked(object sender, ItemClickEventArgs e)
-        {
+        //private void IBoxItem_LinkClicked(object sender, ItemClickEventArgs e)
+        //{
 
-        }
+        //}
 
         private void tileItem8_ItemClick(object sender, TileItemEventArgs e)
         {

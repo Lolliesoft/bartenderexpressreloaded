@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
@@ -50,10 +50,11 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Amount});
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Location = new System.Drawing.Point(-3, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
-            this.listView1.Size = new System.Drawing.Size(225, 349);
+            this.listView1.Size = new System.Drawing.Size(299, 429);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -61,17 +62,18 @@
             // Amount
             // 
             this.Amount.Text = "Amount";
-            this.Amount.Width = 220;
+            this.Amount.Width = 295;
             // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Ingredients});
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(220, 0);
+            this.listView2.Location = new System.Drawing.Point(293, 0);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView2.Name = "listView2";
             this.listView2.Scrollable = false;
-            this.listView2.Size = new System.Drawing.Size(345, 349);
+            this.listView2.Size = new System.Drawing.Size(459, 429);
             this.listView2.TabIndex = 11;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -79,16 +81,18 @@
             // Ingredients
             // 
             this.Ingredients.Text = "Ingredients";
-            this.Ingredients.Width = 340;
+            this.Ingredients.Width = 457;
             // 
             // tileControl1
             // 
             this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
             this.tileControl1.Groups.Add(this.tileGroup2);
-            this.tileControl1.Location = new System.Drawing.Point(592, 0);
+            this.tileControl1.Location = new System.Drawing.Point(789, 0);
+            this.tileControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tileControl1.MaxId = 16;
             this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Size = new System.Drawing.Size(279, 577);
+            this.tileControl1.Padding = new System.Windows.Forms.Padding(24, 22, 24, 22);
+            this.tileControl1.Size = new System.Drawing.Size(372, 710);
             this.tileControl1.TabIndex = 14;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -123,35 +127,35 @@
             this.tileItem1.AppearanceItem.Selected.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Selected.Options.UseBorderColor = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement7.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
-            tileItemElement7.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
-            tileItemElement7.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
-            tileItemElement7.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement7.Appearance.Hovered.Options.UseBorderColor = true;
-            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
-            tileItemElement7.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement7.Text = "";
-            this.tileItem1.Elements.Add(tileItemElement7);
+            tileItemElement10.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
+            tileItemElement10.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
+            tileItemElement10.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
+            tileItemElement10.Appearance.Hovered.Options.UseBackColor = true;
+            tileItemElement10.Appearance.Hovered.Options.UseBorderColor = true;
+            tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
+            tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement10.Text = "";
+            this.tileItem1.Elements.Add(tileItemElement10);
             this.tileItem1.Id = 11;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem1.Name = "tileItem1";
             // 
             // tileItem3
             // 
-            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
-            tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement8.Text = "";
-            this.tileItem3.Elements.Add(tileItemElement8);
+            tileItemElement11.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement11.Image")));
+            tileItemElement11.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement11.Text = "";
+            this.tileItem3.Elements.Add(tileItemElement11);
             this.tileItem3.Id = 15;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem2
             // 
-            tileItemElement9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement9.Image")));
-            tileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement9.Text = "";
-            this.tileItem2.Elements.Add(tileItemElement9);
+            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
+            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement12.Text = "";
+            this.tileItem2.Elements.Add(tileItemElement12);
             this.tileItem2.Id = 12;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
@@ -160,9 +164,10 @@
             // 
             this.FavoritesButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesButton.Image")));
-            this.FavoritesButton.Location = new System.Drawing.Point(542, 0);
+            this.FavoritesButton.Location = new System.Drawing.Point(723, 0);
+            this.FavoritesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FavoritesButton.Name = "FavoritesButton";
-            this.FavoritesButton.Size = new System.Drawing.Size(23, 23);
+            this.FavoritesButton.Size = new System.Drawing.Size(31, 28);
             this.FavoritesButton.TabIndex = 13;
             this.FavoritesButton.Tag = "Add to Favorites";
             this.FavoritesButton.Text = "FavoritesButton";
@@ -170,23 +175,25 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-2, 348);
+            this.richTextBox1.Location = new System.Drawing.Point(-3, 428);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(567, 208);
+            this.richTextBox1.Size = new System.Drawing.Size(755, 255);
             this.richTextBox1.TabIndex = 12;
             this.richTextBox1.Text = "";
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 579);
+            this.ClientSize = new System.Drawing.Size(1464, 713);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.FavoritesButton);
             this.Controls.Add(this.richTextBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);

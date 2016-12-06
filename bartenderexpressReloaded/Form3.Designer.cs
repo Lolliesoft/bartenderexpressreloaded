@@ -51,9 +51,10 @@
             this.Amount});
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
-            this.listView1.Size = new System.Drawing.Size(225, 349);
+            this.listView1.Size = new System.Drawing.Size(299, 429);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -61,17 +62,18 @@
             // Amount
             // 
             this.Amount.Text = "Amount";
-            this.Amount.Width = 220;
+            this.Amount.Width = 290;
             // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Ingredients});
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(220, 0);
+            this.listView2.Location = new System.Drawing.Point(293, 0);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView2.Name = "listView2";
             this.listView2.Scrollable = false;
-            this.listView2.Size = new System.Drawing.Size(345, 349);
+            this.listView2.Size = new System.Drawing.Size(459, 429);
             this.listView2.TabIndex = 2;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -79,14 +81,15 @@
             // Ingredients
             // 
             this.Ingredients.Text = "Ingredients";
-            this.Ingredients.Width = 340;
+            this.Ingredients.Width = 456;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-2, 348);
+            this.richTextBox1.Location = new System.Drawing.Point(-3, 428);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(567, 208);
+            this.richTextBox1.Size = new System.Drawing.Size(755, 255);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
@@ -94,9 +97,10 @@
             // 
             this.FavoritesButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesButton.Image")));
-            this.FavoritesButton.Location = new System.Drawing.Point(536, 1);
+            this.FavoritesButton.Location = new System.Drawing.Point(715, 1);
+            this.FavoritesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FavoritesButton.Name = "FavoritesButton";
-            this.FavoritesButton.Size = new System.Drawing.Size(22, 22);
+            this.FavoritesButton.Size = new System.Drawing.Size(29, 27);
             this.FavoritesButton.TabIndex = 7;
             this.FavoritesButton.Tag = "Add to Favorites";
             this.FavoritesButton.Text = "FavoritesButton";
@@ -107,10 +111,12 @@
             // 
             this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
             this.tileControl1.Groups.Add(this.tileGroup2);
-            this.tileControl1.Location = new System.Drawing.Point(592, 0);
+            this.tileControl1.Location = new System.Drawing.Point(789, 0);
+            this.tileControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tileControl1.MaxId = 16;
             this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Size = new System.Drawing.Size(279, 577);
+            this.tileControl1.Padding = new System.Windows.Forms.Padding(24, 22, 24, 22);
+            this.tileControl1.Size = new System.Drawing.Size(372, 710);
             this.tileControl1.TabIndex = 9;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -181,14 +187,15 @@
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 579);
+            this.ClientSize = new System.Drawing.Size(1464, 713);
             this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.FavoritesButton);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form3";
             this.Text = "Form3";
             this.ResumeLayout(false);
