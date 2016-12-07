@@ -65,7 +65,7 @@
             this.Amount});
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(-3, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
             this.listView1.Size = new System.Drawing.Size(299, 429);
@@ -84,7 +84,7 @@
             this.Ingredients});
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(293, 0);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4);
             this.listView2.Name = "listView2";
             this.listView2.Scrollable = false;
             this.listView2.Size = new System.Drawing.Size(459, 429);
@@ -100,7 +100,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(-3, 428);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(755, 255);
             this.richTextBox1.TabIndex = 2;
@@ -109,7 +109,7 @@
             // DrinkBox
             // 
             this.DrinkBox.Location = new System.Drawing.Point(-3, 428);
-            this.DrinkBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DrinkBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrinkBox.Name = "DrinkBox";
             this.DrinkBox.Size = new System.Drawing.Size(299, 282);
             this.DrinkBox.TabIndex = 4;
@@ -118,7 +118,7 @@
             // DrinkTextBox
             // 
             this.DrinkTextBox.Location = new System.Drawing.Point(293, 428);
-            this.DrinkTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DrinkTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrinkTextBox.Multiline = true;
             this.DrinkTextBox.Name = "DrinkTextBox";
             this.DrinkTextBox.ReadOnly = true;
@@ -130,8 +130,8 @@
             // 
             this.FavoritesDrinkButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesDrinkButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesDrinkButton.Image")));
-            this.FavoritesDrinkButton.Location = new System.Drawing.Point(715, 1);
-            this.FavoritesDrinkButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FavoritesDrinkButton.Location = new System.Drawing.Point(714, 1);
+            this.FavoritesDrinkButton.Margin = new System.Windows.Forms.Padding(4);
             this.FavoritesDrinkButton.Name = "FavoritesDrinkButton";
             this.FavoritesDrinkButton.Size = new System.Drawing.Size(29, 27);
             this.FavoritesDrinkButton.TabIndex = 6;
@@ -173,7 +173,7 @@
             this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
             this.tileControl1.Groups.Add(this.tileGroup2);
             this.tileControl1.Location = new System.Drawing.Point(789, 0);
-            this.tileControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tileControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tileControl1.MaxId = 16;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Padding = new System.Windows.Forms.Padding(24, 22, 24, 22);
@@ -275,7 +275,7 @@
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Form2";
