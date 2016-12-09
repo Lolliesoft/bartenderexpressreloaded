@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
@@ -49,9 +49,10 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Amount});
+            this.listView1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(-3, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
             this.listView1.Size = new System.Drawing.Size(299, 429);
@@ -68,9 +69,10 @@
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Ingredients});
+            this.listView2.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(293, 0);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4);
             this.listView2.Name = "listView2";
             this.listView2.Scrollable = false;
             this.listView2.Size = new System.Drawing.Size(459, 429);
@@ -88,7 +90,7 @@
             this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
             this.tileControl1.Groups.Add(this.tileGroup2);
             this.tileControl1.Location = new System.Drawing.Point(789, 0);
-            this.tileControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tileControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tileControl1.MaxId = 16;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Padding = new System.Windows.Forms.Padding(24, 22, 24, 22);
@@ -127,35 +129,35 @@
             this.tileItem1.AppearanceItem.Selected.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Selected.Options.UseBorderColor = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement10.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
-            tileItemElement10.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
-            tileItemElement10.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
-            tileItemElement10.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement10.Appearance.Hovered.Options.UseBorderColor = true;
-            tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
-            tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement10.Text = "";
-            this.tileItem1.Elements.Add(tileItemElement10);
+            tileItemElement1.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
+            tileItemElement1.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
+            tileItemElement1.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
+            tileItemElement1.Appearance.Hovered.Options.UseBackColor = true;
+            tileItemElement1.Appearance.Hovered.Options.UseBorderColor = true;
+            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement1.Text = "";
+            this.tileItem1.Elements.Add(tileItemElement1);
             this.tileItem1.Id = 11;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem1.Name = "tileItem1";
             // 
             // tileItem3
             // 
-            tileItemElement11.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement11.Image")));
-            tileItemElement11.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement11.Text = "";
-            this.tileItem3.Elements.Add(tileItemElement11);
+            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement2.Text = "";
+            this.tileItem3.Elements.Add(tileItemElement2);
             this.tileItem3.Id = 15;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem2
             // 
-            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement12.Text = "";
-            this.tileItem2.Elements.Add(tileItemElement12);
+            tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement3.Text = "";
+            this.tileItem2.Elements.Add(tileItemElement3);
             this.tileItem2.Id = 12;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
@@ -165,7 +167,7 @@
             this.FavoritesButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesButton.Image")));
             this.FavoritesButton.Location = new System.Drawing.Point(723, 0);
-            this.FavoritesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FavoritesButton.Margin = new System.Windows.Forms.Padding(4);
             this.FavoritesButton.Name = "FavoritesButton";
             this.FavoritesButton.Size = new System.Drawing.Size(31, 28);
             this.FavoritesButton.TabIndex = 13;
@@ -176,7 +178,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(-3, 428);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(755, 255);
@@ -193,7 +195,7 @@
             this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.FavoritesButton);
             this.Controls.Add(this.richTextBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);

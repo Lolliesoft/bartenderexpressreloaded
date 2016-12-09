@@ -14,6 +14,10 @@ using System.Threading;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using SecureApp;
+using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
+
+
 
 namespace bartenderexpressReloaded
 {
@@ -27,13 +31,14 @@ namespace bartenderexpressReloaded
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");          
             DevExpress.LookAndFeel.UserLookAndFeel.Default.UseWindowsXPTheme = false;
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             DevExpress.Skins.SkinManager.EnableFormSkins();
+             
+            
 
             //secureApp
             String abc = @"Software\LollieSoft\Bartender Express";
@@ -49,7 +54,7 @@ namespace bartenderexpressReloaded
 
             bool logic = sec.Algorithm(passwordSt, abc);
             if (logic == true)
-
+    
                 Application.Run(new Form1());
         }
     }

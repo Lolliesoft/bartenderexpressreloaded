@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::bartenderexpressReloaded.SplashScreen1), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
@@ -68,14 +67,14 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
-            this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shotsBindingSource = new System.Windows.Forms.BindingSource();
+            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource();
             this.xpressShotsDataSet = new bartenderexpressReloaded.XpressShotsDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.CheckUpdateBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -97,6 +96,8 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Lolliesoft = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.SocialMedia = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.SocMedia = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.TheBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.DrinksBarItem = new DevExpress.XtraNavBar.NavBarItem();
@@ -115,12 +116,12 @@
             this.LiqueurCabinetGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.IngredientSearch = new DevExpress.XtraNavBar.NavBarItem();
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.punchesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.beersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.liqueursBindingSource = new System.Windows.Forms.BindingSource();
+            this.punchesBindingSource = new System.Windows.Forms.BindingSource();
+            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource();
+            this.beersBindingSource = new System.Windows.Forms.BindingSource();
+            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource();
+            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource();
             this.shotsTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.shotsTableAdapter();
             this.liqueursTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.liqueursTableAdapter();
             this.punchesTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.punchesTableAdapter();
@@ -132,9 +133,9 @@
             this.DeleteDrink = new DevExpress.XtraEditors.SimpleButton();
             this.searchControl8 = new DevExpress.XtraEditors.SearchControl();
             this.CustomNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource();
             this.customDataSet = new bartenderexpressReloaded.CustomDataSet();
-            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource();
             this.myRecipes = new bartenderexpressReloaded.MyRecipes();
             this.CoffeeTeaTab = new System.Windows.Forms.TabPage();
             this.searchControl9 = new DevExpress.XtraEditors.SearchControl();
@@ -160,13 +161,13 @@
             this.DrinksTab = new System.Windows.Forms.TabPage();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource();
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.Favorites = new System.Windows.Forms.TabPage();
             this.DeleteFavorite = new DevExpress.XtraEditors.SimpleButton();
             this.searchControl7 = new DevExpress.XtraEditors.SearchControl();
             this.FavoritesNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.favoritesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.favoritesBindingSource = new System.Windows.Forms.BindingSource();
             this.favoritesDataSet = new bartenderexpressReloaded.FavoritesDataSet();
             this.IngredientsTab = new System.Windows.Forms.TabPage();
             this.searchControl3 = new DevExpress.XtraEditors.SearchControl();
@@ -187,12 +188,12 @@
             this.tileItem6 = new DevExpress.XtraEditors.TileItem();
             this.tileItem4 = new DevExpress.XtraEditors.TileItem();
             this.myRecipesTableAdapter = new bartenderexpressReloaded.MyRecipesTableAdapters.myRecipesTableAdapter();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
             this.ribbonLogoHelper1 = new DevExpress.XtraBars.Ribbon.RibbonLogoHelper();
-            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -318,7 +319,8 @@
             this.ribbonControl1.MaxItemId = 5;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPage1,
+            this.SocialMedia});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl1.Size = new System.Drawing.Size(1209, 179);
             // 
@@ -392,6 +394,7 @@
             this.ribbonGalleryBarItem1.Gallery.ColumnCount = 6;
             galleryItemGroup1.Caption = "Group3";
             galleryItem1.Caption = "Facebook";
+            galleryItem1.HoverImage = ((System.Drawing.Image)(resources.GetObject("galleryItem1.HoverImage")));
             galleryItem1.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem1.Image")));
             galleryItem2.Caption = "Twitter";
             galleryItem2.Image = ((System.Drawing.Image)(resources.GetObject("galleryItem2.Image")));
@@ -512,11 +515,23 @@
             this.Lolliesoft.Glyph = ((System.Drawing.Image)(resources.GetObject("Lolliesoft.Glyph")));
             this.Lolliesoft.ItemLinks.Add(this.CheckUpdateBtn);
             this.Lolliesoft.ItemLinks.Add(this.BuyNow);
-            this.Lolliesoft.ItemLinks.Add(this.ribbonGalleryBarItem1);
             this.Lolliesoft.ItemLinks.Add(this.helpbtn);
             this.Lolliesoft.ItemLinks.Add(this.AboutBtn);
             this.Lolliesoft.Name = "Lolliesoft";
             this.Lolliesoft.Text = "Lolliesoft";
+            // 
+            // SocialMedia
+            // 
+            this.SocialMedia.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.SocMedia});
+            this.SocialMedia.Name = "SocialMedia";
+            this.SocialMedia.Text = "Social";
+            // 
+            // SocMedia
+            // 
+            this.SocMedia.ItemLinks.Add(this.ribbonGalleryBarItem1);
+            this.SocMedia.Name = "SocMedia";
+            this.SocMedia.Text = "Lolliesoft Social Media";
             // 
             // navBarControl1
             // 
@@ -1434,10 +1449,8 @@
             this.tileItem1.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement2.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
-            tileItemElement2.Text = "";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tileItem1.CurrentFrameIndex = 1;
+            tileItemElement2.Text = "Click for a random drink recipe!";
             this.tileItem1.Elements.Add(tileItemElement2);
             tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement3.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
@@ -1924,6 +1937,8 @@
         private DevExpress.XtraBars.BarButtonItem BuyNow;
         private DevExpress.XtraBars.BarButtonItem AboutBtn;
         private DevExpress.XtraBars.BarButtonItem helpbtn;
+        private DevExpress.XtraBars.Ribbon.RibbonPage SocialMedia;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup SocMedia;
     }
 }
 

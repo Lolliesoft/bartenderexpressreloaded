@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
@@ -63,6 +63,7 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Amount});
+            this.listView1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(-3, 0);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
@@ -82,6 +83,7 @@
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Ingredients});
+            this.listView2.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(293, 0);
             this.listView2.Margin = new System.Windows.Forms.Padding(4);
@@ -212,15 +214,15 @@
             this.tileItem1.AppearanceItem.Selected.Options.UseBackColor = true;
             this.tileItem1.AppearanceItem.Selected.Options.UseBorderColor = true;
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement1.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
-            tileItemElement1.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
-            tileItemElement1.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
-            tileItemElement1.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement1.Appearance.Hovered.Options.UseBorderColor = true;
-            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
-            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement1.Text = "";
-            this.tileItem1.Elements.Add(tileItemElement1);
+            tileItemElement5.Appearance.Hovered.BackColor = System.Drawing.Color.Transparent;
+            tileItemElement5.Appearance.Hovered.BackColor2 = System.Drawing.Color.Transparent;
+            tileItemElement5.Appearance.Hovered.BorderColor = System.Drawing.Color.Transparent;
+            tileItemElement5.Appearance.Hovered.Options.UseBackColor = true;
+            tileItemElement5.Appearance.Hovered.Options.UseBorderColor = true;
+            tileItemElement5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement5.Image")));
+            tileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement5.Text = "";
+            this.tileItem1.Elements.Add(tileItemElement5);
             this.tileItem1.Id = 11;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem1.Name = "tileItem1";
@@ -228,30 +230,30 @@
             // 
             // tileItem3
             // 
-            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement2.Text = "";
-            this.tileItem3.Elements.Add(tileItemElement2);
+            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
+            tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement6.Text = "";
+            this.tileItem3.Elements.Add(tileItemElement6);
             this.tileItem3.Id = 15;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem2
             // 
-            tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
-            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement3.Text = "";
-            this.tileItem2.Elements.Add(tileItemElement3);
+            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
+            tileItemElement7.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement7.Text = "";
+            this.tileItem2.Elements.Add(tileItemElement7);
             this.tileItem2.Id = 12;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
             // 
             // tileItem5
             // 
-            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
-            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement4.Text = "tileItem5";
-            this.tileItem5.Elements.Add(tileItemElement4);
+            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
+            tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement8.Text = "tileItem5";
+            this.tileItem5.Elements.Add(tileItemElement8);
             this.tileItem5.Id = 8;
             this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem5.Name = "tileItem5";

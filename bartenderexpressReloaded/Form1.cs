@@ -26,12 +26,15 @@ using DevExpress.Utils.Drawing;
 using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
+using SecureApp;
+
 
 namespace bartenderexpressReloaded
 {
     public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public static ListBoxControl f1ListBox;
+
 
         public Form1()
         {
@@ -41,7 +44,7 @@ namespace bartenderexpressReloaded
             HideSkins(skinsToHide);
             // listBoxControl2 in CabinetSearch
             f1ListBox = IngredientsNameBox;
-
+            RemoveBuyNow();
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
             //This will check whenever client gets focused and there aren't any
@@ -121,8 +124,8 @@ namespace bartenderexpressReloaded
                     //    break;
             }
         }
-    
-    private void Form1_Load(object sender, EventArgs e)
+
+        private void Form1_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < 50; i++)
             {
@@ -152,7 +155,7 @@ namespace bartenderexpressReloaded
             this.shotsTableAdapter.Fill(this.xpressShotsDataSet.shots);
             // TODO: This line of code loads data into the 'bartenderExpressDataSet.recipes' table. You can move, or remove it, as needed.
             this.recipesTableAdapter.Fill(this.bartenderExpressDataSet.recipes);
-           
+
         }
 
         private void nameListCount(object sender, EventArgs e)
@@ -404,7 +407,7 @@ namespace bartenderexpressReloaded
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
                     child.DrinkfavoriteCheckForm1();
-                    
+
 
                     while (reader.Read())
                     {
@@ -1616,7 +1619,7 @@ namespace bartenderexpressReloaded
             {
                 string statusbarrecipe2 = CoffeeTeaNameBox.SelectedValue.ToString();
                 toolStripStatusLabel1.Text = statusbarrecipe2;
-                
+
 
 
                 using (SQLiteConnection conn6 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
@@ -1790,10 +1793,10 @@ namespace bartenderexpressReloaded
                         {
                             child.richTextBox1.Text = rdr[0].ToString();
                         }
-                        
+
                     }
                     conn6.Close();
-                }             
+                }
             }
 
         }
@@ -2197,14 +2200,14 @@ namespace bartenderexpressReloaded
                     //string selectedvalue
 
                     SQLiteCommand cmd = new SQLiteCommand("SELECT DrinkID FROM masterdrinks WHERE name ='" + (statusbarrecipe2.Trim().Replace("'", "''")) + "'", cs106);
-                    
+
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     Form3 child = new Form3();
                     child.Text = f1ListBox.SelectedValue.ToString();
                     child.FavoritesButton.Name = child.Text;
                     child.FavoritesButton.Text = "liqueurCabinet";
-                                
+
                     child.MdiParent = this;
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
@@ -2495,7 +2498,7 @@ namespace bartenderexpressReloaded
             toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
 
         }
-    
+
         private void IngredientsSearch_TextChanged(object sender, EventArgs e)
         {
             IngredientsSearch.Font = new Font("Default", 8, FontStyle.Regular);
@@ -2628,7 +2631,7 @@ namespace bartenderexpressReloaded
             //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
             //string tablename = "drinks";
             //toolStripStatusLabel1.Text = statusbarrecipe;
-            
+
 
             using (SQLiteConnection cs101 = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db"))
             {
@@ -2638,16 +2641,16 @@ namespace bartenderexpressReloaded
                 SQLiteCommand cmd = new SQLiteCommand("SELECT id,name FROM recipes ORDER BY RANDOM() LIMIT 1", cs101);
                 SQLiteDataReader reader = cmd.ExecuteReader();
 
-                
+
 
                 while (reader.Read())
                 {
                     //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
                     string tablename = "drinks";
-                    
+
                     string DrinkName = reader["name"].ToString();
                     toolStripStatusLabel1.Text = DrinkName;
-                    
+
                     // Get Ingredients
                     SQLiteCommand cmding = new SQLiteCommand("SELECT name FROM ingredients INNER JOIN recipeingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs101);
                     SQLiteDataReader rdring = cmding.ExecuteReader();
@@ -3028,17 +3031,17 @@ namespace bartenderexpressReloaded
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
                 }
-            }       
+            }
         }
         private void DeleteDrink_Click(object sender, EventArgs e)
         {
-        
+
             if (CustomNameBox.SelectedValue == null)
 
             {
                 MessageBox.Show("Please Select a recipe to be deleted");
             }
-            
+
             else
             {
                 RemovecustomDrink();
@@ -3069,7 +3072,7 @@ namespace bartenderexpressReloaded
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
                 }
-                
+
             }
         }
         private void DeleteFavorite_Click(object sender, EventArgs e)
@@ -3256,10 +3259,22 @@ namespace bartenderexpressReloaded
             toolTipController1.HideHint();
         }
 
+        void RemoveBuyNow()
+        {
+            String abc = @"Software\LollieSoft\Bartender Express";
+   
+                Microsoft.Win32.RegistryKey regkey = Microsoft.Win32.Registry.CurrentUser;
+                regkey = regkey.CreateSubKey(abc); //path
+                string Br = (string)regkey.GetValue("Password");
+            if (string.IsNullOrEmpty(Br) == false)
+            {
+                Lolliesoft.Ribbon.Items.Remove(BuyNow);
+            }            
+        }
     }
-
 }
-    
+
+
 
    
 
