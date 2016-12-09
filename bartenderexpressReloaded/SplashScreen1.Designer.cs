@@ -47,33 +47,37 @@
             // marqueeProgressBarControl1
             // 
             this.marqueeProgressBarControl1.EditValue = 0;
-            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(12, 336);
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(16, 414);
+            this.marqueeProgressBarControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
             this.marqueeProgressBarControl1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(520, 20);
+            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(693, 25);
             this.marqueeProgressBarControl1.TabIndex = 5;
             // 
             // labelControl1
             // 
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl1.Location = new System.Drawing.Point(209, 313);
+            this.labelControl1.Location = new System.Drawing.Point(279, 385);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(115, 13);
+            this.labelControl1.Size = new System.Drawing.Size(135, 16);
             this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Copyright © 1996-2016";
+            this.labelControl1.Text = "Copyright © 1996-2017";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(13, 313);
+            this.labelControl2.Location = new System.Drawing.Point(17, 385);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(50, 13);
+            this.labelControl2.Size = new System.Drawing.Size(57, 16);
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "Starting...";
             // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(13, 21);
+            this.pictureEdit2.Location = new System.Drawing.Point(17, 26);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.AllowFocused = false;
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -82,61 +86,65 @@
             this.pictureEdit2.Properties.ShowMenu = false;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit2.Properties.ZoomPercent = 60D;
-            this.pictureEdit2.Size = new System.Drawing.Size(520, 283);
+            this.pictureEdit2.Size = new System.Drawing.Size(693, 348);
             this.pictureEdit2.TabIndex = 9;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(165, 360);
+            this.pictureEdit1.Location = new System.Drawing.Point(220, 443);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.AllowFocused = false;
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.pictureEdit1.Properties.ShowMenu = false;
-            this.pictureEdit1.Size = new System.Drawing.Size(213, 48);
+            this.pictureEdit1.Size = new System.Drawing.Size(284, 59);
             this.pictureEdit1.TabIndex = 8;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(407, 313);
+            this.labelControl3.Location = new System.Drawing.Point(543, 385);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(122, 13);
+            this.labelControl3.Size = new System.Drawing.Size(146, 16);
             this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "http://www.lolliesoft.com";
             // 
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(483, 362);
+            this.pictureEdit3.Location = new System.Drawing.Point(644, 446);
+            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(50, 50);
+            this.pictureEdit3.Size = new System.Drawing.Size(67, 62);
             this.pictureEdit3.TabIndex = 11;
             // 
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(13, 362);
+            this.pictureEdit4.Location = new System.Drawing.Point(17, 446);
+            this.pictureEdit4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit4.Size = new System.Drawing.Size(50, 50);
+            this.pictureEdit4.Size = new System.Drawing.Size(67, 62);
             this.pictureEdit4.TabIndex = 12;
             // 
             // SplashScreen1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(545, 416);
+            this.ClientSize = new System.Drawing.Size(727, 512);
             this.Controls.Add(this.pictureEdit4);
             this.Controls.Add(this.pictureEdit3);
             this.Controls.Add(this.labelControl3);
@@ -145,6 +153,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.marqueeProgressBarControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SplashScreen1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).EndInit();

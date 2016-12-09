@@ -3271,6 +3271,18 @@ namespace bartenderexpressReloaded
                 Lolliesoft.Ribbon.Items.Remove(BuyNow);
             }            
         }
+
+        private void AboutBtn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            XtraMessageBox.Show ("Bartender Express Version 4.0\nCopyright © 1996-2017 LollieSoft Inc.\nwww.lolliesoft.com", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            
+            //Form newForm = new Form();
+            
+            //newForm.ShowDialog();
+
+        }
     }
 }
 
