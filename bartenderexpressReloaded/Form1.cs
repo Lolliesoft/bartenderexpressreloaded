@@ -28,7 +28,6 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
 using SecureApp;
 
-
 namespace bartenderexpressReloaded
 {
     public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -3275,13 +3274,16 @@ namespace bartenderexpressReloaded
         private void AboutBtn_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            XtraMessageBox.Show ("Bartender Express Version 4.0\nCopyright © 1996-2017 LollieSoft Inc.\nwww.lolliesoft.com", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Bartender Express Version 4.0\nCopyright © 1996-2017 LollieSoft Inc.\nwww.lolliesoft.com", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
-            //Form newForm = new Form();
-            
-            //newForm.ShowDialog();
+        }
 
+        private void Facebook_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Facebook child = new Facebook();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
         }
     }
 }
