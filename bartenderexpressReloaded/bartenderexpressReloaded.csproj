@@ -164,6 +164,12 @@
     <Compile Include="BAC Calculator.Designer.cs">
       <DependentUpon>BAC Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="BarMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarMap.Designer.cs">
+      <DependentUpon>BarMap.cs</DependentUpon>
+    </Compile>
     <Compile Include="bartenderExpressDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -245,6 +251,9 @@
     </Compile>
     <EmbeddedResource Include="BAC Calculator.resx">
       <DependentUpon>BAC Calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarMap.resx">
+      <DependentUpon>BarMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="customRecipes.resx">
       <DependentUpon>customRecipes.cs</DependentUpon>

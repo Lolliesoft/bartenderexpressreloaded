@@ -3285,6 +3285,14 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.   
             child.Show();
         }
+
+        private void barFinder_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BarMap child = new BarMap();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
+        }
     }
 }
 
