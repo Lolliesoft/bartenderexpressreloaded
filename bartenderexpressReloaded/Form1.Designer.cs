@@ -327,7 +327,7 @@
             this.ribbonPage1,
             this.SocialMedia});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl1.Size = new System.Drawing.Size(1296, 179);
+            this.ribbonControl1.Size = new System.Drawing.Size(1588, 179);
             // 
             // CheckUpdateBtn
             // 
@@ -1260,7 +1260,7 @@
             this.WizardPages.Controls.Add(this.Favorites);
             this.WizardPages.Controls.Add(this.IngredientsTab);
             this.WizardPages.Dock = System.Windows.Forms.DockStyle.Right;
-            this.WizardPages.Location = new System.Drawing.Point(958, 179);
+            this.WizardPages.Location = new System.Drawing.Point(1250, 179);
             this.WizardPages.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WizardPages.Multiline = true;
             this.WizardPages.Name = "WizardPages";
@@ -1410,7 +1410,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(204, 899);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.statusStrip1.Size = new System.Drawing.Size(754, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1046, 25);
             this.statusStrip1.Stretch = true;
             this.statusStrip1.TabIndex = 15;
             this.statusStrip1.Text = "toolStrip1";
@@ -1439,7 +1439,7 @@
             this.tileControl1.Padding = new System.Windows.Forms.Padding(28, 22, 20, 22);
             this.tileControl1.ScrollButtonFadeAnimationTime = 6000;
             this.tileControl1.SelectionColor = System.Drawing.Color.Transparent;
-            this.tileControl1.Size = new System.Drawing.Size(754, 720);
+            this.tileControl1.Size = new System.Drawing.Size(1046, 720);
             this.tileControl1.TabIndex = 21;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -1597,8 +1597,7 @@
             this.tileItem11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem11.BackgroundImage")));
             tileItemElement9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement9.Image")));
             tileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement9.Text = "Lolliesoft";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
+            tileItemElement9.Text = "";
             this.tileItem11.Elements.Add(tileItemElement9);
             this.tileItem11.Id = 26;
             this.tileItem11.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
@@ -1647,11 +1646,25 @@
             this.tileItem7.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem7.BackgroundImage")));
             this.tileItem7.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
-            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement12.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement12.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement12.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem7.CurrentFrameIndex = 1;
+            tileItemElement12.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement12.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement12.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement12.Appearance.Normal.Options.UseFont = true;
+            tileItemElement12.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement12.Appearance.Selected.Options.UseFont = true;
+            tileItemElement12.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement12.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement12.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement12.Text = "Check for the latest version of Bartender Express";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement12.TextLocation = new System.Drawing.Point(4, 11);
             this.tileItem7.Elements.Add(tileItemElement12);
             this.tileItem7.FrameAnimationInterval = 3700;
             tileItemFrame5.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
@@ -1881,7 +1894,7 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1296, 924);
+            this.ClientSize = new System.Drawing.Size(1588, 924);
             this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.WizardPages);
