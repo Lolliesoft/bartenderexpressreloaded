@@ -433,6 +433,7 @@
             this.Favorite.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("Favorite.LargeGlyph")));
             this.Favorite.LargeImageIndex = 0;
             this.Favorite.Name = "Favorite";
+            this.Favorite.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.navBarItem1_LinkClicked);
             // 
             // Liqueur
             // 
@@ -465,6 +466,7 @@
             this.BuyNow.Id = 2;
             this.BuyNow.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("BuyNow.LargeGlyph")));
             this.BuyNow.Name = "BuyNow";
+            this.BuyNow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BuyNow_ItemClick);
             // 
             // AboutBtn
             // 
@@ -1573,6 +1575,7 @@
             this.tileItem9.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem9.Name = "tileItem9";
             this.tileItem9.TextShowMode = DevExpress.XtraEditors.TileItemContentShowMode.Hover;
+            this.tileItem9.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem9_ItemClick);
             // 
             // tileItem3
             // 
@@ -1606,6 +1609,7 @@
             this.tileItem11.Id = 26;
             this.tileItem11.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem11.Name = "tileItem11";
+            this.tileItem11.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem11_ItemClick);
             // 
             // tileItem5
             // 
@@ -1642,6 +1646,7 @@
             this.tileItem10.Id = 32;
             this.tileItem10.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem10.Name = "tileItem10";
+            this.tileItem10.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem10_ItemClick);
             // 
             // tileItem7
             // 
@@ -2044,7 +2049,6 @@
         private DevExpress.XtraEditors.TileItem tileItem6;
         private DevExpress.XtraEditors.TileItem tileItem4;
         private DevExpress.XtraEditors.TileItem tileItem5;
-        private DevExpress.XtraEditors.TileItem tileItem3;
         private System.Windows.Forms.BindingSource myRecipesBindingSource;
         private DevExpress.XtraNavBar.NavBarItem My_Recipes;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
@@ -2108,6 +2112,7 @@
         private DevExpress.XtraEditors.TileItem tileItem11;
         private DevExpress.XtraEditors.TileItem tileItem10;
         private DevExpress.XtraEditors.TileGroup tileGroup1;
+        private DevExpress.XtraEditors.TileItem tileItem3;
     }
 }
 
