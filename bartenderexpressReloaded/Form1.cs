@@ -3293,6 +3293,46 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.   
             child.Show();
         }
+
+        private void tileItem11_ItemClick(object sender, TileItemEventArgs e)
+        {
+            Lolliesoft child = new Lolliesoft();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
+        }
+
+        private void tileItem10_ItemClick(object sender, TileItemEventArgs e)
+        {
+            WizardPages.SelectedTab = Favorites;
+            FavoritesNameBox.Show();
+            FavoritesNameBox.Focus();
+            toolStripStatusLabel1.Text = (this.FavoritesNameBox.ItemCount.ToString()) + " Favorites Recipes ";
+        }
+
+        private void navBarItem1_LinkClicked(object sender, ItemClickEventArgs e)
+        {
+            WizardPages.SelectedTab = Favorites;
+            FavoritesNameBox.Show();
+            FavoritesNameBox.Focus();
+            toolStripStatusLabel1.Text = (this.FavoritesNameBox.ItemCount.ToString()) + " Favorites Recipes ";
+        }
+
+        private void tileItem9_ItemClick(object sender, TileItemEventArgs e)
+        {
+            Twitter child = new Twitter();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
+        }
+
+        private void BuyNow_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BuyNow child = new BuyNow();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
+        }
     }
 }
 

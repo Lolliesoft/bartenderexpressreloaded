@@ -188,6 +188,24 @@
     <Compile Include="customRecipes.Designer.cs">
       <DependentUpon>customRecipes.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyNow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyNow.Designer.cs">
+      <DependentUpon>BuyNow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Twitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Twitter.Designer.cs">
+      <DependentUpon>Twitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lolliesoft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lolliesoft.Designer.cs">
+      <DependentUpon>Lolliesoft.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facebook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +275,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customRecipes.resx">
       <DependentUpon>customRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyNow.resx">
+      <DependentUpon>BuyNow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Twitter.resx">
+      <DependentUpon>Twitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lolliesoft.resx">
+      <DependentUpon>Lolliesoft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facebook.resx">
       <DependentUpon>Facebook.cs</DependentUpon>
