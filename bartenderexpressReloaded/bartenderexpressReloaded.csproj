@@ -330,6 +330,7 @@
       <DependentUpon>bartenderExpressDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="CustomDataSet1.xsc">
       <DependentUpon>CustomDataSet1.xsd</DependentUpon>
     </None>

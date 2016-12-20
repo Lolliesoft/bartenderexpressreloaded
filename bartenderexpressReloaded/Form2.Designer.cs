@@ -122,12 +122,14 @@
             // 
             // FavoritesDrinkButton
             // 
+            this.FavoritesDrinkButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.FavoritesDrinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FavoritesDrinkButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesDrinkButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesDrinkButton.Image")));
-            this.FavoritesDrinkButton.Location = new System.Drawing.Point(714, 1);
+            this.FavoritesDrinkButton.Location = new System.Drawing.Point(730, 0);
             this.FavoritesDrinkButton.Margin = new System.Windows.Forms.Padding(4);
             this.FavoritesDrinkButton.Name = "FavoritesDrinkButton";
-            this.FavoritesDrinkButton.Size = new System.Drawing.Size(29, 27);
+            this.FavoritesDrinkButton.Size = new System.Drawing.Size(21, 24);
             this.FavoritesDrinkButton.TabIndex = 6;
             this.FavoritesDrinkButton.Tag = "Add to Favorites";
             this.FavoritesDrinkButton.Text = "button1";

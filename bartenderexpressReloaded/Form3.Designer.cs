@@ -89,12 +89,14 @@
             // 
             // FavoritesButton
             // 
+            this.FavoritesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.FavoritesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FavoritesButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesButton.Image")));
-            this.FavoritesButton.Location = new System.Drawing.Point(714, 1);
+            this.FavoritesButton.Location = new System.Drawing.Point(730, 0);
             this.FavoritesButton.Margin = new System.Windows.Forms.Padding(4);
             this.FavoritesButton.Name = "FavoritesButton";
-            this.FavoritesButton.Size = new System.Drawing.Size(29, 27);
+            this.FavoritesButton.Size = new System.Drawing.Size(21, 24);
             this.FavoritesButton.TabIndex = 7;
             this.FavoritesButton.Tag = "Add to Favorites";
             this.FavoritesButton.Text = "FavoritesButton";
