@@ -3333,6 +3333,11 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.   
             child.Show();
         }
+
+        private void helpbtn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressPro.chm");
+        }
     }
 }
 

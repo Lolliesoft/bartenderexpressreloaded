@@ -484,6 +484,7 @@
             this.helpbtn.Id = 4;
             this.helpbtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("helpbtn.LargeGlyph")));
             this.helpbtn.Name = "helpbtn";
+            this.helpbtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.helpbtn_ItemClick);
             // 
             // Facebook
             // 
@@ -780,7 +781,7 @@
             this.CustomTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CustomTab.Name = "CustomTab";
             this.CustomTab.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CustomTab.Size = new System.Drawing.Size(330, 569);
+            this.CustomTab.Size = new System.Drawing.Size(330, 533);
             this.CustomTab.TabIndex = 8;
             this.CustomTab.Text = "CustomRecipes";
             this.CustomTab.UseVisualStyleBackColor = true;
@@ -824,7 +825,7 @@
             this.CustomNameBox.Location = new System.Drawing.Point(1, 30);
             this.CustomNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CustomNameBox.Name = "CustomNameBox";
-            this.CustomNameBox.Size = new System.Drawing.Size(327, 536);
+            this.CustomNameBox.Size = new System.Drawing.Size(327, 500);
             this.CustomNameBox.TabIndex = 1;
             this.CustomNameBox.ValueMember = "name";
             this.CustomNameBox.SelectedIndexChanged += new System.EventHandler(this.CustomNameBox_SelectedIndexChanged);
@@ -861,7 +862,7 @@
             this.CoffeeTeaTab.Location = new System.Drawing.Point(4, 67);
             this.CoffeeTeaTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CoffeeTeaTab.Name = "CoffeeTeaTab";
-            this.CoffeeTeaTab.Size = new System.Drawing.Size(330, 569);
+            this.CoffeeTeaTab.Size = new System.Drawing.Size(330, 533);
             this.CoffeeTeaTab.TabIndex = 7;
             this.CoffeeTeaTab.Text = "CoffeeTea";
             this.CoffeeTeaTab.UseVisualStyleBackColor = true;
@@ -895,7 +896,7 @@
             this.CoffeeTeaNameBox.Location = new System.Drawing.Point(1, 30);
             this.CoffeeTeaNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CoffeeTeaNameBox.Name = "CoffeeTeaNameBox";
-            this.CoffeeTeaNameBox.Size = new System.Drawing.Size(327, 536);
+            this.CoffeeTeaNameBox.Size = new System.Drawing.Size(327, 500);
             this.CoffeeTeaNameBox.TabIndex = 11;
             this.CoffeeTeaNameBox.ValueMember = "name";
             this.CoffeeTeaNameBox.Click += new System.EventHandler(this.CoffeeTeaListCount);
@@ -911,7 +912,7 @@
             this.nonAlcoholicTab.Location = new System.Drawing.Point(4, 67);
             this.nonAlcoholicTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nonAlcoholicTab.Name = "nonAlcoholicTab";
-            this.nonAlcoholicTab.Size = new System.Drawing.Size(330, 569);
+            this.nonAlcoholicTab.Size = new System.Drawing.Size(330, 533);
             this.nonAlcoholicTab.TabIndex = 6;
             this.nonAlcoholicTab.Text = "nonAlcoholic";
             this.nonAlcoholicTab.UseVisualStyleBackColor = true;
@@ -944,7 +945,7 @@
             this.NonAlcoholicNameBox.Location = new System.Drawing.Point(1, 30);
             this.NonAlcoholicNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NonAlcoholicNameBox.Name = "NonAlcoholicNameBox";
-            this.NonAlcoholicNameBox.Size = new System.Drawing.Size(327, 536);
+            this.NonAlcoholicNameBox.Size = new System.Drawing.Size(327, 500);
             this.NonAlcoholicNameBox.TabIndex = 10;
             this.NonAlcoholicNameBox.ValueMember = "NAME";
             this.NonAlcoholicNameBox.Click += new System.EventHandler(this.NonAlcoholicListCount);
@@ -960,7 +961,7 @@
             this.BeerAlesTab.Location = new System.Drawing.Point(4, 67);
             this.BeerAlesTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BeerAlesTab.Name = "BeerAlesTab";
-            this.BeerAlesTab.Size = new System.Drawing.Size(330, 569);
+            this.BeerAlesTab.Size = new System.Drawing.Size(330, 533);
             this.BeerAlesTab.TabIndex = 5;
             this.BeerAlesTab.Text = "BeerandAles";
             this.BeerAlesTab.UseVisualStyleBackColor = true;
@@ -993,7 +994,7 @@
             this.BeerAleNameBox.Location = new System.Drawing.Point(1, 30);
             this.BeerAleNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BeerAleNameBox.Name = "BeerAleNameBox";
-            this.BeerAleNameBox.Size = new System.Drawing.Size(327, 536);
+            this.BeerAleNameBox.Size = new System.Drawing.Size(327, 500);
             this.BeerAleNameBox.TabIndex = 9;
             this.BeerAleNameBox.ValueMember = "name";
             this.BeerAleNameBox.Click += new System.EventHandler(this.BeerListCount);
@@ -1009,7 +1010,7 @@
             this.CocktailsTab.Location = new System.Drawing.Point(4, 67);
             this.CocktailsTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CocktailsTab.Name = "CocktailsTab";
-            this.CocktailsTab.Size = new System.Drawing.Size(330, 569);
+            this.CocktailsTab.Size = new System.Drawing.Size(330, 533);
             this.CocktailsTab.TabIndex = 4;
             this.CocktailsTab.Text = "Cocktails";
             this.CocktailsTab.UseVisualStyleBackColor = true;
@@ -1042,7 +1043,7 @@
             this.CocktailsNameBox.Location = new System.Drawing.Point(1, 30);
             this.CocktailsNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CocktailsNameBox.Name = "CocktailsNameBox";
-            this.CocktailsNameBox.Size = new System.Drawing.Size(327, 536);
+            this.CocktailsNameBox.Size = new System.Drawing.Size(327, 500);
             this.CocktailsNameBox.TabIndex = 8;
             this.CocktailsNameBox.ValueMember = "NAME";
             this.CocktailsNameBox.DoubleClick += new System.EventHandler(this.CocktailsNameBox_DoubleClick);
@@ -1057,7 +1058,7 @@
             this.PunchesTab.Location = new System.Drawing.Point(4, 67);
             this.PunchesTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PunchesTab.Name = "PunchesTab";
-            this.PunchesTab.Size = new System.Drawing.Size(330, 569);
+            this.PunchesTab.Size = new System.Drawing.Size(330, 533);
             this.PunchesTab.TabIndex = 3;
             this.PunchesTab.Text = "Punches";
             this.PunchesTab.UseVisualStyleBackColor = true;
@@ -1090,7 +1091,7 @@
             this.PunchesNameBox.Location = new System.Drawing.Point(1, 30);
             this.PunchesNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PunchesNameBox.Name = "PunchesNameBox";
-            this.PunchesNameBox.Size = new System.Drawing.Size(327, 536);
+            this.PunchesNameBox.Size = new System.Drawing.Size(327, 500);
             this.PunchesNameBox.TabIndex = 7;
             this.PunchesNameBox.ValueMember = "name";
             this.PunchesNameBox.Click += new System.EventHandler(this.PunchesListCount);
@@ -1106,7 +1107,7 @@
             this.LiqueursTab.Location = new System.Drawing.Point(4, 67);
             this.LiqueursTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LiqueursTab.Name = "LiqueursTab";
-            this.LiqueursTab.Size = new System.Drawing.Size(330, 569);
+            this.LiqueursTab.Size = new System.Drawing.Size(330, 533);
             this.LiqueursTab.TabIndex = 2;
             this.LiqueursTab.Text = "Liqueurs";
             this.LiqueursTab.UseVisualStyleBackColor = true;
@@ -1139,7 +1140,7 @@
             this.LiqueursNameBox.Location = new System.Drawing.Point(1, 30);
             this.LiqueursNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LiqueursNameBox.Name = "LiqueursNameBox";
-            this.LiqueursNameBox.Size = new System.Drawing.Size(327, 536);
+            this.LiqueursNameBox.Size = new System.Drawing.Size(327, 500);
             this.LiqueursNameBox.TabIndex = 6;
             this.LiqueursNameBox.ValueMember = "name";
             this.LiqueursNameBox.Click += new System.EventHandler(this.LiqueursListCount);
@@ -1155,7 +1156,7 @@
             this.ShotsTab.Location = new System.Drawing.Point(4, 67);
             this.ShotsTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ShotsTab.Name = "ShotsTab";
-            this.ShotsTab.Size = new System.Drawing.Size(330, 569);
+            this.ShotsTab.Size = new System.Drawing.Size(330, 533);
             this.ShotsTab.TabIndex = 1;
             this.ShotsTab.Text = "Shots";
             this.ShotsTab.UseVisualStyleBackColor = true;
@@ -1188,7 +1189,7 @@
             this.ShotsNameBox.Location = new System.Drawing.Point(1, 30);
             this.ShotsNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ShotsNameBox.Name = "ShotsNameBox";
-            this.ShotsNameBox.Size = new System.Drawing.Size(327, 536);
+            this.ShotsNameBox.Size = new System.Drawing.Size(327, 500);
             this.ShotsNameBox.TabIndex = 5;
             this.ShotsNameBox.ValueMember = "name";
             this.ShotsNameBox.Click += new System.EventHandler(this.ShotListCount);
@@ -1284,7 +1285,7 @@
             this.Favorites.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Favorites.Name = "Favorites";
             this.Favorites.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Favorites.Size = new System.Drawing.Size(330, 569);
+            this.Favorites.Size = new System.Drawing.Size(330, 533);
             this.Favorites.TabIndex = 9;
             this.Favorites.Text = "Favorites";
             this.Favorites.UseVisualStyleBackColor = true;
@@ -1328,7 +1329,7 @@
             this.FavoritesNameBox.Location = new System.Drawing.Point(1, 30);
             this.FavoritesNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FavoritesNameBox.Name = "FavoritesNameBox";
-            this.FavoritesNameBox.Size = new System.Drawing.Size(327, 536);
+            this.FavoritesNameBox.Size = new System.Drawing.Size(327, 500);
             this.FavoritesNameBox.TabIndex = 0;
             this.FavoritesNameBox.ValueMember = "name";
             this.FavoritesNameBox.DoubleClick += new System.EventHandler(this.FavoritesNameBox_DoubleClick);
@@ -1352,7 +1353,7 @@
             this.IngredientsTab.Location = new System.Drawing.Point(4, 67);
             this.IngredientsTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IngredientsTab.Name = "IngredientsTab";
-            this.IngredientsTab.Size = new System.Drawing.Size(330, 569);
+            this.IngredientsTab.Size = new System.Drawing.Size(330, 533);
             this.IngredientsTab.TabIndex = 10;
             this.IngredientsTab.Text = "IngredientsTab";
             this.IngredientsTab.UseVisualStyleBackColor = true;
@@ -1383,7 +1384,7 @@
             this.IngredientsNameBox.Location = new System.Drawing.Point(1, 31);
             this.IngredientsNameBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IngredientsNameBox.Name = "IngredientsNameBox";
-            this.IngredientsNameBox.Size = new System.Drawing.Size(327, 536);
+            this.IngredientsNameBox.Size = new System.Drawing.Size(327, 500);
             this.IngredientsNameBox.TabIndex = 4;
             this.IngredientsNameBox.TabStopChanged += new System.EventHandler(this.IngredientsNameBox_TabStopChanged);
             this.IngredientsNameBox.DoubleClick += new System.EventHandler(this.IngredientsNameBox_DoubleClick);
