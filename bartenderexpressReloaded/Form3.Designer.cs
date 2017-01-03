@@ -113,6 +113,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.Text = "Form3";

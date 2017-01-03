@@ -76,7 +76,7 @@ namespace bartenderexpressReloaded
         {
             //check to see if button should be disabled, check if it has a favorite value of true
 
-
+            
             FavoritesDrinkButton.Enabled = false;
             string FavoriteName = FavoritesDrinkButton.Name;
             string FavoritesTable = FavoritesDrinkButton.Text;
