@@ -26,7 +26,8 @@ namespace bartenderexpressReloaded.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\Aku\\AppData\\Roaming\\Lolliesoft\\bartenderExpress.db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\PCH-BurneyA.PCH\\AppData\\Roaming\\Lolliesoft\\bartenderExpress." +
+            "db")]
         public string bartenderExpressConnectionString {
             get {
                 return ((string)(this["bartenderExpressConnectionString"]));
@@ -36,7 +37,7 @@ namespace bartenderexpressReloaded.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\Aku\\AppData\\Roaming\\Lolliesoft\\XpressShots.db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\PCH-BurneyA.PCH\\AppData\\Roaming\\Lolliesoft\\XpressShots.db")]
         public string XpressShotsConnectionString {
             get {
                 return ((string)(this["XpressShotsConnectionString"]));
@@ -46,7 +47,7 @@ namespace bartenderexpressReloaded.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\Aku\\AppData\\Roaming\\Lolliesoft\\Custom.db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\PCH-BurneyA.PCH\\AppData\\Roaming\\Lolliesoft\\Custom.db")]
         public string Custom {
             get {
                 return ((string)(this["Custom"]));
