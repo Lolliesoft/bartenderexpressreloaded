@@ -104,44 +104,41 @@
             // DrinkNameLabel
             // 
             this.DrinkNameLabel.AutoSize = true;
-            this.DrinkNameLabel.Location = new System.Drawing.Point(13, 16);
+            this.DrinkNameLabel.Location = new System.Drawing.Point(11, 13);
             this.DrinkNameLabel.Name = "DrinkNameLabel";
-            this.DrinkNameLabel.Size = new System.Drawing.Size(79, 17);
+            this.DrinkNameLabel.Size = new System.Drawing.Size(61, 13);
             this.DrinkNameLabel.TabIndex = 0;
             this.DrinkNameLabel.Text = "Drink Name";
             // 
             // amt1Label
             // 
             this.amt1Label.AutoSize = true;
-            this.amt1Label.Location = new System.Drawing.Point(14, 46);
+            this.amt1Label.Location = new System.Drawing.Point(12, 37);
             this.amt1Label.Name = "amt1Label";
-            this.amt1Label.Size = new System.Drawing.Size(74, 17);
+            this.amt1Label.Size = new System.Drawing.Size(57, 13);
             this.amt1Label.TabIndex = 1;
             this.amt1Label.Text = "Amount 1:";
             // 
             // txtDrinkName
             // 
-            this.txtDrinkName.Location = new System.Drawing.Point(86, 12);
-            this.txtDrinkName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDrinkName.Location = new System.Drawing.Point(74, 10);
             this.txtDrinkName.Name = "txtDrinkName";
-            this.txtDrinkName.Size = new System.Drawing.Size(509, 23);
-            this.txtDrinkName.TabIndex = 2;
+            this.txtDrinkName.Size = new System.Drawing.Size(437, 21);
+            this.txtDrinkName.TabIndex = 1;
             // 
             // txtAmt1
             // 
-            this.txtAmt1.Location = new System.Drawing.Point(85, 42);
-            this.txtAmt1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt1.Location = new System.Drawing.Point(73, 34);
             this.txtAmt1.Name = "txtAmt1";
-            this.txtAmt1.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt1.TabIndex = 3;
+            this.txtAmt1.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt1.TabIndex = 2;
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(509, 536);
-            this.Save.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Save.Location = new System.Drawing.Point(436, 436);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(87, 28);
-            this.Save.TabIndex = 4;
+            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.TabIndex = 33;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
@@ -149,135 +146,134 @@
             // Ingredient1Label
             // 
             this.Ingredient1Label.AutoSize = true;
-            this.Ingredient1Label.Location = new System.Drawing.Point(297, 46);
+            this.Ingredient1Label.Location = new System.Drawing.Point(255, 37);
             this.Ingredient1Label.Name = "Ingredient1Label";
-            this.Ingredient1Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient1Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient1Label.TabIndex = 5;
             this.Ingredient1Label.Text = "Ingredient 1:";
             // 
             // Ing1
             // 
-            this.Ing1.Location = new System.Drawing.Point(383, 44);
-            this.Ing1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing1.Location = new System.Drawing.Point(328, 36);
             this.Ing1.Name = "Ing1";
-            this.Ing1.Size = new System.Drawing.Size(213, 23);
-            this.Ing1.TabIndex = 6;
+            this.Ing1.Size = new System.Drawing.Size(183, 21);
+            this.Ing1.TabIndex = 3;
             this.Ing1.Text = " ";
             // 
             // amt2Label
             // 
             this.amt2Label.AutoSize = true;
-            this.amt2Label.Location = new System.Drawing.Point(14, 69);
+            this.amt2Label.Location = new System.Drawing.Point(12, 56);
             this.amt2Label.Name = "amt2Label";
-            this.amt2Label.Size = new System.Drawing.Size(74, 17);
+            this.amt2Label.Size = new System.Drawing.Size(57, 13);
             this.amt2Label.TabIndex = 7;
             this.amt2Label.Text = "Amount 2:";
             // 
             // amt3Label
             // 
             this.amt3Label.AutoSize = true;
-            this.amt3Label.Location = new System.Drawing.Point(14, 91);
+            this.amt3Label.Location = new System.Drawing.Point(12, 74);
             this.amt3Label.Name = "amt3Label";
-            this.amt3Label.Size = new System.Drawing.Size(74, 17);
+            this.amt3Label.Size = new System.Drawing.Size(57, 13);
             this.amt3Label.TabIndex = 8;
             this.amt3Label.Text = "Amount 3:";
             // 
             // amt4Label
             // 
             this.amt4Label.AutoSize = true;
-            this.amt4Label.Location = new System.Drawing.Point(13, 116);
+            this.amt4Label.Location = new System.Drawing.Point(11, 94);
             this.amt4Label.Name = "amt4Label";
-            this.amt4Label.Size = new System.Drawing.Size(74, 17);
+            this.amt4Label.Size = new System.Drawing.Size(57, 13);
             this.amt4Label.TabIndex = 9;
             this.amt4Label.Text = "Amount 4:";
             // 
             // amt5Label
             // 
             this.amt5Label.AutoSize = true;
-            this.amt5Label.Location = new System.Drawing.Point(14, 140);
+            this.amt5Label.Location = new System.Drawing.Point(12, 114);
             this.amt5Label.Name = "amt5Label";
-            this.amt5Label.Size = new System.Drawing.Size(74, 17);
+            this.amt5Label.Size = new System.Drawing.Size(57, 13);
             this.amt5Label.TabIndex = 10;
             this.amt5Label.Text = "Amount 5:";
             // 
             // amt6Label
             // 
             this.amt6Label.AutoSize = true;
-            this.amt6Label.Location = new System.Drawing.Point(14, 166);
+            this.amt6Label.Location = new System.Drawing.Point(12, 135);
             this.amt6Label.Name = "amt6Label";
-            this.amt6Label.Size = new System.Drawing.Size(74, 17);
+            this.amt6Label.Size = new System.Drawing.Size(57, 13);
             this.amt6Label.TabIndex = 11;
             this.amt6Label.Text = "Amount 6:";
             // 
             // amt7Label
             // 
             this.amt7Label.AutoSize = true;
-            this.amt7Label.Location = new System.Drawing.Point(14, 191);
+            this.amt7Label.Location = new System.Drawing.Point(12, 155);
             this.amt7Label.Name = "amt7Label";
-            this.amt7Label.Size = new System.Drawing.Size(74, 17);
+            this.amt7Label.Size = new System.Drawing.Size(57, 13);
             this.amt7Label.TabIndex = 12;
             this.amt7Label.Text = "Amount 7:";
             // 
             // amt8Label
             // 
             this.amt8Label.AutoSize = true;
-            this.amt8Label.Location = new System.Drawing.Point(15, 217);
+            this.amt8Label.Location = new System.Drawing.Point(13, 176);
             this.amt8Label.Name = "amt8Label";
-            this.amt8Label.Size = new System.Drawing.Size(74, 17);
+            this.amt8Label.Size = new System.Drawing.Size(57, 13);
             this.amt8Label.TabIndex = 13;
             this.amt8Label.Text = "Amount 8:";
             // 
             // amt9Label
             // 
             this.amt9Label.AutoSize = true;
-            this.amt9Label.Location = new System.Drawing.Point(15, 240);
+            this.amt9Label.Location = new System.Drawing.Point(13, 195);
             this.amt9Label.Name = "amt9Label";
-            this.amt9Label.Size = new System.Drawing.Size(74, 17);
+            this.amt9Label.Size = new System.Drawing.Size(57, 13);
             this.amt9Label.TabIndex = 14;
             this.amt9Label.Text = "Amount 9:";
             // 
             // amt10Label
             // 
             this.amt10Label.AutoSize = true;
-            this.amt10Label.Location = new System.Drawing.Point(15, 263);
+            this.amt10Label.Location = new System.Drawing.Point(13, 214);
             this.amt10Label.Name = "amt10Label";
-            this.amt10Label.Size = new System.Drawing.Size(82, 17);
+            this.amt10Label.Size = new System.Drawing.Size(63, 13);
             this.amt10Label.TabIndex = 15;
             this.amt10Label.Text = "Amount 10:";
             // 
             // amt11Label
             // 
             this.amt11Label.AutoSize = true;
-            this.amt11Label.Location = new System.Drawing.Point(15, 289);
+            this.amt11Label.Location = new System.Drawing.Point(13, 235);
             this.amt11Label.Name = "amt11Label";
-            this.amt11Label.Size = new System.Drawing.Size(82, 17);
+            this.amt11Label.Size = new System.Drawing.Size(63, 13);
             this.amt11Label.TabIndex = 16;
             this.amt11Label.Text = "Amount 11:";
             // 
             // amt12Label
             // 
             this.amt12Label.AutoSize = true;
-            this.amt12Label.Location = new System.Drawing.Point(15, 315);
+            this.amt12Label.Location = new System.Drawing.Point(13, 256);
             this.amt12Label.Name = "amt12Label";
-            this.amt12Label.Size = new System.Drawing.Size(82, 17);
+            this.amt12Label.Size = new System.Drawing.Size(63, 13);
             this.amt12Label.TabIndex = 17;
             this.amt12Label.Text = "Amount 12:";
             // 
             // amt13Label
             // 
             this.amt13Label.AutoSize = true;
-            this.amt13Label.Location = new System.Drawing.Point(15, 341);
+            this.amt13Label.Location = new System.Drawing.Point(13, 277);
             this.amt13Label.Name = "amt13Label";
-            this.amt13Label.Size = new System.Drawing.Size(82, 17);
+            this.amt13Label.Size = new System.Drawing.Size(63, 13);
             this.amt13Label.TabIndex = 18;
             this.amt13Label.Text = "Amount 13:";
             // 
             // amt14Label
             // 
             this.amt14Label.AutoSize = true;
-            this.amt14Label.Location = new System.Drawing.Point(15, 366);
+            this.amt14Label.Location = new System.Drawing.Point(13, 297);
             this.amt14Label.Name = "amt14Label";
-            this.amt14Label.Size = new System.Drawing.Size(82, 17);
+            this.amt14Label.Size = new System.Drawing.Size(63, 13);
             this.amt14Label.TabIndex = 19;
             this.amt14Label.Text = "Amount 14:";
             this.amt14Label.UseMnemonic = false;
@@ -285,379 +281,350 @@
             // amt15Label
             // 
             this.amt15Label.AutoSize = true;
-            this.amt15Label.Location = new System.Drawing.Point(15, 389);
+            this.amt15Label.Location = new System.Drawing.Point(13, 316);
             this.amt15Label.Name = "amt15Label";
-            this.amt15Label.Size = new System.Drawing.Size(82, 17);
+            this.amt15Label.Size = new System.Drawing.Size(63, 13);
             this.amt15Label.TabIndex = 20;
             this.amt15Label.Text = "Amount 15:";
             // 
             // Ingredient2Label
             // 
             this.Ingredient2Label.AutoSize = true;
-            this.Ingredient2Label.Location = new System.Drawing.Point(297, 69);
+            this.Ingredient2Label.Location = new System.Drawing.Point(255, 56);
             this.Ingredient2Label.Name = "Ingredient2Label";
-            this.Ingredient2Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient2Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient2Label.TabIndex = 21;
             this.Ingredient2Label.Text = "Ingredient 2:";
             // 
             // Ingredient3Label
             // 
             this.Ingredient3Label.AutoSize = true;
-            this.Ingredient3Label.Location = new System.Drawing.Point(297, 91);
+            this.Ingredient3Label.Location = new System.Drawing.Point(255, 74);
             this.Ingredient3Label.Name = "Ingredient3Label";
-            this.Ingredient3Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient3Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient3Label.TabIndex = 22;
             this.Ingredient3Label.Text = "Ingredient 3:";
             // 
             // Ingredient4Label
             // 
             this.Ingredient4Label.AutoSize = true;
-            this.Ingredient4Label.Location = new System.Drawing.Point(297, 116);
+            this.Ingredient4Label.Location = new System.Drawing.Point(255, 94);
             this.Ingredient4Label.Name = "Ingredient4Label";
-            this.Ingredient4Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient4Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient4Label.TabIndex = 23;
             this.Ingredient4Label.Text = "Ingredient 4:";
             // 
             // Ingredient5Label
             // 
             this.Ingredient5Label.AutoSize = true;
-            this.Ingredient5Label.Location = new System.Drawing.Point(297, 142);
+            this.Ingredient5Label.Location = new System.Drawing.Point(255, 115);
             this.Ingredient5Label.Name = "Ingredient5Label";
-            this.Ingredient5Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient5Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient5Label.TabIndex = 24;
             this.Ingredient5Label.Text = "Ingredient 5:";
             // 
             // Ingredient6Label
             // 
             this.Ingredient6Label.AutoSize = true;
-            this.Ingredient6Label.Location = new System.Drawing.Point(297, 167);
+            this.Ingredient6Label.Location = new System.Drawing.Point(255, 136);
             this.Ingredient6Label.Name = "Ingredient6Label";
-            this.Ingredient6Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient6Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient6Label.TabIndex = 25;
             this.Ingredient6Label.Text = "Ingredient 6:";
             // 
             // Ingredient7Label
             // 
             this.Ingredient7Label.AutoSize = true;
-            this.Ingredient7Label.Location = new System.Drawing.Point(297, 192);
+            this.Ingredient7Label.Location = new System.Drawing.Point(255, 156);
             this.Ingredient7Label.Name = "Ingredient7Label";
-            this.Ingredient7Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient7Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient7Label.TabIndex = 26;
             this.Ingredient7Label.Text = "Ingredient 7:";
             // 
             // Ingredient8Label
             // 
             this.Ingredient8Label.AutoSize = true;
-            this.Ingredient8Label.Location = new System.Drawing.Point(297, 218);
+            this.Ingredient8Label.Location = new System.Drawing.Point(255, 177);
             this.Ingredient8Label.Name = "Ingredient8Label";
-            this.Ingredient8Label.Size = new System.Drawing.Size(87, 17);
+            this.Ingredient8Label.Size = new System.Drawing.Size(70, 13);
             this.Ingredient8Label.TabIndex = 27;
             this.Ingredient8Label.Text = "Ingredient 8:";
             // 
             // Ingredient9Label
             // 
             this.Ingredient9Label.AutoSize = true;
-            this.Ingredient9Label.Location = new System.Drawing.Point(297, 241);
+            this.Ingredient9Label.Location = new System.Drawing.Point(255, 196);
             this.Ingredient9Label.Name = "Ingredient9Label";
-            this.Ingredient9Label.Size = new System.Drawing.Size(91, 17);
+            this.Ingredient9Label.Size = new System.Drawing.Size(73, 13);
             this.Ingredient9Label.TabIndex = 28;
             this.Ingredient9Label.Text = "Ingredient 9: ";
             // 
             // Ingredient10Label
             // 
             this.Ingredient10Label.AutoSize = true;
-            this.Ingredient10Label.Location = new System.Drawing.Point(297, 265);
+            this.Ingredient10Label.Location = new System.Drawing.Point(255, 215);
             this.Ingredient10Label.Name = "Ingredient10Label";
-            this.Ingredient10Label.Size = new System.Drawing.Size(95, 17);
+            this.Ingredient10Label.Size = new System.Drawing.Size(76, 13);
             this.Ingredient10Label.TabIndex = 29;
             this.Ingredient10Label.Text = "Ingredient 10:";
             // 
             // Ingredient11Label
             // 
             this.Ingredient11Label.AutoSize = true;
-            this.Ingredient11Label.Location = new System.Drawing.Point(297, 290);
+            this.Ingredient11Label.Location = new System.Drawing.Point(255, 236);
             this.Ingredient11Label.Name = "Ingredient11Label";
-            this.Ingredient11Label.Size = new System.Drawing.Size(95, 17);
+            this.Ingredient11Label.Size = new System.Drawing.Size(76, 13);
             this.Ingredient11Label.TabIndex = 30;
             this.Ingredient11Label.Text = "Ingredient 11:";
             // 
             // Ingredient12Label
             // 
             this.Ingredient12Label.AutoSize = true;
-            this.Ingredient12Label.Location = new System.Drawing.Point(297, 316);
+            this.Ingredient12Label.Location = new System.Drawing.Point(255, 257);
             this.Ingredient12Label.Name = "Ingredient12Label";
-            this.Ingredient12Label.Size = new System.Drawing.Size(95, 17);
+            this.Ingredient12Label.Size = new System.Drawing.Size(76, 13);
             this.Ingredient12Label.TabIndex = 31;
             this.Ingredient12Label.Text = "Ingredient 12:";
             // 
             // Ingredient13Label
             // 
             this.Ingredient13Label.AutoSize = true;
-            this.Ingredient13Label.Location = new System.Drawing.Point(297, 341);
+            this.Ingredient13Label.Location = new System.Drawing.Point(255, 277);
             this.Ingredient13Label.Name = "Ingredient13Label";
-            this.Ingredient13Label.Size = new System.Drawing.Size(95, 17);
+            this.Ingredient13Label.Size = new System.Drawing.Size(76, 13);
             this.Ingredient13Label.TabIndex = 32;
             this.Ingredient13Label.Text = "Ingredient 13:";
             // 
             // Ingredient14Label
             // 
             this.Ingredient14Label.AutoSize = true;
-            this.Ingredient14Label.Location = new System.Drawing.Point(297, 366);
+            this.Ingredient14Label.Location = new System.Drawing.Point(255, 297);
             this.Ingredient14Label.Name = "Ingredient14Label";
-            this.Ingredient14Label.Size = new System.Drawing.Size(95, 17);
+            this.Ingredient14Label.Size = new System.Drawing.Size(76, 13);
             this.Ingredient14Label.TabIndex = 33;
             this.Ingredient14Label.Text = "Ingredient 14:";
             // 
             // Ingredient15Label
             // 
             this.Ingredient15Label.AutoSize = true;
-            this.Ingredient15Label.Location = new System.Drawing.Point(297, 390);
+            this.Ingredient15Label.Location = new System.Drawing.Point(255, 317);
             this.Ingredient15Label.Name = "Ingredient15Label";
-            this.Ingredient15Label.Size = new System.Drawing.Size(95, 17);
+            this.Ingredient15Label.Size = new System.Drawing.Size(76, 13);
             this.Ingredient15Label.TabIndex = 34;
             this.Ingredient15Label.Text = "Ingredient 15:";
             // 
             // DirectionsLbl
             // 
             this.DirectionsLbl.AutoSize = true;
-            this.DirectionsLbl.Location = new System.Drawing.Point(14, 422);
+            this.DirectionsLbl.Location = new System.Drawing.Point(12, 343);
             this.DirectionsLbl.Name = "DirectionsLbl";
-            this.DirectionsLbl.Size = new System.Drawing.Size(73, 17);
+            this.DirectionsLbl.Size = new System.Drawing.Size(58, 13);
             this.DirectionsLbl.TabIndex = 35;
             this.DirectionsLbl.Text = "Directions:";
             // 
             // txtAmt2
             // 
-            this.txtAmt2.Location = new System.Drawing.Point(85, 66);
-            this.txtAmt2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt2.Location = new System.Drawing.Point(73, 54);
             this.txtAmt2.Name = "txtAmt2";
-            this.txtAmt2.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt2.TabIndex = 36;
+            this.txtAmt2.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt2.TabIndex = 4;
             // 
             // Ing2
             // 
-            this.Ing2.Location = new System.Drawing.Point(383, 69);
-            this.Ing2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing2.Location = new System.Drawing.Point(328, 56);
             this.Ing2.Name = "Ing2";
-            this.Ing2.Size = new System.Drawing.Size(213, 23);
-            this.Ing2.TabIndex = 37;
+            this.Ing2.Size = new System.Drawing.Size(183, 21);
+            this.Ing2.TabIndex = 5;
             // 
             // txtAmt3
             // 
-            this.txtAmt3.Location = new System.Drawing.Point(85, 91);
-            this.txtAmt3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt3.Location = new System.Drawing.Point(73, 74);
             this.txtAmt3.Name = "txtAmt3";
-            this.txtAmt3.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt3.TabIndex = 38;
+            this.txtAmt3.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt3.TabIndex = 6;
             // 
             // Ing3
             // 
-            this.Ing3.Location = new System.Drawing.Point(383, 94);
-            this.Ing3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing3.Location = new System.Drawing.Point(328, 76);
             this.Ing3.Name = "Ing3";
-            this.Ing3.Size = new System.Drawing.Size(213, 23);
-            this.Ing3.TabIndex = 39;
+            this.Ing3.Size = new System.Drawing.Size(183, 21);
+            this.Ing3.TabIndex = 7;
             // 
             // txtAmt4
             // 
-            this.txtAmt4.Location = new System.Drawing.Point(85, 116);
-            this.txtAmt4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt4.Location = new System.Drawing.Point(73, 94);
             this.txtAmt4.Name = "txtAmt4";
-            this.txtAmt4.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt4.TabIndex = 40;
+            this.txtAmt4.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt4.TabIndex = 8;
             // 
             // Ing4
             // 
-            this.Ing4.Location = new System.Drawing.Point(383, 118);
-            this.Ing4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing4.Location = new System.Drawing.Point(328, 96);
             this.Ing4.Name = "Ing4";
-            this.Ing4.Size = new System.Drawing.Size(213, 23);
-            this.Ing4.TabIndex = 41;
+            this.Ing4.Size = new System.Drawing.Size(183, 21);
+            this.Ing4.TabIndex = 9;
             // 
             // txtAmt5
             // 
-            this.txtAmt5.Location = new System.Drawing.Point(85, 140);
-            this.txtAmt5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt5.Location = new System.Drawing.Point(73, 114);
             this.txtAmt5.Name = "txtAmt5";
-            this.txtAmt5.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt5.TabIndex = 42;
+            this.txtAmt5.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt5.TabIndex = 10;
             // 
             // Ing5
             // 
-            this.Ing5.Location = new System.Drawing.Point(383, 143);
-            this.Ing5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing5.Location = new System.Drawing.Point(328, 116);
             this.Ing5.Name = "Ing5";
-            this.Ing5.Size = new System.Drawing.Size(213, 23);
-            this.Ing5.TabIndex = 43;
+            this.Ing5.Size = new System.Drawing.Size(183, 21);
+            this.Ing5.TabIndex = 11;
             // 
             // txtAmt6
             // 
-            this.txtAmt6.Location = new System.Drawing.Point(85, 165);
-            this.txtAmt6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt6.Location = new System.Drawing.Point(73, 134);
             this.txtAmt6.Name = "txtAmt6";
-            this.txtAmt6.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt6.TabIndex = 44;
+            this.txtAmt6.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt6.TabIndex = 12;
             // 
             // Ing6
             // 
-            this.Ing6.Location = new System.Drawing.Point(383, 167);
-            this.Ing6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing6.Location = new System.Drawing.Point(328, 136);
             this.Ing6.Name = "Ing6";
-            this.Ing6.Size = new System.Drawing.Size(213, 23);
-            this.Ing6.TabIndex = 45;
+            this.Ing6.Size = new System.Drawing.Size(183, 21);
+            this.Ing6.TabIndex = 13;
             // 
             // txtAmt7
             // 
-            this.txtAmt7.Location = new System.Drawing.Point(85, 190);
-            this.txtAmt7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt7.Location = new System.Drawing.Point(73, 154);
             this.txtAmt7.Name = "txtAmt7";
-            this.txtAmt7.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt7.TabIndex = 46;
+            this.txtAmt7.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt7.TabIndex = 14;
             // 
             // Ing7
             // 
-            this.Ing7.Location = new System.Drawing.Point(383, 192);
-            this.Ing7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing7.Location = new System.Drawing.Point(328, 156);
             this.Ing7.Name = "Ing7";
-            this.Ing7.Size = new System.Drawing.Size(213, 23);
-            this.Ing7.TabIndex = 47;
+            this.Ing7.Size = new System.Drawing.Size(183, 21);
+            this.Ing7.TabIndex = 15;
             // 
             // txtAmt8
             // 
-            this.txtAmt8.Location = new System.Drawing.Point(85, 214);
-            this.txtAmt8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt8.Location = new System.Drawing.Point(73, 174);
             this.txtAmt8.Name = "txtAmt8";
-            this.txtAmt8.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt8.TabIndex = 48;
+            this.txtAmt8.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt8.TabIndex = 16;
             // 
             // Ing8
             // 
-            this.Ing8.Location = new System.Drawing.Point(383, 217);
-            this.Ing8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing8.Location = new System.Drawing.Point(328, 176);
             this.Ing8.Name = "Ing8";
-            this.Ing8.Size = new System.Drawing.Size(213, 23);
-            this.Ing8.TabIndex = 49;
+            this.Ing8.Size = new System.Drawing.Size(183, 21);
+            this.Ing8.TabIndex = 17;
             // 
             // txtAmt9
             // 
-            this.txtAmt9.Location = new System.Drawing.Point(85, 239);
-            this.txtAmt9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt9.Location = new System.Drawing.Point(73, 194);
             this.txtAmt9.Name = "txtAmt9";
-            this.txtAmt9.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt9.TabIndex = 50;
+            this.txtAmt9.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt9.TabIndex = 18;
             // 
             // Ing9
             // 
-            this.Ing9.Location = new System.Drawing.Point(383, 241);
-            this.Ing9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing9.Location = new System.Drawing.Point(328, 196);
             this.Ing9.Name = "Ing9";
-            this.Ing9.Size = new System.Drawing.Size(213, 23);
-            this.Ing9.TabIndex = 51;
+            this.Ing9.Size = new System.Drawing.Size(183, 21);
+            this.Ing9.TabIndex = 19;
             // 
             // txtAmt10
             // 
-            this.txtAmt10.Location = new System.Drawing.Point(85, 263);
-            this.txtAmt10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt10.Location = new System.Drawing.Point(73, 214);
             this.txtAmt10.Name = "txtAmt10";
-            this.txtAmt10.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt10.TabIndex = 52;
+            this.txtAmt10.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt10.TabIndex = 20;
             // 
             // Ing10
             // 
-            this.Ing10.Location = new System.Drawing.Point(383, 266);
-            this.Ing10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing10.Location = new System.Drawing.Point(328, 216);
             this.Ing10.Name = "Ing10";
-            this.Ing10.Size = new System.Drawing.Size(213, 23);
-            this.Ing10.TabIndex = 53;
+            this.Ing10.Size = new System.Drawing.Size(183, 21);
+            this.Ing10.TabIndex = 21;
             // 
             // txtAmt11
             // 
-            this.txtAmt11.Location = new System.Drawing.Point(85, 288);
-            this.txtAmt11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt11.Location = new System.Drawing.Point(73, 234);
             this.txtAmt11.Name = "txtAmt11";
-            this.txtAmt11.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt11.TabIndex = 54;
+            this.txtAmt11.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt11.TabIndex = 22;
             // 
             // Ing11
             // 
-            this.Ing11.Location = new System.Drawing.Point(383, 290);
-            this.Ing11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing11.Location = new System.Drawing.Point(328, 236);
             this.Ing11.Name = "Ing11";
-            this.Ing11.Size = new System.Drawing.Size(213, 23);
-            this.Ing11.TabIndex = 55;
+            this.Ing11.Size = new System.Drawing.Size(183, 21);
+            this.Ing11.TabIndex = 23;
             // 
             // txtAmt12
             // 
-            this.txtAmt12.Location = new System.Drawing.Point(85, 313);
-            this.txtAmt12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt12.Location = new System.Drawing.Point(73, 254);
             this.txtAmt12.Name = "txtAmt12";
-            this.txtAmt12.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt12.TabIndex = 56;
+            this.txtAmt12.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt12.TabIndex = 24;
             // 
             // Ing12
             // 
-            this.Ing12.Location = new System.Drawing.Point(383, 315);
-            this.Ing12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing12.Location = new System.Drawing.Point(328, 256);
             this.Ing12.Name = "Ing12";
-            this.Ing12.Size = new System.Drawing.Size(213, 23);
-            this.Ing12.TabIndex = 57;
+            this.Ing12.Size = new System.Drawing.Size(183, 21);
+            this.Ing12.TabIndex = 25;
             // 
             // txtAmt13
             // 
-            this.txtAmt13.Location = new System.Drawing.Point(85, 337);
-            this.txtAmt13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt13.Location = new System.Drawing.Point(73, 274);
             this.txtAmt13.Name = "txtAmt13";
-            this.txtAmt13.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt13.TabIndex = 58;
+            this.txtAmt13.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt13.TabIndex = 26;
             // 
             // Ing13
             // 
-            this.Ing13.Location = new System.Drawing.Point(383, 340);
-            this.Ing13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing13.Location = new System.Drawing.Point(328, 276);
             this.Ing13.Name = "Ing13";
-            this.Ing13.Size = new System.Drawing.Size(213, 23);
-            this.Ing13.TabIndex = 59;
+            this.Ing13.Size = new System.Drawing.Size(183, 21);
+            this.Ing13.TabIndex = 27;
             // 
             // txtAmt14
             // 
-            this.txtAmt14.Location = new System.Drawing.Point(85, 362);
-            this.txtAmt14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt14.Location = new System.Drawing.Point(73, 294);
             this.txtAmt14.Name = "txtAmt14";
-            this.txtAmt14.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt14.TabIndex = 60;
+            this.txtAmt14.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt14.TabIndex = 28;
             // 
             // Ing14
             // 
-            this.Ing14.Location = new System.Drawing.Point(383, 364);
-            this.Ing14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing14.Location = new System.Drawing.Point(328, 296);
             this.Ing14.Name = "Ing14";
-            this.Ing14.Size = new System.Drawing.Size(213, 23);
-            this.Ing14.TabIndex = 61;
+            this.Ing14.Size = new System.Drawing.Size(183, 21);
+            this.Ing14.TabIndex = 29;
             // 
             // txtAmt15
             // 
-            this.txtAmt15.Location = new System.Drawing.Point(85, 386);
-            this.txtAmt15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmt15.Location = new System.Drawing.Point(73, 314);
             this.txtAmt15.Name = "txtAmt15";
-            this.txtAmt15.Size = new System.Drawing.Size(205, 23);
-            this.txtAmt15.TabIndex = 62;
+            this.txtAmt15.Size = new System.Drawing.Size(176, 21);
+            this.txtAmt15.TabIndex = 30;
             // 
             // Ing15
             // 
-            this.Ing15.Location = new System.Drawing.Point(383, 389);
-            this.Ing15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ing15.Location = new System.Drawing.Point(328, 316);
             this.Ing15.Name = "Ing15";
-            this.Ing15.Size = new System.Drawing.Size(213, 23);
-            this.Ing15.TabIndex = 63;
+            this.Ing15.Size = new System.Drawing.Size(183, 21);
+            this.Ing15.TabIndex = 31;
             // 
             // txtDirections
             // 
-            this.txtDirections.Location = new System.Drawing.Point(85, 422);
-            this.txtDirections.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDirections.Location = new System.Drawing.Point(73, 343);
             this.txtDirections.Multiline = true;
             this.txtDirections.Name = "txtDirections";
-            this.txtDirections.Size = new System.Drawing.Size(510, 88);
-            this.txtDirections.TabIndex = 64;
+            this.txtDirections.Size = new System.Drawing.Size(438, 72);
+            this.txtDirections.TabIndex = 32;
             // 
             // myRecipes
             // 
@@ -675,9 +642,9 @@
             // 
             // customRecipes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 570);
+            this.ClientSize = new System.Drawing.Size(518, 463);
             this.Controls.Add(this.txtDirections);
             this.Controls.Add(this.Ing15);
             this.Controls.Add(this.txtAmt15);
@@ -743,7 +710,6 @@
             this.Controls.Add(this.txtDrinkName);
             this.Controls.Add(this.amt1Label);
             this.Controls.Add(this.DrinkNameLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "customRecipes";
             this.Text = "customRecipes";
             ((System.ComponentModel.ISupportInitialize)(this.myRecipes)).EndInit();

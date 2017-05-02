@@ -41,13 +41,12 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Amount});
-            this.listView1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(-3, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Location = new System.Drawing.Point(-2, 0);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
-            this.listView1.Size = new System.Drawing.Size(299, 429);
+            this.listView1.Size = new System.Drawing.Size(225, 349);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -61,13 +60,12 @@
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Ingredients});
-            this.listView2.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(293, 0);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4);
+            this.listView2.Location = new System.Drawing.Point(220, 0);
             this.listView2.Name = "listView2";
             this.listView2.Scrollable = false;
-            this.listView2.Size = new System.Drawing.Size(459, 429);
+            this.listView2.Size = new System.Drawing.Size(345, 349);
             this.listView2.TabIndex = 11;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -81,10 +79,9 @@
             // 
             this.FavoritesButton.ForeColor = System.Drawing.Color.Black;
             this.FavoritesButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesButton.Image")));
-            this.FavoritesButton.Location = new System.Drawing.Point(723, 0);
-            this.FavoritesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.FavoritesButton.Location = new System.Drawing.Point(542, 0);
             this.FavoritesButton.Name = "FavoritesButton";
-            this.FavoritesButton.Size = new System.Drawing.Size(31, 28);
+            this.FavoritesButton.Size = new System.Drawing.Size(23, 23);
             this.FavoritesButton.TabIndex = 13;
             this.FavoritesButton.Tag = "Add to Favorites";
             this.FavoritesButton.Text = "FavoritesButton";
@@ -92,26 +89,24 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-3, 428);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBox1.Location = new System.Drawing.Point(-2, 348);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(755, 255);
+            this.richTextBox1.Size = new System.Drawing.Size(567, 208);
             this.richTextBox1.TabIndex = 12;
             this.richTextBox1.Text = "";
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1464, 713);
+            this.ClientSize = new System.Drawing.Size(1098, 579);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.FavoritesButton);
             this.Controls.Add(this.richTextBox1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);
