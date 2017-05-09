@@ -35,20 +35,22 @@
             // 
             this.webBrowser4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser4.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser4.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webBrowser4.MinimumSize = new System.Drawing.Size(15, 16);
             this.webBrowser4.Name = "webBrowser4";
             this.webBrowser4.ScriptErrorsSuppressed = true;
-            this.webBrowser4.Size = new System.Drawing.Size(282, 255);
+            this.webBrowser4.Size = new System.Drawing.Size(212, 207);
             this.webBrowser4.TabIndex = 0;
-            this.webBrowser4.Url = new System.Uri("https://lolliesoft.com/bartenderexpress/purchase", System.UriKind.Absolute);
+            this.webBrowser4.Url = new System.Uri("https://www.lolliesoft.com/shop/", System.UriKind.Absolute);
             // 
             // BuyNow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 255);
+            this.ClientSize = new System.Drawing.Size(212, 207);
             this.Controls.Add(this.webBrowser4);
-            this.Name = "Purchase BartenderExpress Pro";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "BuyNow";
             this.Text = "Purchase BartenderExpress Pro";
             this.ResumeLayout(false);
 
