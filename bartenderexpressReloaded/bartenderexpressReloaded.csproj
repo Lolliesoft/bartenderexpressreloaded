@@ -416,6 +416,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AutoUpdater.NET.dll" />
     <Content Include="BartenderExpressCalculatorPro.exe" />
     <Content Include="mrbartender32.ico" />
     <None Include="Resources\logo.png" />

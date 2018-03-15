@@ -3274,7 +3274,7 @@ namespace bartenderexpressReloaded
         private void AboutBtn_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            XtraMessageBox.Show("Bartender Express Version 4.0\nCopyright © 1996-2017 LollieSoft Inc.\nwww.lolliesoft.com", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Bartender Express Version 4.0\nCopyright © 1996-2018 LollieSoft Inc.\nwww.lolliesoft.com", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
