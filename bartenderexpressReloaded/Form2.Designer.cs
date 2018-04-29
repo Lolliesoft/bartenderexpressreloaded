@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.Ingredients = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.DrinkBox = new System.Windows.Forms.PictureBox();
             this.DrinkTextBox = new System.Windows.Forms.TextBox();
-            this.FavoritesDrinkButton = new System.Windows.Forms.Button();
             this.toolStripStatusLabel = new System.Windows.Forms.StatusStrip();
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
             this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
             this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
-            this.tileItem5 = new DevExpress.XtraEditors.TileItem();
             this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
-            ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
+            this.FavoritesDrinkButton = new System.Windows.Forms.Button();
+            this.DrinkBox = new System.Windows.Forms.PictureBox();
+            this.tileItem5 = new DevExpress.XtraEditors.TileItem();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -97,14 +97,6 @@
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
-            // DrinkBox
-            // 
-            this.DrinkBox.Location = new System.Drawing.Point(-2, 348);
-            this.DrinkBox.Name = "DrinkBox";
-            this.DrinkBox.Size = new System.Drawing.Size(224, 229);
-            this.DrinkBox.TabIndex = 4;
-            this.DrinkBox.TabStop = false;
-            // 
             // DrinkTextBox
             // 
             this.DrinkTextBox.Location = new System.Drawing.Point(220, 348);
@@ -115,27 +107,12 @@
             this.DrinkTextBox.Size = new System.Drawing.Size(345, 229);
             this.DrinkTextBox.TabIndex = 5;
             // 
-            // FavoritesDrinkButton
-            // 
-            this.FavoritesDrinkButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.FavoritesDrinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FavoritesDrinkButton.ForeColor = System.Drawing.Color.Black;
-            this.FavoritesDrinkButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesDrinkButton.Image")));
-            this.FavoritesDrinkButton.Location = new System.Drawing.Point(548, 0);
-            this.FavoritesDrinkButton.Name = "FavoritesDrinkButton";
-            this.FavoritesDrinkButton.Size = new System.Drawing.Size(16, 20);
-            this.FavoritesDrinkButton.TabIndex = 6;
-            this.FavoritesDrinkButton.Tag = "Add to Favorites";
-            this.FavoritesDrinkButton.Text = "button1";
-            this.FavoritesDrinkButton.UseVisualStyleBackColor = true;
-            this.FavoritesDrinkButton.Click += new System.EventHandler(this.FavoritesDrinkButton_Click);
-            // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStripStatusLabel.Location = new System.Drawing.Point(0, 560);
+            this.toolStripStatusLabel.Location = new System.Drawing.Point(0, 557);
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(1098, 20);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(1098, 22);
             this.toolStripStatusLabel.TabIndex = 7;
             this.toolStripStatusLabel.Visible = false;
             // 
@@ -157,19 +134,42 @@
             // 
             this.tileGroup1.Name = "tileGroup1";
             // 
-            // tileItem5
-            // 
-            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement2.Text = "tileItem5";
-            this.tileItem5.Elements.Add(tileItemElement2);
-            this.tileItem5.Id = 8;
-            this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
-            this.tileItem5.Name = "tileItem5";
-            // 
             // tileGroup3
             // 
             this.tileGroup3.Name = "tileGroup3";
+            // 
+            // FavoritesDrinkButton
+            // 
+            this.FavoritesDrinkButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.FavoritesDrinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FavoritesDrinkButton.ForeColor = System.Drawing.Color.Black;
+            this.FavoritesDrinkButton.Image = ((System.Drawing.Image)(resources.GetObject("FavoritesDrinkButton.Image")));
+            this.FavoritesDrinkButton.Location = new System.Drawing.Point(548, 0);
+            this.FavoritesDrinkButton.Name = "FavoritesDrinkButton";
+            this.FavoritesDrinkButton.Size = new System.Drawing.Size(16, 20);
+            this.FavoritesDrinkButton.TabIndex = 6;
+            this.FavoritesDrinkButton.Tag = "Add to Favorites";
+            this.FavoritesDrinkButton.Text = "button1";
+            this.FavoritesDrinkButton.UseVisualStyleBackColor = true;
+            this.FavoritesDrinkButton.Click += new System.EventHandler(this.FavoritesDrinkButton_Click);
+            // 
+            // DrinkBox
+            // 
+            this.DrinkBox.Location = new System.Drawing.Point(-2, 348);
+            this.DrinkBox.Name = "DrinkBox";
+            this.DrinkBox.Size = new System.Drawing.Size(224, 229);
+            this.DrinkBox.TabIndex = 4;
+            this.DrinkBox.TabStop = false;
+            // 
+            // tileItem5
+            // 
+            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement1.Text = "tileItem5";
+            this.tileItem5.Elements.Add(tileItemElement1);
+            this.tileItem5.Id = 8;
+            this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            this.tileItem5.Name = "tileItem5";
             // 
             // Form2
             // 
@@ -191,9 +191,9 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrinkBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
