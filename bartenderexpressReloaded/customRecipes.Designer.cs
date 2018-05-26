@@ -97,8 +97,10 @@
             this.myRecipes = new bartenderexpressReloaded.MyRecipes();
             this.myRecipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myRecipesTableAdapter = new bartenderexpressReloaded.MyRecipesTableAdapters.myRecipesTableAdapter();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.myRecipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRecipesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // DrinkNameLabel
@@ -125,6 +127,7 @@
             this.txtDrinkName.Name = "txtDrinkName";
             this.txtDrinkName.Size = new System.Drawing.Size(437, 21);
             this.txtDrinkName.TabIndex = 1;
+            this.txtDrinkName.Validating += new System.ComponentModel.CancelEventHandler(this.txtDrinkName_Validating);
             // 
             // txtAmt1
             // 
@@ -640,6 +643,10 @@
             // 
             this.myRecipesTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // customRecipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -714,6 +721,7 @@
             this.Text = "customRecipes";
             ((System.ComponentModel.ISupportInitialize)(this.myRecipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRecipesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,5 +797,6 @@
         private MyRecipes myRecipes;
         private System.Windows.Forms.BindingSource myRecipesBindingSource;
         private MyRecipesTableAdapters.myRecipesTableAdapter myRecipesTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
