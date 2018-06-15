@@ -430,6 +430,7 @@
     <Content Include="AutoUpdater.NET.dll" />
     <Content Include="BartenderExpressCalculatorPro.exe" />
     <Content Include="mrbartender32.ico" />
+    <Content Include="SecureApp.dll" />
     <None Include="Resources\lolliesoftLogoRibbon.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>

@@ -22,7 +22,7 @@ namespace bartenderexpressReloaded
             fill_box();
             listBoxControl1.SelectedIndex = -1;
             CueProvider CreateaCue = new CueProvider();
-            CreateaCue.SetCue(CabinetSearchBox, "Search For Your Ingredients...");
+            CreateaCue.SetCue(CabinetSearchBox, "Get drink suggestions...");
 
         }
 
@@ -155,78 +155,78 @@ namespace bartenderexpressReloaded
 
             SelectedIngredients = SelectedIngredients.Remove(SelectedIngredients.Length - 1);
 
-            SQLiteConnection cs104 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db");
+            SQLiteConnection cs104 = new SQLiteConnection("Data Source = |DataDirectory|\\bartenderExpress.db");
             {
                 cs104.Open();
 
                 //Get Drink Name from masterdrinks table
 
                 SQLiteCommand sql1 = cs104.CreateCommand();
-                sql1.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 =  (" + @SelectedIngredients + ") OR  Ingredient2 =  (" + @SelectedIngredients + ") OR Ingredient3 =  (" + @SelectedIngredients + ") OR Ingredient4 =  (" + @SelectedIngredients + ") OR Ingredient5 =  (" + @SelectedIngredients + ") OR Ingredient6 =  (" + @SelectedIngredients + ") OR Ingredient7 =  (" + @SelectedIngredients + ") OR Ingredient8 =  (" + @SelectedIngredients + ") OR  Ingredient9 =  (" + @SelectedIngredients + ") OR Ingredient10 =  (" + @SelectedIngredients + ") OR Ingredient11 =  (" + @SelectedIngredients + ") OR Ingredient12 =  (" + @SelectedIngredients + ") OR Ingredient13 =  (" + @SelectedIngredients + ") OR Ingredient14 =  (" + @SelectedIngredients + ") OR Ingredient15 =  (" + @SelectedIngredients + ")"; 
+                sql1.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 1";
                 sql1.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql2 = cs104.CreateCommand();
-                sql2.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ")";
+                sql2.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 2";
                 sql2.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql3 = cs104.CreateCommand();
-                sql3.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN (" + @SelectedIngredients + ")";
+                sql3.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 3";
                 sql3.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql4 = cs104.CreateCommand();
-                sql4.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ")";              
+                sql4.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 4";
                 sql4.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql5 = cs104.CreateCommand();
-                sql5.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ")";
+                sql5.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 5";
                 sql5.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql6 = cs104.CreateCommand();
-                sql6.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ")";
+                sql5.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 6";
                 sql6.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql7 = cs104.CreateCommand();
-                sql7.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ")";
+                sql7.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 7";
                 sql7.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql8 = cs104.CreateCommand();
-                sql8.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ")";
+                sql8.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 8";
                 sql8.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql9 = cs104.CreateCommand();
-                sql9.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ") AND Ingredient9 IN (" + @SelectedIngredients + ")";
+                sql9.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 9";
                 sql9.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql10 = cs104.CreateCommand();
-                sql10.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ") AND Ingredient9 IN (" + @SelectedIngredients + ") AND Ingredient10 IN (" + @SelectedIngredients + ")";
+                sql10.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 10";
                 sql10.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
 
                 SQLiteCommand sql11 = cs104.CreateCommand();
-                sql11.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ") AND Ingredient9 IN (" + @SelectedIngredients + ") AND Ingredient10 IN (" + @SelectedIngredients + ") AND Ingredient11 IN (" + @SelectedIngredients + ")";
+                sql11.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 11";
                 sql11.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
 
                 SQLiteCommand sql12 = cs104.CreateCommand();
-                sql12.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ") AND Ingredient9 IN (" + @SelectedIngredients + ") AND Ingredient10 IN (" + @SelectedIngredients + ") AND Ingredient11 IN (" + @SelectedIngredients + ") AND Ingredient12 IN (" + @SelectedIngredients + ")";
+                sql12.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 12";
                 sql12.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
                 SQLiteCommand sql13 = cs104.CreateCommand();
-                sql13.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ") AND Ingredient9 IN (" + @SelectedIngredients + ") AND Ingredient10 IN (" + @SelectedIngredients + ") AND Ingredient11 IN (" + @SelectedIngredients + ") AND Ingredient12 IN (" + @SelectedIngredients + ") AND Ingredient13 IN (" + @SelectedIngredients + ")";
+                sql13.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 13";
                 sql13.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
 
                 SQLiteCommand sql14 = cs104.CreateCommand();
-                sql14.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ") AND Ingredient9 IN (" + @SelectedIngredients + ") AND Ingredient10 IN (" + @SelectedIngredients + ") AND Ingredient11 IN (" + @SelectedIngredients + ") AND Ingredient12 IN (" + @SelectedIngredients + ") AND Ingredient13 IN (" + @SelectedIngredients + ") AND Ingredient14 IN (" + @SelectedIngredients + ")";
+                sql14.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 14";
                 sql14.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
 
                 SQLiteCommand sql15 = cs104.CreateCommand();
-                sql15.CommandText = "SELECT name FROM masterdrinks WHERE Ingredient1 IN (" + @SelectedIngredients + ") AND Ingredient2 IN (" + @SelectedIngredients + ") AND Ingredient3 IN(" + @SelectedIngredients + ") AND Ingredient4 IN (" + @SelectedIngredients + ") AND Ingredient5 IN (" + @SelectedIngredients + ") AND Ingredient6 IN (" + @SelectedIngredients + ") AND Ingredient7 IN (" + @SelectedIngredients + ") AND Ingredient8 IN (" + @SelectedIngredients + ") AND Ingredient9 IN (" + @SelectedIngredients + ") AND Ingredient10 IN (" + @SelectedIngredients + ") AND Ingredient11 IN (" + @SelectedIngredients + ") AND Ingredient12 IN (" + @SelectedIngredients + ") AND Ingredient13 IN (" + @SelectedIngredients + ") AND Ingredient14 IN (" + @SelectedIngredients + ") AND Ingredient15 IN (" + @SelectedIngredients + ")";
+                sql15.CommandText = "SELECT DISTINCT recipes.name FROM recipes INNER JOIN recipeIngredients ON recipes.id = recipeIngredients.recipeid INNER JOIN ingredients ON ingredients.id = recipeIngredients.ingid WHERE recipeIngredients.ingid IN(SELECT ingredients.id FROM ingredients WHERE ingredients.name in (" + @SelectedIngredients + ")) GROUP BY recipes.name HAVING COUNT(DISTINCT recipeIngredients.ingid) = 15";
                 sql15.Parameters.Add(new SQLiteParameter("@SelectedIngredients", SelectedIngredients));
 
 
-                
+
 
 
                 //Determine the number of items dragged into listBoxControl2
