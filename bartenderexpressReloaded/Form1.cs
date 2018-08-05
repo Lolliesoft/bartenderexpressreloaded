@@ -3398,6 +3398,10 @@ namespace bartenderexpressReloaded
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
             Show();
+            BuyNow child = new BuyNow();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
         }
 
     }
