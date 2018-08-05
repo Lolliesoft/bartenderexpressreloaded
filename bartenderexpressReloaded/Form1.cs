@@ -3347,7 +3347,11 @@ namespace bartenderexpressReloaded
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.lolliesoft.com/shop");
+            Show();
+            BuyNow child = new BuyNow();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
         }
 
         private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
@@ -3356,6 +3360,16 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.   
             child.Show();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void MinimizetoTray_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }
