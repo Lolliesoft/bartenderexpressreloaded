@@ -3269,6 +3269,8 @@ namespace bartenderexpressReloaded
             if (string.IsNullOrEmpty(Br) == false)
             {
                 Lolliesoft.Ribbon.Items.Remove(BuyNow);
+                notifyIcon1.Dispose();
+                notifyIcon2.ShowBalloonTip(6000);
             }            
         }
 
@@ -3342,7 +3344,18 @@ namespace bartenderexpressReloaded
 
         private void NotifyNag()
         {
+            String abc = @"Software\LollieSoft\Bartender Express";
+
+            Microsoft.Win32.RegistryKey regkey = Microsoft.Win32.Registry.CurrentUser;
+            regkey = regkey.CreateSubKey(abc); //path
+            string Br = (string)regkey.GetValue("Password");
+            if (string.IsNullOrEmpty(Br) == true)
+            {          
+                notifyIcon2.Dispose();
+            }
             notifyIcon1.ShowBalloonTip(6000);
+            RemoveBuyNow();
+
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -3371,5 +3384,21 @@ namespace bartenderexpressReloaded
         {
             Hide();
         }
+
+        private void notifyIcon2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+        }
+
+        private void notifyIcon2_Click(object sender, EventArgs e)
+        {
+            Show();
+        }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            Show();
+        }
+
     }
 }
