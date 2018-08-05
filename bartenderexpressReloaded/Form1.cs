@@ -44,6 +44,7 @@ namespace bartenderexpressReloaded
             // listBoxControl2 in CabinetSearch
             f1ListBox = IngredientsNameBox;
             RemoveBuyNow();
+            NotifyNag();
             //Find the MdiClient and hold it by a variable
             client = Controls.OfType<MdiClient>().First();
             //This will check whenever client gets focused and there aren't any
@@ -3338,12 +3339,23 @@ namespace bartenderexpressReloaded
         {
             System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressPro.chm");
         }
+
+        private void NotifyNag()
+        {
+            notifyIcon1.ShowBalloonTip(6000);
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.lolliesoft.com/shop");
+        }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            BuyNow child = new BuyNow();
+            child.MdiParent = this;
+            client.BringToFront();//This will make your child form shown on top.   
+            child.Show();
+        }
     }
 }
-
-
-
-   
-
-
-
