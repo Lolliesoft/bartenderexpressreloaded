@@ -3404,5 +3404,9 @@ namespace bartenderexpressReloaded
             child.Show();
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timeStripLabel.Text = DateTime.Now.ToString();
+        }
     }
 }
