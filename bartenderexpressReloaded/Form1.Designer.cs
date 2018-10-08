@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::bartenderexpressReloaded.SplashScreen1), true, true);
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
@@ -65,14 +66,14 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource();
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bartenderExpressDataSet = new bartenderexpressReloaded.bartenderExpressDataSet();
-            this.shotsBindingSource = new System.Windows.Forms.BindingSource();
-            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource();
+            this.shotsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.xpressShotsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.xpressShotsDataSet = new bartenderexpressReloaded.XpressShotsDataSet();
             this.recipesTableAdapter = new bartenderexpressReloaded.bartenderExpressDataSetTableAdapters.recipesTableAdapter();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.CheckUpdateBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -114,12 +115,12 @@
             this.LiqueurCabinetGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.IngredientSearch = new DevExpress.XtraNavBar.NavBarItem();
             this.CustomItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.liqueursBindingSource = new System.Windows.Forms.BindingSource();
-            this.punchesBindingSource = new System.Windows.Forms.BindingSource();
-            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource();
-            this.beersBindingSource = new System.Windows.Forms.BindingSource();
-            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource();
-            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource();
+            this.liqueursBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.punchesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cocktailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.beersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nonalcoholicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.coffeeteaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shotsTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.shotsTableAdapter();
             this.liqueursTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.liqueursTableAdapter();
             this.punchesTableAdapter = new bartenderexpressReloaded.XpressShotsDataSetTableAdapters.punchesTableAdapter();
@@ -131,9 +132,9 @@
             this.DeleteDrink = new DevExpress.XtraEditors.SimpleButton();
             this.searchControl8 = new DevExpress.XtraEditors.SearchControl();
             this.CustomNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource();
+            this.myRecipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.customDataSet = new bartenderexpressReloaded.CustomDataSet();
-            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource();
+            this.myRecipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myRecipes = new bartenderexpressReloaded.MyRecipes();
             this.CoffeeTeaTab = new System.Windows.Forms.TabPage();
             this.searchControl9 = new DevExpress.XtraEditors.SearchControl();
@@ -159,13 +160,13 @@
             this.DrinksTab = new System.Windows.Forms.TabPage();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.DrinksNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource();
+            this.recipesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.WizardPages = new bartenderexpressReloaded.WizardPages();
             this.Favorites = new System.Windows.Forms.TabPage();
             this.DeleteFavorite = new DevExpress.XtraEditors.SimpleButton();
             this.searchControl7 = new DevExpress.XtraEditors.SearchControl();
             this.FavoritesNameBox = new DevExpress.XtraEditors.ListBoxControl();
-            this.favoritesBindingSource = new System.Windows.Forms.BindingSource();
+            this.favoritesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.favoritesDataSet = new bartenderexpressReloaded.FavoritesDataSet();
             this.IngredientsTab = new System.Windows.Forms.TabPage();
             this.searchControl3 = new DevExpress.XtraEditors.SearchControl();
@@ -175,6 +176,8 @@
             this.statusStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.timeStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup = new DevExpress.XtraEditors.TileGroup();
             this.tileItem8 = new DevExpress.XtraEditors.TileItem();
@@ -188,21 +191,22 @@
             this.tileItem6 = new DevExpress.XtraEditors.TileItem();
             this.tileItem4 = new DevExpress.XtraEditors.TileItem();
             this.myRecipesTableAdapter = new bartenderexpressReloaded.MyRecipesTableAdapters.myRecipesTableAdapter();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.myRecipesTableAdapter1 = new bartenderexpressReloaded.CustomDataSetTableAdapters.myRecipesTableAdapter();
             this.favoritesTableAdapter = new bartenderexpressReloaded.FavoritesDataSetTableAdapters.FavoritesTableAdapter();
             this.ribbonLogoHelper1 = new DevExpress.XtraBars.Ribbon.RibbonLogoHelper();
-            this.toolTipController1 = new DevExpress.Utils.ToolTipController();
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.tileItem2 = new DevExpress.XtraEditors.TileItem();
             this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon();
-            this.NotifyIconMenuStrip = new System.Windows.Forms.ContextMenuStrip();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.NotifyIconMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MinimizetoTray = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon2 = new System.Windows.Forms.NotifyIcon();
-            this.timer2 = new System.Windows.Forms.Timer();
+            this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bartenderExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shotsBindingSource)).BeginInit();
@@ -303,6 +307,7 @@
             this.xtraTabbedMdiManager1.MdiParent = this;
             this.xtraTabbedMdiManager1.PinPageButtonShowMode = DevExpress.XtraTab.PinPageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
             this.xtraTabbedMdiManager1.ShowToolTips = DevExpress.Utils.DefaultBoolean.True;
+            this.xtraTabbedMdiManager1.SelectedPageChanged += new System.EventHandler(this.xtraTabbedMdiManager1_SelectedPageChanged);
             // 
             // ribbonControl1
             // 
@@ -406,16 +411,16 @@
             galleryItemGroup1.Caption = "Group3";
             galleryItem1.Caption = "Facebook";
             galleryItem1.ImageOptions.HoverImage = ((System.Drawing.Image)(resources.GetObject("resource.HoverImage")));
-            galleryItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            galleryItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
             galleryItem2.Caption = "Twitter";
-            galleryItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            galleryItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             galleryItem3.Caption = "Lolliesoft";
-            galleryItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
+            galleryItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
             galleryItem4.Caption = "Vimeo";
             galleryItem5.Caption = "YouTube";
-            galleryItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
+            galleryItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
             galleryItem6.Caption = "Pinterest";
-            galleryItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image12")));
+            galleryItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
             galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
             galleryItem1,
             galleryItem2,
@@ -1423,10 +1428,14 @@
             // 
             this.statusStrip1.BackColor = System.Drawing.SystemColors.Highlight;
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.statusStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.timeStripLabel});
+            this.timeStripLabel,
+            this.toolStripSeparator2,
+            this.toolStripLabel1,
+            this.toolStripLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(204, 750);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -1447,10 +1456,21 @@
             // timeStripLabel
             // 
             this.timeStripLabel.ForeColor = System.Drawing.Color.White;
-            this.timeStripLabel.Margin = new System.Windows.Forms.Padding(0, 1, 450, 2);
             this.timeStripLabel.Name = "timeStripLabel";
             this.timeStripLabel.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
             this.timeStripLabel.Size = new System.Drawing.Size(50, 22);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(88, 22);
+            this.toolStripLabel1.Text = "UNREGISTERED";
             // 
             // tileControl1
             // 
@@ -1493,16 +1513,30 @@
             this.tileItem8.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem8.BackgroundImage")));
             this.tileItem8.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement1.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement1.ImageOptions.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem8.CurrentFrameIndex = 1;
+            tileItemElement1.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement1.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement1.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement1.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement1.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement1.Appearance.Normal.Options.UseFont = true;
+            tileItemElement1.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement1.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement1.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement1.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement1.Appearance.Selected.Options.UseFont = true;
+            tileItemElement1.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement1.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement1.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement1.Text = "Calculate measurements for your recipes";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement1.TextLocation = new System.Drawing.Point(4, 11);
             this.tileItem8.Elements.Add(tileItemElement1);
             this.tileItem8.FrameAnimationInterval = 3500;
             tileItemFrame1.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
             tileItemFrame1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItemFrame1.BackgroundImage")));
-            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileItemElement2.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
             tileItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
@@ -1548,14 +1582,14 @@
             this.tileItem1.AppearanceItem.Normal.Options.UseFont = true;
             this.tileItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem1.BackgroundImage")));
             this.tileItem1.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
             tileItemElement4.Text = "<size=-3>Random</size>";
             tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItem1.Elements.Add(tileItemElement4);
             tileItemFrame3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItemFrame3.BackgroundImage")));
-            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement5.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
             tileItemElement5.Text = "<size=-3>Random</size>";
@@ -1612,7 +1646,7 @@
             // tileItem11
             // 
             this.tileItem11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem11.BackgroundImage")));
-            tileItemElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            tileItemElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             tileItemElement9.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
             tileItemElement9.Text = "";
             this.tileItem11.Elements.Add(tileItemElement9);
@@ -1647,7 +1681,7 @@
             // tileItem10
             // 
             this.tileItem10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem10.BackgroundImage")));
-            tileItemElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            tileItemElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             tileItemElement11.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileItemElement11.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
             tileItemElement11.Text = "Favorites";
@@ -1665,7 +1699,7 @@
             this.tileItem7.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileItem7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem7.BackgroundImage")));
             this.tileItem7.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
-            tileItemElement12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            tileItemElement12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             tileItemElement12.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileItemElement12.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
             tileItemElement12.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
@@ -1674,7 +1708,7 @@
             this.tileItem7.FrameAnimationInterval = 3700;
             tileItemFrame5.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
             tileItemFrame5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItemFrame5.BackgroundImage")));
-            tileItemElement13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            tileItemElement13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             tileItemElement13.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileItemElement13.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
             tileItemElement13.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
@@ -1953,6 +1987,12 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
+            this.toolStripLabel2.Text = "toolStripLabel2";
+            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -2175,6 +2215,9 @@
         private System.Windows.Forms.NotifyIcon notifyIcon2;
         private System.Windows.Forms.ToolStripLabel timeStripLabel;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
     }
 }
 

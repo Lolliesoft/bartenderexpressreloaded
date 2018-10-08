@@ -56,7 +56,7 @@ namespace bartenderexpressReloaded
             };
         }
         MdiClient client;
-
+        
 
         void InitSkinGallery()
         {
@@ -175,7 +175,6 @@ namespace bartenderexpressReloaded
                     {
                         //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
                         toolStripStatusLabel1.Text = "Drink " + reader["drink_num"].ToString() + " of " + (this.DrinksNameBox.ItemCount.ToString());
-
                     }
                 }
             }
@@ -3271,6 +3270,7 @@ namespace bartenderexpressReloaded
                 Lolliesoft.Ribbon.Items.Remove(BuyNow);
                 notifyIcon1.Dispose();
                 notifyIcon2.ShowBalloonTip(6000);
+                toolStripLabel1.Text = "REGISTERED";
             }            
         }
 
@@ -3406,7 +3406,13 @@ namespace bartenderexpressReloaded
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timeStripLabel.Text = DateTime.Now.ToString();
+            timeStripLabel.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void xtraTabbedMdiManager1_SelectedPageChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = ActiveMdiChild.Text;
+            //toolStripStatusLabel.Text = statusbarrecipe;
         }
     }
 }
