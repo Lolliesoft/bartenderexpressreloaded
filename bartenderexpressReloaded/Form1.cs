@@ -56,7 +56,7 @@ namespace bartenderexpressReloaded
             };
         }
         MdiClient client;
-        
+
 
         void InitSkinGallery()
         {
@@ -198,7 +198,7 @@ namespace bartenderexpressReloaded
                     while (reader.Read())
                     {
                         //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
-                        string shotsCount  = reader["shots_key"].ToString();
+                        string shotsCount = reader["shots_key"].ToString();
                         shotsCount = shotsCount.Remove(shotsCount.IndexOf('.'));
                         toolStripStatusLabel1.Text = "Shot " + shotsCount + " of " + (this.ShotsNameBox.ItemCount.ToString());
 
@@ -3285,17 +3285,17 @@ namespace bartenderexpressReloaded
         void RemoveBuyNow()
         {
             String abc = @"Software\LollieSoft\Bartender Express";
-   
-                Microsoft.Win32.RegistryKey regkey = Microsoft.Win32.Registry.CurrentUser;
-                regkey = regkey.CreateSubKey(abc); //path
-                string Br = (string)regkey.GetValue("Password");
+
+            Microsoft.Win32.RegistryKey regkey = Microsoft.Win32.Registry.CurrentUser;
+            regkey = regkey.CreateSubKey(abc); //path
+            string Br = (string)regkey.GetValue("Password");
             if (string.IsNullOrEmpty(Br) == false)
             {
                 Lolliesoft.Ribbon.Items.Remove(BuyNow);
                 notifyIcon1.Dispose();
                 notifyIcon2.ShowBalloonTip(6000);
                 toolStripLabel1.Text = "";
-            }            
+            }
         }
 
         private void AboutBtn_ItemClick(object sender, ItemClickEventArgs e)
@@ -3374,7 +3374,7 @@ namespace bartenderexpressReloaded
             regkey = regkey.CreateSubKey(abc); //path
             string Br = (string)regkey.GetValue("Password");
             if (string.IsNullOrEmpty(Br) == true)
-            {          
+            {
                 notifyIcon2.Dispose();
             }
             notifyIcon1.ShowBalloonTip(6000);
@@ -3434,9 +3434,16 @@ namespace bartenderexpressReloaded
         }
 
         private void xtraTabbedMdiManager1_SelectedPageChanged(object sender, EventArgs e)
-        {
+        { 
+            if (ActiveMdiChild != null)
+            { 
             toolStripStatusLabel1.Text = ActiveMdiChild.Text;
+            }
+            else
+            {
+                toolStripStatusLabel1.Text =  "";
+            }
             //toolStripStatusLabel.Text = statusbarrecipe;
-        }
+        } 
     }
 }
