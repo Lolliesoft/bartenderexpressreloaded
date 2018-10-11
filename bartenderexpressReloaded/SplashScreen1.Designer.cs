@@ -104,9 +104,9 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(407, 313);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(122, 13);
+            this.labelControl3.Size = new System.Drawing.Size(127, 13);
             this.labelControl3.TabIndex = 10;
-            this.labelControl3.Text = "http://www.lolliesoft.com";
+            this.labelControl3.Text = "https://www.lolliesoft.com";
             // 
             // pictureEdit3
             // 
