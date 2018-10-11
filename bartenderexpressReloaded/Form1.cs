@@ -198,7 +198,9 @@ namespace bartenderexpressReloaded
                     while (reader.Read())
                     {
                         //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
-                        toolStripStatusLabel1.Text = "Shot " + reader["shots_key"].ToString() + " of " + (this.ShotsNameBox.ItemCount.ToString());
+                        string shotsCount  = reader["shots_key"].ToString();
+                        shotsCount = shotsCount.Remove(shotsCount.IndexOf('.'));
+                        toolStripStatusLabel1.Text = "Shot " + shotsCount + " of " + (this.ShotsNameBox.ItemCount.ToString());
 
                     }
                 }
@@ -233,6 +235,28 @@ namespace bartenderexpressReloaded
             }
         }
 
+        private void CocktailsListCount(object sender, EventArgs e)
+        {
+            if (CocktailsNameBox.SelectedItem != null)
+            {
+                string statusbarrecipe = CocktailsNameBox.SelectedValue.ToString();
+
+
+                using (SQLiteConnection conn31 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
+                {
+                    conn31.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT cocktail_key FROM cocktails WHERE name='" + (statusbarrecipe.Trim().Replace("'", "''")) + "'", conn31);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
+                        toolStripStatusLabel1.Text = "Cocktail " + reader["cocktail_key"].ToString() + " of " + (this.CocktailsNameBox.ItemCount.ToString());
+
+                    }
+                }
+            }
+        }
         private void PunchesListCount(object sender, EventArgs e)
         {
             if (PunchesNameBox.SelectedItem != null)
@@ -249,7 +273,7 @@ namespace bartenderexpressReloaded
                     while (reader.Read())
                     {
                         //MessageBox.Show(this.DrinksNameBox.ItemCount.ToString());
-                        toolStripStatusLabel1.Text = "Punch " + reader["punch_key"].ToString() + " of " + (this.PunchesNameBox.ItemCount.ToString());
+                        toolStripStatusLabel1.Text = "Punch " + (reader["punch_key"]).ToString() + " of " + (this.PunchesNameBox.ItemCount.ToString());
 
                     }
                 }
@@ -3270,7 +3294,7 @@ namespace bartenderexpressReloaded
                 Lolliesoft.Ribbon.Items.Remove(BuyNow);
                 notifyIcon1.Dispose();
                 notifyIcon2.ShowBalloonTip(6000);
-                toolStripLabel1.Text = "REGISTERED";
+                toolStripLabel1.Text = "";
             }            
         }
 
