@@ -3451,6 +3451,11 @@ namespace bartenderexpressReloaded
                     IngredientsNameBox.Show();
                
                 }
+                if (ActiveMdiChild.Text == "Custom Recipes")
+                {
+                    WizardPages.SelectedTab = CustomTab;
+                    CustomNameBox.Show();
+                }
             }
             else
             {

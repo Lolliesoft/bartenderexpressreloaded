@@ -718,7 +718,7 @@
             this.Controls.Add(this.amt1Label);
             this.Controls.Add(this.DrinkNameLabel);
             this.Name = "customRecipes";
-            this.Text = "customRecipes";
+            this.Text = "Custom Recipes";
             ((System.ComponentModel.ISupportInitialize)(this.myRecipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRecipesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
