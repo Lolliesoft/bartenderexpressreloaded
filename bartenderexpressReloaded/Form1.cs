@@ -3444,6 +3444,13 @@ namespace bartenderexpressReloaded
             if (ActiveMdiChild != null)
             { 
             toolStripStatusLabel1.Text = ActiveMdiChild.Text;
+                if (ActiveMdiChild.Text == "Liqueur Cabinet")
+                {
+         
+                    WizardPages.SelectedTab = IngredientsTab;
+                    IngredientsNameBox.Show();
+               
+                }
             }
             else
             {
