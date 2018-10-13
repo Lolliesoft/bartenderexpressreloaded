@@ -2761,7 +2761,21 @@ namespace bartenderexpressReloaded
             int oldFocusedIndex = CustomNameBox.SelectedIndex;
         }
 
+        private void RefreshIngredientStatusStrip()
+        {
+            //Refresh statustrip when using ingredients search
 
+            if (IngredientsNameBox.ItemCount > 0 ) {
+                toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
+            }
+            else if (IngredientsNameBox.ItemCount == 0)
+            {
+                toolStripStatusLabel1.Text = ("Double Click to Open Recipe");
+            }
+
+        }
+
+        
         private void RefreshMyRecipes()
         {
 
@@ -2802,6 +2816,7 @@ namespace bartenderexpressReloaded
         {
             RefreshMyRecipes();
             RefreshFavorites();
+            RefreshIngredientStatusStrip();
         }
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -2965,7 +2980,7 @@ namespace bartenderexpressReloaded
             WizardPages.SelectedTab = IngredientsTab;
             IngredientsNameBox.Show();
             IngredientsNameBox.Focus();
-            toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
+            toolStripStatusLabel1.Text = (IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
         }
 
         private void tileItem5_ItemClick(object sender, TileItemEventArgs e)
@@ -2977,15 +2992,6 @@ namespace bartenderexpressReloaded
             child.Show();
         }
 
-        //private void ribbonControl1_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void IBoxItem_LinkClicked(object sender, ItemClickEventArgs e)
-        //{
-
-        //}
 
         private void tileItem8_ItemClick(object sender, TileItemEventArgs e)
         {
