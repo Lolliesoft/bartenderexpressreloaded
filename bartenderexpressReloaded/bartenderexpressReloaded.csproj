@@ -428,7 +428,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AutoUpdater.NET.dll" />
-    <Content Include="BartenderExpressCalculatorPro.exe" />
+    <Content Include="BartenderExpressCalculator.exe" />
     <Content Include="mrbartender32.ico" />
     <Content Include="SecureApp.dll" />
     <None Include="Resources\lolliesoftLogoRibbon.png" />

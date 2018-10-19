@@ -2995,12 +2995,12 @@ namespace bartenderexpressReloaded
 
         private void tileItem8_ItemClick(object sender, TileItemEventArgs e)
         {
-            System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressCalculatorPro.exe");
+            System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressCalculator.exe");
         }
 
         private void Calculator_ItemClick(object sender, ItemClickEventArgs e)
         {
-            System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressCalculatorPro.exe");
+            System.Diagnostics.Process.Start(Application.StartupPath + "\\BartenderExpressCalculator.exe");
         }
 
         private void tileItem7_ItemClick(object sender, TileItemEventArgs e)
