@@ -3462,6 +3462,11 @@ namespace bartenderexpressReloaded
                 toolStripStatusLabel1.Text =  "";
             }
             //toolStripStatusLabel.Text = statusbarrecipe;
-        } 
+        }
+
+        private void CustomNameBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            CustomNameBox.SelectedIndex = CustomNameBox.IndexFromPoint(e.Location);       
+        }
     }
 }
