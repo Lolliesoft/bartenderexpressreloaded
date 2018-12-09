@@ -3466,7 +3466,13 @@ namespace bartenderexpressReloaded
 
         private void CustomNameBox_MouseDown(object sender, MouseEventArgs e)
         {
-            CustomNameBox.SelectedIndex = CustomNameBox.IndexFromPoint(e.Location);       
+            CustomNameBox.SelectedIndex = CustomNameBox.IndexFromPoint(e.Location);
+
+        }
+
+        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            RemovecustomDrink();
         }
     }
 }
