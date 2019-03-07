@@ -163,8 +163,8 @@
             // 
             // tileItem5
             // 
-            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
-            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
+            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
             tileItemElement1.Text = "tileItem5";
             this.tileItem5.Elements.Add(tileItemElement1);
             this.tileItem5.Id = 8;

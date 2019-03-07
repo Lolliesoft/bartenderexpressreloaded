@@ -67,6 +67,8 @@ namespace bartenderexpressReloaded
 
         string[] skinsToHide = { "DevExpress Style", "DevExpress Dark Style", "Seven Classic", "Seven" }; // populate with names of unnecessary skins
 
+        public string statusbarrecipe { get; internal set; }
+
         private void HideSkins(string[] skinsToHide)
         {
             for (var i = 0; i < skinRibbonGalleryBarItem1.Gallery.Groups.Count; i++)
@@ -388,7 +390,7 @@ namespace bartenderexpressReloaded
         }
 
 
-
+        public string recipeName { get; set; }
 
         public void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
@@ -402,7 +404,8 @@ namespace bartenderexpressReloaded
                 string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
                 string tablename = "drinks";
                 toolStripStatusLabel1.Text = statusbarrecipe;
-
+                recipeName = statusbarrecipe;
+                //MessageBox.Show(recipeName);
 
 
 
@@ -430,7 +433,10 @@ namespace bartenderexpressReloaded
                     client.BringToFront();//This will make your child form shown on top.
                     child.Show();
                     child.DrinkfavoriteCheckForm1();
-
+                    //Adds an icon to mdi child window
+                    string path = Directory.GetCurrentDirectory() + "\\Resources\\Drinks.png";
+                    Image myImg = Image.FromFile(path);                    
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
                     while (reader.Read())
                     {
@@ -444,7 +450,11 @@ namespace bartenderexpressReloaded
                             ingredients.SubItems[0].Text = rdring[0].ToString();
                             child.listView2.Items.Add(ingredients);
 
+                            List<string> ingredientslist = child.listView2.Items.Cast<ListViewItem>()
+                                 .Select(x => x.Text).ToList();
+
                         }
+
                         //Get Amounts
                         SQLiteCommand cmdamt = new SQLiteCommand("SELECT amount FROM recipeingredients INNER JOIN ingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs);
                         SQLiteDataReader rdramt = cmdamt.ExecuteReader();
@@ -532,6 +542,10 @@ namespace bartenderexpressReloaded
                     child.Show();
                     //disables button in form3, if the favorite drink is present
                     child.DrinkfavoriteCheck();
+                    //Adds an icon to mdi child window
+                    string path = Directory.GetCurrentDirectory() + "\\Resources\\shots.png";
+                    Image myImg = Image.FromFile(path);
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
 
@@ -725,7 +739,10 @@ namespace bartenderexpressReloaded
                     child.Show();
                     //disables button in form3, if the favorite drink is present
                     child.DrinkfavoriteCheck();
-
+                    //Adds an icon to mdi child window
+                    string path = Directory.GetCurrentDirectory() + "\\Resources\\liqueurs.png";
+                    Image myImg = Image.FromFile(path);
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
                     while (reader.Read())
@@ -914,6 +931,10 @@ namespace bartenderexpressReloaded
                         child.Show();
                         //disables button in form3, if the favorite drink is present
                         child.DrinkfavoriteCheck();
+                        //Adds an icon to mdi child window
+                        string path = Directory.GetCurrentDirectory() + "\\Resources\\punches.png";
+                        Image myImg = Image.FromFile(path);
+                        xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
 
@@ -1100,7 +1121,10 @@ namespace bartenderexpressReloaded
                         child.Show();
                         //disables button in form3, if the favorite drink is present
                         child.DrinkfavoriteCheck();
-
+                        //Adds an icon to mdi child window
+                        string path = Directory.GetCurrentDirectory() + "\\Resources\\cocktails.png";
+                        Image myImg = Image.FromFile(path);
+                        xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
                         while (reader.Read())
@@ -1291,7 +1315,10 @@ namespace bartenderexpressReloaded
                     child.Show();
                     //disables button in form3, if the favorite drink is present
                     child.DrinkfavoriteCheck();
-
+                    //Adds an icon to mdi child window
+                    string path = Directory.GetCurrentDirectory() + "\\Resources\\beers.png";
+                    Image myImg = Image.FromFile(path);
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
                     while (reader.Read())
@@ -1480,6 +1507,10 @@ namespace bartenderexpressReloaded
                     child.Show();
                     //disables button in form3, if the favorite drink is present
                     child.DrinkfavoriteCheck();
+                    //Adds an icon to mdi child window
+                    string path = Directory.GetCurrentDirectory() + "\\Resources\\nonAlcohol.png";
+                    Image myImg = Image.FromFile(path);
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
 
@@ -1667,7 +1698,10 @@ namespace bartenderexpressReloaded
                     child.Show();
                     //disables button in form3, if the favorite drink is present
                     child.DrinkfavoriteCheck();
-
+                    //Adds an icon to mdi child window
+                    string path = Directory.GetCurrentDirectory() + "\\Resources\\teaCoffee.png";
+                    Image myImg = Image.FromFile(path);
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
                     while (reader.Read())
@@ -2015,6 +2049,9 @@ namespace bartenderexpressReloaded
 
         }
 
+
+
+
         private void FavoritesNameBox_DoubleClick(object sender, EventArgs e)
         {
             if (FavoritesNameBox.SelectedItem != null)
@@ -2045,7 +2082,10 @@ namespace bartenderexpressReloaded
                         child.MdiParent = this;
                         client.BringToFront();//This will make your child form shown on top.
                         child.Show();
-
+                        //Adds an icon to mdi child window
+                        string path = Directory.GetCurrentDirectory() + "\\Resources\\favorite.png";
+                        Image myImg = Image.FromFile(path);
+                        xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
                         //if (reader.Read())
                         {
@@ -2488,6 +2528,11 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
+            //Adds an icon to mdi child window
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\CustomRecipe.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
+
         }
 
 
@@ -2515,6 +2560,9 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\liqueurCabinet.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
             WizardPages.SelectedTab = IngredientsTab;
             IngredientsNameBox.Show();
             IngredientsNameBox.Focus();
@@ -2646,6 +2694,10 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront(); //This will make your child form shown on top.
             child.Show();
+            //Adds an icon to mdi child window
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\CustomRecipe.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
         }
         public void randomDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
@@ -2765,7 +2817,8 @@ namespace bartenderexpressReloaded
         {
             //Refresh statustrip when using ingredients search
 
-            if (IngredientsNameBox.ItemCount > 0 ) {
+            if (IngredientsNameBox.ItemCount > 0)
+            {
                 toolStripStatusLabel1.Text = (this.IngredientsNameBox.ItemCount.ToString()) + " Recipes with your Ingredients";
             }
             else if (IngredientsNameBox.ItemCount == 0)
@@ -2775,7 +2828,7 @@ namespace bartenderexpressReloaded
 
         }
 
-        
+
         private void RefreshMyRecipes()
         {
 
@@ -2884,6 +2937,9 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront(); //This will make your child form shown on top.
             child.Show();
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\CustomRecipe.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
         }
 
         private void randomdrink_ItemClick(object sender, ItemClickEventArgs e)
@@ -2977,6 +3033,10 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\liqueurCabinet.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
+
             WizardPages.SelectedTab = IngredientsTab;
             IngredientsNameBox.Show();
             IngredientsNameBox.Focus();
@@ -3014,6 +3074,9 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.
             child.Show();
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\liqueurCabinet.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
             WizardPages.SelectedTab = IngredientsTab;
             IngredientsNameBox.Show();
             IngredientsNameBox.Focus();
@@ -3440,16 +3503,16 @@ namespace bartenderexpressReloaded
         }
 
         private void xtraTabbedMdiManager1_SelectedPageChanged(object sender, EventArgs e)
-        { 
+        {
             if (ActiveMdiChild != null)
-            { 
-            toolStripStatusLabel1.Text = ActiveMdiChild.Text;
+            {
+                toolStripStatusLabel1.Text = ActiveMdiChild.Text;
                 if (ActiveMdiChild.Text == "Liqueur Cabinet")
                 {
-         
+
                     WizardPages.SelectedTab = IngredientsTab;
                     IngredientsNameBox.Show();
-               
+
                 }
                 if (ActiveMdiChild.Text == "Custom Recipes")
                 {
@@ -3459,7 +3522,7 @@ namespace bartenderexpressReloaded
             }
             else
             {
-                toolStripStatusLabel1.Text =  "";
+                toolStripStatusLabel1.Text = "";
             }
             //toolStripStatusLabel.Text = statusbarrecipe;
         }
@@ -3474,5 +3537,49 @@ namespace bartenderexpressReloaded
         {
             RemovecustomDrink();
         }
+
+        private void emailStripButton_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                string selectedDrink = ActiveMdiChild.Text;
+
+
+                string path = Directory.GetCurrentDirectory() + "\\Resources\\Drinks1.ico";
+                Image myImg = Image.FromFile(path);
+
+                var iconName = xtraTabbedMdiManager1.SelectedPage.Image;
+
+                if (iconName != null)
+                {
+                    int iconNameFlag = iconName.Flags;
+
+                    if (iconNameFlag == 77842)
+                    {
+                        string tablename = "drinks";
+                        emailDrink child2 = new emailDrink(selectedDrink, tablename);
+                        child2.MdiParent = this;
+                        child2.Show();
+                        //Adds an icon to mdi child window
+                        string path1 = Directory.GetCurrentDirectory() + "\\Resources\\email.png";
+                        Image myImg1 = Image.FromFile(path1);
+                        xtraTabbedMdiManager1.SelectedPage.Image = myImg1;
+
+                    }
+                }
+                if (iconName == null)
+                {
+                    MessageBox.Show("Fuck You not a drink Table");
+                }
+            }
+            else
+            {
+                MessageBox.Show("no recipe to email!");
+            }
+        }
+                //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
+            
+               
+        }
+
     }
-}

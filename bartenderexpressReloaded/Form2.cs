@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace bartenderexpressReloaded
 {
+
     public partial class Form2 : Form
     {
 
@@ -24,7 +25,13 @@ namespace bartenderexpressReloaded
             string FavoritesTable = tablename;
         }
 
-             public void DrinkfavoriteCheckForm1()
+       
+
+        public string FavoriteName { get;  set; }
+    
+        
+
+        public void DrinkfavoriteCheckForm1()
         {
 
             string FavoriteName = FavoritesDrinkButton.Name;
@@ -177,6 +184,28 @@ namespace bartenderexpressReloaded
         private void tileItem1_ItemClick_2(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.lolliesoft.com");
+        }
+
+        public class emailDrink : Form1 
+        {
+            private void button1_Click(object sender, EventArgs e)
+            {
+              
+            }
+
+
+        }
+
+      
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show(Text);
+            
+
+            
+            
         }
     }
 }

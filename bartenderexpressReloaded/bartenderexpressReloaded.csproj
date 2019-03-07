@@ -214,6 +214,12 @@
     <Compile Include="Dashboard1.Designer.cs">
       <DependentUpon>Dashboard1.cs</DependentUpon>
     </Compile>
+    <Compile Include="emailDrink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emailDrink.Designer.cs">
+      <DependentUpon>emailDrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="Twitter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuyNow.resx">
       <DependentUpon>BuyNow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emailDrink.resx">
+      <DependentUpon>emailDrink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Twitter.resx">
       <DependentUpon>Twitter.cs</DependentUpon>
@@ -430,6 +439,46 @@
     <Content Include="AutoUpdater.NET.dll" />
     <Content Include="BartenderExpressCalculator.exe" />
     <Content Include="mrbartender32.ico" />
+    <Content Include="Resources\beers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cocktails.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CustomRecipe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Drinks.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Drinks1.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\email.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\favorite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\liqueurCabinet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\liqueurs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\myrecipes.png" />
+    <Content Include="Resources\nonAlcohol.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\punches.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\shots.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\teaCoffee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SecureApp.dll" />
     <None Include="Resources\lolliesoftLogoRibbon.png" />
     <None Include="Resources\logo.png" />
