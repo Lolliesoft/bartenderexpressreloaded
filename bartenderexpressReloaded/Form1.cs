@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data.SQLite;
 using AutoUpdaterDotNET;
 using DevExpress.XtraEditors;
 using DevExpress.Skins;
@@ -27,6 +26,7 @@ using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
 using SecureApp;
+using Devart.Data.SQLite;
 
 namespace bartenderexpressReloaded
 {
@@ -2894,7 +2894,10 @@ namespace bartenderexpressReloaded
                     {
                         source.Open();
                         destination.Open();
-                        source.BackupDatabase(destination, "main", "main", -1, null, 0);
+                        //source.BackupDatabase(destination, "main", "main", -1, null, 0);
+                        source.BackupDatabase(destination, "main", "main", 1);
+
+
                     }
 
                     MessageBox.Show("Backup.db saved to: " + fullfolderPath + "\n" + "Use this file to restore your custom Recipes at a later time", "Custom Recipes Backed up", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2922,7 +2925,8 @@ namespace bartenderexpressReloaded
                 {
                     source.Open();
                     destination.Open();
-                    source.BackupDatabase(destination, "main", "main", -1, null, 0);
+                    //source.BackupDatabase(destination, "main", "main", -1, null, 0);
+                    source.BackupDatabase(destination, "main", "main", 1);
                 }
 
                 MessageBox.Show("Backup.db restored" + "\n" + "All custom recipes exported", "Custom Recipes Restored", MessageBoxButtons.OK, MessageBoxIcon.Information);
