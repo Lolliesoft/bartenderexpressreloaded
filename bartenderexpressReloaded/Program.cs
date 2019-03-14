@@ -33,7 +33,8 @@ namespace bartenderexpressReloaded
             Application.SetCompatibleTextRenderingDefault(false);
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
-            UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");          
+            UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");    
+            //UserLookAndFeel.Default.SetSkinStyle("Office 2019 Colorful");
             DevExpress.LookAndFeel.UserLookAndFeel.Default.UseWindowsXPTheme = false;
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             DevExpress.Skins.SkinManager.EnableFormSkins();

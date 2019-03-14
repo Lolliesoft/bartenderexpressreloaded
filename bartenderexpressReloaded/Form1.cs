@@ -2895,7 +2895,7 @@ namespace bartenderexpressReloaded
                         source.Open();
                         destination.Open();
                         //source.BackupDatabase(destination, "main", "main", -1, null, 0);
-                        source.BackupDatabase(destination, "main", "main", 1);
+                        source.BackupDatabase(destination, "main", "main", -1);
 
 
                     }
@@ -2926,7 +2926,7 @@ namespace bartenderexpressReloaded
                     source.Open();
                     destination.Open();
                     //source.BackupDatabase(destination, "main", "main", -1, null, 0);
-                    source.BackupDatabase(destination, "main", "main", 1);
+                    source.BackupDatabase(destination, "main", "main", -1);
                 }
 
                 MessageBox.Show("Backup.db restored" + "\n" + "All custom recipes exported", "Custom Recipes Restored", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -3374,7 +3374,7 @@ namespace bartenderexpressReloaded
         private void AboutBtn_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            XtraMessageBox.Show("Bartender Express Version 4.0\nCopyright © 1996-2018 LollieSoft Inc.\nwww.lolliesoft.com", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Bartender Express Version 4.0\nCopyright © 1996-2019 LollieSoft Inc.\nwww.lolliesoft.com", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
