@@ -25,6 +25,7 @@ using DevExpress.Utils.Drawing;
 using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
+using DevExpress.XtraBars.FluentDesignSystem;
 using SecureApp;
 using Devart.Data.SQLite;
 
@@ -391,18 +392,19 @@ namespace bartenderexpressReloaded
 
 
         public string recipeName { get; set; }
-
+        public string tableIdent { get; set; }
         public void DrinksNameBox_DoubleClick(object sender, EventArgs e)
         {
 
             //string _statusbarrecipe2 = DrinksNameBox.SelectedValue.ToString();
-
+           
 
             if (DrinksNameBox.SelectedItem != null)
             {
-
+                
                 string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
                 string tablename = "drinks";
+                tableIdent = tablename;
                 toolStripStatusLabel1.Text = statusbarrecipe;
                 recipeName = statusbarrecipe;
                 //MessageBox.Show(recipeName);
@@ -513,7 +515,10 @@ namespace bartenderexpressReloaded
             {
 
                 string statusbarrecipe2 = ShotsNameBox.SelectedValue.ToString();
+                string tablename = "shots";
+                tableIdent = tablename;
                 toolStripStatusLabel1.Text = statusbarrecipe2;
+                
 
 
                 using (SQLiteConnection cs2 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
@@ -711,6 +716,8 @@ namespace bartenderexpressReloaded
             if (LiqueursNameBox.SelectedItem != null)
             {
                 string statusbarrecipe3 = LiqueursNameBox.SelectedValue.ToString();
+                string tablename = "Liqueurs";
+                tableIdent = tablename;
                 statusbarrecipe3 = statusbarrecipe3.Replace("'", "''");
 
 
@@ -902,6 +909,9 @@ namespace bartenderexpressReloaded
             {
                 {
                     string statusbarrecipe2 = PunchesNameBox.SelectedValue.ToString();
+                    string tablename = "Punches";
+                    tableIdent = tablename;
+
                     toolStripStatusLabel1.Text = statusbarrecipe2;
 
                     //MessageBox.Show(statusbarrecipe2);
@@ -1091,6 +1101,8 @@ namespace bartenderexpressReloaded
             {
                 {
                     string statusbarrecipe2 = CocktailsNameBox.SelectedValue.ToString();
+                    string tablename = "Cocktails";
+                    tableIdent = tablename;
                     toolStripStatusLabel1.Text = statusbarrecipe2;
 
                     //MessageBox.Show(statusbarrecipe2);
@@ -1286,6 +1298,9 @@ namespace bartenderexpressReloaded
             if (BeerAleNameBox.SelectedItem != null)
             {
                 string statusbarrecipe2 = BeerAleNameBox.SelectedValue.ToString();
+                string tablename = "Beers";
+                tableIdent = tablename;
+
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
                 //MessageBox.Show(statusbarrecipe2);
@@ -1477,6 +1492,8 @@ namespace bartenderexpressReloaded
             if (NonAlcoholicNameBox.SelectedItem != null)
             {
                 string statusbarrecipe2 = NonAlcoholicNameBox.SelectedValue.ToString();
+                string tablename = "NonAlcoholic";
+                tableIdent = tablename;
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
                 //MessageBox.Show(statusbarrecipe2);
@@ -1672,6 +1689,8 @@ namespace bartenderexpressReloaded
             if (CoffeeTeaNameBox.SelectedItem != null)
             {
                 string statusbarrecipe2 = CoffeeTeaNameBox.SelectedValue.ToString();
+                string tablename = "CoffeeTea";
+                tableIdent = tablename;
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
 
@@ -1863,6 +1882,8 @@ namespace bartenderexpressReloaded
             if (CustomNameBox.SelectedItem != null)
             {
                 string statusbarrecipe2 = CustomNameBox.SelectedValue.ToString();
+                string tablename = "Custom";
+                tableIdent = tablename;
                 statusbarrecipe2 = statusbarrecipe2.Replace("'", "''");
                 toolStripStatusLabel1.Text = statusbarrecipe2;
 
@@ -2096,7 +2117,7 @@ namespace bartenderexpressReloaded
                             if (rdring.Read())
                             {
                                 ListViewItem ingredient1 = new ListViewItem();
-                                ingredient1.SubItems[0].Text = rdring[0].ToString();
+                                ingredient1.SubItems[0].Text = rdring[0].ToString().Trim();
                                 child.listView2.Items.Add(ingredient1);
 
                                 ListViewItem ingredient2 = new ListViewItem();
@@ -2164,7 +2185,7 @@ namespace bartenderexpressReloaded
                             if (rdramt.Read())
                             {
                                 ListViewItem amt1 = new ListViewItem();
-                                amt1.SubItems[0].Text = rdramt[0].ToString();
+                                amt1.SubItems[0].Text = rdramt[0].ToString().Trim();
                                 //amount.SubItems.Add(rdramt[0].ToString());
                                 child.listView1.Items.Add(amt1);
 
@@ -3557,11 +3578,16 @@ namespace bartenderexpressReloaded
                 if (iconName != null)
                 {
                     int iconNameFlag = iconName.Flags;
+                    // { 7462dc86 - 6180 - 4c7e - 8e3f - ee7333a7a483}
+                    //+		RawFormat	{[ImageFormat: b96b3caf-0728-11d3-9d7b-0000f81ef32e]}	System.Drawing.Imaging.ImageFormat
+
+
 
                     if (iconNameFlag == 77842)
                     {
-                        string tablename = "drinks";
-                        emailDrink child2 = new emailDrink(selectedDrink, tablename);
+                        //string tablename = "drinks";
+                        //tableIdent = tablename;
+                        emailDrink child2 = new emailDrink(selectedDrink, tableIdent);
                         child2.MdiParent = this;
                         child2.Show();
                         //Adds an icon to mdi child window
