@@ -223,6 +223,7 @@
     <Compile Include="emailDrink.Designer.cs">
       <DependentUpon>emailDrink.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetDrink.cs" />
     <Compile Include="Twitter.cs">
       <SubType>Form</SubType>
     </Compile>

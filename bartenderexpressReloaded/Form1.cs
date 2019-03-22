@@ -716,7 +716,7 @@ namespace bartenderexpressReloaded
             if (LiqueursNameBox.SelectedItem != null)
             {
                 string statusbarrecipe3 = LiqueursNameBox.SelectedValue.ToString();
-                string tablename = "Liqueurs";
+                string tablename = "liqueurs";
                 tableIdent = tablename;
                 statusbarrecipe3 = statusbarrecipe3.Replace("'", "''");
 
