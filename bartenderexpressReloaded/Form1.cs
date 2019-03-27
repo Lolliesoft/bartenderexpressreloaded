@@ -3578,23 +3578,30 @@ namespace bartenderexpressReloaded
                 if (iconName != null)
                 {
                     int iconNameFlag = iconName.Flags;
-                    // { 7462dc86 - 6180 - 4c7e - 8e3f - ee7333a7a483}
-                    //+		RawFormat	{[ImageFormat: b96b3caf-0728-11d3-9d7b-0000f81ef32e]}	System.Drawing.Imaging.ImageFormat
-
-
-
                     if (iconNameFlag == 77842)
                     {
-                        //string tablename = "drinks";
-                        //tableIdent = tablename;
                         emailDrink child2 = new emailDrink(selectedDrink, tableIdent);
+
+                        GetDrink GetDrinks = new GetDrink();
+                        GetDrinks.getDrinkRecipe(selectedDrink, tableIdent);
+
+                        
+                        string emailIngredients = string.Join("<br> ", GetDrinks.IngredientsList());
+                        var emailIngredientshtml = "<html><head></head><body>" + emailIngredients + "</body></html>";
+                        var emailAmounts = string.Join("<br> ", GetDrinks.AmountList());
+                        var emailAmountshtml = "<html><head></head><body>" + emailAmounts + "</body></html>";
+                        string emailDirections = string.Join("<br> ", GetDrinks.DirectionList());
+                       
+                        child2.webBrowser1.DocumentText = emailAmountshtml;
+                        child2.webBrowser2.DocumentText = emailIngredientshtml;
+                        child2.webBrowser3.DocumentText = emailDirections;
+
                         child2.MdiParent = this;
                         child2.Show();
                         //Adds an icon to mdi child window
                         string path1 = Directory.GetCurrentDirectory() + "\\Resources\\email.png";
                         Image myImg1 = Image.FromFile(path1);
                         xtraTabbedMdiManager1.SelectedPage.Image = myImg1;
-
                     }
                 }
                 if (iconName == null)

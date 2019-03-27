@@ -75,6 +75,8 @@
             this.webBrowser1.Location = new System.Drawing.Point(109, 112);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.ScrollBarsEnabled = false;
             this.webBrowser1.Size = new System.Drawing.Size(281, 211);
             this.webBrowser1.TabIndex = 4;
             // 
@@ -83,6 +85,8 @@
             this.webBrowser2.Location = new System.Drawing.Point(393, 112);
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.ScriptErrorsSuppressed = true;
+            this.webBrowser2.ScrollBarsEnabled = false;
             this.webBrowser2.Size = new System.Drawing.Size(303, 211);
             this.webBrowser2.TabIndex = 5;
             // 
@@ -91,6 +95,7 @@
             this.webBrowser3.Location = new System.Drawing.Point(109, 329);
             this.webBrowser3.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser3.Name = "webBrowser3";
+            this.webBrowser3.ScriptErrorsSuppressed = true;
             this.webBrowser3.Size = new System.Drawing.Size(587, 96);
             this.webBrowser3.TabIndex = 6;
             // 
@@ -120,7 +125,7 @@
         private System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.WebBrowser webBrowser1;
         public System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.WebBrowser webBrowser2;
-        private System.Windows.Forms.WebBrowser webBrowser3;
+        public System.Windows.Forms.WebBrowser webBrowser2;
+        public System.Windows.Forms.WebBrowser webBrowser3;
     }
 }

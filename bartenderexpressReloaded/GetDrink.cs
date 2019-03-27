@@ -10,11 +10,25 @@ namespace bartenderexpressReloaded
 {
     class GetDrink
     {
+        private List<string> drinkingredientlist = new List<string>();
+        public List<string> IngredientsList()
+        {
+            return drinkingredientlist;
+        }
+
+        private List<string> drinkamountlist = new List<string>();
+        public List<string> AmountList()
+        {
+            return drinkamountlist;
+        }
+
+        private List<string> drinkdirectionlist = new List<string>();
+        public List<string> DirectionList()
+        {
+            return drinkdirectionlist;
+        }
         public void getDrinkRecipe(string DrinkName, string tablename)
         {
-            MessageBox.Show(DrinkName);
-            MessageBox.Show(tablename);
-            //DrinkName = DrinkName.Trim();
             string tablekey;
 
             if (tablename == "liqueurs")
@@ -45,7 +59,6 @@ namespace bartenderexpressReloaded
 
                     //Get ID
                     SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM recipes WHERE name='" + (DrinkName.Trim().Replace("'", "''")) + "'", cs);
-                    //SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM recipes WHERE name ='" + statusbarrecipe + "'", cs);
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
@@ -53,35 +66,11 @@ namespace bartenderexpressReloaded
                         // Get Ingredients
                         SQLiteCommand cmding = new SQLiteCommand("SELECT name FROM ingredients INNER JOIN recipeingredients ON ingredients.id=recipeingredients.ingid WHERE recipeid=" + (reader["id"]) + "", cs);
                         SQLiteDataReader rdring = cmding.ExecuteReader();
+                        
 
                         while (rdring.Read())
-                        {
-                            //ListViewItem ingredients = new ListViewItem();
-                            //ingredients.SubItems[0].Text = rdring[0].ToString();
-                            //child.listView2.Items.Add(ingredients);
-
-                            //List<string> ingredientslist = child.listView2.Items.Cast<ListViewItem>()
-                            //     .Select(x => x.Text).ToList();
-
-                            //string path = @"c:\temp\MyTest.txt";
-                            //System.IO.File.WriteAllLines(path, ingredientslist);
-
-
-
-                            //string Profanity = "Fuck you";
-                            //string DrinkIngredients = "<html><body>" + Profanity + "</body></html>";
-
-                            //string DrinkIngredients = "<html><head></head><body>" + path + "</body></html>";
-                            //string DrinkIng = listOfIngredients[0];
-
-                            //child2.webBrowser1.Navigate("about:blank");
-
-                            //child2.webBrowser1.DocumentText = DrinkIngredients;
-                            //child2.webBrowser1.Refresh();
-                            //child2.textBox1.Text = Profanity;
-                            //child2.webBrowser1.Navigate(path);
-                            MessageBox.Show(rdring[0].ToString());
-
+                        {                          
+                            drinkingredientlist.Add(rdring[0].ToString());
                         }
 
                         //Get Amounts
@@ -90,44 +79,27 @@ namespace bartenderexpressReloaded
 
                         while (rdramt.Read())
                         {
-                            //ListViewItem amount = new ListViewItem();
-                            //amount.SubItems[0].Text = rdramt[0].ToString();
-                            //child.listView1.Items.Add(amount);
-                            //this.webBrowser1.DocumentText = rdramt[0].ToString();
-                            MessageBox.Show(rdramt[0].ToString());
+                            drinkamountlist.Add(rdramt[0].ToString());
                         }
 
                         //Get Directions
                         SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM recipes WHERE id = " + (reader["id"]) + "", cs);
                         SQLiteDataReader rdr = cmddir.ExecuteReader();
-                        //this.webBrowser1.Font = new Font("Consolas", 14);
 
                         while (rdr.Read())
                         {
-
-                            //this.webBrowser3.DocumentText = rdr[0].ToString();
-                            MessageBox.Show(rdr[0].ToString());
+                            drinkdirectionlist.Add(rdr[0].ToString());
                         }
 
                         //Get glasstype
-                        //SQLiteCommand cmdglass = new SQLiteCommand("SELECT glasstype FROM recipes WHERE id = " + (reader["id"]) + "", cs);
-
+                        
                         SQLiteCommand cmdglass = new SQLiteCommand("SELECT pictures.picture FROM pictures INNER JOIN recipes ON pictures.id = recipes.id WHERE pictures.id IN (SELECT recipes.glasstype FROM recipes WHERE id = " + (reader["id"]) + ")", cs);
-
-
-
                         SQLiteDataReader rdrglass = cmdglass.ExecuteReader();
-                        //MessageBox.Show(rdrglass["pictures.picture"].ToString());
+                     
 
                         while (rdrglass.Read())
                         {
-                            //For Image inside a BLOB
-
-                            //byte[] imagepic = (byte[])rdrglass[0];
-                            //MemoryStream ms = new MemoryStream(imagepic);
-                            //Clipboard.SetImage(Image.FromStream(ms, true));
-                            //child.richTextBox1.Paste();
-                            //this.webBrowser1. = Image.FromStream(ms, true);
+                        
                         }
                     }
 
@@ -143,11 +115,8 @@ namespace bartenderexpressReloaded
                     cs.Open();
 
                     //Get ID
-
                     SQLiteCommand cmd = new SQLiteCommand("SELECT " + tablekey + " FROM " + tablename + " WHERE name = '" + (DrinkName.Replace("'", "''")) + "'", cs);
-                    //SQLiteCommand cmd = new SQLiteCommand("SELECT id FROM recipes WHERE name ='" + statusbarrecipe + "'", cs);
                     SQLiteDataReader reader = cmd.ExecuteReader();
-                    //MessageBox.Show(reader[0].ToString());
 
                     while (reader.Read())
                     {
@@ -157,33 +126,22 @@ namespace bartenderexpressReloaded
 
                         while (rdring.Read())
                         {
-                            //ListViewItem ingredients = new ListViewItem();
-                            //ingredients.SubItems[0].Text = rdring[0].ToString();
-                            //child.listView2.Items.Add(ingredients);
-
-                            //List<string> ingredientslist = child.listView2.Items.Cast<ListViewItem>()
-                            //     .Select(x => x.Text).ToList();
-
-                            //string path = @"c:\temp\MyTest.txt";
-                            //System.IO.File.WriteAllLines(path, ingredientslist);
-
-
-
-                            //string Profanity = "Fuck you";
-                            //string DrinkIngredients = "<html><body>" + Profanity + "</body></html>";
-
-                            //string DrinkIngredients = "<html><head></head><body>" + path + "</body></html>";
-                            //string DrinkIng = listOfIngredients[0];
-
-                            //child2.webBrowser1.Navigate("about:blank");
-
-                            //child2.webBrowser1.DocumentText = DrinkIngredients;
-                            //child2.webBrowser1.Refresh();
-                            //child2.textBox1.Text = Profanity;
-                            //child2.webBrowser1.Navigate(path);
-                            MessageBox.Show(rdring[0].ToString());
-
-
+                            //Add ingredients into the drinkingredientlist
+                            drinkingredientlist.Add(rdring[0].ToString());
+                            drinkingredientlist.Add(rdring[1].ToString());
+                            drinkingredientlist.Add(rdring[2].ToString());
+                            drinkingredientlist.Add(rdring[3].ToString());
+                            drinkingredientlist.Add(rdring[4].ToString());
+                            drinkingredientlist.Add(rdring[5].ToString()); 
+                            drinkingredientlist.Add(rdring[6].ToString());
+                            drinkingredientlist.Add(rdring[7].ToString()); 
+                            drinkingredientlist.Add(rdring[8].ToString());
+                            drinkingredientlist.Add(rdring[9].ToString());
+                            drinkingredientlist.Add(rdring[10].ToString());
+                            drinkingredientlist.Add(rdring[11].ToString());
+                            drinkingredientlist.Add(rdring[12].ToString());
+                            drinkingredientlist.Add(rdring[13].ToString()); 
+                            drinkingredientlist.Add(rdring[14].ToString());
                         }
 
                         //Get Amounts
@@ -192,46 +150,32 @@ namespace bartenderexpressReloaded
 
                         while (rdramt.Read())
                         {
-                            //ListViewItem amount = new ListViewItem();
-                            //amount.SubItems[0].Text = rdramt[0].ToString();
-                            //child.listView1.Items.Add(amount);
-                            //this.webBrowser1.DocumentText = rdramt[0].ToString();
-                            MessageBox.Show(rdramt[0].ToString());
+                            drinkamountlist.Add(rdramt[0].ToString());
+                            drinkamountlist.Add(rdramt[1].ToString());
+                            drinkamountlist.Add(rdramt[2].ToString());
+                            drinkamountlist.Add(rdramt[3].ToString());
+                            drinkamountlist.Add(rdramt[4].ToString());
+                            drinkamountlist.Add(rdramt[5].ToString());
+                            drinkamountlist.Add(rdramt[6].ToString());
+                            drinkamountlist.Add(rdramt[7].ToString());
+                            drinkamountlist.Add(rdramt[8].ToString());
+                            drinkamountlist.Add(rdramt[9].ToString());
+                            drinkamountlist.Add(rdramt[10].ToString());
+                            drinkamountlist.Add(rdramt[11].ToString());
+                            drinkamountlist.Add(rdramt[12].ToString());
+                            drinkamountlist.Add(rdramt[13].ToString());
+                            drinkamountlist.Add(rdramt[14].ToString());
                         }
 
                         //Get Directions
                         SQLiteCommand cmddir = new SQLiteCommand("SELECT directions FROM " + tablename + " WHERE " + tablekey + "  = " + (reader[tablekey]) + "", cs);
                         SQLiteDataReader rdr = cmddir.ExecuteReader();
-                        //this.webBrowser1.Font = new Font("Consolas", 14);
 
                         while (rdr.Read())
                         {
-                            MessageBox.Show(rdr[0].ToString());
-                            //this.webBrowser3.DocumentText = rdr[0].ToString();
+                            drinkdirectionlist.Add(rdr[0].ToString());
                         }
-
-                        //Get glasstype
-                        //SQLiteCommand cmdglass = new SQLiteCommand("SELECT glasstype FROM recipes WHERE id = " + (reader["id"]) + "", cs);
-
-                        //SQLiteCommand cmdglass = new SQLiteCommand("SELECT pictures.picture FROM pictures INNER JOIN recipes ON pictures.id = recipes.id WHERE pictures.id IN (SELECT recipes.glasstype FROM recipes WHERE id = " + (reader["id"]) + ")", cs);
-
-
-
-                        //SQLiteDataReader rdrglass = cmdglass.ExecuteReader();
-                        //MessageBox.Show(rdrglass["pictures.picture"].ToString());
-
-                        //while (rdrglass.Read())
-                        //{
-                        //For Image inside a BLOB
-
-                        //byte[] imagepic = (byte[])rdrglass[0];
-                        //MemoryStream ms = new MemoryStream(imagepic);
-                        //Clipboard.SetImage(Image.FromStream(ms, true));
-                        //child.richTextBox1.Paste();
-                        //this.webBrowser1. = Image.FromStream(ms, true);
-                        //}
                     }
-
                     cs.Close();
                 }
             }
