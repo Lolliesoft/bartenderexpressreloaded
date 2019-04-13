@@ -35,6 +35,11 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.webBrowser3 = new System.Windows.Forms.WebBrowser();
+            this.sendEmail = new System.Windows.Forms.Button();
+            this.amountBox = new System.Windows.Forms.TextBox();
+            this.ingredientsBox = new System.Windows.Forms.TextBox();
+            this.directionsBox = new System.Windows.Forms.TextBox();
+            this.amtIngBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +55,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(109, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(590, 20);
+            this.textBox1.Size = new System.Drawing.Size(508, 20);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -66,7 +71,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(109, 65);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(590, 20);
+            this.textBox2.Size = new System.Drawing.Size(508, 20);
             this.textBox2.TabIndex = 3;
             // 
             // webBrowser1
@@ -99,11 +104,58 @@
             this.webBrowser3.Size = new System.Drawing.Size(587, 96);
             this.webBrowser3.TabIndex = 6;
             // 
+            // sendEmail
+            // 
+            this.sendEmail.Location = new System.Drawing.Point(623, 40);
+            this.sendEmail.Name = "sendEmail";
+            this.sendEmail.Size = new System.Drawing.Size(73, 45);
+            this.sendEmail.TabIndex = 7;
+            this.sendEmail.Text = "Send Drink";
+            this.sendEmail.UseVisualStyleBackColor = true;
+            this.sendEmail.Click += new System.EventHandler(this.SendEmail_Click);
+            // 
+            // amountBox
+            // 
+            this.amountBox.Location = new System.Drawing.Point(12, 112);
+            this.amountBox.Name = "amountBox";
+            this.amountBox.Size = new System.Drawing.Size(77, 20);
+            this.amountBox.TabIndex = 8;
+            this.amountBox.Visible = false;
+            // 
+            // ingredientsBox
+            // 
+            this.ingredientsBox.Location = new System.Drawing.Point(13, 139);
+            this.ingredientsBox.Name = "ingredientsBox";
+            this.ingredientsBox.Size = new System.Drawing.Size(77, 20);
+            this.ingredientsBox.TabIndex = 9;
+            this.ingredientsBox.Visible = false;
+            // 
+            // directionsBox
+            // 
+            this.directionsBox.Location = new System.Drawing.Point(12, 212);
+            this.directionsBox.Name = "directionsBox";
+            this.directionsBox.Size = new System.Drawing.Size(77, 20);
+            this.directionsBox.TabIndex = 10;
+            this.directionsBox.Visible = false;
+            // 
+            // amtIngBox
+            // 
+            this.amtIngBox.Location = new System.Drawing.Point(13, 178);
+            this.amtIngBox.Name = "amtIngBox";
+            this.amtIngBox.Size = new System.Drawing.Size(77, 20);
+            this.amtIngBox.TabIndex = 11;
+            this.amtIngBox.Visible = false;
+            // 
             // emailDrink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.amtIngBox);
+            this.Controls.Add(this.directionsBox);
+            this.Controls.Add(this.ingredientsBox);
+            this.Controls.Add(this.amountBox);
+            this.Controls.Add(this.sendEmail);
             this.Controls.Add(this.webBrowser3);
             this.Controls.Add(this.webBrowser2);
             this.Controls.Add(this.webBrowser1);
@@ -113,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Name = "emailDrink";
             this.Text = "email Drink Recipe";
+            this.Click += new System.EventHandler(this.SendEmail_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +180,10 @@
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.WebBrowser webBrowser2;
         public System.Windows.Forms.WebBrowser webBrowser3;
+        private System.Windows.Forms.Button sendEmail;
+        private System.Windows.Forms.TextBox amountBox;
+        private System.Windows.Forms.TextBox ingredientsBox;
+        private System.Windows.Forms.TextBox directionsBox;
+        private System.Windows.Forms.TextBox amtIngBox;
     }
 }

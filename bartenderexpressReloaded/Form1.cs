@@ -397,11 +397,11 @@ namespace bartenderexpressReloaded
         {
 
             //string _statusbarrecipe2 = DrinksNameBox.SelectedValue.ToString();
-           
+
 
             if (DrinksNameBox.SelectedItem != null)
             {
-                
+
                 string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
                 string tablename = "drinks";
                 tableIdent = tablename;
@@ -437,7 +437,7 @@ namespace bartenderexpressReloaded
                     child.DrinkfavoriteCheckForm1();
                     //Adds an icon to mdi child window
                     string path = Directory.GetCurrentDirectory() + "\\Resources\\Drinks.png";
-                    Image myImg = Image.FromFile(path);                    
+                    Image myImg = Image.FromFile(path);
                     xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
                     while (reader.Read())
@@ -518,7 +518,7 @@ namespace bartenderexpressReloaded
                 string tablename = "shots";
                 tableIdent = tablename;
                 toolStripStatusLabel1.Text = statusbarrecipe2;
-                
+
 
 
                 using (SQLiteConnection cs2 = new SQLiteConnection("Data Source = |DataDirectory|\\XpressShots.db"))
@@ -3563,6 +3563,13 @@ namespace bartenderexpressReloaded
             RemovecustomDrink();
         }
 
+        public string emailAmountsTxt { get; set; }
+        public string emailIngredientsTxt { get; set; }
+        public string emailDirections { get; set; }
+        public string emailAmtIng { get; set; }
+
+
+
         private void emailStripButton_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
@@ -3580,18 +3587,28 @@ namespace bartenderexpressReloaded
                     int iconNameFlag = iconName.Flags;
                     if (iconNameFlag == 77842)
                     {
-                        emailDrink child2 = new emailDrink(selectedDrink, tableIdent);
-
                         GetDrink GetDrinks = new GetDrink();
                         GetDrinks.getDrinkRecipe(selectedDrink, tableIdent);
-
-                        
-                        string emailIngredients = string.Join("<br> ", GetDrinks.IngredientsList());
+                        string emailIngredients = string.Join("<br>", GetDrinks.IngredientsList());
                         var emailIngredientshtml = "<html><head></head><body>" + emailIngredients + "</body></html>";
-                        var emailAmounts = string.Join("<br> ", GetDrinks.AmountList());
-                        var emailAmountshtml = "<html><head></head><body>" + emailAmounts + "</body></html>";
-                        string emailDirections = string.Join("<br> ", GetDrinks.DirectionList());
-                       
+                        string emailIngredientsTxt = string.Join(Environment.NewLine, GetDrinks.IngredientsList());
+                        string emailAmounts = string.Join("<br> ", GetDrinks.AmountList());
+                        string emailAmountshtml = "<html><head></head><body>" + emailAmounts + "</body></html>";
+                        string emailDirections = string.Join("<br><div>", GetDrinks.DirectionList());
+                        string emailDirectionsTxt = string.Join("%0D", GetDrinks.DirectionList());
+
+                        List<string> amtIng = new List<string>();
+
+                        //populate amtIng list with amounts and corresponding ingredients
+                        for (int i = 0; i < GetDrinks.AmountList().Count; i++)
+                        {
+                            amtIng.AddRange(new List<string> { GetDrinks.AmountList()[i].ToString() + "   -   " + GetDrinks.IngredientsList()[i].ToString() });
+                        }
+
+                        string emailAmountsTxt = string.Join("%0A", amtIng);
+
+                        emailDrink child2 = new emailDrink(selectedDrink, tableIdent, emailAmountsTxt, emailIngredientsTxt, emailDirectionsTxt, emailAmtIng);
+
                         child2.webBrowser1.DocumentText = emailAmountshtml;
                         child2.webBrowser2.DocumentText = emailIngredientshtml;
                         child2.webBrowser3.DocumentText = emailDirections;
@@ -3606,7 +3623,7 @@ namespace bartenderexpressReloaded
                 }
                 if (iconName == null)
                 {
-                    MessageBox.Show("Fuck You not a drink Table");
+                    MessageBox.Show("not a drink Table");
                 }
             }
             else
@@ -3614,9 +3631,5 @@ namespace bartenderexpressReloaded
                 MessageBox.Show("no recipe to email!");
             }
         }
-                //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
-            
-               
-        }
-
     }
+}
