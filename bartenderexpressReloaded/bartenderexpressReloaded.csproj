@@ -446,6 +446,9 @@
     <Content Include="Resources\beers.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Calculator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\cocktails.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -470,6 +473,9 @@
     <Content Include="Resources\liqueurs.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\location.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\myrecipes.png" />
     <Content Include="Resources\nonAlcohol.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -478,6 +484,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\shots.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\shuffle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\teaCoffee.png">

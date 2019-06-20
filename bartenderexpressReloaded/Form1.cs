@@ -1913,6 +1913,10 @@ namespace bartenderexpressReloaded
 
                         //disables button in form3, if the favorite drink is present
                         child.DrinkfavoriteCheck();
+                        //Adds an icon to mdi child window
+                        string path = Directory.GetCurrentDirectory() + "\\Resources\\CustomRecipe.png";
+                        Image myImg = Image.FromFile(path);
+                        xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
 
                         //if (reader.Read())
@@ -2722,7 +2726,7 @@ namespace bartenderexpressReloaded
         }
         public void randomDrinkClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            Connection shuffle = new Connection();
+            Connection shuffle = new Connection();           
             //shuffle.RandomConnection();
             //string statusbarrecipe = DrinksNameBox.SelectedValue.ToString();
             //string tablename = "drinks";
@@ -2758,6 +2762,10 @@ namespace bartenderexpressReloaded
                     child.MdiParent = this;
                     client.BringToFront(); //This will make your child form shown on top.
                     child.Show();
+                    //Adds an icon to mdi child window
+                    string path = Directory.GetCurrentDirectory() + "\\Resources\\shuffle.png";
+                    Image myImg = Image.FromFile(path);
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg;
 
                     while (rdring.Read())
                     {
@@ -2827,6 +2835,10 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.    
             child.StartPosition = FormStartPosition.CenterScreen;
             child.Show();
+            //Adds an icon to mdi child window
+            string path1 = Directory.GetCurrentDirectory() + "\\Resources\\Calculator.png";
+            Image myImg1 = Image.FromFile(path1);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg1;
         }
 
         private void CustomNameBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2999,6 +3011,11 @@ namespace bartenderexpressReloaded
                     client.BringToFront(); //This will make your child form shown on top.
                     child.Show();
 
+                    //Adds an icon to mdi child window
+                    string path1 = Directory.GetCurrentDirectory() + "\\Resources\\shuffle.png";
+                    Image myImg1 = Image.FromFile(path1);
+                    xtraTabbedMdiManager1.SelectedPage.Image = myImg1;
+
                     while (rdring.Read())
                     {
                         ListViewItem ingredients = new ListViewItem();
@@ -3075,6 +3092,10 @@ namespace bartenderexpressReloaded
             client.BringToFront();//This will make your child form shown on top.    
             child.StartPosition = FormStartPosition.CenterScreen;
             child.Show();
+            //Adds an icon to mdi child window
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\Calculator.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
         }
 
 
@@ -3413,6 +3434,10 @@ namespace bartenderexpressReloaded
             child.MdiParent = this;
             client.BringToFront();//This will make your child form shown on top.   
             child.Show();
+            //Adds an icon to mdi child window
+            string path = Directory.GetCurrentDirectory() + "\\Resources\\location.png";
+            Image myImg = Image.FromFile(path);
+            xtraTabbedMdiManager1.SelectedPage.Image = myImg;
         }
 
         private void tileItem11_ItemClick(object sender, TileItemEventArgs e)
@@ -3568,8 +3593,6 @@ namespace bartenderexpressReloaded
         public string emailDirections { get; set; }
         public string emailAmtIng { get; set; }
 
-
-
         private void emailStripButton_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
@@ -3631,5 +3654,24 @@ namespace bartenderexpressReloaded
                 MessageBox.Show("no recipe to email!");
             }
         }
+
+        private void contextMenuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            //get tablename
+            //get Drinkname for each namelist(string statusbarrecipe2 = CocktailsNameBox.SelectedValue.ToString();
+            string DrinkName = "A BOMB";
+            string TableName = "drinks";
+            GetDrink GD = new GetDrink();
+            GD.getDrinkRecipe(DrinkName, TableName);
+            string emailIngredients = string.Join("<br>", GD.IngredientsList());
+            var emailIngredientshtml = "<html><head></head><body>" + emailIngredients + "</body></html>";
+            string emailIngredientsTxt = string.Join(Environment.NewLine, GD.IngredientsList());
+            string emailAmounts = string.Join("<br> ", GD.AmountList());
+            string emailAmountshtml = "<html><head></head><body>" + emailAmounts + "</body></html>";
+            string emailDirections = string.Join("<br><div>", GD.DirectionList());
+            string emailDirectionsTxt = string.Join("%0D", GD.DirectionList());
+          
+        }
     }
+
 }

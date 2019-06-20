@@ -43,6 +43,7 @@
             this.Amount});
             this.listView1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
@@ -62,6 +63,7 @@
             this.Ingredients});
             this.listView2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(220, 0);
             this.listView2.Name = "listView2";
             this.listView2.Scrollable = false;
@@ -77,6 +79,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(-2, 348);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
